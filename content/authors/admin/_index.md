@@ -50,21 +50,22 @@ education:
     - course: Licenciatura in Political Science
       institution: Universidad Complutense de Madrid
       year: 2005
-    
+   
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
-- icon: envelope
+social:
+  - icon: envelope
     icon_pack: fas
     link: "mailto:cag30@st-andrews.ac.uk"
-- icon: twitter
+  - icon: twitter
     icon_pack: fab
     link: https://twitter.com/ClementAG
-- icon: orcid
+  - icon: orcid
     icon_pack: ai
     link: https://orcid.org/0000-0001-8699-7582
-- icon: github
+  - icon: github
     icon_pack: fab
     link: https://github.com/Pantagrueliste
 
@@ -72,3 +73,4 @@ education:
 highlight_name: false
 ---
 Clément Godbarge is a Lecturer in Digital Huamnities at the University of St Andrews. His research revolves around science and statecraft in early modern Europe. In his forthcoming book, he examines how doctors embedded at the courts of sixteenth-century France and Italy promoted themselves as political experts of a new genre. His research has been supported by the Andrew W. Mellon Foundation, the Fulbright Commission, the Renaissance Society of America, and Harvard University.
+{style="text-align: justify;"}
