@@ -10,8 +10,8 @@ first_name: Clément
 last_name: Godbarge
 
 # Status emoji
-status:
-  icon: ☕️
+# status:
+#   icon: ☕️
 
 # Is this the primary user of the site?
 superuser: true
@@ -27,29 +27,29 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include early modern history, European literature and the digital humanities.
 
-# Interests to show in About widget
-interests:
-- Early modern history
-- Italian literature
-- Rhetoric
-- History of medicine
-- Digital scholarship
+# # Interests to show in About widget
+# interests:
+# - Early modern history
+# - Italian literature
+# - Rhetoric
+# - History of medicine
+# - Digital scholarship
 
-# Education to show in About widget
-education:
-  courses:
-    - course: PhD in Italian Studies
-      institution: New York University
-      year: 2017
-    - course: MA in Political Science
-      institution: New York University
-      year: 2010
-    - course: MA in Cultural & Intellectual History 
-      institution: The Warburg Institute in London
-      year: 2008
-    - course: Licenciatura in Political Science
-      institution: Universidad Complutense de Madrid
-      year: 2005
+# # Education to show in About widget
+# education:
+#   courses:
+#     - course: PhD in Italian Studies
+#       institution: New York University
+#       year: 2017
+#     - course: MA in Political Science
+#       institution: New York University
+#       year: 2010
+#     - course: MA in Cultural & Intellectual History 
+#       institution: The Warburg Institute in London
+#       year: 2008
+#     - course: Licenciatura in Political Science
+#       institution: Universidad Complutense de Madrid
+#       year: 2005
    
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
