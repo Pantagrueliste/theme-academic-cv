@@ -37,7 +37,7 @@ outputs:
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
-  quality: 75
+  quality: 90
   anchor: smart
 timeout: 600000
 taxonomies:
@@ -53,7 +53,7 @@ related:
   toLower: true
   indices:
     - name: tags
-      weight: 100
+      weight: 80
     - name: categories
       weight: 70
 security:
