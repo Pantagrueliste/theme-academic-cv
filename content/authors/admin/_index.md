@@ -78,6 +78,5 @@ education:
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
-
 Clément Godbarge is a Lecturer in Digital Huamnities at the University of St Andrews. His research revolves around science and statecraft in early modern Europe. In his forthcoming book, he examines how doctors embedded at the courts of sixteenth-century France and Italy promoted themselves as political experts of a new genre. His research has been supported by the Andrew W. Mellon Foundation, the Fulbright Commission, the Renaissance Society of America, and Harvard University.
 {style="text-align: justify;"}
