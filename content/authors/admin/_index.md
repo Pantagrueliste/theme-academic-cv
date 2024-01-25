@@ -38,18 +38,18 @@ interests:
 # Education to show in About widget
 education:
   courses:
-  - course: PhD in Italian Studies
-    institution: New York University
-    year: 2017
-  - course: MA in Political Science
-    institution: New York University
-    year: 2010
-  - course: MA in Cultural & Intellectual History 
-    institution: The Warburg Institute in London
-    year: 2008
-  - course: Licenciatura in Political Science
-    institution: Universidad Complutense de Madrid
-    year: 2005
+    - course: PhD in Italian Studies
+      institution: New York University
+      year: 2017
+    - course: MA in Political Science
+      institution: New York University
+      year: 2010
+    - course: MA in Cultural & Intellectual History 
+      institution: The Warburg Institute in London
+      year: 2008
+    - course: Licenciatura in Political Science
+      institution: Universidad Complutense de Madrid
+      year: 2005
     
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
