@@ -56,27 +56,19 @@ education:
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 - icon: envelope
-  icon_pack: fas
-  link: "mailto:cag30@st-andrews.ac.uk"
+    icon_pack: fas
+    link: "mailto:cag30@st-andrews.ac.uk"
 - icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/ClementAG
+    icon_pack: fab
+    link: https://twitter.com/ClementAG
 - icon: orcid
-  icon_pack: ai
-  link: https://orcid.org/0000-0001-8699-7582
+    icon_pack: ai
+    link: https://orcid.org/0000-0001-8699-7582
 - icon: github
-  icon_pack: fab
-  link: https://github.com/Pantagrueliste
-
-  # Link to a PDF of your resume/CV.
-  # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.yaml`,
-  # and uncomment the lines below.
-  #- icon: cv
-  #  icon_pack: ai
-  #  link: uploads/resume.pdf
+    icon_pack: fab
+    link: https://github.com/Pantagrueliste
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 ---
 Clément Godbarge is a Lecturer in Digital Huamnities at the University of St Andrews. His research revolves around science and statecraft in early modern Europe. In his forthcoming book, he examines how doctors embedded at the courts of sixteenth-century France and Italy promoted themselves as political experts of a new genre. His research has been supported by the Andrew W. Mellon Foundation, the Fulbright Commission, the Renaissance Society of America, and Harvard University.
-{style="text-align: justify;"}
