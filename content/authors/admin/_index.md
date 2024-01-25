@@ -29,18 +29,16 @@ bio: My research interests include early modern history, European literature and
 
 # # Interests to show in About widget
 # interests:
-# - Early modern history
-# - Italian literature
-# - Rhetoric
-# - History of medicine
-# - Digital scholarship
+- Early modern Literature
+- History of medicine
+- Digital scholarship
 
 # # Education to show in About widget
-# education:
-#   courses:
-#     - course: PhD in Italian Studies
-#       institution: New York University
-#       year: 2017
+education:
+  courses:
+    - course: PhD in Italian Studies
+      institution: New York University
+      year: 2017
 #     - course: MA in Political Science
 #       institution: New York University
 #       year: 2010
