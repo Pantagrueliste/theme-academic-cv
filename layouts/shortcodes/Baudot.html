@@ -1,0 +1,209 @@
+<div class="baudot-emulator">
+  <h2>ITA2 (Baudot-Murray) Telegraph Type Emulator</h2>
+  <p>Type a word in the input below to see its representation on the ITA2 tape.</p>
+
+  <form>
+    <label for="text">Type word:</label>
+    <input id="text" class="text-input" oninput="updateITA2Code(this.value)" size="80" maxlength="80" />
+    <button type="button" id="ltrButton" class="control-button active">LTR</button>
+    <button type="button" id="figButton" class="control-button">FIG</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th colspan="80">Tape</th>
+      </tr>
+    </thead>
+    <tbody id="tape"></tbody>
+  </table>
+
+  <style>
+    .baudot-emulator {
+      --bg-color: #ffffff;
+      --font-family: 'Arial', sans-serif;
+      --cell-size: 20px;
+      --punched-color: #000;
+      --unpunched-color: #ffffff;
+    }
+
+    .baudot-emulator table {
+      margin: auto;
+      border-collapse: collapse;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .baudot-emulator .cell {
+      width: var(--cell-size);
+      height: var(--cell-size);
+      text-align: center;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      position: relative;
+    }
+
+    .baudot-emulator .cell::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 13px;
+      height: 13px;
+      background-color: var(--unpunched-color);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.3s ease;
+    }
+
+    .baudot-emulator .punched::before {
+      background-color: var(--punched-color);
+      box-shadow: inset 0 0 3px #333;
+    }
+
+    .baudot-emulator .unpunched::before {
+      box-shadow: none;
+    }
+
+    .baudot-emulator .text-input {
+      font-family: var(--font-family);
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid var(--bg-color);
+      font-size: larger;
+      text-transform: uppercase;
+    }
+
+    .baudot-emulator th {
+      width: var(--cell-size);
+      height: var(--cell-size);
+      text-align: center;
+      border: 1px solid transparent;
+      background-color: var(--bg-color);
+      font-size: 10px;
+      font-weight: 300;
+    }
+
+    .baudot-emulator .sprocket-hole {
+      position: absolute;
+      left: 50%;
+      top: calc(100% - 2px);
+      width: 4px;
+      height: 4px;
+      border: 0.5px solid var(--punched-color);
+      background-color: var(--unpunched-color);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      margin-top: -0.5px;
+    }
+
+    .baudot-emulator .control-button {
+      font-family: var(--font-family);
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .baudot-emulator .control-button.active {
+      background-color: #ccc;
+    }
+
+    .baudot-emulator .line-number {
+      text-align: center;
+      padding-right: 2px;
+      font-size: 6px;
+      color: #888;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ita2Code = {
+        // Letters
+        'A': '00011', 'B': '11001', 'C': '01110', 'D': '01001', 'E': '00001',
+        'F': '01101', 'G': '11010', 'H': '10100', 'I': '00110', 'J': '01011',
+        'K': '01111', 'L': '10010', 'M': '11100', 'N': '01100', 'O': '11000',
+        'P': '10110', 'Q': '10111', 'R': '01010', 'S': '00101', 'T': '10000',
+        'U': '00111', 'V': '11110', 'W': '10011', 'X': '11101', 'Y': '10101',
+        'Z': '10001',
+        // Figures
+        '1': '00011', '2': '11001', '3': '01110', '4': '01001', '5': '00001',
+        '6': '01101', '7': '11010', '8': '10111', '9': '01011', '0': '10110',
+        '-': '10010', '?': '00100', ':': '01010', '(': '11000', ')': '11101',
+        '.': '01000', ',': '00010', "'": '10001', '=': '01111', '/': '10011',
+        '+': '11011', '£': '11100', '$': '01110',
+        // Control characters
+        'NUL': '00000', 'LF': '01001', 'SP': '00100', 'CR': '00010', 'FIG': '11011',
+        'LTR': '11111',
+      };
+
+      function updateITA2Code(word) {
+        clearTape();
+        word = word.toUpperCase();
+        let tapePosition = 0;
+        let currentCharType = 'LTR';
+
+        document.getElementById('ltrButton').classList.add('active');
+        document.getElementById('figButton').classList.remove('active');
+
+        for (let i = 0; i < word.length; i++) {
+          const char = word[i];
+          let code = ita2Code[char] || ita2Code['SP'];
+          let requiredCharType = /[A-Z ]/.test(char) ? 'LTR' : 'FIG';
+
+          if (requiredCharType !== currentCharType) {
+            const shiftCode = requiredCharType === 'LTR' ? ita2Code['LTR'] : ita2Code['FIG'];
+            punchTape(shiftCode, tapePosition++);
+            currentCharType = requiredCharType;
+
+            document.getElementById('ltrButton').classList.toggle('active', currentCharType === 'LTR');
+            document.getElementById('figButton').classList.toggle('active', currentCharType === 'FIG');
+          }
+
+          punchTape(code, tapePosition++);
+        }
+      }
+
+      function punchTape(code, tapePosition) {
+        for (let bit = 0; bit < 5; bit++) {
+          const cell = document.getElementById(`_${bit}_${tapePosition}`);
+          if (cell) {
+            cell.className = code[bit] === '1' ? 'cell punched' : 'cell unpunched';
+          }
+        }
+      }
+
+      function clearTape() {
+        for (let i = 0; i < 80; i++) {
+          for (let bit = 0; bit < 5; bit++) {
+            const cell = document.getElementById(`_${bit}_${i}`);
+            if (cell) {
+              cell.className = 'cell unpunched';
+            }
+          }
+        }
+      }
+
+      function generateTape() {
+        const tape = document.getElementById('tape');
+        let rows = '';
+        for (let row = 0; row < 5; row++) {
+          rows += '<tr>';
+          rows += `<td class="line-number">${row + 1}</td>`;
+          for (let col = 0; col < 80; col++) {
+            rows += `<td id="_${row}_${col}" class="cell unpunched">${row === 2 ? '<div class="sprocket-hole"></div>' : ''}</td>`;
+          }
+          rows += '</tr>';
+        }
+        tape.innerHTML = rows;
+      }
+
+      generateTape();
+    });
+  </script>
+</div>
