@@ -184,7 +184,7 @@ sections:
       view: Compact
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
-  - block: portfolio
+  - block: collection
     id: code
     content:
       title: Code
@@ -201,8 +201,6 @@ sections:
           tag: JavaScript
         - name: Python
           tag: Python
-        - name: Teaching
-          tag: Teaching
     design:
       # Choose how many columns the section has. Valid values: '1' or '2'.
       columns: '1'
