@@ -2,22 +2,24 @@
   <h2>ITA2 (Baudot-Murray) Telegraph Type Emulator</h2>
   <p>Type a word in the input below to see its representation on the ITA2 tape.</p>
 
-  <form>
-    <label for="text">Type word:</label>
-    <input id="text" class="text-input" oninput="updateITA2Code(this.value)" size="80" maxlength="80" />
-    <button type="button" id="ltrButton" class="control-button active">LTR</button>
-    <button type="button" id="figButton" class="control-button">FIG</button>
-  </form>
+  <div class="baudot-controls">
+    <label for="baudot-input">Type word:</label>
+    <input id="baudot-input" class="text-input" size="80" maxlength="80" />
+    <button type="button" id="baudot-ltr-button" class="control-button active">LTR</button>
+    <button type="button" id="baudot-fig-button" class="control-button">FIG</button>
+  </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th colspan="80">Tape</th>
-      </tr>
-    </thead>
-    <tbody id="tape"></tbody>
-  </table>
+  <div class="tape-container">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="80">Tape</th>
+        </tr>
+      </thead>
+      <tbody id="baudot-tape"></tbody>
+    </table>
+  </div>
 
   <style>
     .baudot-emulator {
@@ -26,10 +28,14 @@
       --cell-size: 20px;
       --punched-color: #000;
       --unpunched-color: #ffffff;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     .baudot-emulator table {
-      margin: auto;
+      margin: 15px auto;
       border-collapse: collapse;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -68,11 +74,13 @@
 
     .baudot-emulator .text-input {
       font-family: var(--font-family);
-      background-color: transparent;
-      border: none;
-      border-bottom: 2px solid var(--bg-color);
-      font-size: larger;
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 16px;
       text-transform: uppercase;
+      margin-right: 10px;
     }
 
     .baudot-emulator th {
@@ -106,7 +114,7 @@
       border-radius: 4px;
       padding: 6px 12px;
       cursor: pointer;
-      margin-left: 10px;
+      margin-left: 5px;
     }
 
     .baudot-emulator .control-button.active {
@@ -119,10 +127,29 @@
       font-size: 6px;
       color: #888;
     }
+    
+    .baudot-controls {
+      margin: 15px 0;
+    }
   </style>
 
   <script>
+    // Ensure script runs after DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function() {
+      initBaudotEmulator();
+    });
+    
+    // Use a separate function to avoid conflicts with other scripts
+    function initBaudotEmulator() {
+      // Only initialize if elements exist
+      if (!document.getElementById('baudot-input')) return;
+      
+      const textInput = document.getElementById('baudot-input');
+      const tape = document.getElementById('baudot-tape');
+      const ltrButton = document.getElementById('baudot-ltr-button');
+      const figButton = document.getElementById('baudot-fig-button');
+      
+      // Define the ITA2 code mapping
       const ita2Code = {
         // Letters
         'A': '00011', 'B': '11001', 'C': '01110', 'D': '01001', 'E': '00001',
@@ -133,77 +160,109 @@
         'Z': '10001',
         // Figures
         '1': '00011', '2': '11001', '3': '01110', '4': '01001', '5': '00001',
-        '6': '01101', '7': '11010', '8': '10111', '9': '01011', '0': '10110',
-        '-': '10010', '?': '00100', ':': '01010', '(': '11000', ')': '11101',
+        '6': '01101', '7': '11010', '8': '10100', '9': '01011', '0': '11000',
+        '-': '00011', '?': '00100', ':': '01010', '(': '11000', ')': '11101',
         '.': '01000', ',': '00010', "'": '10001', '=': '01111', '/': '10011',
-        '+': '11011', '£': '11100', '$': '01110',
+        '+': '11011', ' ': '00100',
         // Control characters
-        'NUL': '00000', 'LF': '01001', 'SP': '00100', 'CR': '00010', 'FIG': '11011',
-        'LTR': '11111',
+        'FIG': '11011', 'LTR': '11111',
       };
-
+      
+      // Generate the tape display
+      function generateTape() {
+        let rows = '';
+        for (let row = 0; row < 5; row++) {
+          rows += '<tr>';
+          rows += `<td class="line-number">${row + 1}</td>`;
+          for (let col = 0; col < 80; col++) {
+            rows += `<td id="baudot_${row}_${col}" class="cell unpunched">
+                      ${row === 2 ? '<div class="sprocket-hole"></div>' : ''}
+                    </td>`;
+          }
+          rows += '</tr>';
+        }
+        tape.innerHTML = rows;
+      }
+      
+      // Update the tape display based on input text
       function updateITA2Code(word) {
         clearTape();
         word = word.toUpperCase();
         let tapePosition = 0;
         let currentCharType = 'LTR';
-
-        document.getElementById('ltrButton').classList.add('active');
-        document.getElementById('figButton').classList.remove('active');
-
+        
+        ltrButton.classList.add('active');
+        figButton.classList.remove('active');
+        
         for (let i = 0; i < word.length; i++) {
           const char = word[i];
-          let code = ita2Code[char] || ita2Code['SP'];
+          let code = ita2Code[char] || ita2Code[' '];
           let requiredCharType = /[A-Z ]/.test(char) ? 'LTR' : 'FIG';
-
+          
           if (requiredCharType !== currentCharType) {
             const shiftCode = requiredCharType === 'LTR' ? ita2Code['LTR'] : ita2Code['FIG'];
             punchTape(shiftCode, tapePosition++);
             currentCharType = requiredCharType;
-
-            document.getElementById('ltrButton').classList.toggle('active', currentCharType === 'LTR');
-            document.getElementById('figButton').classList.toggle('active', currentCharType === 'FIG');
+            
+            ltrButton.classList.toggle('active', currentCharType === 'LTR');
+            figButton.classList.toggle('active', currentCharType === 'FIG');
           }
-
+          
           punchTape(code, tapePosition++);
         }
       }
-
+      
+      // Punch holes in the tape based on the code
       function punchTape(code, tapePosition) {
+        if (tapePosition >= 80) return; // Prevent going beyond tape width
         for (let bit = 0; bit < 5; bit++) {
-          const cell = document.getElementById(`_${bit}_${tapePosition}`);
+          const cell = document.getElementById(`baudot_${bit}_${tapePosition}`);
           if (cell) {
             cell.className = code[bit] === '1' ? 'cell punched' : 'cell unpunched';
           }
         }
       }
-
+      
+      // Clear the tape display
       function clearTape() {
         for (let i = 0; i < 80; i++) {
           for (let bit = 0; bit < 5; bit++) {
-            const cell = document.getElementById(`_${bit}_${i}`);
+            const cell = document.getElementById(`baudot_${bit}_${i}`);
             if (cell) {
               cell.className = 'cell unpunched';
             }
           }
         }
       }
-
-      function generateTape() {
-        const tape = document.getElementById('tape');
-        let rows = '';
-        for (let row = 0; row < 5; row++) {
-          rows += '<tr>';
-          rows += `<td class="line-number">${row + 1}</td>`;
-          for (let col = 0; col < 80; col++) {
-            rows += `<td id="_${row}_${col}" class="cell unpunched">${row === 2 ? '<div class="sprocket-hole"></div>' : ''}</td>`;
-          }
-          rows += '</tr>';
-        }
-        tape.innerHTML = rows;
-      }
-
+      
+      // Initialize the emulator
       generateTape();
-    });
+      
+      // Add event listeners
+      textInput.addEventListener('input', function() {
+        updateITA2Code(this.value);
+      });
+      
+      ltrButton.addEventListener('click', function() {
+        this.classList.add('active');
+        figButton.classList.remove('active');
+        if (textInput.value) {
+          updateITA2Code(textInput.value);
+        }
+      });
+      
+      figButton.addEventListener('click', function() {
+        this.classList.add('active');
+        ltrButton.classList.remove('active');
+        if (textInput.value) {
+          updateITA2Code(textInput.value);
+        }
+      });
+      
+      // Trigger on initial load if there's already text in the input
+      if (textInput.value) {
+        updateITA2Code(textInput.value);
+      }
+    }
   </script>
 </div>
