@@ -4,142 +4,184 @@
 
   <div class="baudot-controls">
     <label for="baudot-input">Type word:</label>
-    <input id="baudot-input" class="text-input" size="80" maxlength="80" />
+    <input id="baudot-input" class="text-input" size="50" maxlength="50" />
     <button type="button" id="baudot-ltr-button" class="control-button active">LTR</button>
     <button type="button" id="baudot-fig-button" class="control-button">FIG</button>
   </div>
 
   <div class="tape-container">
     <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th colspan="80">Tape</th>
-        </tr>
-      </thead>
       <tbody id="baudot-tape"></tbody>
     </table>
   </div>
 
   <style>
     .baudot-emulator {
-      --bg-color: #ffffff;
-      --font-family: 'Arial', sans-serif;
-      --cell-size: 20px;
-      --punched-color: #000;
-      --unpunched-color: #ffffff;
-      margin: 20px 0;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+      max-width: 100%;
+      margin: 2rem 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
-    .baudot-emulator table {
-      margin: 15px auto;
-      border-collapse: collapse;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Dark mode sensing - will adapt to the site's current theme */
+    @media (prefers-color-scheme: dark) {
+      .baudot-emulator {
+        --tape-bg: #2d3748;
+        --hole-bg: #1a202c;
+        --hole-border: #4a5568;
+        --punched-bg: #e2e8f0;
+        --punched-border: #e2e8f0;
+        --sprocket-bg: #2d3748;
+        --sprocket-border: #718096;
+        --button-bg: #4a5568;
+        --button-bg-active: #718096;
+        --button-text: #e2e8f0;
+        --input-bg: #2d3748;
+        --input-border: #4a5568;
+        --input-text: #e2e8f0;
+        --line-number: #a0aec0;
+      }
     }
-
-    .baudot-emulator .cell {
-      width: var(--cell-size);
-      height: var(--cell-size);
-      text-align: center;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      position: relative;
+    
+    html[data-theme='dark'] .baudot-emulator {
+      --tape-bg: #2d3748;
+      --hole-bg: #1a202c;
+      --hole-border: #4a5568;
+      --punched-bg: #e2e8f0;
+      --punched-border: #e2e8f0;
+      --sprocket-bg: #2d3748;
+      --sprocket-border: #718096;
+      --button-bg: #4a5568;
+      --button-bg-active: #718096;
+      --button-text: #e2e8f0;
+      --input-bg: #2d3748;
+      --input-border: #4a5568;
+      --input-text: #e2e8f0;
+      --line-number: #a0aec0;
     }
-
-    .baudot-emulator .cell::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 13px;
-      height: 13px;
-      background-color: var(--unpunched-color);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: background-color 0.3s ease;
-    }
-
-    .baudot-emulator .punched::before {
-      background-color: var(--punched-color);
-      box-shadow: inset 0 0 3px #333;
-    }
-
-    .baudot-emulator .unpunched::before {
-      box-shadow: none;
-    }
-
-    .baudot-emulator .text-input {
-      font-family: var(--font-family);
-      background-color: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 8px;
-      font-size: 16px;
-      text-transform: uppercase;
-      margin-right: 10px;
-    }
-
-    .baudot-emulator th {
-      width: var(--cell-size);
-      height: var(--cell-size);
-      text-align: center;
-      border: 1px solid transparent;
-      background-color: var(--bg-color);
-      font-size: 10px;
-      font-weight: 300;
-    }
-
-    .baudot-emulator .sprocket-hole {
-      position: absolute;
-      left: 50%;
-      top: calc(100% - 2px);
-      width: 4px;
-      height: 4px;
-      border: 0.5px solid var(--punched-color);
-      background-color: var(--unpunched-color);
-      border-radius: 50%;
-      transform: translateX(-50%);
-      z-index: 1;
-      margin-top: -0.5px;
-    }
-
-    .baudot-emulator .control-button {
-      font-family: var(--font-family);
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 6px 12px;
-      cursor: pointer;
-      margin-left: 5px;
-    }
-
-    .baudot-emulator .control-button.active {
-      background-color: #ccc;
-    }
-
-    .baudot-emulator .line-number {
-      text-align: center;
-      padding-right: 2px;
-      font-size: 6px;
-      color: #888;
+    
+    html:not([data-theme='dark']) .baudot-emulator, 
+    body:not(.dark) .baudot-emulator,
+    .baudot-emulator {
+      --tape-bg: #ffffff;
+      --hole-bg: #ffffff;
+      --hole-border: #d1d5db;
+      --punched-bg: #000000;
+      --punched-border: #000000;
+      --sprocket-bg: #ffffff;
+      --sprocket-border: #6b7280;
+      --button-bg: #f3f4f6;
+      --button-bg-active: #d1d5db;
+      --button-text: #1f2937;
+      --input-bg: #ffffff;
+      --input-border: #d1d5db;
+      --input-text: #1f2937;
+      --line-number: #6b7280;
     }
     
     .baudot-controls {
-      margin: 15px 0;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .baudot-emulator .text-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      background: var(--input-bg);
+      color: var(--input-text);
+    }
+    
+    .baudot-emulator .control-button {
+      padding: 0.5rem 1rem;
+      background: var(--button-bg);
+      color: var(--button-text);
+      border: 1px solid var(--input-border);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    
+    .baudot-emulator .control-button.active {
+      background: var(--button-bg-active);
+      font-weight: bold;
+    }
+    
+    .tape-container {
+      width: 100%;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+      background: var(--tape-bg);
+      border-radius: 4px;
+      padding: 1rem;
+    }
+    
+    .baudot-emulator table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    .baudot-emulator tr {
+      height: 24px;
+    }
+    
+    .baudot-emulator .line-number {
+      width: 20px;
+      text-align: center;
+      color: var(--line-number);
+      font-size: 0.7rem;
+      padding-right: 5px;
+    }
+    
+    .baudot-emulator .cell {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+    }
+    
+    .baudot-emulator .cell-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--hole-bg);
+      border: 1px solid var(--hole-border);
+    }
+    
+    .baudot-emulator .punched .cell-content {
+      background: var(--punched-bg);
+      border: 1px solid var(--punched-border);
+    }
+    
+    .baudot-emulator .sprocket-hole {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--sprocket-bg);
+      border: 1px solid var(--sprocket-border);
     }
   </style>
 
   <script>
-    // Ensure script runs after DOM is fully loaded
     document.addEventListener('DOMContentLoaded', function() {
       initBaudotEmulator();
     });
     
-    // Use a separate function to avoid conflicts with other scripts
     function initBaudotEmulator() {
       // Only initialize if elements exist
       if (!document.getElementById('baudot-input')) return;
@@ -171,13 +213,17 @@
       // Generate the tape display
       function generateTape() {
         let rows = '';
+        // Create 5 rows
         for (let row = 0; row < 5; row++) {
           rows += '<tr>';
           rows += `<td class="line-number">${row + 1}</td>`;
-          for (let col = 0; col < 80; col++) {
+          // Create columns
+          for (let col = 0; col < 50; col++) {
+            // Add a cell with both regular hole and sprocket hole (for row 3)
             rows += `<td id="baudot_${row}_${col}" class="cell unpunched">
-                      ${row === 2 ? '<div class="sprocket-hole"></div>' : ''}
-                    </td>`;
+              <div class="cell-content"></div>
+              ${row === 2 ? '<div class="sprocket-hole"></div>' : ''}
+            </td>`;
           }
           rows += '</tr>';
         }
@@ -214,7 +260,7 @@
       
       // Punch holes in the tape based on the code
       function punchTape(code, tapePosition) {
-        if (tapePosition >= 80) return; // Prevent going beyond tape width
+        if (tapePosition >= 50) return; // Prevent going beyond tape width
         for (let bit = 0; bit < 5; bit++) {
           const cell = document.getElementById(`baudot_${bit}_${tapePosition}`);
           if (cell) {
@@ -225,7 +271,7 @@
       
       // Clear the tape display
       function clearTape() {
-        for (let i = 0; i < 80; i++) {
+        for (let i = 0; i < 50; i++) {
           for (let bit = 0; bit < 5; bit++) {
             const cell = document.getElementById(`baudot_${bit}_${i}`);
             if (cell) {
