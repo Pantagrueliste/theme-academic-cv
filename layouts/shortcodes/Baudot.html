@@ -33,66 +33,13 @@
     
     /* Dark mode variables */
     .baudot-emulator {
-      --row-bg: var(--dark-alt-color);
-      --row-alt-bg: var(--dark-color);
-      --tape-bg: var(--dark-color);
-      --tape-border: var(--dark-alt-color);
-      --outer-tape-bg: var(--dark-alt-color);
-      --hole-bg: var(--dark-alt-color);
-      --hole-border: #4a5568;
-      --punched-bg: var(--light-color);
-      --punched-border: var(--light-color);
-      --sprocket-bg: var(--dark-alt-color);
-      --sprocket-border: #a0aec0;
-      --button-bg: var(--dark-alt-color);
-      --button-bg-active: #4a5568;
-      --button-text: var(--light-color);
-      --button-border: #4a5568;
-      --input-bg: var(--dark-alt-color);
-      --input-border: #4a5568;
-      --input-text: var(--light-color);
-      --line-number: #a0aec0;
-    }
-    
-    /* Light mode overrides */
-    @media (prefers-color-scheme: light) {
-      .baudot-emulator {
-        --row-bg: var(--light-color);
-        --row-alt-bg: var(--light-alt-color);
-        --tape-bg: white;
-        --tape-border: #e2e8f0;
-        --outer-tape-bg: var(--light-alt-color);
-        --hole-bg: white;
-        --hole-border: #d1d5db;
-        --punched-bg: black;
-        --punched-border: black;
-        --sprocket-bg: white;
-        --sprocket-border: #6b7280;
-        --button-bg: var(--light-color);
-        --button-bg-active: #d1d5db;
-        --button-text: var(--dark-color);
-        --button-border: #d1d5db;
-        --input-bg: white;
-        --input-border: #d1d5db;
-        --input-text: var(--dark-color);
-        --line-number: #6b7280;
-      }
-    }
-    
-    /* Override for Hugo Academic light theme */
-    html:not([data-theme='dark']) .baudot-emulator,
-    body:not(.dark) .baudot-emulator {
-      --row-bg: var(--light-color);
-      --row-alt-bg: var(--light-alt-color);
-      --tape-bg: white;
-      --tape-border: #e2e8f0;
-      --outer-tape-bg: var(--light-alt-color);
-      --hole-bg: white;
+      --tape-bg: var(--light-color);
+      --hole-bg: var(--light-color);
       --hole-border: #d1d5db;
-      --punched-bg: black;
-      --punched-border: black;
-      --sprocket-bg: white;
-      --sprocket-border: #6b7280;
+      --punched-bg: var(--dark-color);
+      --punched-border: var(--dark-color);
+      --sprocket-bg: var(--light-color);
+      --sprocket-border: #9ca3af;
       --button-bg: var(--light-color);
       --button-bg-active: #d1d5db;
       --button-text: var(--dark-color);
@@ -101,6 +48,47 @@
       --input-border: #d1d5db;
       --input-text: var(--dark-color);
       --line-number: #6b7280;
+    }
+    
+    /* Override for Hugo Academic dark theme */
+    html[data-theme='dark'] .baudot-emulator,
+    body.dark .baudot-emulator {
+      --tape-bg: var(--dark-alt-color);
+      --hole-bg: var(--dark-alt-color);
+      --hole-border: #4b5563;
+      --punched-bg: var(--light-color);
+      --punched-border: var(--light-color);
+      --sprocket-bg: var(--dark-alt-color);
+      --sprocket-border: #9ca3af;
+      --button-bg: var(--dark-alt-color);
+      --button-bg-active: #4b5563;
+      --button-text: var(--light-color);
+      --button-border: #4b5563;
+      --input-bg: var(--dark-alt-color);
+      --input-border: #4b5563;
+      --input-text: var(--light-color);
+      --line-number: #9ca3af;
+    }
+    
+    /* For browsers that support prefers-color-scheme */
+    @media (prefers-color-scheme: dark) {
+      .baudot-emulator:not(html[data-theme='light'] *):not(body:not(.dark) *) {
+        --tape-bg: var(--dark-alt-color);
+        --hole-bg: var(--dark-alt-color);
+        --hole-border: #4b5563;
+        --punched-bg: var(--light-color);
+        --punched-border: var(--light-color);
+        --sprocket-bg: var(--dark-alt-color);
+        --sprocket-border: #9ca3af;
+        --button-bg: var(--dark-alt-color);
+        --button-bg-active: #4b5563;
+        --button-text: var(--light-color);
+        --button-border: #4b5563;
+        --input-bg: var(--dark-alt-color);
+        --input-border: #4b5563;
+        --input-text: var(--light-color);
+        --line-number: #9ca3af;
+      }
     }
     
     .baudot-controls {
@@ -138,36 +126,34 @@
     }
     
     .tape-outer-container {
-      background: var(--outer-tape-bg);
-      border-radius: 8px;
-      padding: 8px;
+      padding: 0;
       margin-bottom: 1.5rem;
+      border-radius: 4px;
+      overflow: hidden;
     }
     
     .tape-container {
       width: 100%;
       overflow-x: auto;
       background: var(--tape-bg);
-      border-radius: 4px;
-      border: 1px solid var(--tape-border);
-      padding: 1rem;
+      padding: 1rem 0.5rem;
     }
     
     .baudot-emulator table {
       border-collapse: collapse;
       width: 100%;
+      table-layout: fixed;
+      border: none;
     }
     
     .baudot-emulator tr {
       height: 24px;
+      border: none;
     }
     
-    .baudot-emulator tr:nth-child(odd) {
-      background-color: var(--row-bg);
-    }
-    
-    .baudot-emulator tr:nth-child(even) {
-      background-color: var(--row-alt-bg);
+    .baudot-emulator td {
+      border: none;
+      padding: 0;
     }
     
     .baudot-emulator .line-number {
@@ -175,7 +161,7 @@
       text-align: center;
       color: var(--line-number);
       font-size: 0.8rem;
-      padding: 0 8px;
+      padding: 0 8px 0 0;
       font-weight: bold;
     }
     
@@ -183,7 +169,6 @@
       position: relative;
       width: 20px;
       height: 20px;
-      padding: 0;
     }
     
     .baudot-emulator .cell-content {
@@ -208,8 +193,8 @@
       left: 50%;
       top: 100%;
       transform: translate(-50%, -50%);
-      width: 5px;
-      height: 5px;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background: var(--sprocket-bg);
       border: 1px solid var(--sprocket-border);
