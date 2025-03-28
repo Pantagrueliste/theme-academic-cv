@@ -9,14 +9,21 @@
     <button type="button" id="baudot-fig-button" class="control-button">FIG</button>
   </div>
 
-  <div class="tape-container">
-    <table>
-      <tbody id="baudot-tape"></tbody>
-    </table>
+  <div class="tape-outer-container">
+    <div class="tape-container">
+      <table>
+        <tbody id="baudot-tape"></tbody>
+      </table>
+    </div>
   </div>
 
   <style>
     .baudot-emulator {
+      --light-color: #f3f4f6;
+      --dark-color: #1f2937;
+      --light-alt-color: #e5e7eb;
+      --dark-alt-color: #374151;
+      
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
       max-width: 100%;
       margin: 2rem 0;
@@ -24,59 +31,75 @@
       box-sizing: border-box;
     }
     
-    /* Dark mode sensing - will adapt to the site's current theme */
-    @media (prefers-color-scheme: dark) {
-      .baudot-emulator {
-        --tape-bg: #2d3748;
-        --hole-bg: #1a202c;
-        --hole-border: #4a5568;
-        --punched-bg: #e2e8f0;
-        --punched-border: #e2e8f0;
-        --sprocket-bg: #2d3748;
-        --sprocket-border: #718096;
-        --button-bg: #4a5568;
-        --button-bg-active: #718096;
-        --button-text: #e2e8f0;
-        --input-bg: #2d3748;
-        --input-border: #4a5568;
-        --input-text: #e2e8f0;
-        --line-number: #a0aec0;
-      }
-    }
-    
-    html[data-theme='dark'] .baudot-emulator {
-      --tape-bg: #2d3748;
-      --hole-bg: #1a202c;
+    /* Dark mode variables */
+    .baudot-emulator {
+      --row-bg: var(--dark-alt-color);
+      --row-alt-bg: var(--dark-color);
+      --tape-bg: var(--dark-color);
+      --tape-border: var(--dark-alt-color);
+      --outer-tape-bg: var(--dark-alt-color);
+      --hole-bg: var(--dark-alt-color);
       --hole-border: #4a5568;
-      --punched-bg: #e2e8f0;
-      --punched-border: #e2e8f0;
-      --sprocket-bg: #2d3748;
-      --sprocket-border: #718096;
-      --button-bg: #4a5568;
-      --button-bg-active: #718096;
-      --button-text: #e2e8f0;
-      --input-bg: #2d3748;
+      --punched-bg: var(--light-color);
+      --punched-border: var(--light-color);
+      --sprocket-bg: var(--dark-alt-color);
+      --sprocket-border: #a0aec0;
+      --button-bg: var(--dark-alt-color);
+      --button-bg-active: #4a5568;
+      --button-text: var(--light-color);
+      --button-border: #4a5568;
+      --input-bg: var(--dark-alt-color);
       --input-border: #4a5568;
-      --input-text: #e2e8f0;
+      --input-text: var(--light-color);
       --line-number: #a0aec0;
     }
     
-    html:not([data-theme='dark']) .baudot-emulator, 
-    body:not(.dark) .baudot-emulator,
-    .baudot-emulator {
-      --tape-bg: #ffffff;
-      --hole-bg: #ffffff;
+    /* Light mode overrides */
+    @media (prefers-color-scheme: light) {
+      .baudot-emulator {
+        --row-bg: var(--light-color);
+        --row-alt-bg: var(--light-alt-color);
+        --tape-bg: white;
+        --tape-border: #e2e8f0;
+        --outer-tape-bg: var(--light-alt-color);
+        --hole-bg: white;
+        --hole-border: #d1d5db;
+        --punched-bg: black;
+        --punched-border: black;
+        --sprocket-bg: white;
+        --sprocket-border: #6b7280;
+        --button-bg: var(--light-color);
+        --button-bg-active: #d1d5db;
+        --button-text: var(--dark-color);
+        --button-border: #d1d5db;
+        --input-bg: white;
+        --input-border: #d1d5db;
+        --input-text: var(--dark-color);
+        --line-number: #6b7280;
+      }
+    }
+    
+    /* Override for Hugo Academic light theme */
+    html:not([data-theme='dark']) .baudot-emulator,
+    body:not(.dark) .baudot-emulator {
+      --row-bg: var(--light-color);
+      --row-alt-bg: var(--light-alt-color);
+      --tape-bg: white;
+      --tape-border: #e2e8f0;
+      --outer-tape-bg: var(--light-alt-color);
+      --hole-bg: white;
       --hole-border: #d1d5db;
-      --punched-bg: #000000;
-      --punched-border: #000000;
-      --sprocket-bg: #ffffff;
+      --punched-bg: black;
+      --punched-border: black;
+      --sprocket-bg: white;
       --sprocket-border: #6b7280;
-      --button-bg: #f3f4f6;
+      --button-bg: var(--light-color);
       --button-bg-active: #d1d5db;
-      --button-text: #1f2937;
-      --input-bg: #ffffff;
+      --button-text: var(--dark-color);
+      --button-border: #d1d5db;
+      --input-bg: white;
       --input-border: #d1d5db;
-      --input-text: #1f2937;
+      --input-text: var(--dark-color);
       --line-number: #6b7280;
     }
     
@@ -103,7 +126,7 @@
       padding: 0.5rem 1rem;
       background: var(--button-bg);
       color: var(--button-text);
-      border: 1px solid var(--input-border);
+      border: 1px solid var(--button-border);
       border-radius: 4px;
       cursor: pointer;
       font-size: 0.9rem;
@@ -114,12 +137,19 @@
       font-weight: bold;
     }
     
+    .tape-outer-container {
+      background: var(--outer-tape-bg);
+      border-radius: 8px;
+      padding: 8px;
+      margin-bottom: 1.5rem;
+    }
+    
     .tape-container {
       width: 100%;
       overflow-x: auto;
-      margin-bottom: 1rem;
       background: var(--tape-bg);
       border-radius: 4px;
+      border: 1px solid var(--tape-border);
       padding: 1rem;
     }
     
@@ -132,12 +162,21 @@
       height: 24px;
     }
     
+    .baudot-emulator tr:nth-child(odd) {
+      background-color: var(--row-bg);
+    }
+    
+    .baudot-emulator tr:nth-child(even) {
+      background-color: var(--row-alt-bg);
+    }
+    
     .baudot-emulator .line-number {
       width: 20px;
       text-align: center;
       color: var(--line-number);
-      font-size: 0.7rem;
-      padding-right: 5px;
+      font-size: 0.8rem;
+      padding: 0 8px;
+      font-weight: bold;
     }
     
     .baudot-emulator .cell {
@@ -169,11 +208,12 @@
       left: 50%;
       top: 100%;
       transform: translate(-50%, -50%);
-      width: 4px;
-      height: 4px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: var(--sprocket-bg);
       border: 1px solid var(--sprocket-border);
+      z-index: 2;
     }
   </style>
 
@@ -305,7 +345,7 @@
         }
       });
       
-      // Trigger on initial load if there's already text in the input
+      // Auto-initialize with any text already in the input
       if (textInput.value) {
         updateITA2Code(textInput.value);
       }
