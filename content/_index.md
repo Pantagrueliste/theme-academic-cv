@@ -184,6 +184,31 @@ sections:
       view: Compact
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
+  - block: portfolio
+    id: code
+    content:
+      title: Code
+      filters:
+        folders:
+          - code
+      # Default filter index
+      default_button_index: 0
+      # Filter toolbar (optional)
+      buttons:
+        - name: All
+          tag: '*'
+        - name: JavaScript
+          tag: JavaScript
+        - name: Python
+          tag: Python
+        - name: Teaching
+          tag: Teaching
+    design:
+      # Choose how many columns the section has. Valid values: '1' or '2'.
+      columns: '1'
+      view: Compact
+      # For Showcase view, flip alternate rows?
+      flip_alt_rows: false
   # - block: markdown
   #   content:
   #     title: Gallery
