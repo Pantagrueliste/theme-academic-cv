@@ -57,9 +57,9 @@ social:
   - icon: envelope
     icon_pack: fas
     link: "mailto:cag30@st-andrews.ac.uk"
-  - icon: twitter
-    icon_pack: fab
-    link: https://twitter.com/ClementAG
+  # - icon: twitter
+  #   icon_pack: fab
+  #   link: https://twitter.com/ClementAG
   - icon: orcid
     icon_pack: ai
     link: https://orcid.org/0000-0001-8699-7582
