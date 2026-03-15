@@ -36,7 +36,7 @@ P5 Guidelines.
 
 {{< toc >}}
 
-# What is MCP?
+## What is MCP?
 
 The [Model Context Protocol](https://modelcontextprotocol.io) (MCP) is an open 
 standard that allows AI applications to connect to external data sources and 
@@ -48,7 +48,7 @@ An MCP server exposes *tools* that the AI can call during a conversation.
 Instead of relying on memorised training data, the model can query a live, 
 authoritative source.
 
-# What tei-mcp does
+## What tei-mcp does
 
 tei-mcp parses the TEI P5 ODD specification and exposes 16 tools that cover 
 the most common questions an editor or encoder would ask:
@@ -67,7 +67,7 @@ the most common questions an editor or encoder would ask:
 - **What about my project schema?** Load an ODD customisation file to 
   constrain all of the above to your project's specific subset of TEI.
 
-# Why it matters
+## Why it matters
 
 TEI encoding requires constant reference to the Guidelines. Experienced 
 encoders internalise the most common patterns, but even they need to check 
@@ -79,7 +79,7 @@ With tei-mcp, the AI doesn't have to guess. It can look up the answer in
 the specification before writing a single angle bracket. The result is markup 
 that conforms to TEI P5 — or to your project's ODD customisation.
 
-# Getting started
+## Getting started
 
 Install from PyPI:
 
