@@ -21,7 +21,7 @@ marketing:
     description: 'Academic website of Clément Godbarge, PhD.'
     twitter: 'clementAG'
   analytics:
-    google_analytics: 'UA-154884249-1'
+    google_analytics: ''
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''
@@ -70,7 +70,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/Pantagrueliste/theme-academic-cv'
     content_dir: content
     branch: main
   avatar:

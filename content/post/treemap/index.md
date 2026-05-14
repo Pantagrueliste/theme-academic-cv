@@ -69,7 +69,7 @@ In doing so, the treemap becomes an interactive visual index, showing readers a 
   <body>
     <p>Click any cell to zoom in, or the top to zoom out.</p>
     <div id="treemap"></div>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/vis-treemap.js"></script>
     <script src="js/vis-tooltip.js"></script>
     <script src="js/index.js"></script>
