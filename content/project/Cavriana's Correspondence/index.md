@@ -12,18 +12,18 @@ date: "2019-12-27T00:00:00Z"
 external_link: ""
 
 image:
-  caption: detail of ASFi MP 4726a f.17v–18r
+  caption: facsimile of ASFi MP 4726a f.17v–18r
   focal_point: Smart
 
-#links:
-#- icon: twitter
-#  icon_pack: fab
-#  name: Follow
-#  url: 
-#  url_code: ""
-#  url_pdf: ""
-#  url_slides: ""
-#  url_video: ""
+links:
+  - icon: book-open
+    icon_pack: fas
+    name: Read the Edition
+    url: https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
 
 # Slides (optional).
 #   Associate this project with Markdown slides.
@@ -40,3 +40,5 @@ The letters, which can be found at the [State Archives of Florence](https://www.
 Publishing primary source documents should remain, in spite of the increasing difficulties, part of an historian's job. The shape that these publications may take, however, should probably evolve. Not only should primary source publications adapt to the situation I described above, but also better reflect the incremental nature of this research, while making it possible for someone else to continue it.
 
 Hence the idea to develop a new type of digital publication project that is **scalable**, **sustainable**, **trusted**, **platform independent**, and potentially **collaborative**. 
+
+The edition is now online: **[Filippo Cavriana: The Secret Correspondence](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. It gathers the letters transcribed so far, from the State Archives of Florence, Mantua, and the BnF, and grows as new ones surface. I have explained the reasoning behind its design in [a separate post](/post/cavriana-edition/).
