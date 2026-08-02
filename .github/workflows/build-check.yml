@@ -1,0 +1,71 @@
+# Builds the site exactly the way Netlify does, so a broken build shows up as a
+# red X on the commit instead of silently failing to deploy.
+#
+# In May 2026 a HUGO_VERSION bump broke every production build for ~2.5 months
+# without anyone noticing, because nothing reported the failure. This is the
+# safety net for that.
+#
+# The Hugo version is read out of netlify.toml rather than hardcoded, so this
+# check can never pass against a version that production isn't using.
+name: Build check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Full history: the build runs with HUGO_ENABLEGITINFO, which reads
+          # commit dates for each page.
+          fetch-depth: 0
+
+      - name: Read Hugo version from netlify.toml
+        id: hugo
+        run: |
+          version=$(grep -E '^[[:space:]]*HUGO_VERSION[[:space:]]*=' netlify.toml \
+            | head -1 | sed -E 's/.*"([^"]+)".*/\1/')
+          if [ -z "$version" ]; then
+            echo "::error::Could not parse HUGO_VERSION from netlify.toml"
+            exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "Building with Hugo $version (from netlify.toml)"
+
+      # Hugo modules are Go modules, so the toolchain is required to fetch the theme.
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Install Hugo (extended)
+        env:
+          VERSION: ${{ steps.hugo.outputs.version }}
+        run: |
+          curl -fsSL -o hugo.tar.gz \
+            "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_extended_${VERSION}_linux-amd64.tar.gz"
+          tar -xzf hugo.tar.gz hugo
+          sudo mv hugo /usr/local/bin/hugo
+          hugo version
+
+      - name: Build
+        env:
+          HUGO_ENV: production
+          HUGO_ENABLEGITINFO: 'true'
+        # Mirrors the `command` in netlify.toml.
+        run: hugo --gc --minify -b https://clementgodbarge.com
+
+      - name: Report output size
+        run: |
+          echo "Pages built: $(find public -name '*.html' | wc -l)"
+          echo "Output size: $(du -sh public | cut -f1)"
