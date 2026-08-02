@@ -3,7 +3,11 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.147.7"
+  # Pinned to 0.119.0: blox-bootstrap v5.9.7 (the module's final release) fails
+  # to build on Hugo >= 0.134 — site.GoogleAnalytics was removed, and 0.146's
+  # template rewrite breaks the theme's block lookup. Do not bump without
+  # first migrating off blox-bootstrap.
+  HUGO_VERSION = "0.119.0"
   HUGO_ENABLEGITINFO = "true"
 
 [context.production.environment]
