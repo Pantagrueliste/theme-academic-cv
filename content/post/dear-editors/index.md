@@ -15,6 +15,12 @@ lastmod: "2026-08-27T00:00:00Z"
 draft: false
 featured: true
 
+image:
+  caption: '"La Tour de Babel", *Alix* — © Éditions Casterman S.A./Jacques Martin, via [BnF Essentiels](https://passerelles.essentiels.bnf.fr/fr/album/544a710e-b4f3-4daa-9a5b-a51f329013dd-babylone-et-tour-babel-travers-siecles)'
+  focal_point: "Center"
+  placement: 2
+  preview_only: false
+
 authors:
 - admin
 
