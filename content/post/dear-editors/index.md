@@ -39,7 +39,7 @@ Another day, another journal trumpeting its AI policy. This time, it is *Progres
 
 That sentence deserves a moment. Retraction sits at the top of academic publishing’s sanctions, the penalty normally reserved for fabrication and fraud. Here it is attached to an offence the same editorial cannot define. There are, the editors concede, ‘genuine grey areas’ and ‘no clear lines demarcating the zone of “irresponsibility”’. Enforcement will rest on ‘judgement calls that might upset some authors, who will claim no undue AI use’: one’s own declaration, in other words, may be overruled. The advice that follows is to remain ‘safely in the zone of “responsibility”’, and one only counsels safety where there is danger. Sanctioning people for crossing a line you admit you cannot draw makes sense only if the aim is to rule by fear. Hold that thought.
 
-## The voice they protect
+## The voice pretext
 
 What does responsible use look like? Authors are told: ‘great care must be taken ... to retain their own voice’. Misuse is to resort to AI ‘to write in a language authors would never themselves normally employ’. This makes sense for a native speaker: do not pretend to be what you are not. But for foreigners who must write in a language not their own, the injunction contradicts itself. The voice the policy protects is the one thing the journal’s own rules deny us.
 
