@@ -1,6 +1,6 @@
 ---
 title: Making & Knowing Project
-summary: Experimentar con el BnF Ms. Fr. 640
+summary: Experimentos con el BnF Ms. Fr. 640
 tags: 
 - Making & Knowing Project
 - Humanidades digitales
@@ -33,11 +33,11 @@ image:
 #slides: example
 machine_translated: true
 ---
-El [Making & Knowing Project](https://www.makingandknowing.org), fundado en 2014 por Pamela H. Smith y en el que participan cientos de colaboradores, es una iniciativa de investigación y pedagógica del [Center for Science and Society](https://edition640.makingandknowing.org) de la Universidad de Columbia.
+El [Making & Knowing Project](https://www.makingandknowing.org), fundado en 2014 por Pamela H. Smith y con cientos de colaboradores, es una iniciativa de investigación y docencia del [Center for Science and Society](https://edition640.makingandknowing.org) de la Universidad de Columbia.
 
-Como investigador posdoctoral, participé en el proyecto trabajando, entre otras cosas, en la [edición crítica digital](https://edition640.makingandknowing.org) del BnF Ms. Fr. 640. Este singular manuscrito francés del siglo XVI ofrece una visión de primera mano de la fabricación y los materiales en una época en la que los artistas eran científicos.  
+Como investigador posdoctoral participé en el proyecto y trabajé, entre otras cosas, en la [edición crítica digital](https://edition640.makingandknowing.org) del BnF Ms. Fr. 640, un manuscrito francés del siglo XVI, único en su género, que permite asomarse de primera mano al hacer y a los materiales de una época en que los artistas eran científicos.  
 
-La edición digital pone a libre disposición una gran cantidad de datos en su [repositorio de GitHub](https://github.com/cu-mkp/m-k-manuscript-data). A lo largo del próximo año, tengo la intención de publicar una serie de entradas relacionadas con la edición y sus datos. Mostraré lo fácil que es descargar y analizar el texto con Python o R. ¡Permanezcan atentos!
+La edición digital pone a libre disposición una gran cantidad de datos en su [repositorio de GitHub](https://github.com/cu-mkp/m-k-manuscript-data). A lo largo del próximo año pienso publicar una serie de entradas sobre la edición y sus datos, en las que mostraré lo fácil que es descargar y analizar el texto con Python o R. ¡No se lo pierdan!
 
 
 

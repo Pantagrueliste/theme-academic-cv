@@ -1,6 +1,6 @@
 ---
 title: persNamer
-summary: Una herramienta en Python que convierte identificadores VIAF en entradas de persona y etiquetas de anotación en XML TEI, agilizando el control de autoridades en las ediciones críticas digitales.
+summary: Una herramienta en Python que convierte identificadores VIAF en entradas de persona y etiquetas de anotación en XML TEI, y agiliza así el control de autoridades en las ediciones críticas digitales.
 tags:
   - XML
   - TEI
@@ -21,7 +21,7 @@ image:
 links:
   - type: code
     icon: brands/github
-    label: Code
+    label: Código
     url: https://github.com/Pantagrueliste/persNamer
 url_code: ""
 url_pdf: ""
@@ -41,37 +41,37 @@ machine_translated: true
 
 [![DOI](https://zenodo.org/badge/933156851.svg)](https://doi.org/10.5281/zenodo.14875030)
 
-persNamer es una herramienta especializada en Python que agiliza la integración de datos de autoridad sobre personas procedentes de VIAF (Virtual International Authority File) en documentos XML TEI. Al convertir los identificadores VIAF en marcado TEI listo para usar, persNamer reduce considerablemente el trabajo manual que supone crear entradas de persona estructuradas para las ediciones críticas digitales.
+persNamer es una herramienta especializada en Python que agiliza la integración en documentos XML TEI de los datos de autoridad sobre personas de VIAF (Virtual International Authority File). Al convertir los identificadores VIAF en marcado TEI listo para usar, persNamer reduce en buena medida el trabajo manual que supone crear entradas de persona estructuradas para una edición crítica digital.
 
 ## El reto del control de autoridades en TEI
 
-Las ediciones críticas digitales suelen requerir una identificación precisa de los personajes históricos, incluidos sus nombres normalizados y sus fechas de nacimiento y muerte. Mantener un control de autoridades coherente en todo un proyecto exige:
+Las ediciones críticas digitales suelen exigir una identificación precisa de los personajes históricos, con sus nombres normalizados y sus fechas de nacimiento y muerte. Mantener un control de autoridades coherente en todo un proyecto exige:
 
 1. Identificar a las personas en los textos históricos
 2. Encontrar datos de autoridad sobre ellas
-3. Crear entradas TEI correctamente formateadas
-4. Garantizar referencias coherentes a lo largo de todo el proyecto
+3. Crear entradas TEI con el formato correcto
+4. Garantizar que las referencias sean coherentes en todo el proyecto
 
-Estos pasos suelen ser manuales, laboriosos y propensos a la incoherencia.
+Todo ello suele hacerse a mano, lleva tiempo y se presta a incoherencias.
 
 ## Cómo funciona persNamer
 
-persNamer automatiza este flujo de trabajo:
+persNamer automatiza este flujo de trabajo en tres pasos:
 
-1. **Obteniendo los datos de VIAF**: dado un identificador VIAF, la herramienta recupera los datos RDF mediante negociación de contenido HTTP
-2. **Extrayendo la información clave**: analiza el RDF para extraer el nombre preferido, la fecha de nacimiento y la fecha de muerte
-3. **Generando el marcado TEI**: crea dos fragmentos XML esenciales:
+1. **Obtiene los datos de VIAF**: a partir de un identificador VIAF, recupera los datos RDF mediante negociación de contenido HTTP
+2. **Extrae la información clave**: analiza el RDF para extraer el nombre preferente y las fechas de nacimiento y muerte
+3. **Genera el marcado TEI**: crea dos fragmentos XML esenciales:
    - Una **entrada del fichero de autoridades** (elemento `<person>` con un `xml:id` generado, `<persName>`, `<birth>`, `<death>` e `<idno type="VIAF">`)
    - Una **etiqueta de anotación** independiente (`<persName>` con un atributo `ref` que remite a la entrada de autoridad)
 
-Esta doble salida permite a los editores mantener un fichero de autoridades centralizado e insertar fácilmente etiquetas de anotación en sus textos TEI.
+Esta doble salida permite al editor mantener un fichero de autoridades centralizado y, a la vez, insertar sin esfuerzo etiquetas de anotación en sus textos TEI.
 
 ## Características principales
 
-- **Generación normalizada de identificadores**: crea identificadores XML coherentes con el formato `pers-[apellido]-[inicial del nombre]` (p. ej., `pers-deteligny-c`)
-- **Análisis de RDF**: utiliza `rdflib` para extraer información de distintas propiedades RDF (p. ej., `rdfs:label`, `schema:name`, `viaf:mainHead`)
-- **Interfaz de línea de comandos**: ejecución sencilla con un número VIAF como único argumento obligatorio
-- **Salida detallada**: proporciona información pormenorizada del procesamiento junto con la salida XML final
+- **Identificadores normalizados**: genera identificadores XML coherentes con el formato `pers-[apellido]-[inicial del nombre]` (p. ej., `pers-deteligny-c`)
+- **Análisis de RDF**: usa `rdflib` para extraer información de distintas propiedades RDF (p. ej., `rdfs:label`, `schema:name`, `viaf:mainHead`)
+- **Interfaz de línea de comandos**: se ejecuta con un número VIAF como único argumento obligatorio
+- **Salida detallada**: informa con detalle del procesamiento junto a la salida XML final
 
 ## Ejemplo de uso
 
@@ -92,21 +92,21 @@ Este comando produce:
 <persName ref="#pers-deteligny-c">Charles deTéligny</persName>
 ```
 
-## Aplicación en las humanidades digitales
+## Aplicaciones en humanidades digitales
 
-persNamer resulta especialmente valioso para:
+persNamer resulta especialmente útil para:
 
-- Ediciones críticas digitales que requieren control de autoridades
+- Ediciones críticas digitales que necesitan control de autoridades
 - Proyectos de codificación TEI que trabajan con personajes históricos
 - Iniciativas de datos enlazados que conectan documentos con registros de autoridad
 - Garantizar la coherencia en grandes corpus TEI
-- Enseñar los conceptos del control de autoridades en cursos de humanidades digitales
+- Enseñar el control de autoridades en cursos de humanidades digitales
 
 ## Implementación
 
-persNamer está implementado en Python y depende de:
+persNamer está escrito en Python y depende de:
 - `requests` para las peticiones HTTP
 - `rdflib` para el análisis de RDF
 - `lxml` para el manejo de XML
 
-Encontrará el código fuente y la documentación en el [repositorio de GitHub](https://github.com/Pantagrueliste/persNamer).
+El código fuente y la documentación están en el [repositorio de GitHub](https://github.com/Pantagrueliste/persNamer).

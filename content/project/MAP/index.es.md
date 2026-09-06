@@ -12,7 +12,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: "La noticia de la muerte del rey Enrique III | BnF"
+  caption: "Se anuncia la muerte del rey Enrique III | BnF"
   focal_point: Smart
 
 #links:
@@ -33,8 +33,8 @@ image:
 #slides: example
 machine_translated: true
 ---
-El objetivo principal del proyecto *Avviso* es digitalizar, conservar, catalogar, editar, contextualizar y difundir las 35 000 hojas de noticias manuscritas de la Edad Moderna, conocidas como *avvisi*, que formaban parte de la colección Médici y que hoy se conservan en el Archivio di Stato di Firenze. 
-La catalogación, digitalización y difusión de aproximadamente 35 000 *avvisi*, hojas de noticias manuscritas de la Edad Moderna, a través de la plataforma Medici Interactive Archive del Medici Archive Project.
+El proyecto *Avviso* tiene por objetivo principal digitalizar, conservar, catalogar, editar, contextualizar y difundir las 35 000 hojas de noticias manuscritas de la Edad Moderna —los llamados *avvisi*— que formaban parte de la colección de los Médici y se conservan hoy en el Archivio di Stato di Firenze. 
+Catalogación, digitalización y difusión de unos 35 000 *avvisi*, hojas de noticias manuscritas de la Edad Moderna, a través de la plataforma Medici Interactive Archive del Medici Archive Project.
 
 
 

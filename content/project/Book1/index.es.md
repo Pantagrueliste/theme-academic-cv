@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-Más información próximamente.
+Más información en breve.
 

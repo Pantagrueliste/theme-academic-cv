@@ -1,9 +1,9 @@
 ---
 title: "Automatizar el marcado en las ediciones críticas digitales"
-subtitle: "¿Pueden los modelos de lenguaje preentrenados aumentar significativamente la productividad editorial?"
+subtitle: "¿Pueden los modelos de lenguaje preentrenados aumentar sustancialmente la productividad editorial?"
 
 # Summary for listings and search engines
-summary: Los modelos de lenguaje preentrenados pueden ayudar a los investigadores a automatizar algunas de las tareas más tediosas y laboriosas de la edición. A partir de las anotaciones cuidadosamente elaboradas de *Secrets of Craft and Nature in Renaissance France*, evalúo hasta qué punto un modelo como GPT-3 puede entrenarse rápidamente para anotar manuscritos técnicos del siglo XVI.
+summary: Los modelos de lenguaje preentrenados pueden descargar a los investigadores de algunas de las tareas más tediosas y laboriosas de la edición. A partir de las anotaciones, revisadas con esmero, de *Secrets of Craft and Nature in Renaissance France*, evalúo hasta qué punto un modelo como GPT-3 puede entrenarse en poco tiempo para anotar manuscritos técnicos del siglo XVI.
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -42,24 +42,24 @@ categories:
 - Edición eficiente
 ---
 # Introducción
-¿Cómo producir ediciones críticas digitales sin arruinarse? En esta entrada, la primera de una serie dedicada a la edición eficiente, evalúo el papel que pueden desempeñar los modelos de lenguaje preentrenados en la automatización de tareas editoriales como el marcado semántico.
+¿Cómo producir ediciones críticas digitales sin dejarse en ellas el presupuesto? En esta entrada, primera de una serie dedicada a la edición eficiente, examino el papel que pueden desempeñar los modelos de lenguaje preentrenados en la automatización de tareas editoriales como el marcado semántico.
 
 {{< toc >}}
 
 # El problema
-## Una obra de amor
-En cuestiones de amor no se repara en gastos... o eso dice el viejo proverbio. Esto es especialmente cierto en el caso de las ediciones críticas digitales, pues la transcripción, la traducción y la anotación que exige su elaboración suponen miles de horas de trabajo, realizadas, como en el caso de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), por cientos de colaboradores altamente cualificados.
+## Una labor de amor
+En el amor no se mira el gasto... o eso dice el refrán. Y a las ediciones críticas digitales se les aplica con especial justicia: la transcripción, la traducción y la anotación que exigen suman miles de horas de trabajo, a cargo —como en el caso de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org)— de cientos de colaboradores altamente cualificados.
 
-En cierto sentido, es una bendición que los proyectos de gran visibilidad en humanidades digitales puedan obtener las enormes sumas de financiación necesarias para funcionar. Sin embargo, depender en gran medida de la generosidad de fundaciones acaudaladas, universidades y organismos públicos, y necesitar durante largos periodos importantes recursos humanos, no constituye un modelo económico viable para el futuro.
+En cierto modo, es una suerte que los proyectos más visibles de las humanidades digitales consigan las enormes sumas que necesitan para funcionar. Ahora bien, depender de la munificencia de fundaciones acaudaladas, universidades y organismos públicos, y necesitar durante años un despliegue considerable de recursos humanos, no es un modelo económico con futuro.
 
-De hecho, si queremos animar a investigadores de todo el mundo a hacer accesibles los documentos históricos a un público más amplio, {{< hl >}}el coste de las ediciones críticas digitales debería reducirse en varios órdenes de magnitud{{< /hl >}}. 
+En rigor, si queremos animar a investigadores de todo el mundo a poner los documentos históricos al alcance de un público más amplio, {{< hl >}}el coste de las ediciones críticas digitales tendría que bajar varios órdenes de magnitud{{< /hl >}}. 
 
-## Un umbral elevado
-De forma un tanto paradójica, {{< hl >}}la solución puede venir de proyectos tan intensivos en mano de obra como [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), ya que constituyen un valioso conjunto de entrenamiento{{< /hl >}} para automatizar algunas de las tareas más ingratas y repetitivas de la edición digital, como el marcado.
+## Un listón muy alto
+Paradójicamente, {{< hl >}}la solución puede venir de proyectos tan intensivos en trabajo como [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), pues constituyen un valioso conjunto de entrenamiento{{< /hl >}} con el que automatizar algunas de las tareas más ingratas y repetitivas de la edición digital, empezando por el marcado.
 
-No es que el marcado carezca de importancia. De hecho, {{< hl >}}el marcado se ha convertido en el componente indispensable de cualquier proyecto digital académico serio.{{< /hl >}} Estandarizado por la [Text Encoding Initiative](https://tei-c.org), nos permite registrar el mayor número posible de aspectos del documento y del texto que este transmite: estructura, anotaciones marginales, tachaduras, variantes, tipo de papel, manchas, caligrafía... Todo lo que se pueda imaginar.
+No es que el marcado sea cosa menor. Al contrario: {{< hl >}}se ha convertido en el componente indispensable de cualquier proyecto digital serio.{{< /hl >}} Normalizado por la [Text Encoding Initiative](https://tei-c.org), permite registrar cuantos aspectos se quiera del documento y del texto que transmite: estructura, notas marginales, tachaduras, variantes, tipo de papel, manchas, caligrafía... Lo que se le ocurra.
 
-Tomado de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), el siguiente ejemplo muestra cómo el marcado enriquece el texto con información adicional (categoría, estructura, campos semánticos, tachaduras, etc.), lo que da a las ediciones digitales una ventaja considerable sobre sus antepasadas materiales.
+El siguiente ejemplo, tomado de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), muestra cómo el marcado enriquece el texto con información añadida (categoría, estructura, campos semánticos, tachaduras, etc.), y da así a las ediciones digitales una ventaja considerable sobre sus antepasadas de papel.
 
 <table>
 <tr>
@@ -97,39 +97,39 @@ violence aux <wp>artifices de foeu</wp></head>
 </tr>
 </table>
 
-Esta información no solo es valiosa con fines archivísticos, sino también, como he mostrado en ocasiones anteriores, con fines sintéticos y analíticos. No obstante, este tipo de anotación puede consumir muchísimo tiempo, ya que a menudo el mismo texto debe estar disponible en distintas versiones: como traducción, como transcripción, como modernización, etc. 
+Esta información no solo vale con fines archivísticos; como he mostrado en otras ocasiones, sirve también para la síntesis y el análisis. Con todo, anotar así un texto puede llevar muchísimo tiempo, sobre todo porque el mismo texto suele tener que existir en varias versiones: traducción, transcripción, modernización, etc. 
 
 # La solución
-## Los transformadores: ¿el camino más sencillo hacia la automatización?
-En 2020, [OpenAI](https://www.openai.com) lanzó a bombo y platillo su última familia de modelos de lenguaje de gran escala y propósito general, denominada GPT-3, siglas de «Generative Pre-trained Transformer 3». Los transformadores representan un avance bastante reciente en inteligencia artificial. Aprenden nuevas tareas con una rapidez asombrosa, simplemente leyendo una instrucción (*prompt*) y observando un número muy limitado de ejemplos. También pueden recibir entrenamiento adicional con un conjunto de datos ad hoc (ajuste fino o *fine-tuning*), lo que mejora la latencia y la precisión. Por eso decimos que GPT-3 y los transformadores comparables son [aprendices con pocos ejemplos](https://arxiv.org/abs/2005.14165) (*few-shot learners*). 
+## Los transformadores: ¿el camino más corto hacia la automatización?
+En 2020, [OpenAI](https://www.openai.com) presentó a bombo y platillo su última familia de modelos de lenguaje de gran escala y propósito general, GPT-3, siglas de «Generative Pre-trained Transformer 3». Los transformadores son un avance reciente de la inteligencia artificial: aprenden tareas nuevas con una rapidez asombrosa, con solo leer una instrucción (*prompt*) y ver un puñado de ejemplos. Admiten además un entrenamiento adicional con datos ad hoc (el *fine-tuning* o ajuste fino), que mejora la latencia y la precisión. De ahí que se diga que GPT-3 y sus semejantes son [aprendices con pocos ejemplos](https://arxiv.org/abs/2005.14165) (*few-shot learners*). 
 
-OpenAI afirma que GPT-3 contiene la cifra récord de 175 000 millones de parámetros y que ha sido entrenado con más de 570 GB de texto, en su mayoría documentos en inglés presumiblemente extraídos de [internet](https://skylion007.github.io/OpenWebTextCorpus/). Por su enorme tamaño, GPT-3 ha establecido un nuevo estándar en este ámbito, ejecutando de entrada tareas muy diversas con un realismo inquietante. Escribe [artículos de opinión](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3) verosímiles, [interactúa con humanos](https://www.quickchat.ai/emerson) en salas de chat, [responde correos electrónicos](https://www.jarvis.ai/?fpr=serpbattle), [resume textos](https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88), traduce documentos, explica jerga especializada, etc.
+Según OpenAI, GPT-3 contiene la cifra récord de 175 000 millones de parámetros y se ha entrenado con más de 570 GB de texto, en su mayoría documentos en inglés extraídos, cabe suponer, de [internet](https://skylion007.github.io/OpenWebTextCorpus/). Por su mero tamaño, GPT-3 ha fijado un nuevo estándar en el campo, y ejecuta de entrada las tareas más variadas con un realismo inquietante: escribe [artículos de opinión](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3) verosímiles, [conversa con humanos](https://www.quickchat.ai/emerson) en salas de chat, [contesta correos electrónicos](https://www.jarvis.ai/?fpr=serpbattle), [resume textos](https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88), traduce documentos, explica la jerga de las profesiones, etc.
 
-Con acceso anticipado a la API de OpenAI desde mayo de 2021, he podido experimentar con la capacidad del modelo para resolver una serie de tareas de reconocida dificultad, como traducir poesía francesa y textos neolatinos al inglés, explicar analogías e incluso simplificar el libro 4 de la *Groundwork for a Metaphysics of Morals* de Kant para un niño de siete años (aunque sin demasiado éxito).
+Con acceso anticipado a la API de OpenAI desde mayo de 2021, he podido poner a prueba la capacidad del modelo para resolver tareas de reconocida dificultad: traducir al inglés poesía francesa y textos neolatinos, explicar analogías e incluso simplificar el libro 4 de la *Fundamentación de la metafísica de las costumbres* de Kant para un niño de siete años (sin demasiado éxito, hay que decirlo).
 
 ### Codex
-Uno de los últimos desarrollos de GPT-3 se centra en los lenguajes informáticos. Bautizado como *Codex*, este modelo traduce el lenguaje natural a lenguaje de programación y viceversa. Por ejemplo, si busco una expresión regular que me permita «encontrar únicamente las palabras que empiezan por mayúscula», GPT-3 lo traduce de inmediato en una expresión regular funcional: ```[A-Z]+\w+```.
+Uno de los últimos desarrollos de GPT-3 se ocupa de los lenguajes de programación. Se llama *Codex* y traduce el lenguaje natural a código, y viceversa. Si busco, por ejemplo, una expresión regular que me permita «encontrar solo las palabras que empiezan por mayúscula», GPT-3 la convierte al instante en una expresión regular que funciona: ```[A-Z]+\w+```.
 
-OpenAI afirma que *Codex* puede trabajar con una docena de lenguajes informáticos, entre ellos Python, JavaScript, Go, Perl, PHP, Ruby y Swift. Al convertir el pseudocódigo en código sin fisuras, *Codex* permite a las personas centrarse no en la fastidiosa sintaxis de un lenguaje de programación, sino en los pasos lógicos y las estrategias que permiten a las aplicaciones resolver problemas.
+OpenAI asegura que *Codex* maneja una docena de lenguajes, entre ellos Python, JavaScript, Go, Perl, PHP, Ruby y Swift. Al pasar del pseudocódigo al código sin fisuras, *Codex* permite concentrarse no en la sintaxis puntillosa de un lenguaje, sino en los pasos lógicos y las estrategias con que una aplicación resuelve un problema.
 
 ### Más allá de OpenAI
-OpenAI, por supuesto, no es el único actor en escena. Como ya se ha mencionado, la Academia de Inteligencia Artificial de Pekín anunció en 2021 un modelo aún mayor y más capaz, conocido como *Wu Dao 2*. Nvidia y Microsoft unieron fuerzas para producir el modelo *Megatron-Turing NLG 530B*, de nombre muy apropiado. Empresas emergentes más pequeñas, como [AI21 Labs](https://www.ai21.com) y [Cohere](https://cohere.ai), también ofrecen API al público. Cabe mencionar asimismo iniciativas de código abierto como [EuletherAI](https://www.eleuther.ai). El panorama de la IA, claro está, evoluciona muy deprisa; para seguir las nuevas iniciativas en este campo, consulte [Hugging Face](https://huggingface.co/transformers/master/index.html).
+OpenAI no es, desde luego, el único actor en escena. Como ya se ha dicho, la Academia de Inteligencia Artificial de Pekín anunció en 2021 un modelo aún mayor y más capaz, *Wu Dao 2*. Nvidia y Microsoft unieron fuerzas para producir el modelo *Megatron-Turing NLG 530B*, de nombre bien elegido. Empresas emergentes de menor tamaño, como [AI21 Labs](https://www.ai21.com) y [Cohere](https://cohere.ai), ofrecen también sus API al público, y merecen mención iniciativas de código abierto como [EuletherAI](https://www.eleuther.ai). El panorama, claro está, cambia a gran velocidad; para seguir las novedades del campo, consulte [Hugging Face](https://huggingface.co/transformers/master/index.html).
 
 # Los experimentos
 
 > [!NOTE]
-> El objetivo de estos experimentos es encontrar el camino más económico hacia una automatización fiable de las tareas editoriales. Podría argumentarse que algunas de ellas también podrían automatizarse mediante algoritmos de aprendizaje supervisado. Exploraremos esta hipótesis en una futura entrada.
+> El objetivo de estos experimentos es dar con el camino más económico hacia una automatización fiable de las tareas editoriales. Se dirá que algunas podrían automatizarse también con algoritmos de aprendizaje supervisado; exploraremos esa hipótesis en una próxima entrada.
 
-¿Puede un transformador como GPT-3 aprender a anotar, por ejemplo, un manuscrito técnico y científico del siglo XVI?
+¿Puede un transformador como GPT-3 aprender a anotar, pongamos por caso, un manuscrito técnico y científico del siglo XVI?
 
-## Experimento 1: categorización de textos
-Empecemos por algo relativamente sencillo. Como «aprendiz con pocos ejemplos», GPT-3 debería ser capaz de entender rápidamente cómo nuestro equipo editorial ha clasificado las entradas del Ms. Fr. 640.
+## Experimento 1: categorizar textos
+Empecemos por algo relativamente sencillo. Como «aprendiz con pocos ejemplos», GPT-3 debería captar en poco tiempo el modo en que nuestro equipo editorial ha clasificado las entradas del Ms. Fr. 640.
 
 ### Diseño del prompt
-Para entrenarlo, utilicé un prompt muy minimalista y seleccioné como ejemplos cuatro entradas breves en texto plano, entre ellas una sobre «medicina», «armas y armaduras» y «pintura». 
+Para entrenarlo usé un prompt mínimo y elegí como ejemplos cuatro entradas breves en texto plano, entre ellas una de «medicina», otra de «armas y armaduras» y otra de «pintura». 
 
 ### Prueba
-A continuación, copié otro pasaje que no estaba en la secuencia inicial: 
+Después copié un pasaje que no formaba parte de la secuencia inicial: 
 
 ```text
 Working neatly
@@ -139,29 +139,29 @@ But next, having made your design carefully, keep the place of shadows for them 
 And in this way, you further your work, economize your colors & work neatly.  
 Which is the reason that, the colors not being muddled nor mixed together, they do not die & you soften the colors better, since they are not so thick.
 ```
-El resultado es perfectamente coherente con el contenido: 
+El resultado se ajusta perfectamente al contenido: 
 
 ```xml
 <categories="painting">
 ```
 
-Si lo probamos con una entrada perteneciente a una categoría que ni siquiera estaba incluida en la selección inicial de textos elegidos para entrenar a GPT-3, el resultado es sorprendente. 
+Si probamos con una entrada de una categoría que ni siquiera figuraba entre los textos elegidos para entrenar a GPT-3, el resultado sorprende. 
 
 ```xml
 <categories="jewelry">
 ```
 
 ### Resultado
-La categoría «jewelry» (joyería) no existe en nuestra edición del Ms. Fr. 640. El equipo editorial [prefiere](https://edition640.makingandknowing.org/#/content/resources) la categoría más amplia de «Stones» (piedras). La intuición de GPT-3 es buena, sin embargo, e indica que, con un poco más de entrenamiento, puede aprender a categorizar cualquier entrada del Ms. Fr. 640, y quizá incluso las de textos técnicos similares del siglo XVI.   
+La categoría «jewelry» (joyería) no existe en nuestra edición del Ms. Fr. 640: el equipo editorial [prefiere](https://edition640.makingandknowing.org/#/content/resources) la más amplia de «Stones» (piedras). La intuición de GPT-3, sin embargo, es buena, y hace pensar que con un poco más de entrenamiento podría aprender a categorizar cualquier entrada del Ms. Fr. 640, y acaso las de otros textos técnicos del siglo XVI.   
 
 ## Experimento 2: marcado semántico
-Subamos un poco el listón. Si los transformadores como GPT-3 pueden aprender a categorizar textos según criterios editoriales específicos, ¿pueden también identificar parte del marcado del texto?  
+Subamos el listón. Si un transformador como GPT-3 puede aprender a categorizar textos según criterios editoriales concretos, ¿podrá también identificar parte de su marcado?  
 
 > [!NOTE]
-> *Secrets of Craft and Nature* ofrece una [combinación](https://edition640.makingandknowing.org/#/content/resources/principles) de etiquetas semánticas y estructurales. Lamentablemente, GPT-3 no procesa imágenes, a diferencia de otros proyectos como [Wu Dao 2](https://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). Es probable que futuras iteraciones de GPT incluyan esta capacidad, necesaria para reconocer la mayoría de los aspectos estructurales y materiales de un documento. Dejaremos de lado estas etiquetas en particular y nos centraremos en el marcado que no requiere reconocimiento de imágenes.
+> *Secrets of Craft and Nature* ofrece una [combinación](https://edition640.makingandknowing.org/#/content/resources/principles) de etiquetas semánticas y estructurales. Por desgracia, GPT-3 no procesa imágenes, a diferencia de otros proyectos como [Wu Dao 2](https://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). Es probable que futuras versiones de GPT incorporen esa capacidad, imprescindible para reconocer la mayoría de los aspectos estructurales y materiales de un documento. Dejaremos de lado esas etiquetas y nos centraremos en el marcado que no exige reconocer imágenes.
 
 ### Diseño del prompt
-Las etiquetas semánticas incluyen referencias a animales, plantas, topónimos, percepciones sensoriales, etc. En el prompt de entrenamiento seleccioné unos cuantos ejemplos de la edición:
+Las etiquetas semánticas señalan animales, plantas, topónimos, percepciones sensoriales, etc. Para el prompt de entrenamiento escogí unos cuantos ejemplos de la edición:
 ```xml
 <!--Input prompt-->
 The following is a list of words and their corresponding semantic tags
@@ -193,7 +193,7 @@ charcoal: <m>charcoal</m>
 founders: <pro>founders</pro>
 ```
 ### Prueba
-Probemos unas cuantas palabras fáciles con el modelo `Davinci-codex`, como *Apothecary* (boticario), *smoke* (humo), *glassmakers* (vidrieros), *latten* (latón) y *snake* (serpiente). Los resultados son inmediatos e impecables:
+Probemos con el modelo `Davinci-codex` unas cuantas palabras fáciles: *Apothecary* (boticario), *smoke* (humo), *glassmakers* (vidrieros), *latten* (latón) y *snake* (serpiente). El resultado es inmediato e impecable:
 
 ```xml
 <!--Output-->
@@ -204,7 +204,7 @@ latten: <m>latten</m>
 snake: <al>snake</al>
 ```
 
-Una prueba más difícil implica el uso de palabras compuestas, como *copper plates* (planchas de cobre), *walnut oil* (aceite de nuez) y *wood block* (bloque de madera). El objetivo de esta prueba es comprobar si GPT-3 maneja correctamente las etiquetas anidadas. 
+Una prueba más exigente es la de las palabras compuestas, como *copper plates* (planchas de cobre), *walnut oil* (aceite de nuez) y *wood block* (taco de madera): se trata de ver si GPT-3 maneja bien las etiquetas anidadas. 
 
 ```xml
 <!--Output-->
@@ -213,7 +213,7 @@ walnut oil: <m><pa>walnut</pa> oil</m>
 wood block: <m>wood block</m>
 ```
 
-Los resultados, sin embargo, son desiguales, ya que `Davinci-codex` solo etiquetó correctamente *walnut oil*, sin detectar las etiquetas anidadas `tl` y `m` en *copper plates* y *wood block*. No obstante, como muestra la siguiente prueba, estos errores pueden mitigarse con un prompt de entrenamiento mejor. Tras añadir cinco ejemplos más de etiquetas anidadas, `Davinci-codex` devolvió un resultado casi impecable, con un solo error (*oil paintbrushes*):
+Aquí el resultado es desigual: `Davinci-codex` solo etiquetó bien *walnut oil*, y no detectó las etiquetas anidadas `tl` y `m` en *copper plates* y *wood block*. Ahora bien, como muestra la siguiente prueba, estos errores se corrigen con un prompt de entrenamiento mejor. Tras añadir cinco ejemplos más de etiquetas anidadas, `Davinci-codex` devolvió un resultado casi perfecto, con un solo fallo (*oil paintbrushes*):
 
 ```xml
 <!--Output-->
@@ -225,5 +225,5 @@ bronze mortar: <tl><m>bronze</m> mortar</tl>
 ```
 
 # Conclusión
-Conviene recordar que estas pruebas se realizaron con pequeños fragmentos de texto. Sospecho que, proporcionando más contexto en los ejemplos y en el prompt, los modelos GPT-3 darían resultados aún mejores. Además, ajustar el modelo con conjuntos de datos de entrenamiento ad hoc mejoraría sin duda la precisión del etiquetado.  
-Aunque estos experimentos aún tendrían que realizarse a mayor escala para demostrar la fiabilidad de los modelos de lenguaje preentrenados, podemos concluir no obstante que {{< hl >}}este enfoque permite a los editores automatizar varias tareas de anotación en unos pocos pasos sencillos, con el consiguiente ahorro potencial de enormes cantidades de tiempo y dinero.{{< /hl >}}
+Conviene no olvidar que estas pruebas se hicieron con fragmentos de texto muy breves. Sospecho que, con más contexto en los ejemplos y en el prompt, los modelos GPT-3 rendirían aún mejor; y el ajuste fino con datos de entrenamiento ad hoc mejoraría sin duda la precisión del etiquetado.  
+Aunque haría falta repetir estos experimentos a mayor escala para demostrar la fiabilidad de los modelos de lenguaje preentrenados, sí cabe concluir que {{< hl >}}este enfoque permite a los editores automatizar varias tareas de anotación en unos pocos pasos, con un ahorro potencial enorme de tiempo y dinero.{{< /hl >}}

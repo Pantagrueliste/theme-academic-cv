@@ -1,9 +1,9 @@
 ---
-title: "¿Puede el alojamiento web distribuido ofrecer sostenibilidad a bajo coste?"
-subtitle: Ventajas e inconvenientes de alojar una edición crítica digital en IPFS
+title: "¿Puede el alojamiento web distribuido dar sostenibilidad a bajo coste?"
+subtitle: Luces y sombras de alojar una edición crítica digital en IPFS
 
 # Summary for listings and search engines
-summary: "En esta entrada sostengo que el alojamiento web distribuido permite a los editores publicar contenidos de forma sostenible y reducir costes al mismo tiempo. ¿Podemos lograr la sostenibilidad a un coste mínimo o nulo? Y, en caso afirmativo, ¿qué compromisos debe aceptar una edición digital?"
+summary: "En esta entrada sostengo que el alojamiento web distribuido permite a los editores publicar de manera sostenible y, al mismo tiempo, abaratar costes. ¿Es posible la sostenibilidad a coste mínimo o nulo? Y, si lo es, ¿qué renuncias tiene que aceptar una edición digital?"
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -43,4 +43,4 @@ categories:
 ---
 
 # Introducción
-¿Cómo producir ediciones críticas digitales sin arruinarse? En esta entrada, la primera de una serie dedicada a la edición eficiente, evalúo el papel que pueden desempeñar los modelos de lenguaje preentrenados en la automatización de tareas editoriales como el marcado semántico.
+¿Cómo producir ediciones críticas digitales sin dejarse en ellas el presupuesto? En esta entrada, primera de una serie dedicada a la edición eficiente, examino el papel que pueden desempeñar los modelos de lenguaje preentrenados en la automatización de tareas editoriales como el marcado semántico.

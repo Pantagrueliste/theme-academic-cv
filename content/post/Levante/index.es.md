@@ -2,8 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Una geografía perceptiva del Levante"
-subtitle: "¿Con qué se asociaba el Levante en la Florencia del siglo XVI?"
-summary: "El Levante es un topónimo escurridizo, pues suele definirse en relación con otro territorio, o por oposición a él. ¿Cuál era, entonces, el Levante de la Toscana en el siglo XVI? Los datos que he reunido a partir de la base de datos MIA dan una respuesta inesperada."
+subtitle: "¿Qué evocaba el Levante en la Florencia del siglo XVI?"
+summary: "El Levante es un topónimo escurridizo: suele definirse en relación con otro territorio, o por oposición a él. ¿Cuál era, pues, el Levante de la Toscana del siglo XVI? Los datos que he reunido en la base de datos MIA dan una respuesta inesperada."
 authors: [clement]
 tags: [MAP, Avviso]
 categories: [Notas]
@@ -31,15 +31,15 @@ projects: ["MAP"]
 ---
 
 # Introducción
-El *Levante* es un lugar escurridizo. Definido habitualmente en relación con otro territorio —o por oposición a él—, su significado rara vez ha sido estable, y evoca geografías distintas según el lugar y la época en que se empleaba el término. Ahora bien, si resulta difícil articular una definición objetiva y precisa del término, cabe al menos la esperanza de trazar un mapa subjetivo de esa región, tomando como base las correlaciones existentes dentro de un corpus de textos determinado. En otras palabras, ¿qué espacio podía evocar el *Levante* para un grupo concreto de lectores?  
-En esta entrada mostraré cómo utilizar los datos de la [base de datos MIA](https://mia.medici.org/) del Medici Archive Project 
-para visualizar los lugares concretos con los que se asociaba el topónimo.  
+El *Levante* es un lugar escurridizo. Definido casi siempre en relación con otro territorio —o por oposición a él—, su sentido rara vez ha sido estable: evoca geografías distintas según el lugar y la época en que se usa la palabra. Ahora bien, si una definición objetiva y precisa del término se nos resiste, cabe al menos trazar un mapa subjetivo de esa región a partir de las correlaciones que existen dentro de un corpus de textos determinado. Dicho de otro modo: ¿qué espacio evocaba el *Levante* para un grupo concreto de lectores?  
+En esta entrada mostraré cómo usar los datos de la [base de datos MIA](https://mia.medici.org/) del Medici Archive Project 
+para visualizar los lugares concretos con que se asociaba el topónimo.  
 
 # La base de datos MIA
-La base de datos MIA es una plataforma colaborativa para investigadores que desean subir y compartir sus propias fotografías de material de archivo del [Archivio di Stato di Firenze](https://archiviodistatofirenze.cultura.gov.it/asfi/home). A lo largo del último año, y bajo el patrocinio del [National Endowment for the Humanities](https://www.neh.gov), nuestro equipo ha fotografiado, transcrito, resumido y clasificado miles de documentos conservados en la sección de *avvisi* del fondo *Mediceo del Principato* en Florencia. Aunque nuestra base de datos no se concibió principalmente para el análisis estadístico, los metadatos que hemos puesto a disposición pueden descargarse y utilizarse como conjuntos de datos. 
+MIA es una plataforma colaborativa en la que los investigadores suben y comparten sus propias fotografías de documentos del [Archivio di Stato di Firenze](https://archiviodistatofirenze.cultura.gov.it/asfi/home). A lo largo del último año, con el patrocinio del [National Endowment for the Humanities](https://www.neh.gov), nuestro equipo ha fotografiado, transcrito, resumido y clasificado miles de documentos de la sección de *avvisi* del fondo *Mediceo del Principato*, en Florencia. La base de datos no se concibió para el análisis estadístico, pero los metadatos que hemos puesto a disposición del público pueden descargarse y usarse como conjuntos de datos. 
 
 # El conjunto de datos
-En este caso, el conjunto de datos que he creado abarca todas las noticias procedentes del *Levante* entre 1543 y 1566, es decir, desde el primer avviso registrado en los archivos hasta el año de la muerte del sultán [Solimán I](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). He aquí una muestra de los datos que extraje del servidor. Compuestos de tres columnas, los datos consisten en un número de documento único, un nombre de lugar y una fecha. 
+El conjunto que preparé para esta ocasión abarca todas las noticias llegadas de *Levante* entre 1543 y 1566, esto es, desde el primer avviso que registra el archivo hasta el año de la muerte del sultán [Solimán I](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). He aquí una muestra de lo que extraje del servidor: tres columnas con un número único de documento, un nombre de lugar y una fecha. 
 
 ```csv
 57386 Malta / Europe / World / Top of the TGN hierarchy 1565-1-3
@@ -61,7 +61,7 @@ En este caso, el conjunto de datos que he creado abarca todas las noticias proce
 ```
 
 ## Limpieza de los datos
-Para visualizar estos datos, necesitamos hacerlos legibles como un conjunto de datos csv (valores separados por comas). También necesitamos convertir la información geográfica aquí incluida a un formato más «apto para máquinas»: coordenadas GPS. Como el conjunto de datos contiene cientos de entradas, es preferible automatizar este proceso. Esto puede lograrse con bastante rapidez y precisión utilizando modelos de lenguaje preentrenados como [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) o [AI-21](https://www.ai21.com), por citar solo algunos. Esta operación, sin embargo, debe supervisarse de cerca, ya que los modelos de lenguaje preentrenados tienen cierta tendencia a alucinar.
+Para visualizar estos datos hay que convertirlos en un csv (valores separados por comas) legible, y traducir la información geográfica a un formato más «digerible» para la máquina: coordenadas GPS. Como el conjunto tiene cientos de entradas, más vale automatizar la operación, lo que puede hacerse con bastante rapidez y precisión mediante modelos de lenguaje preentrenados como [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) o [AI-21](https://www.ai21.com), por citar solo algunos. Eso sí: conviene vigilar de cerca, porque estos modelos tienen cierta propensión a alucinar.
 
 
 ```csv
@@ -85,20 +85,20 @@ documentId,latitude,longitude,documentDate
 ```
 
 # El mapa de densidad
-Un mapa de densidad es un tipo de visualización que resalta la frecuencia con la que se menciona un lugar en un conjunto de datos determinado. Resulta especialmente útil para comprender no solo el alcance geográfico de los datos, sino también sus puntos focales. ¿Qué lugares del mapa se mencionan con más frecuencia? ¿Y cuáles son más episódicos? ¿Dónde están los centros y a qué distancia queda la periferia? ¿En qué zona del mapa es más probable que se concentre la atención de un lector? 
+Un mapa de densidad es una visualización que resalta la frecuencia con que un lugar aparece en un conjunto de datos. Sirve para apreciar no solo el alcance geográfico de los datos, sino también sus puntos focales. ¿Qué lugares del mapa se mencionan más a menudo, y cuáles solo de tanto en tanto? ¿Dónde están los centros, y a qué distancia queda la periferia? ¿En qué zona del mapa tenderá a fijarse la atención de un lector? 
 
 <iframe width='100%' height='600px' src="https://api.mapbox.com/styles/v1/clemclem/cl9q7c77p004y14mqytjrfnex.html?title=false&access_token=pk.eyJ1IjoiY2xlbWNsZW0iLCJhIjoiY2lmbGpvbjMwZjh3NnJ5bHg4ZzkzeWZzeCJ9.IgOF4fphVbsWAIKyzAV-DQ&zoomwheel=false#3.83/43.29/33.61" title="Levante" style="border:none;"></iframe>
 
-Para este experimento —y como tenía prisa— utilicé una de las API de [Map Box](https://www.mapbox.com). Sin embargo, muchas bibliotecas de visualización y sistemas de información geográfica permiten producir el mismo tipo de mapa de densidad. 
+Para este experimento —y porque tenía prisa— recurrí a una de las API de [Map Box](https://www.mapbox.com). Muchas bibliotecas de visualización y sistemas de información geográfica permiten, con todo, producir el mismo tipo de mapa. 
 
 # Algunas observaciones
-El resultado es más un cuadro impresionista que la representación precisa de un concepto claramente definible, y eso es precisamente lo que me gusta de este experimento. En efecto, {{< hl >}}aunque la ciencia de datos puede ser una poderosa aliada de las humanidades, no tenemos por qué someternos necesariamente a sus reglas.{{< /hl >}}
+El resultado tiene más de cuadro impresionista que de representación exacta de un concepto bien delimitado, y eso es justamente lo que me gusta de este experimento. Porque, {{< hl >}}si bien la ciencia de datos puede ser una gran aliada de las humanidades, no estamos obligados a jugar con sus reglas.{{< /hl >}}
 
-Otro aspecto interesante de este experimento es que el mapa revela un *Levante* completamente integrado con el resto de Europa y del Mediterráneo. También pone de relieve la centralidad de Edirne en la geografía política del Imperio otomano. Además, la ciudad española más relevante del mapa no es Madrid ni El Escorial, sino Nápoles. Por último, pero no menos importante, las islas y las pequeñas ciudades-estado como Ragusa parecen desempeñar un papel importante como mediadoras entre las distintas potencias de la región.  
+Otro aspecto interesante: el mapa revela un *Levante* plenamente integrado en el resto de Europa y del Mediterráneo. Subraya también la centralidad de Edirne en la geografía política del Imperio otomano. Por lo demás, la ciudad más relevante de la Monarquía española en el mapa no es Madrid ni El Escorial, sino Nápoles. Y no es lo de menos que las islas y las pequeñas ciudades-estado como Ragusa parezcan desempeñar un papel importante de mediación entre las distintas potencias de la región.  
 
 
-# Cómo solicitar datos a MIA
-Aunque MIA es una herramienta colaborativa excepcional para los investigadores, los datos que almacena en sus servidores no son fácilmente accesibles. Su *back-end*, por ejemplo, no está publicado en repositorios públicos. No obstante, puede obtener los datos registrándose en MIA y haciendo peticiones al servidor con Python.
+# Cómo pedir datos a MIA
+MIA es una herramienta colaborativa excelente para los investigadores, pero los datos que guarda en sus servidores no son de fácil acceso: su *back-end*, por ejemplo, no está publicado en ningún repositorio público. Aun así, puede obtenerlos registrándose en MIA y lanzando peticiones al servidor con Python.
 
 ### Petición
 ```python
@@ -107,9 +107,9 @@ payload = [{"searchSection":"archivalLocationSearch","type":"archivalLocationAdv
 headers = {'Content-type': 'application/json', 'Accept': '*/*'}
 r = requests.post(url, data=json.dumps(payload), headers=headers, auth=('LOGIN','PASSWORD'))
 ```
-Asegúrese de sustituir LOGIN y PASSWORD por sus propias credenciales.
+No olvide sustituir LOGIN y PASSWORD por sus propias credenciales.
 
-### Escribir la respuesta en un archivo
+### Guardar la respuesta en un archivo
 ```python
 with open('response.json', 'wb') as fd:
     for chunk in r.iter_content(chunk_size=128):
@@ -141,4 +141,4 @@ with open('results.csv', 'w', newline='') as csvfile:
                 writer.writerow({'documentId': documentId, 'placeCited': placeCited, 'documentDate': documentDate})
 ```
 
-Una vez descargado el archivo `results.csv`, puede proceder a limpiar los datos como se ha explicado más arriba. 
+Una vez descargado `results.csv`, puede pasar a limpiar los datos como se explicó más arriba. 

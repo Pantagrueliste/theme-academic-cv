@@ -1,6 +1,6 @@
 ---
 title: Emulador de telégrafo ITA2
-summary: Una demostración interactiva del código telegráfico ITA2 (Baudot-Murray) que ayuda al alumnado a comprender conceptos fundamentales de la codificación binaria y de las máquinas de estados.
+summary: Una demostración interactiva del código telegráfico ITA2 (Baudot-Murray) con la que los estudiantes captan las nociones básicas de la codificación binaria y de las máquinas de estados.
 tags:
   - JavaScript
   - Interactivo
@@ -18,7 +18,7 @@ image:
 links:
   - type: code
     icon: brands/github
-    label: Code
+    label: Código
     url: https://github.com/Pantagrueliste/BaudotMurray_Emulator
 url_code: ""
 url_pdf: ""
@@ -34,18 +34,18 @@ slides: ""
 machine_translated: true
 ---
 
-Este emulador de ITA2 sirve como recurso didáctico práctico al hacer visibles e interactivos los conceptos abstractos de la codificación. Cuando los estudiantes escriben un texto y ven su conversión inmediata en patrones de agujeros, están aprendiendo varios conceptos clave de la informática y las telecomunicaciones.
+Este emulador de ITA2 es un recurso para el aula: vuelve visibles y manipulables las nociones abstractas de la codificación. Cuando los estudiantes escriben un texto y lo ven convertirse al instante en patrones de agujeros, están aprendiendo varias ideas clave de la informática y de las telecomunicaciones.
 
 ## Ventajas pedagógicas
 
-En primer lugar, demuestra la representación binaria, es decir, cómo el texto se convierte en secuencias de unos y ceros. Aunque solemos enseñar esto de forma abstracta, ver aparecer los agujeros reales ayuda a los estudiantes a comprender cómo los sistemas físicos pueden representar información digital.
+En primer lugar, muestra la representación binaria: cómo un texto se convierte en una secuencia de unos y ceros. Solemos explicarlo en abstracto; ver cómo van apareciendo los agujeros ayuda, en cambio, a comprender que un sistema físico puede contener información digital.
 
 {{< Baudot >}}
 
-El mecanismo de cambio LETRAS/CIFRAS introduce de forma natural las máquinas de estados. Los estudiantes descubren experimentando que un mismo patrón puede representar caracteres distintos según el modo activo. Esta experiencia práctica con la codificación basada en estados los prepara para conceptos informáticos más complejos.
+El mecanismo de cambio LETRAS/CIFRAS es la puerta natural a las máquinas de estados. A fuerza de probar, los estudiantes descubren que un mismo patrón puede representar caracteres distintos según el modo en que se encuentre la máquina; y esa experiencia directa de una codificación dependiente del estado los prepara para nociones informáticas más complejas.
 
 ## Detalles de implementación
 
-El emulador está implementado en JavaScript y HTML/CSS, lo que permite integrarlo fácilmente en cualquier página web. El código es modular y puede adaptarse a distintos contextos educativos.
+El emulador está escrito en JavaScript y HTML/CSS, de modo que se incrusta sin dificultad en cualquier página web. El código es modular y puede adaptarse a distintos contextos docentes.
 
-Puede encontrar el código fuente y probar el emulador en el [repositorio de GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).
+El código fuente está disponible, y el emulador puede probarse, en el [repositorio de GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).

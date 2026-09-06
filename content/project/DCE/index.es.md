@@ -1,6 +1,6 @@
 ---
 title: Edición eficiente
-summary: Una serie de entradas en las que evalúo distintos enfoques para reducir el coste de las ediciones críticas
+summary: Una serie de entradas en las que evalúo distintas maneras de abaratar las ediciones críticas
 tags: 
 - Humanidades digitales
 date: "2021-12-12T00:00:00Z"
@@ -30,14 +30,14 @@ image:
 #slides: example
 machine_translated: true
 ---
-Las ediciones críticas digitales son onerosas. El trabajo de transcripción, traducción y anotación que debe realizar una mano de obra altamente cualificada representa miles de horas de trabajo y requiere una financiación sustancial, además de un apoyo institucional a largo plazo.  
+Las ediciones críticas digitales salen caras. La transcripción, la traducción y la anotación, que exigen una mano de obra muy cualificada, suman miles de horas de trabajo y requieren una financiación considerable, además de un apoyo institucional sostenido en el tiempo.  
 
-En cierto sentido, es una bendición que los proyectos de gran visibilidad en humanidades digitales puedan obtener las enormes sumas de financiación necesarias para funcionar.   
+En cierto modo, es una suerte que los proyectos más visibles de las humanidades digitales consigan las enormes sumas que necesitan para funcionar.   
 
-Sin embargo, depender en gran medida de la generosidad de fundaciones acaudaladas, universidades y organismos públicos, y necesitar durante largos periodos importantes recursos humanos, no constituye un modelo económico viable para el futuro. Si cada vez más investigadores pueden permitirse producir ambiciosas ediciones digitales de fuentes primarias, esta práctica sigue siendo el privilegio de unos pocos países ricos, lo que refuerza su hegemonía cultural.  
+Ahora bien, depender de la munificencia de fundaciones acaudaladas, universidades y organismos públicos, y necesitar durante años un despliegue considerable de recursos humanos, no es un modelo económico con futuro. Aunque cada vez más investigadores puedan permitirse ambiciosas ediciones digitales de fuentes primarias, la práctica sigue siendo privilegio de unos pocos países ricos, cuya hegemonía cultural refuerza.  
 
-Para hacer accesibles a un público más amplio los documentos históricos de todo el mundo, {{< hl >}}el coste de las ediciones críticas digitales debería reducirse en varios órdenes de magnitud{{< /hl >}}.
+Para que los documentos históricos de todo el mundo lleguen a un público más amplio, {{< hl >}}el coste de las ediciones críticas digitales tendría que bajar varios órdenes de magnitud{{< /hl >}}.
 
-En esta serie de entradas, evalúo los distintos enfoques y componentes tecnológicos que los investigadores de todo el mundo pueden utilizar para publicar fuentes primarias con mayor rapidez y a un coste mínimo.  
+En esta serie de entradas evalúo los distintos enfoques y piezas tecnológicas con que investigadores de cualquier lugar del mundo pueden publicar fuentes primarias más deprisa y con un gasto mínimo.  
 
-Evaluaré, en particular, tecnologías como el aprendizaje automático, la cadena de bloques (*blockchain*) y el almacenamiento descentralizado.
+Me detendré, en particular, en tecnologías como el aprendizaje automático, la cadena de bloques (*blockchain*) y el almacenamiento descentralizado.
