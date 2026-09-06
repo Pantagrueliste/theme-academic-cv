@@ -1,0 +1,31 @@
+# サイト固有の文字列（HugoBlox Kit の i18n ファイルと統合されます）
+translation_notice:
+  other: "このページは自動翻訳されたもので、まだネイティブスピーカーによる確認を受けていません。"
+translation_original:
+  other: "原文を読む"
+translation_vote_question:
+  other: "この翻訳の品質は良いですか？"
+translation_vote_good:
+  other: "はい"
+translation_vote_bad:
+  other: "いいえ"
+translation_vote_thanks:
+  other: "ご意見ありがとうございます！"
+
+# HugoBlox Kit の ja パックに欠けているキー
+questions:
+  other: "質問"
+faq:
+  other: "よくある質問"
+docs:
+  other: "ドキュメント"
+poweredby_button:
+  other: "自分のサイトを作る →"
+read_more:
+  other: "続きを読む"
+callout_note:
+  other: "注"
+portfolio_link_default:
+  other: "リンク"
+backlinks:
+  other: "バックリンク"

@@ -80,3 +80,100 @@ it:
       - name: Codice
         url: /it/#code
         weight: 40
+
+de:
+  locale: de-de
+  weight: 5
+  params:
+    hugoblox:
+      identity:
+        description: "Akademische Website von Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Startseite
+        url: /de/
+        weight: 10
+      - name: Zibaldone
+        url: /de/#posts
+        weight: 20
+      - name: Projekte
+        url: /de/#projects
+        weight: 30
+      - name: Code
+        url: /de/#code
+        weight: 40
+
+ja:
+  locale: ja-jp
+  weight: 6
+  params:
+    hugoblox:
+      identity:
+        description: "クレマン・ゴドバルジュ（PhD）の学術サイト"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: ホーム
+        url: /ja/
+        weight: 10
+      - name: Zibaldone
+        url: /ja/#posts
+        weight: 20
+      - name: プロジェクト
+        url: /ja/#projects
+        weight: 30
+      - name: コード
+        url: /ja/#code
+        weight: 40
+
+zh:
+  locale: zh-cn
+  weight: 7
+  params:
+    hugoblox:
+      identity:
+        description: "Clément Godbarge（博士）的学术网站"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: 首页
+        url: /zh/
+        weight: 10
+      - name: Zibaldone
+        url: /zh/#posts
+        weight: 20
+      - name: 项目
+        url: /zh/#projects
+        weight: 30
+      - name: 代码
+        url: /zh/#code
+        weight: 40
+
+ar:
+  locale: ar
+  direction: rtl
+  weight: 8
+  params:
+    hugoblox:
+      identity:
+        description: "الموقع الأكاديمي لكليمان غودبارج، دكتوراه"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: الرئيسية
+        url: /ar/
+        weight: 10
+      - name: Zibaldone
+        url: /ar/#posts
+        weight: 20
+      - name: المشاريع
+        url: /ar/#projects
+        weight: 30
+      - name: الكود
+        url: /ar/#code
+        weight: 40

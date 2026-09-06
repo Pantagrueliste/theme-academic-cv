@@ -1,5 +1,5 @@
 ---
-title: El espía que les deseaba lo mejor
+title: The Spy Who Wished Them Well
 summary: Una monografía sobre medicina, política y epistemología en tiempos de guerras de religión. 
 tags: 
 - Historia de la medicina

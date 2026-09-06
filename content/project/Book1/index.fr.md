@@ -1,5 +1,5 @@
 ---
-title: L’espion qui leur voulait du bien
+title: The Spy Who Wished Them Well
 summary: Une monographie sur la médecine, la politique et l’épistémologie en temps de guerres de religion. 
 tags: 
 - Histoire de la médecine

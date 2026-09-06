@@ -1,0 +1,13 @@
+# Seitenspezifische Zeichenketten (werden mit den i18n-Dateien von HugoBlox Kit zusammengeführt)
+translation_notice:
+  other: "Diese Seite wurde automatisch übersetzt und noch nicht von einer muttersprachlichen Person geprüft."
+translation_original:
+  other: "Original lesen"
+translation_vote_question:
+  other: "Ist diese Übersetzung gut?"
+translation_vote_good:
+  other: "Ja"
+translation_vote_bad:
+  other: "Nein"
+translation_vote_thanks:
+  other: "Vielen Dank für Ihre Rückmeldung!"

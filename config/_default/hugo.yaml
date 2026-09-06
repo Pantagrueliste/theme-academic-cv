@@ -12,7 +12,8 @@ baseURL: 'https://www.clementgodbarge.com/'
 ############################
 
 defaultContentLanguage: en
-hasCJKLanguage: false
+# Japanese and Chinese content: correct word counts / reading time / summaries
+hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
 

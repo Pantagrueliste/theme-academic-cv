@@ -1,0 +1,26 @@
+# Japanese overrides for data/authors/clement.yaml (merged on top of the default)
+name:
+  alternate: クレマン・ゴドバルジュ
+role: デジタル・ヒューマニティーズ講師
+bio: |
+  クレマン・ゴドバルジュはセント・アンドルーズ大学のデジタル・ヒューマニティーズ講師。研究テーマは近世ヨーロッパにおける科学と統治術の関係である。近刊の著書では、16世紀のフランスとイタリアの宮廷に仕えた医師たちが、いかにして新しいタイプの政治的専門家として自らを位置づけたかを考察している。これまでにアンドリュー・W・メロン財団、フルブライト委員会、アメリカ・ルネサンス学会、ハーバード大学の助成を受けている。
+
+affiliations:
+  - name: セント・アンドルーズ大学
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: メール
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - 近世史
+  - ヨーロッパ文学
+  - デジタル・ヒューマニティーズ

@@ -1,19 +1,19 @@
 ---
 title: The Spy Who Wished Them Well
-summary: Una monografia su medicina, politica ed epistemologia al tempo delle guerre di religione. 
+summary: 宗教戦争の時代における医学、政治、認識論についての研究書。
 tags: 
-- Storia della medicina
-- Guerre di religione francesi
-- Ricerca in corso
+- 医学史
+- フランス宗教戦争
+- 現在の研究
 - Filippo Cavriana
-- Libri
+- 書籍
 date: "2021-12-12T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
-  caption: Particolare dell’affresco di Giorgio Vasari nella Sala Regia a Roma
+  caption: ローマのサラ・レジアにあるジョルジョ・ヴァザーリのフレスコ画の細部
   focal_point: Smart
 
 #links:
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-Maggiori informazioni a breve.
+詳細は近日公開予定です。
 

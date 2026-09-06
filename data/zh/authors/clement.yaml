@@ -1,0 +1,26 @@
+# Chinese (Simplified) overrides for data/authors/clement.yaml (merged on top of the default)
+name:
+  alternate: 克莱芒·戈德巴尔热
+role: 数字人文讲师
+bio: |
+  Clément Godbarge（克莱芒·戈德巴尔热）是圣安德鲁斯大学数字人文讲师。他的研究围绕近代早期欧洲的科学与治国之术展开。在即将出版的新书中，他考察了十六世纪供职于法国和意大利宫廷的医生如何将自己塑造成一种新型的政治专家。他的研究曾获安德鲁·W·梅隆基金会、富布赖特委员会、美国文艺复兴学会和哈佛大学的资助。
+
+affiliations:
+  - name: 圣安德鲁斯大学
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: 电子邮件
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - 近代早期史
+  - 欧洲文学
+  - 数字人文
