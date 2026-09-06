@@ -1,6 +1,6 @@
 ---
 title: The Spy Who Wished Them Well
-summary: Eine Monographie über Medizin, Politik und Epistemologie in Zeiten der Religionskriege. 
+summary: Eine Monographie über Medizin, Politik und Erkenntnistheorie in Zeiten der Religionskriege. 
 tags: 
 - Medizingeschichte
 - Hugenottenkriege
@@ -13,7 +13,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Detail aus Giorgio Vasaris Fresko in der Sala Regia in Rom
+  caption: Ausschnitt aus Giorgio Vasaris Fresko in der Sala Regia in Rom
   focal_point: Smart
 
 #links:
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-Weitere Informationen folgen in Kürze.
+Näheres in Kürze.
 

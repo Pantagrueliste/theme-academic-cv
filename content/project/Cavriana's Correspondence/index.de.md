@@ -1,6 +1,6 @@
 ---
 title: Filippo Cavrianas geheime Korrespondenz, 1568–1589.
-summary: Aufbau einer minimalen Edition von Filippo Cavrianas geheimem *epistolarium*
+summary: Eine minimale Edition von Filippo Cavrianas geheimem *epistolarium*
 tags: 
 - Digital Humanities
 - Primärquellen
@@ -34,12 +34,12 @@ url_video: ""
 machine_translated: true
 ---
 
-Filippo Cavrianas geheime Briefe sind ein einzigartiges Zeugnis der Hugenottenkriege: Über mehr als 20 Jahre hinweg dokumentieren sie die Intrigen, Schlachten, Verhandlungen und Verschwörungen, die das Leben am französischen Hof und darüber hinaus bestimmten.  
+Filippo Cavrianas geheime Briefe sind ein Zeugnis der Hugenottenkriege, wie es kein zweites gibt: Über mehr als 20 Jahre hinweg begleiten sie die Intrigen, Schlachten, Verhandlungen und Verschwörungen, die dem Leben am französischen Hof und weit darüber hinaus den Takt vorgaben.  
 
-Die Briefe, die sich im [Staatsarchiv Florenz](https://www.archiviodistato.firenze.it/asfi/home) befinden, sind größtenteils über Hunderte nicht inventarisierter Bündel verstreut, die man in Florenz *filze* nennt. Zwar konnte ich in den vergangenen Jahren Dutzende neuer Briefe entdecken, doch diese Art der Archivforschung erweist sich als zunehmend schwierig. Die geografische Entfernung von Florenz, der Verfall einiger öffentlicher Dienste in Italien und die Covid-19-Pandemie tragen alle dazu bei, solche Publikationsprojekte zu einem langen und ungewissen Unterfangen zu machen.
+Die Briefe liegen im [Staatsarchiv Florenz](https://www.archiviodistato.firenze.it/asfi/home), größtenteils verstreut über Hunderte unerschlossener Bündel – *filze*, wie man in Florenz sagt. Zwar habe ich in den vergangenen Jahren Dutzende neuer Briefe ans Licht gebracht, doch diese Art von Archivarbeit wird immer beschwerlicher: Die Entfernung von Florenz, der Verfall mancher öffentlicher Dienste in Italien und die Covid-19-Pandemie machen aus solchen Editionsvorhaben ein langwieriges und ungewisses Unterfangen.
 
-Trotz der wachsenden Schwierigkeiten sollte die Veröffentlichung von Primärquellen Teil der Arbeit eines Historikers bleiben. Die Form, die solche Veröffentlichungen annehmen, sollte sich jedoch wahrscheinlich weiterentwickeln. Quellenpublikationen sollten sich nicht nur an die oben beschriebene Situation anpassen, sondern auch den inkrementellen Charakter dieser Forschung besser widerspiegeln und es zugleich anderen ermöglichen, sie fortzuführen.
+Allen Widrigkeiten zum Trotz sollte das Edieren von Primärquellen weiterhin zum Handwerk des Historikers gehören. Die Form freilich, die solche Editionen annehmen, wird sich wohl wandeln müssen. Quelleneditionen sollten sich nicht nur auf die geschilderte Lage einstellen, sondern auch dem schrittweisen Charakter dieser Forschung besser gerecht werden – und es anderen erlauben, die Arbeit fortzusetzen.
 
-Daher die Idee, eine neue Art von digitalem Publikationsprojekt zu entwickeln, das **skalierbar**, **nachhaltig**, **vertrauenswürdig**, **plattformunabhängig** und potenziell **kollaborativ** ist. 
+Daher die Idee, eine neue Art von digitalem Editionsprojekt zu entwickeln: **skalierbar**, **nachhaltig**, **vertrauenswürdig**, **plattformunabhängig** und nach Möglichkeit **kollaborativ**. 
 
-Die Edition ist jetzt online: **[Filippo Cavriana: The Secret Correspondence](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Sie versammelt die bisher transkribierten Briefe aus den Staatsarchiven von Florenz und Mantua sowie der BnF und wächst, sobald neue auftauchen. Die Überlegungen hinter ihrer Gestaltung habe ich in [einem eigenen Beitrag](/post/cavriana-edition/) erläutert.
+Die Edition ist inzwischen online: **[Filippo Cavriana: The Secret Correspondence](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Sie versammelt die bislang transkribierten Briefe aus den Staatsarchiven von Florenz und Mantua sowie der BnF und wächst, sobald neue auftauchen. Die Überlegungen hinter ihrer Anlage habe ich in [einem eigenen Beitrag](/post/cavriana-edition/) dargelegt.

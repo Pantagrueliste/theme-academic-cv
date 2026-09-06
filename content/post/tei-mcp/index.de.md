@@ -1,12 +1,12 @@
 ---
 title: "tei-mcp: TEI P5 für KI-Agenten"
-subtitle: Ein MCP-Server, der KI-Assistenten hilft, die TEI Guidelines zu verstehen
+subtitle: Ein MCP-Server, der KI-Assistenten die TEI Guidelines beibringt
 
 summary: >
-  tei-mcp ist ein Open-Source-MCP-Server, der KI-Programmierassistenten
-  direkten Zugriff auf die TEI-P5-Spezifikation gibt – Elementsuche,
-  Attributauflösung, Verschachtelungsprüfung, Dokumentvalidierung und
-  ODD-Anpassung.
+  tei-mcp ist ein quelloffener MCP-Server, der KI-Programmierassistenten
+  unmittelbaren Zugriff auf die TEI-P5-Spezifikation verschafft – Nachschlagen
+  von Elementen, Auflösen von Attributen, Prüfen der Verschachtelung,
+  Validieren von Dokumenten und ODD-Anpassung.
 
 date: "2026-03-15T00:00:00Z"
 lastmod: "2026-03-15T00:00:00Z"
@@ -28,63 +28,60 @@ categories:
 - Digital Humanities
 ---
 
-Wenn Sie je einen KI-Programmierassistenten benutzt haben, um TEI-XML zu 
-schreiben, ist Ihnen wahrscheinlich aufgefallen, dass er Fehler macht. Elemente 
-tauchen auf, wo sie nicht hingehören. Attribute werden erfunden. 
-Verschachtelungsregeln werden ignoriert. Das Modell hat eine ungefähre 
-Vorstellung davon, wie TEI aussieht, aber keine verlässliche Kenntnis der 
-Spezifikation.
+Wer schon einmal einen KI-Programmierassistenten TEI-XML hat schreiben lassen, 
+weiß, dass dabei Fehler passieren. Elemente stehen, wo sie nicht hingehören; 
+Attribute werden frei erfunden; Verschachtelungsregeln bleiben unbeachtet. Das 
+Modell hat eine ungefähre Vorstellung davon, wie TEI aussieht – von der 
+Spezifikation selbst weiß es nichts Verlässliches.
 
-tei-mcp löst dieses Problem, indem es KI-Agenten direkten, werkzeugbasierten 
-Zugriff auf die TEI-P5-Guidelines gibt.
+tei-mcp schafft hier Abhilfe: Es gibt KI-Agenten direkten, werkzeuggestützten 
+Zugriff auf die TEI-P5-Guidelines.
 
 {{< toc >}}
 
 ## Was ist MCP?
 
 Das [Model Context Protocol](https://modelcontextprotocol.io) (MCP) ist ein 
-offener Standard, der es KI-Anwendungen erlaubt, sich mit externen Datenquellen 
-und Werkzeugen zu verbinden. Stellen Sie es sich als USB-Anschluss für KI vor: 
-ein einziges Protokoll, über das sich jeder kompatible Client – Claude, Cursor, 
-Windsurf und andere – an spezialisierte Dienste anschließen kann.
+offener Standard, über den sich KI-Anwendungen mit externen Datenquellen und 
+Werkzeugen verbinden. Man kann es sich als USB-Anschluss für KI vorstellen: 
+ein einziges Protokoll, mit dem sich jeder kompatible Client – Claude, Cursor, 
+Windsurf und andere – an spezialisierte Dienste anstöpseln lässt.
 
-Ein MCP-Server stellt *Tools* bereit, die die KI während eines Gesprächs 
-aufrufen kann. Statt sich auf auswendig gelernte Trainingsdaten zu verlassen, 
-kann das Modell eine aktuelle, maßgebliche Quelle abfragen.
+Ein MCP-Server stellt *Tools* bereit, die die KI im Laufe eines Gesprächs 
+aufrufen kann. Statt auf angelerntes Trainingswissen zu vertrauen, kann das 
+Modell eine aktuelle, maßgebliche Quelle befragen.
 
-## Was tei-mcp tut
+## Was tei-mcp leistet
 
-tei-mcp parst die ODD-Spezifikation von TEI P5 und stellt 16 Tools bereit, die 
-die häufigsten Fragen abdecken, die sich Editorinnen, Editoren oder Encoder 
+tei-mcp liest die ODD-Spezifikation von TEI P5 ein und stellt 16 Tools bereit, 
+die die häufigsten Fragen beantworten, die sich beim Edieren und Kodieren 
 stellen:
 
-- **Was ist dieses Element?** Schlagen Sie jedes Element, jede Klasse, jedes 
-  Makro oder jedes Modul anhand des Namens nach, ohne Berücksichtigung der 
-  Groß-/Kleinschreibung und mit Vorschlägen bei Tippfehlern.
-- **Welche Attribute nimmt es an?** Lösen Sie Attribute über die gesamte 
-  Klassenhierarchie auf – zuerst lokale Attribute, dann geerbte in ihrer 
-  Reihenfolge.
-- **Was darf hinein?** Expandieren Sie Inhaltsmodelle zu strukturierten Bäumen 
-  oder erhalten Sie eine flache Liste zulässiger Kindelemente.
-- **Darf dieses Element hierhin?** Prüfen Sie die Eltern-Kind-Verschachtelung 
-  oder verfolgen Sie die Erreichbarkeit durch die gesamte Elementhierarchie.
-- **Ist mein Dokument valide?** Validieren Sie eine TEI-XML-Datei gegen die 
+- **Was ist dieses Element?** Nachschlagen von Elementen, Klassen, Makros und 
+  Modulen nach Namen, ohne Rücksicht auf Groß- und Kleinschreibung und mit 
+  Vorschlägen bei Tippfehlern.
+- **Welche Attribute nimmt es?** Auflösen der Attribute über die gesamte 
+  Klassenhierarchie – zuerst die lokalen, dann der Reihe nach die geerbten.
+- **Was darf hinein?** Entfalten von Inhaltsmodellen zu strukturierten Bäumen 
+  oder eine flache Liste der zulässigen Kindelemente.
+- **Darf dieses Element hierhin?** Prüfen der Eltern-Kind-Verschachtelung oder 
+  Nachverfolgen der Erreichbarkeit durch die gesamte Elementhierarchie.
+- **Ist mein Dokument valide?** Validieren einer TEI-XML-Datei gegen die 
   Spezifikation: Inhaltsmodelle, Attributwerte, geschlossene Wertelisten, 
-  Referenzintegrität und Warnungen zu veralteten Elementen.
-- **Und mein Projektschema?** Laden Sie eine ODD-Anpassungsdatei, um all das 
-  oben Genannte auf die projektspezifische Teilmenge von TEI einzuschränken.
+  Integrität der Verweise und Warnungen vor veralteten Konstrukten.
+- **Und mein Projektschema?** Laden einer ODD-Anpassung, um all das auf die 
+  projektspezifische Teilmenge von TEI einzuschränken.
 
-## Warum das wichtig ist
+## Warum das zählt
 
-TEI-Kodierung erfordert ständiges Nachschlagen in den Guidelines. Erfahrene 
-Encoder verinnerlichen die gängigsten Muster, aber selbst sie müssen bei 
-weniger vertrauten Elementen oder komplexen Inhaltsmodellen in der 
-Spezifikation nachsehen. Für KI-Assistenten, die über kein solches 
-verinnerlichtes Wissen verfügen, ist das Problem schlimmer: Sie halluzinieren 
-plausibel aussehendes, aber falsches Markup.
+Wer in TEI kodiert, schlägt ständig in den Guidelines nach. Erfahrene Encoder 
+haben die gängigen Muster verinnerlicht, aber selbst sie müssen bei selteneren 
+Elementen oder verwickelten Inhaltsmodellen in die Spezifikation schauen. Für 
+KI-Assistenten, denen jedes verinnerlichte Wissen fehlt, ist das Problem 
+gravierender: Sie halluzinieren Markup, das plausibel aussieht und falsch ist.
 
 Mit tei-mcp muss die KI nicht raten. Sie kann die Antwort in der Spezifikation 
-nachschlagen, bevor sie eine einzige spitze Klammer schreibt. Das Ergebnis ist 
+nachschlagen, ehe sie auch nur eine spitze Klammer schreibt. Heraus kommt 
 Markup, das TEI P5 entspricht – oder der ODD-Anpassung Ihres Projekts.
 
 ## Erste Schritte
@@ -95,7 +92,7 @@ Installation von PyPI:
 pip install tei-mcp
 ```
 
-Fügen Sie es dann der Konfiguration Ihres MCP-Clients hinzu:
+Anschließend in die Konfiguration Ihres MCP-Clients eintragen:
 
 ```json
 {
@@ -108,8 +105,8 @@ Fügen Sie es dann der Konfiguration Ihres MCP-Clients hinzu:
 }
 ```
 
-Der Server lädt die TEI-Spezifikation beim ersten Start herunter und 
-funktioniert mit jedem MCP-kompatiblen Client.
+Beim ersten Start lädt der Server die TEI-Spezifikation herunter; er arbeitet 
+mit jedem MCP-kompatiblen Client zusammen.
 
 Quellcode und vollständige Dokumentation: 
 [github.com/Pantagrueliste/tei-mcp](https://github.com/Pantagrueliste/tei-mcp)

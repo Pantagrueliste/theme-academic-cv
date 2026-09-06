@@ -1,6 +1,6 @@
 ---
 title: Effizientes Edieren
-summary: Eine Reihe von Blogbeiträgen, in denen ich verschiedene Ansätze bewerte, um die Kosten wissenschaftlicher Editionen zu senken
+summary: Eine Reihe von Blogbeiträgen, in denen ich verschiedene Wege prüfe, die Kosten wissenschaftlicher Editionen zu drücken
 tags: 
 - Digital Humanities
 date: "2021-12-12T00:00:00Z"
@@ -30,14 +30,14 @@ image:
 #slides: example
 machine_translated: true
 ---
-Digitale kritische Editionen sind kostspielig. Die Arbeit der Transkription, Übersetzung und Annotation, die hochqualifizierte Fachkräfte leisten müssen, bedeutet Tausende von Arbeitsstunden und erfordert erhebliche Fördermittel, zusätzlich zu langfristiger institutioneller Unterstützung.  
+Digitale kritische Editionen sind ein kostspieliges Geschäft. Transkription, Übersetzung und Annotation, die nur hochqualifizierte Fachleute leisten können, verschlingen Tausende von Arbeitsstunden und verlangen erhebliche Fördermittel – dazu institutionellen Rückhalt auf lange Sicht.  
 
-In gewissem Sinne ist es ein Segen, dass Projekte der Digital Humanities mit hoher Sichtbarkeit die enormen Fördermittel einwerben können, die für ihren Betrieb nötig sind.   
+In gewisser Weise ist es ein Segen, dass Vorzeigeprojekte der Digital Humanities die gewaltigen Summen einwerben können, die ihr Betrieb erfordert.   
 
-Doch die starke Abhängigkeit von der Großzügigkeit wohlhabender Stiftungen, Universitäten und staatlicher Einrichtungen sowie der langanhaltende Bedarf an umfangreichen personellen Ressourcen bilden kein tragfähiges Wirtschaftsmodell für die Zukunft. Auch wenn sich immer mehr Forschende ambitionierte digitale Editionen von Primärquellen leisten können, bleibt diese Praxis das Privileg einiger weniger wohlhabender Länder und verstärkt damit deren kulturelle Hegemonie.  
+Doch wer sich derart auf die Großzügigkeit reicher Stiftungen, Universitäten und Behörden verlässt und über Jahre hinweg viel Personal binden muss, hat kein Wirtschaftsmodell, das die Zukunft trägt. Mögen sich auch immer mehr Forschende ehrgeizige digitale Quelleneditionen leisten können – diese Praxis bleibt das Privileg einiger weniger wohlhabender Länder und befestigt damit deren kulturelle Vormacht.  
 
-Um historische Dokumente aus aller Welt einem breiteren Publikum zugänglich zu machen, {{< hl >}}müssen die Kosten digitaler kritischer Editionen um Größenordnungen sinken{{< /hl >}}.
+Sollen historische Dokumente aus aller Welt einem breiteren Publikum zugänglich werden, dann {{< hl >}}müssen die Kosten digitaler kritischer Editionen um Größenordnungen sinken{{< /hl >}}.
 
-In dieser Reihe von Blogbeiträgen bewerte ich die verschiedenen Ansätze und technologischen Bausteine, mit denen Forschende aus aller Welt Primärquellen schneller und mit minimalem Aufwand veröffentlichen können.  
+In dieser Reihe von Blogbeiträgen prüfe ich die Ansätze und technischen Bausteine, mit denen Forschende überall auf der Welt Primärquellen schneller und mit minimalem Aufwand publizieren können.  
 
-Ich werde insbesondere Technologien wie maschinelles Lernen, Blockchain und dezentrale Speicherung bewerten.
+Im Blick habe ich dabei vor allem Technologien wie maschinelles Lernen, Blockchain und dezentrale Speicherung.

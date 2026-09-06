@@ -1,9 +1,9 @@
 ---
 title: Handschriften visualisieren 2 (Update)
-subtitle: Ein Werkzeug zur Handschriftenvisualisierung nach mehreren Kriterien
+subtitle: Ein Werkzeug, das Handschriften nach mehreren Kriterien sichtbar macht
 
 # Summary for listings and search engines
-summary: Neuere Version der interaktiven Treemap mit zusätzlichen Funktionen. 
+summary: Neue Fassung der interaktiven Treemap, um einige Funktionen erweitert. 
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -42,10 +42,10 @@ tags:
 categories:
 - Notizen
 ---
-Wie versprochen, hier eine neue Version der interaktiven Treemap aus einem [früheren Beitrag]({{< relref "/post/treemap" >}}), diesmal mit zwei Anzeigemodi.
+Wie versprochen: eine neue Fassung der interaktiven Treemap aus einem [früheren Beitrag]({{< relref "/post/treemap" >}}), diesmal mit zwei Ansichten.
 
 > [!NOTE]
-> Für ein besseres Anzeigeerlebnis stellen Sie sicher, dass die Webseite im hellen Modus angezeigt wird (klicken Sie auf das Mondsymbol oben rechts).
+> Am besten wirkt die Darstellung im hellen Modus der Webseite (Mondsymbol oben rechts anklicken).
 
    <head>
     <meta charset="UTF-8" />

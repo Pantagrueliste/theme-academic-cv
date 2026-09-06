@@ -1,9 +1,9 @@
 ---
-title: Kann verteiltes Webhosting kostengünstige Nachhaltigkeit bieten?
-subtitle: Vor- und Nachteile des Hostings einer digitalen kritischen Edition auf IPFS
+title: Nachhaltig hosten zum kleinen Preis – geht das mit dem verteilten Web?
+subtitle: Was für und was gegen eine digitale kritische Edition auf IPFS spricht
 
 # Summary for listings and search engines
-summary: In diesem Beitrag argumentiere ich, dass verteiltes Webhosting es Editorinnen und Editoren ermöglicht, Inhalte nachhaltig zu veröffentlichen und zugleich Kosten zu senken. Lässt sich Nachhaltigkeit zu geringen oder gar keinen Kosten erreichen? Und wenn ja, welche Kompromisse muss eine digitale Edition dafür eingehen?
+summary: In diesem Beitrag vertrete ich die These, dass verteiltes Webhosting Herausgeberinnen und Herausgebern erlaubt, nachhaltig zu publizieren und dabei noch Kosten zu sparen. Ist Nachhaltigkeit für wenig oder gar kein Geld zu haben? Und wenn ja, welche Zugeständnisse muss eine digitale Edition dafür machen?
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -43,4 +43,4 @@ categories:
 ---
 
 # Einleitung
-Wie lassen sich digitale wissenschaftliche Editionen herstellen, ohne das Budget zu sprengen? In diesem Beitrag, dem ersten einer Reihe zum effizienten Edieren, bewerte ich die Rolle, die vortrainierte Sprachmodelle bei der Automatisierung editorischer Aufgaben wie der semantischen Auszeichnung spielen können.
+Wie bringt man eine digitale wissenschaftliche Edition zustande, ohne sich zu ruinieren? Dieser Beitrag eröffnet eine Reihe zum effizienten Edieren; ich prüfe darin, was vortrainierte Sprachmodelle leisten können, wenn es darum geht, editorische Routinearbeiten wie die semantische Auszeichnung zu automatisieren.

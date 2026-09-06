@@ -1,6 +1,6 @@
 ---
 title: ITA2-Telegrafen-Emulator
-summary: Eine interaktive Demonstration des ITA2-Telegrafencodes (Baudot-Murray-Code), die Studierenden hilft, grundlegende Konzepte der Binärkodierung und der Zustandsautomaten zu erfassen.
+summary: Eine interaktive Vorführung des ITA2-Telegrafencodes (Baudot-Murray-Code), an der Studierende die Grundbegriffe der Binärkodierung und der Zustandsautomaten erfassen.
 tags:
   - JavaScript
   - Interaktiv
@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: ITA2-Telegrafenlochstreifen mit kodierter Nachricht
+  caption: ITA2-Lochstreifen mit kodierter Nachricht
   focal_point: Smart
 
 links:
@@ -34,18 +34,18 @@ slides: ""
 machine_translated: true
 ---
 
-Dieser ITA2-Emulator dient als praktisches Lehrmittel, indem er abstrakte Kodierungskonzepte sichtbar und interaktiv macht. Wenn Studierende Text eintippen und die unmittelbare Umwandlung in Lochmuster sehen, lernen sie mehrere Schlüsselkonzepte der Informatik und der Telekommunikation kennen.
+Dieser ITA2-Emulator ist ein handfestes Lehrmittel: Er macht sichtbar und anfassbar, was an der Kodierung sonst abstrakt bleibt. Wer Text eintippt und zusieht, wie er sich augenblicklich in Lochmuster verwandelt, lernt dabei gleich mehrere Grundbegriffe von Informatik und Telekommunikation kennen.
 
 ## Didaktischer Nutzen
 
-Erstens veranschaulicht er die Binärdarstellung – wie aus Text Muster aus Einsen und Nullen werden. Wir vermitteln dies oft rein abstrakt; wer aber die tatsächlichen Löcher erscheinen sieht, begreift leichter, wie physische Systeme digitale Information darstellen können.
+Zum einen führt er die Binärdarstellung vor – wie aus Text ein Muster aus Einsen und Nullen wird. Oft lehren wir das rein abstrakt; wer aber die Löcher tatsächlich im Streifen erscheinen sieht, begreift viel leichter, dass ein physisches System digitale Information tragen kann.
 
 {{< Baudot >}}
 
-Der LETTERS/FIGURES-Umschaltmechanismus führt ganz natürlich in das Konzept der Zustandsautomaten ein. Studierende entdecken durch Experimentieren, dass dasselbe Muster je nach aktuellem Modus unterschiedliche Zeichen darstellen kann. Diese praktische Erfahrung mit zustandsabhängiger Kodierung bereitet sie auf komplexere Konzepte der Informatik vor.
+Mit der LETTERS/FIGURES-Umschaltung ist zum anderen der Zustandsautomat wie von selbst im Raum. Beim Ausprobieren entdecken die Studierenden, dass ein und dasselbe Muster je nach Modus ein anderes Zeichen bedeutet – eine handfeste Erfahrung mit zustandsabhängiger Kodierung, die den Boden für anspruchsvollere Begriffe der Informatik bereitet.
 
-## Details zur Implementierung
+## Zur Implementierung
 
-Der Emulator ist in JavaScript und HTML/CSS implementiert und lässt sich damit leicht in jede Webseite einbetten. Der Code ist modular aufgebaut und kann an verschiedene Lehrkontexte angepasst werden.
+Der Emulator ist in JavaScript und HTML/CSS geschrieben und lässt sich daher ohne Umstände in jede Webseite einbetten. Der Code ist modular aufgebaut und für verschiedene Unterrichtssituationen anpassbar.
 
-Den Quellcode finden Sie im [GitHub-Repository](https://github.com/Pantagrueliste/BaudotMurray_Emulator), wo Sie den Emulator auch selbst ausprobieren können.
+Quellcode und Emulator zum Selbstausprobieren finden Sie im [GitHub-Repository](https://github.com/Pantagrueliste/BaudotMurray_Emulator).

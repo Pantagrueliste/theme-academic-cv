@@ -1,9 +1,9 @@
 ---
 title: Ein visueller Browser für das Archiv
-subtitle: Ein nutzerfreundlicher Zugang zu digitalisierten Archivdokumenten
+subtitle: Digitalisierte Archivdokumente, benutzerfreundlich erschlossen
 
 # Summary for listings and search engines
-summary: Interaktive Visualisierungen bieten Leserinnen und Lesern einen alternativen sinnlichen Zugang, um sich in komplexen Archivdokumenten zurechtzufinden.
+summary: Interaktive Visualisierungen geben Leserinnen und Lesern einen anderen sinnlichen Halt, um sich in verwickelten Archivdokumenten zurechtzufinden.
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -41,17 +41,17 @@ categories:
 - Notizen
 ---
 # Das Problem
-Digitale Editionen leiden unter einem Paradox: Während sie entlegene Dokumente einem breiteren Publikum zugänglich machen, neigt der Verlust sinnlicher Eindrücke, der aus ihrer Entmaterialisierung folgt, dazu, Leserinnen und Leser zu desorientieren und sogar davon abzuhalten, sich mit ihren Inhalten zu befassen. Sie machen die Navigation in umfangreichen Dokumentbeständen ziemlich umständlich und einschüchternd. Das gilt nicht nur für Nutzende ohne Erfahrung in der Archivforschung, sondern auch für Leserinnen und Leser mit kognitiven Beeinträchtigungen.
+Digitale Editionen leiden an einem Paradox: Sie machen entlegene Dokumente einem breiteren Publikum zugänglich – doch mit der Entmaterialisierung geht der sinnliche Halt verloren, und das verwirrt die Leserinnen und Leser oder schreckt sie gar davon ab, sich auf den Inhalt einzulassen. Sich durch riesige Dokumentbestände zu bewegen wird so umständlich und einschüchternd. Das gilt nicht nur für Nutzende, denen die Archivarbeit fremd ist, sondern auch für Leserinnen und Leser mit kognitiven Beeinträchtigungen.
 
 # Die Lösung
-Hier können uns Archivmetadaten helfen. Solche Daten ermöglichen es uns nämlich, interaktive visuelle Abstraktionen zu schaffen, die den Lesenden einen alternativen sinnlichen Zugang bieten und damit sowohl die Ergonomie als auch die Zugänglichkeit verbessern. Um das Archiv visuell navigierbar zu machen, genügt eine Treemap – oder jedes andere Diagramm, das hierarchische Daten effizient aufschlüsselt. 
+An dieser Stelle helfen die Metadaten des Archivs weiter. Aus ihnen lassen sich interaktive visuelle Abstraktionen bauen, die den Lesenden einen anderen sinnlichen Zugang eröffnen und damit Ergonomie wie Zugänglichkeit zugleich verbessern. Um das Archiv visuell begehbar zu machen, genügt eine Treemap – oder irgendein Diagramm, das hierarchische Daten übersichtlich aufgliedert. 
 
 # Das Experiment
-Mein erstes Experiment adaptiert den Code der [Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) für `D3.js` und ergänzt ihn um Hyperlinks. Es stellt die Handschrift BnF Ms. Fr. 640, ihre Folios und die Einträge in jedem Folio dar. Die Farben stehen für die vorherrschende Kategorie. Weitere Daten werden beim Überfahren jedes Eintrags mit der Maus angezeigt, darunter der Hyperlink zur Handschrift.   
-Auf diese Weise wird die Treemap zu einem interaktiven visuellen Index, der den Lesenden einen sehr schnellen und reaktiven Überblick verschafft – nicht nur über den Inhalt der Handschrift, sondern auch über den Umfang jedes Folios und jedes Eintrags.  
-~~In den kommenden Monaten werde ich weiter mit dieser Idee experimentieren und andere Diagramme und andere Hierarchien ausprobieren … Bleiben Sie dran!~~ Eine neue Version der Treemap finden Sie [hier]({{< relref "/post/treemap2" >}}).  
+Mein erster Versuch passt den Code der [Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) für `D3.js` an und ergänzt ihn um Hyperlinks. Dargestellt wird die Handschrift BnF Ms. Fr. 640 mit ihren Folios und den Einträgen auf jedem Folio; die Farben zeigen die jeweils vorherrschende Kategorie an. Fährt man mit der Maus über einen Eintrag, erscheinen weitere Angaben, darunter der Link zur Handschrift.   
+So wird die Treemap zu einem interaktiven visuellen Register, das den Lesenden auf einen Blick und ohne Verzögerung Überblick verschafft – nicht nur über den Inhalt der Handschrift, sondern auch über den Umfang jedes Folios und jedes Eintrags.  
+~~In den kommenden Monaten werde ich diese Idee weiterverfolgen und andere Diagramme und andere Hierarchien ausprobieren … Bleiben Sie dran!~~ Eine neue Version der Treemap finden Sie [hier]({{< relref "/post/treemap2" >}}).  
 > [!NOTE]
-> Für ein besseres Anzeigeerlebnis stellen Sie sicher, dass die Webseite im hellen Modus angezeigt wird (klicken Sie auf das Mondsymbol oben rechts).
+> Am besten wirkt die Darstellung im hellen Modus der Webseite (Mondsymbol oben rechts anklicken).
 
   <head>
     <meta charset="UTF-8" />

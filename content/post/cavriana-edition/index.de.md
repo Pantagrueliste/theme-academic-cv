@@ -1,12 +1,12 @@
 ---
-title: "Eine andere Art von digitaler Edition"
-subtitle: Jenseits des Förderzyklus – ein nachhaltiger Weg zu kritischen Editionen
+title: "Eine digitale Edition anderer Art"
+subtitle: Jenseits des Förderzyklus – ein tragfähiger Weg zur kritischen Edition
 
 summary: >
   Die meisten Primärquellen werden nie veröffentlicht. Das Modell der
   drittmittelfinanzierten digitalen Edition ist zu teuer, zu zentralisiert
-  und zu fragil, um in großem Maßstab zu funktionieren. Hier erkläre ich,
-  warum ich die kritische Edition von Cavrianas Briefen anders aufbaue.
+  und zu zerbrechlich, als dass es in der Breite funktionieren könnte. Warum
+  ich die kritische Edition von Cavrianas Briefen deshalb anders anlege.
 
 date: "2026-03-24T00:00:00Z"
 lastmod: "2026-03-24T00:00:00Z"
@@ -26,4 +26,4 @@ categories:
 - Digital Humanities
 ---
 
-Die meisten Primärquellen werden nie veröffentlicht. Das Modell, auf das wir uns verlassen, um das zu ändern – drittmittelfinanzierte digitale Editionen –, ist zu teuer, zu zentralisiert und zu fragil, um in großem Maßstab zu funktionieren. Ich habe soeben [einen Beitrag](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/blog/2026/03/23/welcome) veröffentlicht, in dem ich erkläre, warum ich die kritische Edition von Cavrianas Briefen anders aufbaue: digitalisierte Primärquellen, die organisch wachsen, mit minimaler Infrastruktur, automatisierter Wartung, offen für Zusammenarbeit und so kostengünstig, dass gar keine Fördermittel nötig sind. Es ist ein Plädoyer für eine Art von Digital Humanities, die unabhängig von institutioneller Unterstützung funktioniert.
+Die meisten Primärquellen werden nie veröffentlicht. Und das Modell, mit dem wir dem abhelfen wollen – die drittmittelfinanzierte digitale Edition –, ist zu teuer, zu zentralisiert und zu zerbrechlich, als dass es in der Breite funktionieren könnte. In [einem soeben erschienenen Beitrag](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/blog/2026/03/23/welcome) lege ich dar, warum ich die kritische Edition von Cavrianas Briefen anders anlege: als digitalisierte Primärquellen, die organisch wachsen, mit minimaler Infrastruktur auskommen, sich selbsttätig warten, offen für Mitarbeit sind und so wenig kosten, dass es gar keiner Förderung bedarf. Es ist ein Plädoyer für Digital Humanities, die auch ohne institutionellen Rückhalt funktionieren.

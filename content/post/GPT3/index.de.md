@@ -1,9 +1,9 @@
 ---
-title: Automatisierte Auszeichnung in digitalen wissenschaftlichen Editionen
-subtitle: Können vortrainierte Sprachmodelle die editorische Produktivität deutlich steigern?
+title: Auszeichnung automatisieren in digitalen wissenschaftlichen Editionen
+subtitle: Lässt sich die Produktivität beim Edieren mit vortrainierten Sprachmodellen spürbar steigern?
 
 # Summary for listings and search engines
-summary: Vortrainierte Sprachmodelle können Forschenden helfen, einige der mühsamsten und arbeitsintensivsten Aufgaben des Edierens zu automatisieren. Auf der Grundlage der kuratierten Annotationen von *Secrets of Craft and Nature in Renaissance France* prüfe ich, inwieweit ein Modell wie GPT-3 rasch darauf trainiert werden kann, technische Handschriften des 16. Jahrhunderts zu annotieren.
+summary: Vortrainierte Sprachmodelle können Forschenden einige der mühsamsten und arbeitsintensivsten Schritte des Edierens abnehmen. Anhand der kuratierten Annotationen von *Secrets of Craft and Nature in Renaissance France* prüfe ich, wie weit sich ein Modell wie GPT-3 in kurzer Zeit darauf trainieren lässt, technische Handschriften des 16. Jahrhunderts zu annotieren.
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -42,24 +42,24 @@ categories:
 - Effizientes Edieren
 ---
 # Einleitung
-Wie lassen sich digitale wissenschaftliche Editionen herstellen, ohne das Budget zu sprengen? In diesem Beitrag, dem ersten einer Reihe zum effizienten Edieren, bewerte ich die Rolle, die vortrainierte Sprachmodelle bei der Automatisierung editorischer Aufgaben wie der semantischen Auszeichnung spielen können.
+Wie bringt man eine digitale wissenschaftliche Edition zustande, ohne sich zu ruinieren? Dieser Beitrag eröffnet eine Reihe zum effizienten Edieren; ich prüfe darin, was vortrainierte Sprachmodelle leisten können, wenn es darum geht, editorische Routinearbeiten wie die semantische Auszeichnung zu automatisieren.
 
 {{< toc >}}
 
 # Das Problem
-## Eine Arbeit aus Liebe
-Wer liebt, der rechnet nicht … so jedenfalls das alte Sprichwort. Für digitale wissenschaftliche Editionen gilt das in besonderem Maße, denn die Transkription, Übersetzung und Annotation, die ihre Erarbeitung erfordert, bedeuten Tausende von Arbeitsstunden, geleistet – wie im Fall von [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) – von Hunderten hochqualifizierter Mitarbeiterinnen und Mitarbeiter.
+## Ein Werk der Liebe
+Wo die Liebe hinfällt, fragt niemand nach dem Preis – so jedenfalls will es das alte Sprichwort. Auf digitale wissenschaftliche Editionen trifft das in besonderem Maße zu: Transkription, Übersetzung und Annotation verschlingen Tausende von Arbeitsstunden, die – wie bei [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) – von Hunderten hochqualifizierter Mitarbeiterinnen und Mitarbeiter geleistet werden.
 
-In gewissem Sinne ist es ein Segen, dass Projekte der Digital Humanities mit hoher Sichtbarkeit die enormen Fördermittel einwerben können, die für ihren Betrieb nötig sind. Doch die starke Abhängigkeit von der Großzügigkeit wohlhabender Stiftungen, Universitäten und staatlicher Einrichtungen sowie der langanhaltende Bedarf an umfangreichen personellen Ressourcen bilden kein tragfähiges Wirtschaftsmodell für die Zukunft.
+In gewisser Weise ist es ein Segen, dass Vorzeigeprojekte der Digital Humanities die gewaltigen Summen einwerben können, die ihr Betrieb verlangt. Doch wer sich derart auf die Großzügigkeit reicher Stiftungen, Universitäten und Behörden verlässt und über Jahre hinweg viel Personal binden muss, hat kein Wirtschaftsmodell, das die Zukunft trägt.
 
-Wenn wir Forschende aus aller Welt ermutigen wollen, historische Dokumente einem breiteren Publikum zugänglich zu machen, {{< hl >}}müssen die Kosten digitaler kritischer Editionen um Größenordnungen sinken{{< /hl >}}. 
+Wollen wir Forschende in aller Welt ermutigen, historische Dokumente einem breiteren Publikum zu erschließen, dann {{< hl >}}müssen die Kosten digitaler kritischer Editionen um Größenordnungen sinken{{< /hl >}}. 
 
 ## Eine hohe Schwelle
-Etwas paradoxerweise {{< hl >}}könnte die Lösung gerade von arbeitsintensiven Projekten wie [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) kommen, denn sie bilden einen wertvollen Trainingsdatensatz{{< /hl >}}, um einige der widerspenstigsten und repetitivsten Aufgaben des digitalen Edierens zu automatisieren, etwa die Auszeichnung (Markup).
+Paradoxerweise {{< hl >}}könnte die Lösung ausgerechnet von arbeitsintensiven Unternehmungen wie [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) kommen, denn sie liefern einen wertvollen Trainingsdatensatz{{< /hl >}}, mit dem sich einige der sprödesten und eintönigsten Arbeiten des digitalen Edierens automatisieren lassen – etwa die Auszeichnung.
 
-Nicht, dass die Auszeichnung unwichtig wäre. Im Gegenteil: {{< hl >}}Markup ist zum unverzichtbaren Bestandteil jedes ernsthaften digitalen Editionsprojekts geworden.{{< /hl >}} Standardisiert durch die [Text Encoding Initiative](https://tei-c.org), erlaubt es uns, möglichst viele Aspekte des Dokuments und des Textes, den es vermittelt, festzuhalten: Struktur, Randbemerkungen, Streichungen, Varianten, Papiersorte, Flecken, Schriftbild … was immer Sie wollen.
+Nicht, dass die Auszeichnung nebensächlich wäre; im Gegenteil: {{< hl >}}Markup ist heute der unverzichtbare Bestandteil jedes ernstzunehmenden digitalen Editionsvorhabens.{{< /hl >}} Normiert durch die [Text Encoding Initiative](https://tei-c.org), erlaubt es, möglichst viele Eigenschaften des Dokuments und des Textes, den es überliefert, festzuhalten – Struktur, Marginalien, Streichungen, Varianten, Papiersorte, Flecken, Schriftbild … ganz nach Belieben.
 
-Das folgende Beispiel aus [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) zeigt, wie die Auszeichnung den Text um zusätzliche Informationen anreichert (Kategorie, Struktur, semantische Felder, Streichungen usw.) und digitalen Editionen damit letztlich einen erheblichen Vorteil gegenüber ihren materiellen Vorfahren verschafft.
+Das folgende Beispiel aus [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org) zeigt, wie die Auszeichnung den Text mit Zusatzinformation anreichert (Kategorie, Struktur, semantische Felder, Streichungen usw.) – und der digitalen Edition damit einen handfesten Vorsprung vor ihren gedruckten Vorfahren verschafft.
 
 <table>
 <tr>
@@ -97,39 +97,39 @@ violence aux <wp>artifices de foeu</wp></head>
 </tr>
 </table>
 
-Diese Informationen sind nicht nur für Archivzwecke wertvoll, sondern, wie ich bei früheren Gelegenheiten gezeigt habe, auch für synthetische und analytische Zwecke. Dennoch kann diese Art der Annotation äußerst zeitaufwendig sein, da derselbe Text oft in verschiedenen Fassungen verfügbar sein muss: als Übersetzung, als Transkription, als Modernisierung usw. 
+Wertvoll ist diese Information für die Archivierung, aber ebenso – wie ich andernorts gezeigt habe – für Synthese und Analyse. Nur ist eine solche Annotation eben ungeheuer zeitraubend, zumal derselbe Text häufig in mehreren Gestalten vorliegen muss: als Übersetzung, als Transkription, als modernisierte Fassung und so fort. 
 
 # Die Lösung
-## Transformer: der einfachste Weg zur Automatisierung?
-2020 veröffentlichte [OpenAI](https://www.openai.com) mit großem Tamtam seine neueste Familie universeller großer Sprachmodelle namens GPT-3, was für „Generative Pre-trained Transformer 3“ steht. Transformer stellen einen recht jungen Durchbruch in der Künstlichen Intelligenz dar. Sie lernen neue Aufgaben mit beeindruckender Geschwindigkeit, indem sie einfach einen Prompt lesen und eine sehr begrenzte Zahl von Beispielen betrachten. Sie können auch mit einem eigens zusammengestellten Datensatz zusätzlich trainiert werden (Fine-Tuning), was Latenz und Genauigkeit verbessert. Aus diesem Grund bezeichnet man GPT-3 und vergleichbare Transformer als [Few-Shot-Learner](https://arxiv.org/abs/2005.14165). 
+## Transformer: der kürzeste Weg zur Automatisierung?
+2020 stellte [OpenAI](https://www.openai.com) mit großem Getöse seine neueste Familie universell einsetzbarer großer Sprachmodelle vor: GPT-3, ausgeschrieben „Generative Pre-trained Transformer 3“. Transformer sind ein noch recht junger Durchbruch der Künstlichen Intelligenz. Sie lernen neue Aufgaben verblüffend schnell – es genügt, ihnen eine Anweisung (den Prompt) und eine Handvoll Beispiele vorzulegen. Zudem lassen sie sich mit einem eigens zusammengestellten Datensatz nachtrainieren (Fine-Tuning), was Antwortzeit und Treffsicherheit verbessert. Deshalb spricht man bei GPT-3 und verwandten Transformern von [Few-Shot-Learnern](https://arxiv.org/abs/2005.14165). 
 
-OpenAI gibt an, dass GPT-3 die Rekordzahl von 175 Milliarden Parametern umfasst und mit mehr als 570 GB Text trainiert wurde, überwiegend englischsprachigen Dokumenten, die vermutlich aus [dem Internet](https://skylion007.github.io/OpenWebTextCorpus/) stammen. Allein durch seine schiere Größe hat GPT-3 in diesem Bereich einen neuen Standard gesetzt und führt ohne weitere Anpassung verschiedenste Aufgaben mit beunruhigendem Realismus aus. Es schreibt plausible [Meinungsbeiträge](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3), es [interagiert mit Menschen](https://www.quickchat.ai/emerson) in Chatrooms, [beantwortet E-Mails](https://www.jarvis.ai/?fpr=serpbattle), [fasst Texte zusammen](https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88), übersetzt Dokumente, erklärt Fachjargon usw.
+Nach Angaben von OpenAI umfasst GPT-3 die Rekordzahl von 175 Milliarden Parametern und wurde mit über 570 GB Text trainiert, überwiegend englischsprachigen Dokumenten, die vermutlich aus [dem Internet](https://skylion007.github.io/OpenWebTextCorpus/) stammen. Allein kraft seiner Größe hat GPT-3 in diesem Feld neue Maßstäbe gesetzt: Es erledigt ohne jede Anpassung die verschiedensten Aufgaben mit einem Realismus, der einen beunruhigen kann. Es schreibt glaubwürdige [Meinungsbeiträge](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3), [plaudert mit Menschen](https://www.quickchat.ai/emerson) in Chatrooms, [beantwortet E-Mails](https://www.jarvis.ai/?fpr=serpbattle), [fasst Texte zusammen](https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88), übersetzt Dokumente, erklärt Fachjargon und dergleichen mehr.
 
-Da ich seit Mai 2021 frühen Zugang zur API von OpenAI hatte, konnte ich mit der Fähigkeit des Modells experimentieren, eine Reihe als schwierig geltender Aufgaben zu lösen: französische Lyrik und neulateinische Texte ins Englische zu übersetzen, Analogien zu erklären und sogar Buch 4 von Kants *Grundlegung zur Metaphysik der Sitten* für ein siebenjähriges Kind zu vereinfachen (wenn auch wenig überzeugend).
+Seit Mai 2021 habe ich frühen Zugang zur API von OpenAI und konnte seither ausprobieren, wie das Modell mit Aufgaben zurechtkommt, die als notorisch schwierig gelten: französische Lyrik und neulateinische Texte ins Englische übersetzen, Analogien erläutern, ja sogar den vierten Abschnitt von Kants *Grundlegung zur Metaphysik der Sitten* für ein siebenjähriges Kind herunterbrechen (wenn auch wenig überzeugend).
 
 ### Codex
-Eine der jüngsten Entwicklungen von GPT-3 konzentriert sich auf Programmiersprachen. Dieses Modell namens *Codex* übersetzt natürliche Sprache in Programmiersprache und umgekehrt. Wenn ich zum Beispiel einen regulären Ausdruck suche, mit dem ich „nur Wörter finden kann, die mit einem Großbuchstaben beginnen“, übersetzt GPT-3 dies prompt in einen funktionierenden regulären Ausdruck: ```[A-Z]+\w+```.
+Eine der jüngsten Ausprägungen von GPT-3 hat es auf Programmiersprachen abgesehen. Das Modell heißt *Codex* und übersetzt natürliche Sprache in Programmcode und umgekehrt. Suche ich etwa einen regulären Ausdruck, der „nur Wörter findet, die mit einem Großbuchstaben beginnen“, so liefert GPT-3 prompt einen funktionierenden: ```[A-Z]+\w+```.
 
-OpenAI gibt an, dass *Codex* mit einem Dutzend Programmiersprachen arbeiten kann, darunter Python, JavaScript, Go, Perl, PHP, Ruby und Swift. Indem es Pseudocode nahtlos in Code umwandelt, erlaubt *Codex* den Nutzenden, sich nicht auf die mühselige Syntax einer Programmiersprache zu konzentrieren, sondern auf die logischen Schritte und Strategien, mit denen Anwendungen Probleme lösen.
+Laut OpenAI beherrscht *Codex* ein Dutzend Programmiersprachen, darunter Python, JavaScript, Go, Perl, PHP, Ruby und Swift. Weil es Pseudocode reibungslos in Code verwandelt, kann man sich statt auf die pedantische Syntax einer Programmiersprache auf das konzentrieren, worauf es ankommt: die logischen Schritte und Strategien, mit denen ein Programm ein Problem löst.
 
 ### Jenseits von OpenAI
-OpenAI ist natürlich nicht der einzige Akteur auf dem Markt. Wie bereits erwähnt, kündigte die Beijing Academy of Artificial Intelligence 2021 ein noch größeres und leistungsfähigeres Modell namens *Wu Dao 2* an. Nvidia und Microsoft haben sich zusammengetan, um das treffend benannte Modell *Megatron-Turing NLG 530B* zu entwickeln. Kleinere Start-ups wie [AI21 Labs](https://www.ai21.com) und [Cohere](https://cohere.ai) bieten der Öffentlichkeit ebenfalls APIs an. Erwähnenswert sind auch Open-Source-Initiativen wie [EleutherAI](https://www.eleuther.ai). Die KI-Szene entwickelt sich natürlich sehr schnell; um neue Initiativen in diesem Bereich zu verfolgen, werfen Sie einen Blick auf [Hugging Face](https://huggingface.co/transformers/master/index.html).
+OpenAI ist freilich nicht der einzige Mitspieler. Wie erwähnt, kündigte die Beijing Academy of Artificial Intelligence 2021 mit *Wu Dao 2* ein noch größeres und leistungsfähigeres Modell an. Nvidia und Microsoft taten sich für das treffend benannte *Megatron-Turing NLG 530B* zusammen. Kleinere Start-ups wie [AI21 Labs](https://www.ai21.com) und [Cohere](https://cohere.ai) bieten der Öffentlichkeit ebenfalls APIs an, und auch Open-Source-Initiativen wie [EleutherAI](https://www.eleuther.ai) verdienen Erwähnung. Die KI-Szene ist natürlich in rasender Bewegung; wer auf dem Laufenden bleiben will, sollte einen Blick auf [Hugging Face](https://huggingface.co/transformers/master/index.html) werfen.
 
 # Die Experimente
 
 > [!NOTE]
-> Ziel dieser Experimente ist es, den wirtschaftlichsten Weg zu einer zuverlässigen Automatisierung editorischer Aufgaben zu finden. Man könnte einwenden, dass einige davon auch mit Algorithmen des überwachten Lernens automatisiert werden könnten. Diese Hypothese werden wir in einem künftigen Beitrag untersuchen.
+> Ziel dieser Experimente ist es, den sparsamsten Weg zu einer verlässlichen Automatisierung editorischer Aufgaben zu finden. Man könnte einwenden, dass sich manche davon auch mit Verfahren des überwachten Lernens automatisieren ließen. Dieser Hypothese gehen wir in einem späteren Beitrag nach.
 
-Kann ein Transformer wie GPT-3 lernen, zum Beispiel eine technisch-wissenschaftliche Handschrift des 16. Jahrhunderts zu annotieren?
+Kann ein Transformer wie GPT-3 lernen, etwa eine technisch-naturwissenschaftliche Handschrift des 16. Jahrhunderts zu annotieren?
 
 ## Experiment 1 – Textkategorisierung
-Beginnen wir mit etwas relativ Einfachem. Als „Few-Shot-Learner“ sollte GPT-3 rasch verstehen können, wie unser Redaktionsteam die Einträge in Ms. Fr. 640 klassifiziert hat.
+Beginnen wir mit etwas vergleichsweise Einfachem. Als „Few-Shot-Learner“ sollte GPT-3 rasch durchschauen, nach welchem Schema unser Herausgeberteam die Einträge von Ms. Fr. 640 klassifiziert hat.
 
 ### Prompt-Engineering
-Zum Training verwendete ich einen sehr minimalen Prompt und wählte vier kurze Einträge im Reintext als Beispiele aus, darunter je einen zu „Medizin“, „Waffen und Rüstungen“ und „Malerei“. 
+Zum Anlernen begnügte ich mich mit einem denkbar knappen Prompt und vier kurzen Einträgen im Reintext als Beispielen, darunter je einer zu „Medizin“, „Waffen und Rüstungen“ und „Malerei“. 
 
 ### Test
-Dann kopierte ich eine weitere Passage, die nicht in der ursprünglichen Sequenz enthalten war: 
+Anschließend kopierte ich eine weitere Passage hinein, die in der ursprünglichen Folge nicht enthalten war: 
 
 ```text
 Working neatly
@@ -139,29 +139,29 @@ But next, having made your design carefully, keep the place of shadows for them 
 And in this way, you further your work, economize your colors & work neatly.  
 Which is the reason that, the colors not being muddled nor mixed together, they do not die & you soften the colors better, since they are not so thick.
 ```
-Die Ausgabe stimmt vollkommen mit dem Inhalt überein: 
+Die Ausgabe passt vollkommen zum Inhalt: 
 
 ```xml
 <categories="painting">
 ```
 
-Versuchen wir es mit einem Eintrag aus einer Kategorie, die in der ursprünglichen Textauswahl zum Training von GPT-3 gar nicht enthalten war, so ist das Ergebnis überraschend. 
+Nimmt man einen Eintrag aus einer Kategorie, die in der Auswahl der Trainingstexte gar nicht vorkam, überrascht das Ergebnis. 
 
 ```xml
 <categories="jewelry">
 ```
 
 ### Ergebnis
-Die Kategorie „jewelry“ (Schmuck) existiert in unserer Edition von Ms. Fr. 640 nicht. Das Redaktionsteam [bevorzugt](https://edition640.makingandknowing.org/#/content/resources) die weiter gefasste Kategorie „Stones“ (Steine). Die Intuition von GPT-3 ist jedoch gut und deutet darauf hin, dass es mit etwas mehr Training lernen kann, jeden Eintrag von Ms. Fr. 640 zu kategorisieren – und vielleicht sogar die Einträge ähnlicher technischer Texte des 16. Jahrhunderts.   
+Eine Kategorie „jewelry“ (Schmuck) gibt es in unserer Edition von Ms. Fr. 640 nicht; das Herausgeberteam [bevorzugt](https://edition640.makingandknowing.org/#/content/resources) die weiter gefasste Rubrik „Stones“ (Steine). Der Instinkt von GPT-3 ist gleichwohl richtig, und das lässt erwarten, dass es mit ein wenig mehr Training jeden Eintrag von Ms. Fr. 640 einordnen könnte – womöglich sogar Einträge vergleichbarer technischer Texte des 16. Jahrhunderts.   
 
 ## Experiment 2 – Semantische Auszeichnung
-Legen wir die Messlatte etwas höher. Wenn Transformer wie GPT-3 lernen können, Texte nach bestimmten editorischen Kriterien zu kategorisieren, können sie dann auch einen Teil der Auszeichnung des Textes erkennen?  
+Legen wir die Latte etwas höher. Wenn Transformer wie GPT-3 lernen können, Texte nach bestimmten editorischen Kriterien zu klassifizieren – erkennen sie dann auch einen Teil der Auszeichnung im Text?  
 
 > [!NOTE]
-> *Secrets of Craft and Nature* bietet eine [Kombination](https://edition640.makingandknowing.org/#/content/resources/principles) aus semantischen und strukturellen Labels. Leider verarbeitet GPT-3 keine Bilder, im Gegensatz zu anderen Projekten wie [Wu Dao 2](https://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). Wahrscheinlich werden künftige Versionen von GPT diese Fähigkeit enthalten, die notwendig ist, um die meisten strukturellen und materiellen Aspekte eines Dokuments zu erkennen. Wir lassen diese speziellen Tags beiseite und konzentrieren uns stattdessen auf Auszeichnungen, die keine Bilderkennung erfordern.
+> *Secrets of Craft and Nature* verwendet eine [Kombination](https://edition640.makingandknowing.org/#/content/resources/principles) aus semantischen und strukturellen Labels. Leider verarbeitet GPT-3 keine Bilder, anders als etwa [Wu Dao 2](https://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). Künftige Versionen von GPT werden diese Fähigkeit wahrscheinlich mitbringen; ohne sie lassen sich die meisten strukturellen und materiellen Merkmale eines Dokuments nicht erkennen. Wir übergehen diese Tags daher und wenden uns der Auszeichnung zu, die ohne Bilderkennung auskommt.
 
 ### Prompt-Engineering
-Semantische Tags umfassen Verweise auf Tiere, Pflanzen, Ortsnamen, Sinneswahrnehmungen usw. Für den Trainingsprompt wählte ich einige Beispiele aus der Edition aus:
+Semantische Tags erfassen unter anderem Tiere, Pflanzen, Ortsnamen und Sinneseindrücke. Für den Trainingsprompt griff ich einige Beispiele aus der Edition heraus:
 ```xml
 <!--Input prompt-->
 The following is a list of words and their corresponding semantic tags
@@ -193,7 +193,7 @@ charcoal: <m>charcoal</m>
 founders: <pro>founders</pro>
 ```
 ### Test
-Versuchen wir es mit dem Modell `Davinci-codex` und ein paar einfachen Wörtern wie *Apothecary* (Apotheker), *smoke* (Rauch), *glassmakers* (Glasmacher), *latten* (Messingblech) und *snake* (Schlange). Die Ergebnisse kommen sofort und sind fehlerfrei:
+Versuchen wir es mit dem Modell `Davinci-codex` und ein paar leichten Wörtern: *Apothecary* (Apotheker), *smoke* (Rauch), *glassmakers* (Glasmacher), *latten* (Messingblech) und *snake* (Schlange). Die Antwort kommt sofort, und sie ist fehlerfrei:
 
 ```xml
 <!--Output-->
@@ -204,7 +204,7 @@ latten: <m>latten</m>
 snake: <al>snake</al>
 ```
 
-Ein schwierigerer Test beinhaltet zusammengesetzte Begriffe wie *copper plates* (Kupferplatten), *walnut oil* (Walnussöl) und *wood block* (Holzblock). Ziel eines solchen Tests ist es zu sehen, ob GPT-3 verschachtelte Tags richtig handhabt. 
+Schwieriger wird es mit zusammengesetzten Ausdrücken wie *copper plates* (Kupferplatten), *walnut oil* (Walnussöl) und *wood block* (Holzblock). Hier soll sich zeigen, ob GPT-3 mit verschachtelten Tags zurechtkommt. 
 
 ```xml
 <!--Output-->
@@ -213,7 +213,7 @@ walnut oil: <m><pa>walnut</pa> oil</m>
 wood block: <m>wood block</m>
 ```
 
-Die Ergebnisse sind jedoch gemischt, da `Davinci-codex` nur *walnut oil* korrekt ausgezeichnet hat und die verschachtelten Tags `tl` und `m` in *copper plates* und *wood block* nicht erkannte. Wie der nächste Test unten zeigt, lassen sich diese Fehler jedoch durch einen besseren Trainingsprompt abmildern. Nachdem ich fünf weitere Beispiele für verschachtelte Tags hinzugefügt hatte, lieferte `Davinci-codex` ein nahezu fehlerfreies Ergebnis mit nur einem Fehler (*oil paintbrushes*):
+Das Ergebnis ist durchwachsen: `Davinci-codex` hat nur *walnut oil* korrekt ausgezeichnet und die verschachtelten Tags `tl` und `m` in *copper plates* und *wood block* übersehen. Wie der nächste Test zeigt, lassen sich solche Fehler indes mit einem besseren Trainingsprompt eindämmen. Nachdem ich fünf weitere Beispiele für verschachtelte Tags ergänzt hatte, lieferte `Davinci-codex` ein nahezu makelloses Ergebnis mit einem einzigen Fehler (*oil paintbrushes*):
 
 ```xml
 <!--Output-->
@@ -225,5 +225,5 @@ bronze mortar: <tl><m>bronze</m> mortar</tl>
 ```
 
 # Fazit
-Man sollte nicht vergessen, dass diese Tests mit kleinen Textfragmenten durchgeführt wurden. Ich vermute, dass GPT-3-Modelle noch bessere Ergebnisse liefern würden, wenn man in den Beispielen und im Prompt mehr Kontext bereitstellte. Darüber hinaus würde ein Fine-Tuning des Modells mit eigens erstellten Trainingsdatensätzen die Genauigkeit der Auszeichnung zweifellos weiter verbessern.  
-Auch wenn diese Experimente noch in größerem Maßstab durchgeführt werden müssten, um die Zuverlässigkeit vortrainierter Sprachmodelle nachzuweisen, können wir dennoch festhalten, dass {{< hl >}}dieser Ansatz es Editorinnen und Editoren ermöglicht, mehrere Annotationsaufgaben in wenigen einfachen Schritten zu automatisieren und dabei potenziell enorm viel Zeit und Geld zu sparen.{{< /hl >}}
+Vergessen wir nicht, dass diese Tests mit kleinen Textstücken gemacht wurden. Ich vermute, dass GPT-3-Modelle noch besser abschneiden, wenn Beispiele und Prompt mehr Kontext bieten; und ein Fine-Tuning mit eigens angelegten Trainingsdaten würde die Treffsicherheit der Auszeichnung zweifellos weiter erhöhen.  
+Gewiss müssten diese Versuche in größerem Maßstab wiederholt werden, um die Verlässlichkeit vortrainierter Sprachmodelle nachzuweisen. Festhalten lässt sich aber schon jetzt, dass {{< hl >}}dieser Ansatz Editorinnen und Editoren erlaubt, mehrere Annotationsaufgaben in wenigen einfachen Schritten zu automatisieren – und dabei womöglich enorm viel Zeit und Geld zu sparen.{{< /hl >}}

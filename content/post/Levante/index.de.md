@@ -2,8 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Eine Wahrnehmungsgeographie der Levante"
-subtitle: "Womit wurde die Levante im Florenz des 16. Jahrhunderts assoziiert?"
-summary: "Die Levante ist ein schwer fassbares Toponym, da sie üblicherweise in Bezug auf – oder in Abgrenzung von – ein anderes Gebiet definiert wird. Was war also die Levante der Toskana im 16. Jahrhundert? Die Daten, die ich aus der MIA-Datenbank zusammengetragen habe, geben eine unerwartete Antwort."
+subtitle: "Woran dachte man im Florenz des 16. Jahrhunderts bei der Levante?"
+summary: "Die Levante ist ein schwer fassbares Toponym: Sie wird gewöhnlich im Verhältnis zu – oder in Abgrenzung von – einem anderen Gebiet bestimmt. Wo lag also die Levante der Toskana im 16. Jahrhundert? Die Daten, die ich aus der MIA-Datenbank gezogen habe, geben eine unerwartete Antwort."
 authors: [clement]
 tags: [MAP, Avviso]
 categories: [Notizen]
@@ -18,7 +18,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Dichtekarte der in ASFi MdP 4277 zwischen 1543 und 1566 erwähnten Toponyme"
+  caption: "Dichtekarte der in ASFi MdP 4277 zwischen 1543 und 1566 genannten Toponyme"
   focal_point: ""
   preview_only: true
 
@@ -31,15 +31,15 @@ projects: ["MAP"]
 ---
 
 # Einleitung
-Die *Levante* ist ein schwer fassbarer Ort. Üblicherweise in Bezug auf – oder in Abgrenzung von – ein anderes Gebiet definiert, war ihre Bedeutung selten stabil und rief je nach Ort und Zeit, in denen der Begriff verwendet wurde, unterschiedliche Geographien hervor. Doch auch wenn sich eine objektive und genaue Definition des Begriffs kaum formulieren lässt, kann man immer noch hoffen, eine subjektive Karte dieser Region zu zeichnen, und zwar auf der Grundlage der Korrelationen, die innerhalb eines bestimmten Textkorpus bestehen. Mit anderen Worten: Welchen Raum konnte die *Levante* für eine bestimmte Gruppe von Lesern evozieren?  
-In diesem Beitrag zeige ich Ihnen, wie Sie Daten aus der [MIA-Datenbank](https://mia.medici.org/) des Medici Archive Project verwenden können, 
-um die konkreten Orte zu visualisieren, mit denen das Toponym verknüpft war.  
+Die *Levante* ist ein Ort, der sich entzieht. Gewöhnlich im Verhältnis zu – oder in Abgrenzung von – einem anderen Gebiet bestimmt, hat der Begriff selten eine feste Bedeutung gehabt; je nachdem, wo und wann man ihn gebrauchte, rief er eine andere Geographie auf. Doch wenn sich eine objektive, exakte Definition schon kaum formulieren lässt, so darf man doch hoffen, eine subjektive Karte dieser Region zu zeichnen – auf der Grundlage der Zusammenhänge, die sich innerhalb eines bestimmten Textkorpus zeigen. Anders gefragt: Welchen Raum konnte die *Levante* einer bestimmten Gruppe von Lesern vor Augen stellen?  
+In diesem Beitrag zeige ich Ihnen, wie Sie mit Daten aus der [MIA-Datenbank](https://mia.medici.org/) des Medici Archive Project 
+sichtbar machen, mit welchen konkreten Orten dieses Toponym verbunden war.  
 
 # Die MIA-Datenbank
-Die MIA-Datenbank ist eine kollaborative Plattform für Forschende, die ihre eigenen Fotografien von Archivmaterial aus dem [Staatsarchiv Florenz](https://archiviodistatofirenze.cultura.gov.it/asfi/home) hochladen und teilen möchten. Im Laufe des vergangenen Jahres hat unser Team unter der Schirmherrschaft des [National Endowment for the Humanities](https://www.neh.gov) Tausende von Dokumenten aus der *avvisi*-Abteilung des Archivs *Mediceo del Principato* in Florenz fotografiert, transkribiert, zusammengefasst und klassifiziert. Obwohl unsere Datenbank nicht in erster Linie für statistische Analysen gedacht war, lassen sich die von uns bereitgestellten Metadaten dennoch herunterladen und als Datensätze verwenden. 
+MIA ist eine kollaborative Plattform, auf der Forschende ihre eigenen Aufnahmen von Archivalien aus dem [Staatsarchiv Florenz](https://archiviodistatofirenze.cultura.gov.it/asfi/home) hochladen und miteinander teilen. Im vergangenen Jahr hat unser Team mit Unterstützung des [National Endowment for the Humanities](https://www.neh.gov) Tausende von Dokumenten aus der *avvisi*-Serie des *Mediceo del Principato* in Florenz fotografiert, transkribiert, regestiert und klassifiziert. Für statistische Auswertungen war die Datenbank zwar nicht in erster Linie gedacht; die Metadaten, die wir bereitstellen, lassen sich aber gleichwohl herunterladen und als Datensätze nutzen. 
 
 # Der Datensatz
-In diesem Fall umfasst der von mir erstellte Datensatz alle Nachrichten aus der *Levante* von 1543 bis 1566, das heißt vom ersten in den Archiven verzeichneten Avviso bis zum Todesjahr des Sultans [Süleyman I.](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). Hier ein Ausschnitt der Daten, die ich vom Server extrahiert habe. Die Daten bestehen aus drei Spalten: einer eindeutigen Dokumentnummer, einem Ortsnamen und einem Datum. 
+Der Datensatz, den ich hier angelegt habe, umfasst sämtliche Nachrichten aus der *Levante* von 1543 bis 1566 – vom ersten im Archiv verzeichneten Avviso bis zum Todesjahr Sultan [Süleymans I.](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). Hier ein Ausschnitt dessen, was ich vom Server geholt habe: drei Spalten mit einer eindeutigen Dokumentnummer, einem Ortsnamen und einem Datum. 
 
 ```csv
 57386 Malta / Europe / World / Top of the TGN hierarchy 1565-1-3
@@ -60,8 +60,8 @@ In diesem Fall umfasst der von mir erstellte Datensatz alle Nachrichten aus der 
 57389 Çorlu / Thraki / Ellas / Europe 1565-1-3
 ```
 
-## Bereinigung der Daten
-Um diese Daten zu visualisieren, müssen wir sie als CSV-Datensatz (comma separated values) lesbar machen. Außerdem müssen wir die hier enthaltenen geografischen Angaben in ein „maschinenfreundlicheres“ Format umwandeln: GPS-Koordinaten. Da der Datensatz Hunderte von Einträgen enthält, wollen wir diesen Vorgang lieber automatisieren. Das lässt sich recht schnell und ziemlich genau mit vortrainierten Sprachmodellen wie [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) oder [AI-21](https://www.ai21.com) erreichen, um nur einige zu nennen. Dieser Vorgang muss allerdings eng überwacht werden, da vortrainierte Sprachmodelle eine leichte Neigung zum Halluzinieren haben.
+## Die Daten bereinigen
+Bevor sich diese Daten visualisieren lassen, müssen sie als CSV-Datensatz (comma separated values) lesbar sein; außerdem wollen die geografischen Angaben in ein „maschinenfreundlicheres“ Format gebracht werden, nämlich in GPS-Koordinaten. Bei Hunderten von Einträgen macht man das lieber nicht von Hand. Vortrainierte Sprachmodelle wie [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) oder [AI-21](https://www.ai21.com), um nur einige zu nennen, erledigen es ziemlich schnell und ziemlich genau – allerdings nur unter strenger Aufsicht, denn zum Halluzinieren neigen sie alle ein wenig.
 
 
 ```csv
@@ -85,20 +85,20 @@ documentId,latitude,longitude,documentDate
 ```
 
 # Die Dichtekarte
-Eine Dichtekarte ist eine Art der Visualisierung, die hervorhebt, wie häufig ein Ort in einem bestimmten Datensatz erwähnt wird. Das ist besonders nützlich, um nicht nur die geografische Reichweite der eigenen Daten zu verstehen, sondern auch ihre Schwerpunkte. Welche Orte auf der Karte werden häufiger erwähnt? Und welche eher episodisch? Wo liegen die Zentren, und wie weit entfernt ist die Peripherie? Worauf richtet sich die Aufmerksamkeit eines Lesers auf der Karte am wahrscheinlichsten? 
+Eine Dichtekarte zeigt, wie oft ein Ort in einem Datensatz genannt wird. Das hilft, nicht nur die geografische Reichweite der Daten zu erfassen, sondern auch ihre Brennpunkte: Welche Orte tauchen immer wieder auf, welche nur gelegentlich? Wo liegen die Zentren, wie weit reicht die Peripherie? Und wohin auf der Karte richtet sich die Aufmerksamkeit eines Lesers am ehesten? 
 
 <iframe width='100%' height='600px' src="https://api.mapbox.com/styles/v1/clemclem/cl9q7c77p004y14mqytjrfnex.html?title=false&access_token=pk.eyJ1IjoiY2xlbWNsZW0iLCJhIjoiY2lmbGpvbjMwZjh3NnJ5bHg4ZzkzeWZzeCJ9.IgOF4fphVbsWAIKyzAV-DQ&zoomwheel=false#3.83/43.29/33.61" title="Levante" style="border:none;"></iframe>
 
-Für dieses Experiment – und weil ich es eilig hatte – habe ich eine der APIs von [Mapbox](https://www.mapbox.com) verwendet. Viele Visualisierungsbibliotheken und Geoinformationssysteme erlauben es jedoch, dieselbe Art von Dichtekarte zu erstellen. 
+Für dieses Experiment – und weil es schnell gehen musste – habe ich auf eine der APIs von [Mapbox](https://www.mapbox.com) zurückgegriffen. Dieselbe Art von Dichtekarte lässt sich aber mit vielen Visualisierungsbibliotheken und Geoinformationssystemen erzeugen. 
 
 # Einige Beobachtungen
-Das Ergebnis ist eher ein impressionistisches Tableau als die genaue Darstellung eines klar definierbaren Konzepts, und genau das gefällt mir an diesem Experiment. Denn {{< hl >}}auch wenn die Datenwissenschaft ein mächtiger Verbündeter der Geisteswissenschaften sein kann, müssen wir uns nicht unbedingt an ihre Regeln halten.{{< /hl >}}
+Herausgekommen ist eher ein impressionistisches Tableau als die exakte Darstellung eines sauber definierbaren Begriffs – und genau das gefällt mir an diesem Versuch. Denn {{< hl >}}die Datenwissenschaft mag den Geisteswissenschaften eine mächtige Verbündete sein; an ihre Regeln halten müssen wir uns deshalb noch lange nicht.{{< /hl >}}
 
-Ein weiterer interessanter Aspekt dieses Experiments ist, dass die Karte eine *Levante* zeigt, die vollständig in das übrige Europa und den Mittelmeerraum integriert ist. Sie unterstreicht außerdem die zentrale Stellung von Edirne in der politischen Geographie des Osmanischen Reiches. Darüber hinaus ist die wichtigste Stadt Spaniens auf der Karte weder Madrid noch der Escorial, sondern Neapel. Und nicht zuletzt scheinen Inseln und kleine Stadtstaaten wie Ragusa eine wichtige Vermittlerrolle zwischen den verschiedenen Mächten der Region gespielt zu haben.  
+Bemerkenswert ist außerdem, dass die Karte eine *Levante* zeigt, die mit dem übrigen Europa und dem Mittelmeerraum aufs Engste verflochten ist. Sie hebt zudem hervor, wie zentral Edirne in der politischen Geographie des Osmanischen Reiches stand. Die wichtigste Stadt Spaniens ist auf dieser Karte überdies weder Madrid noch der Escorial, sondern Neapel. Und nicht zuletzt scheinen Inseln und kleine Stadtstaaten wie Ragusa zwischen den Mächten der Region eine wichtige Mittlerrolle gespielt zu haben.  
 
 
-# Wie man Daten von MIA anfordert
-Obwohl MIA ein hervorragendes kollaboratives Werkzeug für Forschende ist, sind die auf seinen Servern gespeicherten Daten nicht leicht zugänglich. Sein Back-End ist zum Beispiel nicht in öffentlichen Repositorien veröffentlicht. Sie können die Daten dennoch erhalten, indem Sie sich bei MIA registrieren und mit Python Anfragen an den Server stellen.
+# Wie man Daten bei MIA abfragt
+So hervorragend MIA als kollaboratives Werkzeug für die Forschung auch ist – an die Daten auf seinen Servern kommt man nicht ohne Weiteres heran. Das Back-End etwa ist in keinem öffentlichen Repositorium veröffentlicht. Wer sich bei MIA registriert, kann die Daten aber dennoch beziehen, indem er den Server mit Python abfragt.
 
 ### Anfrage
 ```python
@@ -107,7 +107,7 @@ payload = [{"searchSection":"archivalLocationSearch","type":"archivalLocationAdv
 headers = {'Content-type': 'application/json', 'Accept': '*/*'}
 r = requests.post(url, data=json.dumps(payload), headers=headers, auth=('LOGIN','PASSWORD'))
 ```
-Achten Sie darauf, LOGIN und PASSWORD durch Ihre eigenen Zugangsdaten zu ersetzen.
+Ersetzen Sie LOGIN und PASSWORD durch Ihre eigenen Zugangsdaten.
 
 ### Antwort in eine Datei schreiben
 ```python
@@ -123,7 +123,7 @@ f = open('response.json', encoding="utf8")
 ```python
 json_complete = json.load(f)
 ```
-### Daten aus dem JSON auswählen und im CSV-Format ausgeben
+### Daten aus dem JSON auswählen und als CSV ausgeben
 ```python
 with open('results.csv', 'w', newline='') as csvfile:
     fieldnames = ['documentId', 'placeCited', 'documentDate']

@@ -1,9 +1,9 @@
 ---
-title: Semantische Auszeichnung in BnF Ms. Fr. 640 visualisieren
-subtitle: Mit Python schnelle Visualisierungen einer digitalen wissenschaftlichen Edition erstellen  
+title: Semantische Auszeichnung in BnF Ms. Fr. 640 sichtbar machen
+subtitle: Schnelle Visualisierungen einer digitalen wissenschaftlichen Edition mit Python  
 
 # Summary for listings and search engines
-summary: Ein schneller Weg, um mit Python die Auszeichnung annotierter digitaler Editionen wie *Secrets of Craft and Nature in Renaissance France* zu korrelieren
+summary: Wie man die Auszeichnung annotierter digitaler Editionen wie *Secrets of Craft and Nature in Renaissance France* mit Python im Handumdrehen korreliert
 
 # Link this post with a project
 projects: ["M&K"]
@@ -43,14 +43,14 @@ categories:
 ---
 
 # Überblick 
-Datenreiche wissenschaftliche Editionen enthalten wertvolle editorische Annotationen, die man für alle möglichen wissenschaftlichen Zwecke extrahieren, analysieren und visualisieren kann. Das gilt für [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), erschienen 2020, deren Metadatendatei sich aus ihrem GitHub-Repository herunterladen lässt. In diesem Beitrag zeige ich, wie man all diese Variablen in einer Korrelationsmatrix zusammenführt und auf verschiedene Weise visualisiert.
+Datenreiche wissenschaftliche Editionen stecken voller editorischer Annotationen, die sich für die verschiedensten Forschungszwecke auslesen, analysieren und visualisieren lassen. So auch [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), erschienen 2020, deren Metadaten als Datei im GitHub-Repository der Edition zum Herunterladen bereitliegen. In diesem Beitrag zeige ich, wie man all diese Variablen in einer Korrelationsmatrix zusammenführt und auf verschiedene Weise sichtbar macht.
 
 # Die Daten
-Das Making and Knowing Project erzeugt eine Tabelle mit aktualisierten Informationen über den Inhalt der Handschrift: ```entry_metadata.csv```. Die Datei kann aus dem [GitHub-Repository](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv) des Making & Knowing Project abgerufen werden. Alternativ kann man maßgeschneiderte .csv-Dateien erzeugen und dabei weitere Auszeichnungen hinzufügen, dank Matthew Kumars hervorragendem [manuscript-object](https://github.com/cu-mkp/manuscript-object), einer Python-Version von BnF Ms. Fr. 640.
+Das Making and Knowing Project erzeugt eine Tabelle mit laufend aktualisierten Angaben zum Inhalt der Handschrift: ```entry_metadata.csv```. Die Datei liegt im [GitHub-Repository](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv) des Making & Knowing Project. Wer mag, kann sich auch eigene .csv-Dateien mit zusätzlicher Auszeichnung erzeugen – dank Matthew Kumars vorzüglichem [manuscript-object](https://github.com/cu-mkp/manuscript-object), einer Python-Fassung von BnF Ms. Fr. 640.
 
 ## Python einrichten 
-Wir verwenden Pandas für die Datenaufbereitung, Matplotlib und seaborn für die Heatmaps und schließlich NetworkX, um korrelationsbasierte Netzwerke zu erzeugen.  
-Für diese Art von Variablen vermeiden wir die Pearson-Methode und verwenden stattdessen die 𝜙𝐾-Methode. Lesen Sie unbedingt [nach](https://phik.readthedocs.io/en/latest/index.html), was es mit dieser Korrelationsmethode und `PhiK`, der zugehörigen Bibliothek, auf sich hat.
+Wir nehmen Pandas für die Datenaufbereitung, Matplotlib und seaborn für die Heatmaps und schließlich NetworkX, um aus den Korrelationen Netzwerke zu bauen.  
+Für Variablen dieser Art meiden wir die Pearson-Korrelation und greifen stattdessen zur 𝜙𝐾-Methode. Lesen Sie unbedingt [nach](https://phik.readthedocs.io/en/latest/index.html), was es mit diesem Korrelationsmaß und der zugehörigen Bibliothek `PhiK` auf sich hat.
 
 ```python
 #install packages
@@ -64,10 +64,10 @@ import networkx as nx
 ```
 
 ## Die Daten vorbereiten
-Zuerst laden wir die neueste Metadatendatei der Edition aus dem Ordner „metadata“ ihres [GitHub-Repositorys](https://github.com/cu-mkp/m-k-manuscript-data) herunter.
-Wir wählen nur die Spalten aus, die wir brauchen. Für diese Demonstration wähle ich alle semantischen Tags aus der englischen Übersetzung `tl`, aber Sie können auch Tags aus der französischen Transkription `tc` oder der normalisierten Fassung `tcn` wählen. 
-Die Daten kommen als durch Semikolons getrennte Werte, und wir brauchen Python, um sie für uns zu zählen. Dafür verwenden wir die Stack-Unstack-Methode mit dem regulären Ausdruck `[^;\s][^\;]*[^;\s]*`.
-Um die Matrix leichter lesbar zu machen, benennen wir jede Spalte um. Diesen Schritt können Sie überspringen, wenn Sie es eilig haben; denken Sie nur daran, dass unser Dataframe in diesem Stadium `tagsrn` heißt.
+Zunächst laden wir die aktuelle Metadatendatei der Edition aus dem Ordner „metadata“ ihres [GitHub-Repositorys](https://github.com/cu-mkp/m-k-manuscript-data) herunter.
+Wir behalten nur die Spalten, die wir brauchen. Für diese Demonstration nehme ich sämtliche semantischen Tags aus der englischen Übersetzung `tl`; ebenso gut könnten Sie die Tags der französischen Transkription `tc` oder der normalisierten Fassung `tcn` wählen. 
+Die Werte sind durch Semikolons getrennt, und Python soll sie für uns zählen. Dazu dient die Stack-Unstack-Methode mit dem regulären Ausdruck `[^;\s][^\;]*[^;\s]*`.
+Damit die Matrix lesbarer wird, benennen wir die Spalten um. Wer es eilig hat, kann diesen Schritt überspringen – nur sollte man im Kopf behalten, dass unser Dataframe an dieser Stelle `tagsrn` heißt.
 
 ```python
 # load the edition's metadata
@@ -85,16 +85,16 @@ tagsrn = tagcount.rename(columns={'al_tl': 'animals', 'bp_tl': 'body parts', 'cn
 
 # Korrelieren
 
-Sobald der Dataframe bereinigt ist, können wir die Korrelationskoeffizienten zwischen den einzelnen Variablen berechnen. In diesem Stadium ist es wichtig, die eigenen Daten zu verstehen und sicherzustellen, dass man die am besten geeignete Korrelationsmethode verwendet. Das Paket `pandas-profiling` ist für diese Aufgabe besonders hilfreich. 
+Ist der Dataframe bereinigt, können wir die Korrelationskoeffizienten zwischen den Variablen berechnen. An dieser Stelle sollte man seine Daten wirklich verstehen und sich vergewissern, dass man das passende Korrelationsmaß verwendet; das Paket `pandas-profiling` leistet dabei gute Dienste. 
 
 ```python
 # calculate correlation coefficient with the phi k method
 cortag = tagsrn.phik_matrix()
 ```
-`cortag` ist unsere Korrelationsmatrix. Jetzt können wir verschiedene Arten der Visualisierung ausprobieren.
+`cortag` ist unsere Korrelationsmatrix. Nun können wir verschiedene Darstellungen ausprobieren.
 
 # Visualisieren
-Als Erstes können wir versuchen, sie als farbkodierte Matrix zu visualisieren, mit dem [Heatmap-Modul](https://seaborn.pydata.org/generated/seaborn.heatmap.html) von `seaborn`. 
+Am nächsten liegt eine farbkodierte Matrix, erzeugt mit dem [Heatmap-Modul](https://seaborn.pydata.org/generated/seaborn.heatmap.html) von `seaborn`. 
 
 ### Korrelations-Heatmap
 ```python
@@ -103,27 +103,27 @@ ax = sns.heatmap(cortag, linewidths=.03, vmin=0, cmap="Oranges", square=True)
 ```
 ![Korrelations-Heatmap von BnF Ms. Fr. 640](heatmap.png)
 
-Wenn Sie den Text gut kennen, sehen Sie sofort, dass die Heatmap sehr viel Sinn ergibt. Zum Beispiel korrelieren Namen stark mit Latein, da es vor allem unter den Humanisten des 16. Jahrhunderts üblich war, sie zu latinisieren.  
+Wer den Text gut kennt, sieht sofort, dass die Heatmap sehr wohl Sinn ergibt. Personennamen etwa korrelieren stark mit Latein – kein Wunder, war es doch gerade unter den Humanisten des 16. Jahrhunderts üblich, sie zu latinisieren.  
 
-Manche mögen einwenden, diese Heatmap sage nur das Offensichtliche. Ganz unrecht haben sie nicht, und auf den ersten Blick scheinen die medizinischen Tags ein Paradebeispiel zu sein, da sie erwartungsgemäß mit Körperteilen, Maßangaben und Pflanzen korrelieren.
+Manche werden einwenden, die Heatmap renne offene Türen ein. Ganz unrecht haben sie nicht; auf den ersten Blick scheinen die medizinischen Tags das zu bestätigen, korrelieren sie doch erwartungsgemäß mit Körperteilen, Maßangaben und Pflanzen.
 
-Doch wenn wir die Heatmap sorgfältiger lesen, Zeile für Zeile, finden wir womöglich einige interessante und unerwartete Korrelationen. Dass medizinische Tags zum Beispiel mit italienischen und lateinischen Wörtern korrelieren, gibt uns Hinweise auf die Herkunft der medizinischen Rezepte in Ms. Fr. 640. Ebenso zeigt die Korrelation zwischen Berufen, Definitionen und Maßangaben, in welchem Ausmaß die berufliche Identität die technischen Diskurse des 16. Jahrhunderts strukturiert. 
+Liest man die Heatmap aber genauer, Zeile für Zeile, stößt man auf durchaus interessante und unerwartete Zusammenhänge. Dass medizinische Tags mit italienischen und lateinischen Wörtern korrelieren, gibt etwa Hinweise auf die Herkunft der medizinischen Rezepte in Ms. Fr. 640. Und die Korrelation von Berufen, Definitionen und Maßangaben zeigt, wie stark die berufliche Identität den technischen Diskurs des 16. Jahrhunderts strukturiert. 
 
 ### Korrelations-Clustermap
 
-Heatmaps sind in „explorativen“ Kontexten hilfreich, können für Ihr Publikum aber etwas unübersichtlich wirken, vor allem wenn Sie bestimmte semantische Cluster in der Handschrift diskutieren – oder noch danach suchen. Das Modul `clustermap` von Seaborn kann interessante Ergebnisse liefern.
+Heatmaps sind fürs „Explorieren“ nützlich, wirken auf ein Publikum aber leicht unübersichtlich – zumal, wenn man bestimmte semantische Cluster in der Handschrift erörtern (oder noch suchen) will. Hier kann das Modul `clustermap` von Seaborn interessante Ergebnisse liefern.
 
 ```python
 clustermap = sns.clustermap(cortag, figsize=(12, 13), dendrogram_ratio=(.1, .2), vmin=0, cmap="Oranges", cbar_pos=(-.06, .12, .03, .68))
 ```
 ![Korrelations-Clustermap von BnF Ms. Fr. 640](clustermap.png)
 
-Abgesehen davon, dass sie wie ein verpixeltes Insekt aussieht (ja, „pixelated“ steht im OED), unterscheidet die Clustermap klar zwischen isolierten Tags (oben und links) und stärker vernetzten. Wir erkennen auch isolierte Cluster wie Musik und Poitevin (wer hätte das gedacht!) im Gegensatz zu zentraleren wie Maßangaben, Material, Definitionen und Waffen. Berufe sind stärker vernetzt, gehören aber, zumindest in dieser speziellen Korrelationsmatrix, keinem bestimmten Cluster an.
+Abgesehen davon, dass sie wie ein verpixeltes Insekt aussieht (ja, „pixelated“ steht im OED), trennt die Clustermap sauber die isolierten Tags (oben und links) von den stärker vernetzten. Auch abgelegene Cluster wie Musik und Poitevin (wer hätte das gedacht!) heben sich von zentraleren ab – Maßangaben, Material, Definitionen, Waffen. Die Berufe sind zwar besser vernetzt, gehören aber, jedenfalls in dieser Matrix, keinem bestimmten Cluster an.
 
 ### Korrelationsnetzwerk
 
-Wenn wir die in unserer Matrix enthaltenen Korrelationen noch weiter verdichten wollen, bieten Netzwerkgraphen eine elegante Lösung. Das gilt besonders in Kontexten, in denen wir über den Inhalt der Handschrift kommunizieren wollen.  
-Dazu müssen wir unsere Matrix in eine Liste von Kanten und Knoten umwandeln und einen Schwellenwert festlegen, um schwächere Korrelationen aus unserem Graphen zu entfernen.
+Will man die Korrelationen der Matrix noch stärker verdichten, bieten Netzwerkgraphen eine elegante Lösung – besonders dort, wo es darum geht, den Inhalt der Handschrift zu vermitteln.  
+Dafür müssen wir die Matrix in eine Liste von Kanten und Knoten verwandeln und einen Schwellenwert festlegen, der die schwächeren Korrelationen aus dem Graphen verbannt.
 
 ```python
 # transform the data
@@ -143,7 +143,7 @@ nx.draw_kamada_kawai(G, with_labels = True, node_color = 'red', node_size = 400,
 ```
 ![Korrelationsgraph von BnF Ms. Fr. 640](graph.png)
 
-Wenn es zu viele Kanten und Knoten gibt, können Sie den Schwellenwert anpassen, um ein saubereres Ergebnis zu erhalten. Andernfalls können Sie den Graphen mit der Funktion `.write_gexf()` exportieren, um in `Gephi` damit zu experimentieren.
+Sind es zu viele Kanten und Knoten, lässt sich der Schwellenwert anpassen, bis das Bild aufgeräumter wird. Oder Sie exportieren den Graphen mit `.write_gexf()` und spielen in `Gephi` damit weiter.
 
 ```python 
 nx.write_gexf(G, 'graph.gexf')
@@ -153,7 +153,7 @@ Das Ergebnis sehen Sie am Anfang dieses Beitrags.
 
 ### Update: Kreisförmiges gewichtetes Netzwerk
 
-Ich habe nach Möglichkeiten gesucht, Korrelationsmatrizen als gewichtete Netzwerke darzustellen, und bin auf diesen interessanten Ansatz gestoßen, den [Julian West geteilt hat](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold) und den ich hier auf unseren Datensatz übertrage.
+Auf der Suche nach Wegen, Korrelationsmatrizen als gewichtete Netzwerke darzustellen, bin ich auf einen interessanten Ansatz gestoßen, den [Julian West vorgestellt hat](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold) und den ich hier auf unseren Datensatz übertrage.
 
 ```python
 # create graph weighted by correlation coefficients (unfiltered)
@@ -177,7 +177,7 @@ Gx.remove_edges_from(remove)
 
 print(str(len(remove)) + ' edges removed')
 ```
-Nachdem wir einige Kanten entfernt haben, können wir ihre Farbe und Dicke festlegen.
+Sind einige Kanten entfernt, legen wir Farbe und Stärke der übrigen fest.
 
 ```python
 # determine the colors of edges
@@ -196,7 +196,7 @@ def assign_node_size(degree, scaling_factor=50):
     return degree * scaling_factor
 ```
 
-Außerdem geben wir den Knoten eine Größe, die proportional zu ihrer Anzahl an Verbindungen ist. 
+Außerdem bekommen die Knoten eine Größe, die ihrer Zahl an Verbindungen entspricht. 
 
 ```python
 # assign node size depending on number of connections (degree)
@@ -204,6 +204,6 @@ node_size = []
 for key, value in dict(Gx.degree).items():
     node_size.append(assign_node_size(value))
 ```
-Das Ergebnis ist ein gewichteter Graph, der mehr Knoten und erheblich mehr Kanten zulässt und dabei lesbar und informativ bleibt. 
+Heraus kommt ein gewichteter Graph, der mehr Knoten und erheblich mehr Kanten verträgt und dabei lesbar und aussagekräftig bleibt. 
 
 ![Gewichteter Korrelationsgraph von BnF Ms. Fr. 640](weightedgraph.png) 

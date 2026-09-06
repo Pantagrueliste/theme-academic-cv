@@ -1,6 +1,6 @@
 ---
 title: tei-mcp
-summary: Ein MCP-Server, der KI-Agenten hilft, valides TEI-XML zu lesen und zu schreiben, mit 16 Tools für Elementsuche, Attributauflösung, Expansion von Inhaltsmodellen, Verschachtelungsprüfung, Dokumentvalidierung und ODD-Anpassung.
+summary: Ein MCP-Server, der KI-Agenten beim Lesen und Schreiben validen TEI-XML unterstützt – mit 16 Tools zum Nachschlagen von Elementen, Auflösen von Attributen, Entfalten von Inhaltsmodellen, Prüfen der Verschachtelung, Validieren von Dokumenten und zur ODD-Anpassung.
 tags:
   - XML
   - TEI
@@ -37,19 +37,19 @@ machine_translated: true
 
 ## tei-mcp: TEI P5 für KI-Agenten
 
-tei-mcp ist ein Open-Source-[MCP](https://modelcontextprotocol.io)-Server, der KI-Programmierassistenten direkten Zugriff auf die [TEI-P5](https://tei-c.org/guidelines/)-Spezifikation gibt. Statt sich auf auswendig gelernte Trainingsdaten zu verlassen – was oft plausibles, aber falsches Markup hervorbringt –, kann die KI die Spezifikation in Echtzeit abfragen.
+tei-mcp ist ein quelloffener [MCP](https://modelcontextprotocol.io)-Server, der KI-Programmierassistenten unmittelbaren Zugriff auf die [TEI-P5](https://tei-c.org/guidelines/)-Spezifikation verschafft. Statt sich auf angelerntes Trainingswissen zu verlassen – das oft plausibel aussehendes, aber falsches Markup hervorbringt –, kann die KI die Spezifikation in Echtzeit befragen.
 
 ## Funktionen
 
-Der Server parst das ODD von TEI P5 und stellt 16 Tools bereit:
+Der Server liest das ODD von TEI P5 ein und stellt 16 Tools bereit:
 
-- **Nachschlagen** jedes Elements, jeder Klasse, jedes Makros oder Moduls anhand des Namens, ohne Berücksichtigung der Groß-/Kleinschreibung und mit Vorschlägen bei Tippfehlern
+- **Nachschlagen** von Elementen, Klassen, Makros und Modulen nach Namen, ohne Rücksicht auf Groß- und Kleinschreibung und mit Vorschlägen bei Tippfehlern
 - **Attribute auflösen** über die gesamte TEI-Klassenhierarchie (lokal + geerbt)
-- **Inhaltsmodelle expandieren** zu strukturierten Bäumen mit Auflösung von Klassen und Makros
+- **Inhaltsmodelle entfalten** zu strukturierten Bäumen, mit Auflösung von Klassen und Makros
 - **Verschachtelung prüfen** – direkte Eltern-Kind-Beziehung oder rekursive Erreichbarkeit mit Pfadverfolgung
-- **Dokumente validieren** gegen TEI P5: Inhaltsmodelle, Attribute, geschlossene Wertelisten, Referenzintegrität und Warnungen zu veralteten Elementen
-- **Einzelne Elemente validieren** für inkrementelle Bearbeitungsabläufe
-- **ODD-Anpassungen laden**, um das Schema auf eine projektspezifische Teilmenge einzuschränken
+- **Dokumente validieren** gegen TEI P5: Inhaltsmodelle, Attribute, geschlossene Wertelisten, Integrität der Verweise und Warnungen vor veralteten Konstrukten
+- **Einzelne Elemente validieren** für schrittweises Bearbeiten
+- **ODD-Anpassungen laden**, um das Schema auf die projektspezifische Teilmenge einzuschränken
 - **Suchen** über alle Entitätstypen hinweg mit regulären Ausdrücken
 
 ## Installation
@@ -58,7 +58,7 @@ Der Server parst das ODD von TEI P5 und stellt 16 Tools bereit:
 pip install tei-mcp
 ```
 
-Oder direkt ausführen mit:
+Oder direkt starten mit:
 
 ```bash
 uvx tei-mcp
@@ -66,7 +66,7 @@ uvx tei-mcp
 
 ## Verwendung
 
-Fügen Sie es einem beliebigen MCP-kompatiblen Client hinzu (Claude, Cursor, Windsurf usw.):
+In einen beliebigen MCP-kompatiblen Client eintragen (Claude, Cursor, Windsurf usw.):
 
 ```json
 {

@@ -33,11 +33,11 @@ image:
 #slides: example
 machine_translated: true
 ---
-Das [Making & Knowing Project](https://www.makingandknowing.org), 2014 von Pamela H. Smith gegründet und unter Beteiligung Hunderter Mitarbeiterinnen und Mitarbeiter, ist eine Forschungs- und Lehrinitiative am [Center for Science and Society](https://edition640.makingandknowing.org) der Columbia University.
+Das [Making & Knowing Project](https://www.makingandknowing.org), 2014 von Pamela H. Smith gegründet und von Hunderten Mitarbeiterinnen und Mitarbeitern getragen, ist eine Forschungs- und Lehrinitiative am [Center for Science and Society](https://edition640.makingandknowing.org) der Columbia University.
 
-Als Postdoktorand habe ich an dem Projekt mitgewirkt und dabei unter anderem an der [digitalen kritischen Edition](https://edition640.makingandknowing.org) von BnF Ms. Fr. 640 gearbeitet. Diese einzigartige französische Handschrift des 16. Jahrhunderts bietet Einblicke aus erster Hand in Herstellungsverfahren und Materialien aus einer Zeit, in der Künstler Wissenschaftler waren.  
+Als Postdoktorand habe ich in diesem Projekt unter anderem an der [digitalen kritischen Edition](https://edition640.makingandknowing.org) von BnF Ms. Fr. 640 mitgearbeitet. Diese einzigartige französische Handschrift aus dem 16. Jahrhundert gewährt Einblick aus erster Hand in Herstellungsverfahren und Werkstoffe einer Zeit, in der Künstler noch Naturforscher waren.  
 
-Die digitale Edition stellt eine Fülle von Daten frei in ihrem [GitHub-Repository](https://github.com/cu-mkp/m-k-manuscript-data) zur Verfügung. Im kommenden Jahr beabsichtige ich, eine Reihe von Blogbeiträgen zur Edition und ihren Daten zu veröffentlichen. Ich werde zeigen, wie leicht sich der Text mit Python oder R herunterladen und analysieren lässt. Bleiben Sie dran!
+Die digitale Edition stellt in ihrem [GitHub-Repository](https://github.com/cu-mkp/m-k-manuscript-data) eine Fülle von Daten frei zur Verfügung. Im kommenden Jahr will ich in einer Reihe von Blogbeiträgen über die Edition und ihre Daten schreiben und zeigen, wie leicht sich der Text mit Python oder R herunterladen und auswerten lässt. Bleiben Sie dran!
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Avviso | Die Nachrichten veröffentlichen, die uns modern gemacht haben (1537–1743)"
+title: "Avviso | Die Nachrichten edieren, die uns modern gemacht haben (1537–1743)"
 summary: Ein vom NEH gefördertes Projekt des Medici Archive Project
 tags: 
 - Avviso
@@ -12,7 +12,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: "Die Nachricht vom Tod König Heinrichs III. | BnF"
+  caption: "Die Nachricht vom Tod König Heinrichs III. macht die Runde | BnF"
   focal_point: Smart
 
 #links:
@@ -33,8 +33,8 @@ image:
 #slides: example
 machine_translated: true
 ---
-Das Hauptziel des *Avviso*-Projekts besteht darin, die 35.000 frühneuzeitlichen handschriftlichen Nachrichtenbriefe, bekannt als *avvisi*, die Teil der Medici-Sammlung waren und heute im Staatsarchiv Florenz aufbewahrt werden, zu digitalisieren, zu bewahren, zu katalogisieren, zu edieren, zu kontextualisieren und zu verbreiten. 
-Die Katalogisierung, Digitalisierung und Verbreitung von rund 35.000 *avvisi*, frühneuzeitlichen handschriftlichen Nachrichtenbriefen, über die Plattform Medici Interactive Archive des Medici Archive Project.
+Das *Avviso*-Projekt hat sich zum Ziel gesetzt, die 35.000 frühneuzeitlichen handschriftlichen Nachrichtenbriefe – die sogenannten *avvisi* –, die einst zur Sammlung der Medici gehörten und heute im Staatsarchiv Florenz liegen, zu digitalisieren, zu sichern, zu katalogisieren, zu edieren, in ihren Zusammenhang zu stellen und zugänglich zu machen. 
+Katalogisierung, Digitalisierung und Verbreitung von rund 35.000 *avvisi*, den handschriftlichen Nachrichtenbriefen der Frühen Neuzeit, über die Plattform Medici Interactive Archive des Medici Archive Project.
 
 
 

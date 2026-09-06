@@ -1,6 +1,6 @@
 ---
 title: persNamer
-summary: Ein Python-Werkzeug, das VIAF-Identifikatoren in TEI-XML-Personeneinträge und Annotations-Tags umwandelt und so die Normdatenkontrolle in digitalen wissenschaftlichen Editionen vereinfacht.
+summary: Ein Python-Werkzeug, das VIAF-Identifikatoren in TEI-XML-Personeneinträge und Annotations-Tags verwandelt und so die Normdatenpflege in digitalen wissenschaftlichen Editionen erleichtert.
 tags:
   - XML
   - TEI
@@ -15,7 +15,7 @@ date: "2025-03-28T00:00:00Z"
 external_link: ""
 
 image:
-  caption: persNamer-Demonstration
+  caption: persNamer im Einsatz
   focal_point: Smart
 
 links:
@@ -37,41 +37,41 @@ slides: ""
 machine_translated: true
 ---
 
-## persNamer: TEI mit dem Virtual International Authority File verbinden
+## persNamer: TEI mit dem Virtual International Authority File verknüpfen
 
 [![DOI](https://zenodo.org/badge/933156851.svg)](https://doi.org/10.5281/zenodo.14875030)
 
-persNamer ist ein spezialisiertes Python-Werkzeug, das die Integration von Personen-Normdaten aus VIAF (Virtual International Authority File) in TEI-XML-Dokumente vereinfacht. Indem es VIAF-Identifikatoren in sofort verwendbares TEI-Markup umwandelt, reduziert persNamer die manuelle Arbeit erheblich, die mit der Erstellung strukturierter Personeneinträge für digitale wissenschaftliche Editionen verbunden ist.
+persNamer ist ein spezialisiertes Python-Werkzeug, das Personen-Normdaten aus VIAF (Virtual International Authority File) ohne Umwege in TEI-XML-Dokumente holt. Weil es VIAF-Identifikatoren in fertiges TEI-Markup übersetzt, erspart persNamer einen Großteil der Handarbeit, die strukturierte Personeneinträge in digitalen wissenschaftlichen Editionen sonst verlangen.
 
-## Die Herausforderung der Normdatenkontrolle in TEI
+## Die Mühen der Normdatenpflege in TEI
 
-Digitale wissenschaftliche Editionen erfordern oft die präzise Identifizierung historischer Personen, einschließlich ihrer normierten Namen und Lebensdaten. Eine konsistente Normdatenkontrolle über ein ganzes Projekt hinweg erfordert:
+Digitale wissenschaftliche Editionen müssen historische Personen häufig exakt identifizieren, samt normiertem Namen und Lebensdaten. Wer die Normdaten über ein ganzes Projekt hinweg konsistent halten will, muss:
 
-1. Die Identifizierung von Personen in historischen Texten
-2. Das Auffinden von Normdaten zu ihnen
-3. Die Erstellung korrekt formatierter TEI-Einträge
-4. Die Sicherstellung konsistenter Verweise im gesamten Projekt
+1. Personen in historischen Texten erkennen
+2. verlässliche Normdaten zu ihnen finden
+3. korrekt formatierte TEI-Einträge anlegen
+4. dafür sorgen, dass die Verweise im ganzen Projekt einheitlich bleiben
 
-Diese Schritte sind in der Regel manuell, zeitaufwendig und anfällig für Inkonsistenzen.
+All das geschieht in der Regel von Hand, kostet Zeit und lädt zu Inkonsistenzen ein.
 
-## Wie persNamer funktioniert
+## Wie persNamer arbeitet
 
-persNamer automatisiert diesen Arbeitsablauf durch:
+persNamer automatisiert diesen Ablauf, indem es:
 
-1. **Abrufen von VIAF-Daten**: Zu einem gegebenen VIAF-Identifikator ruft das Werkzeug RDF-Daten per HTTP Content Negotiation ab
-2. **Extrahieren der Schlüsselinformationen**: Es parst das RDF, um den bevorzugten Namen, das Geburts- und das Sterbedatum zu extrahieren
-3. **Erzeugen von TEI-Markup**: Es erstellt zwei wesentliche XML-Schnipsel:
-   - Einen **Eintrag für die Normdatei** (`<person>`-Element mit generierter `xml:id`, `<persName>`, `<birth>`, `<death>` und `<idno type="VIAF">`)
-   - Ein separates **Annotations-Tag** (`<persName>` mit einem `ref`-Attribut, das auf den Normdateneintrag verweist)
+1. **VIAF-Daten abruft**: Zu einem gegebenen VIAF-Identifikator holt das Werkzeug per HTTP Content Negotiation die RDF-Daten
+2. **die Kerninformationen ausliest**: Aus dem RDF zieht es den bevorzugten Namen sowie Geburts- und Sterbedatum
+3. **TEI-Markup erzeugt**: Es liefert zwei unentbehrliche XML-Schnipsel:
+   - einen **Eintrag für die Normdatei** (`<person>`-Element mit generierter `xml:id`, `<persName>`, `<birth>`, `<death>` und `<idno type="VIAF">`)
+   - ein eigenes **Annotations-Tag** (`<persName>` mit einem `ref`-Attribut, das auf den Normdateneintrag verweist)
 
-Diese doppelte Ausgabe erlaubt es Editorinnen und Editoren, eine zentrale Normdatei zu pflegen und zugleich Annotations-Tags mühelos in ihre TEI-Texte einzufügen.
+Diese zweifache Ausgabe erlaubt es Editorinnen und Editoren, eine zentrale Normdatei zu führen und die Annotations-Tags zugleich bequem in ihre TEI-Texte einzusetzen.
 
 ## Hauptmerkmale
 
-- **Standardisierte ID-Erzeugung**: Erstellt konsistente XML-IDs im Format `pers-[familyname]-[givenname initial]` (z. B. `pers-deteligny-c`)
-- **RDF-Parsing**: Verwendet `rdflib`, um Informationen aus verschiedenen RDF-Eigenschaften zu extrahieren (z. B. `rdfs:label`, `schema:name`, `viaf:mainHead`)
-- **Kommandozeilenschnittstelle**: Einfache Ausführung mit einer VIAF-Nummer als einzigem erforderlichen Argument
-- **Ausführliche Ausgabe**: Liefert detaillierte Verarbeitungsinformationen neben der endgültigen XML-Ausgabe
+- **Einheitliche ID-Vergabe**: Erzeugt konsistente XML-IDs nach dem Muster `pers-[familyname]-[givenname initial]` (z. B. `pers-deteligny-c`)
+- **RDF-Parsing**: Liest mit `rdflib` Informationen aus verschiedenen RDF-Eigenschaften aus (z. B. `rdfs:label`, `schema:name`, `viaf:mainHead`)
+- **Kommandozeile**: Ein Aufruf mit der VIAF-Nummer als einzigem Pflichtargument genügt
+- **Ausführliche Ausgabe**: Liefert neben dem fertigen XML detaillierte Angaben zur Verarbeitung
 
 ## Anwendungsbeispiel
 
@@ -92,19 +92,19 @@ Dieser Befehl erzeugt:
 <persName ref="#pers-deteligny-c">Charles deTéligny</persName>
 ```
 
-## Anwendung in den Digital Humanities
+## Einsatz in den Digital Humanities
 
-persNamer ist besonders wertvoll für:
+persNamer ist besonders nützlich für:
 
-- Digitale wissenschaftliche Editionen, die Normdatenkontrolle erfordern
-- TEI-Kodierungsprojekte, die mit historischen Persönlichkeiten arbeiten
-- Linked-Data-Initiativen, die Dokumente mit Normdatensätzen verknüpfen
-- Die Sicherstellung von Konsistenz in großen TEI-Korpora
-- Die Vermittlung von Konzepten der Normdatenkontrolle in Lehrveranstaltungen der Digital Humanities
+- digitale wissenschaftliche Editionen, die Normdatenpflege verlangen
+- TEI-Kodierungsprojekte, in denen historische Persönlichkeiten vorkommen
+- Linked-Data-Vorhaben, die Dokumente mit Normdatensätzen verknüpfen
+- die Wahrung der Konsistenz in großen TEI-Korpora
+- die Vermittlung der Normdatenpflege in Lehrveranstaltungen der Digital Humanities
 
 ## Implementierung
 
-persNamer ist in Python implementiert und hängt ab von:
+persNamer ist in Python geschrieben und stützt sich auf:
 - `requests` für HTTP-Anfragen
 - `rdflib` für das RDF-Parsing
 - `lxml` für die XML-Verarbeitung
