@@ -1,0 +1,13 @@
+# 站点专用字符串（与 HugoBlox Kit 的 i18n 文件合并）
+translation_notice:
+  other: "本页面为机器自动翻译，尚未经母语者审校。"
+translation_original:
+  other: "阅读原文"
+translation_vote_question:
+  other: "这篇翻译的质量好吗？"
+translation_vote_good:
+  other: "好"
+translation_vote_bad:
+  other: "不好"
+translation_vote_thanks:
+  other: "感谢您的反馈！"

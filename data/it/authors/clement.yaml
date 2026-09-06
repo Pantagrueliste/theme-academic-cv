@@ -1,0 +1,24 @@
+# Italian overrides for data/authors/clement.yaml (merged on top of the default)
+role: Docente di Umanistica digitale
+bio: |
+  Clément Godbarge insegna Umanistica digitale all'Università di St Andrews. Le sue ricerche riguardano i rapporti tra scienza e arte di governo nell'Europa della prima età moderna. Nel suo libro di prossima pubblicazione esamina come i medici inseriti nelle corti di Francia e Italia del Cinquecento si siano proposti come esperti politici di un genere nuovo. Le sue ricerche sono state sostenute dalla Andrew W. Mellon Foundation, dalla Commissione Fulbright, dalla Renaissance Society of America e dall'Università di Harvard.
+
+affiliations:
+  - name: Università di St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: E-mail
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Storia della prima età moderna
+  - Letteratura europea
+  - Umanistica digitale

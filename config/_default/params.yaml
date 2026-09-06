@@ -1,4 +1,13 @@
 # ══════════════════════════════════════════════════════════════════════════════
+# SITE-SPECIFIC SETTINGS
+# ══════════════════════════════════════════════════════════════════════════════
+# Translation-feedback widget (layouts/_partials/components/translation-feedback.html):
+# shown at the end of pages that carry `machine_translated: true` AND whose language
+# is listed here — i.e. the languages the author cannot proofread himself.
+translation_feedback:
+  languages: [de, ja, zh, ar, pt, fa, vi]
+
+# ══════════════════════════════════════════════════════════════════════════════
 # HUGO BLOX CONFIGURATION
 # Schema: hugoblox.com/schema/v2
 # Tutorial: https://docs.hugoblox.com/tutorial/

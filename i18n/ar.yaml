@@ -1,0 +1,31 @@
+# سلاسل نصية خاصة بالموقع (تُدمج مع ملفات i18n الخاصة بـ HugoBlox Kit)
+translation_notice:
+  other: "تُرجمت هذه الصفحة آليًا ولم يراجعها بعدُ متحدث أصلي باللغة."
+translation_original:
+  other: "اقرأ النص الأصلي"
+translation_vote_question:
+  other: "هل هذه الترجمة جيدة؟"
+translation_vote_good:
+  other: "نعم"
+translation_vote_bad:
+  other: "لا"
+translation_vote_thanks:
+  other: "شكرًا لملاحظتك!"
+
+# مفاتيح ناقصة في حزمة ar الخاصة بـ HugoBlox Kit
+questions:
+  other: "أسئلة"
+faq:
+  other: "الأسئلة الشائعة"
+docs:
+  other: "التوثيق"
+poweredby_button:
+  other: "أنشئ موقعك →"
+read_more:
+  other: "اقرأ المزيد"
+callout_note:
+  other: "ملاحظة"
+portfolio_link_default:
+  other: "رابط"
+backlinks:
+  other: "روابط خلفية"

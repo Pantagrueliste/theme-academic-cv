@@ -1,0 +1,23 @@
+# Cadenas propias del sitio (se combinan con los archivos i18n de HugoBlox Kit)
+translation_notice:
+  other: "Esta página se ha traducido automáticamente y todavía no ha sido revisada por un hablante nativo."
+translation_original:
+  other: "Leer el original"
+translation_vote_question:
+  other: "¿Es buena esta traducción?"
+translation_vote_good:
+  other: "Sí"
+translation_vote_bad:
+  other: "No"
+translation_vote_thanks:
+  other: "¡Gracias por su opinión!"
+
+# Claves ausentes en el paquete es de HugoBlox Kit
+questions:
+  other: "Preguntas"
+faq:
+  other: "Preguntas frecuentes"
+docs:
+  other: "Documentación"
+poweredby_button:
+  other: "Crea el tuyo →"

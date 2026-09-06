@@ -1,0 +1,29 @@
+# Chaînes propres au site (fusionnées avec les fichiers i18n de HugoBlox Kit)
+translation_notice:
+  other: "Cette page a été traduite automatiquement et n'a pas encore été relue par un locuteur natif."
+translation_original:
+  other: "Lire l'original"
+translation_vote_question:
+  other: "Cette traduction est-elle de bonne qualité ?"
+translation_vote_good:
+  other: "Oui"
+translation_vote_bad:
+  other: "Non"
+translation_vote_thanks:
+  other: "Merci pour votre avis !"
+
+# Clés manquantes dans le pack fr de HugoBlox Kit
+questions:
+  other: "Questions"
+faq:
+  other: "FAQ"
+docs:
+  other: "Documentation"
+poweredby_button:
+  other: "Créez le vôtre →"
+read_more:
+  other: "Lire la suite"
+backlinks:
+  other: "Rétroliens"
+portfolio_link_default:
+  other: "Lien"

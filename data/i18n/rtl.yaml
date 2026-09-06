@@ -1,0 +1,10 @@
+# Locales rendered right-to-left. The HugoBlox Kit layout looks up
+# `hugo.Data.i18n.rtl.rtl` (matched against each language's `locale`), but the
+# kit itself ships no such data file, so we provide it here.
+rtl:
+  - ar
+  - ar-sa
+  - ar-eg
+  - fa
+  - he
+  - ur

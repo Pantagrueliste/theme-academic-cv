@@ -1,0 +1,56 @@
+{{/*
+  Translation-quality feedback widget.
+
+  Shown on pages that are not in the default language and carry
+  `machine_translated: true` in their front matter. Readers can vote 👍/👎;
+  the vote is sent as an Umami custom event ("translation-vote") with the
+  language, page path and vote as properties, so results can be aggregated
+  per page and per language in the Umami dashboard. No backend needed.
+*/}}
+{{- $defaultLang := hugo.Sites.Default.Language.Lang -}}
+{{- $isTranslation := ne .Language.Lang $defaultLang -}}
+{{/* Only for languages listed in params.yaml → translation_feedback.languages (those the author cannot proofread). */}}
+{{- $feedbackLangs := site.Params.translation_feedback.languages | default slice -}}
+{{- if and $isTranslation (in $feedbackLangs .Language.Lang) .Params.machine_translated -}}
+  {{- $original := "" -}}
+  {{- range .AllTranslations -}}
+    {{- if eq .Language.Lang $defaultLang -}}{{- $original = .RelPermalink -}}{{- end -}}
+  {{- end -}}
+  {{- $id := printf "tf-%s" (.RelPermalink | md5 | truncate 8 "") -}}
+  <aside id="{{ $id }}" class="translation-feedback mt-10 mb-8 rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800/60 dark:text-gray-300"
+         data-tf-page="{{ .RelPermalink }}" data-tf-lang="{{ .Language.Lang }}">
+    <p class="m-0">
+      {{ i18n "translation_notice" }}
+      {{- with $original }} <a href="{{ . }}" class="underline">{{ i18n "translation_original" }}</a>.{{ end }}
+    </p>
+    <div class="mt-3 flex flex-wrap items-center gap-2" data-tf-buttons>
+      <span>{{ i18n "translation_vote_question" }}</span>
+      <button type="button"
+              class="rounded-md border border-gray-300 bg-white px-3 py-1 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600"
+              data-umami-event="translation-vote" data-umami-event-lang="{{ .Language.Lang }}" data-umami-event-page="{{ .RelPermalink }}" data-umami-event-vote="good"
+              data-tf-vote="good">👍 {{ i18n "translation_vote_good" }}</button>
+      <button type="button"
+              class="rounded-md border border-gray-300 bg-white px-3 py-1 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:hover:bg-gray-600"
+              data-umami-event="translation-vote" data-umami-event-lang="{{ .Language.Lang }}" data-umami-event-page="{{ .RelPermalink }}" data-umami-event-vote="bad"
+              data-tf-vote="bad">👎 {{ i18n "translation_vote_bad" }}</button>
+    </div>
+    <p class="m-0 mt-3 hidden" data-tf-thanks>{{ i18n "translation_vote_thanks" }}</p>
+  </aside>
+  <script>
+    (function () {
+      var box = document.getElementById({{ $id }});
+      if (!box) return;
+      var key = 'translation-vote:' + box.dataset.tfLang + ':' + box.dataset.tfPage;
+      var buttons = box.querySelector('[data-tf-buttons]');
+      var thanks = box.querySelector('[data-tf-thanks]');
+      function done() { buttons.classList.add('hidden'); thanks.classList.remove('hidden'); }
+      try { if (localStorage.getItem(key)) { done(); return; } } catch (e) {}
+      box.querySelectorAll('[data-tf-vote]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          try { localStorage.setItem(key, b.dataset.tfVote); } catch (e) {}
+          done();
+        });
+      });
+    })();
+  </script>
+{{- end -}}

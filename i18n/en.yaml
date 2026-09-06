@@ -1,0 +1,13 @@
+# Site-specific strings (merged with the HugoBlox Kit i18n files)
+translation_notice:
+  other: "This page was translated automatically and has not yet been reviewed by a native speaker."
+translation_original:
+  other: "Read the original"
+translation_vote_question:
+  other: "Is this translation good?"
+translation_vote_good:
+  other: "Yes"
+translation_vote_bad:
+  other: "No"
+translation_vote_thanks:
+  other: "Thank you for your feedback!"

@@ -1,7 +1,252 @@
 # Languages
-#   Create a section for each of your site's languages.
+#   One section per site language. English is the default and stays at the site
+#   root; other languages live under /fr/, /es/, /it/.
+#   Translations sit next to the originals as `index.<lang>.md` (same bundle, so
+#   images and other resources are shared).
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
-# Default language
 en:
   locale: en-us
+  weight: 1
+
+fr:
+  locale: fr-fr
+  weight: 2
+  params:
+    hugoblox:
+      identity:
+        description: "Site académique de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Accueil
+        url: /fr/
+        weight: 10
+      - name: Zibaldone
+        url: /fr/#posts
+        weight: 20
+      - name: Projets
+        url: /fr/#projects
+        weight: 30
+      - name: Code
+        url: /fr/#code
+        weight: 40
+
+es:
+  locale: es-es
+  weight: 3
+  params:
+    hugoblox:
+      identity:
+        description: "Sitio académico de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Inicio
+        url: /es/
+        weight: 10
+      - name: Zibaldone
+        url: /es/#posts
+        weight: 20
+      - name: Proyectos
+        url: /es/#projects
+        weight: 30
+      - name: Código
+        url: /es/#code
+        weight: 40
+
+it:
+  locale: it-it
+  weight: 4
+  params:
+    hugoblox:
+      identity:
+        description: "Sito accademico di Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Home
+        url: /it/
+        weight: 10
+      - name: Zibaldone
+        url: /it/#posts
+        weight: 20
+      - name: Progetti
+        url: /it/#projects
+        weight: 30
+      - name: Codice
+        url: /it/#code
+        weight: 40
+
+de:
+  locale: de-de
+  weight: 5
+  params:
+    hugoblox:
+      identity:
+        description: "Akademische Website von Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Startseite
+        url: /de/
+        weight: 10
+      - name: Zibaldone
+        url: /de/#posts
+        weight: 20
+      - name: Projekte
+        url: /de/#projects
+        weight: 30
+      - name: Code
+        url: /de/#code
+        weight: 40
+
+ja:
+  locale: ja-jp
+  weight: 6
+  params:
+    hugoblox:
+      identity:
+        description: "クレマン・ゴドバルジュ（PhD）の学術サイト"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: ホーム
+        url: /ja/
+        weight: 10
+      - name: Zibaldone
+        url: /ja/#posts
+        weight: 20
+      - name: プロジェクト
+        url: /ja/#projects
+        weight: 30
+      - name: コード
+        url: /ja/#code
+        weight: 40
+
+zh:
+  locale: zh-cn
+  weight: 7
+  params:
+    hugoblox:
+      identity:
+        description: "Clément Godbarge（博士）的学术网站"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: 首页
+        url: /zh/
+        weight: 10
+      - name: Zibaldone
+        url: /zh/#posts
+        weight: 20
+      - name: 项目
+        url: /zh/#projects
+        weight: 30
+      - name: 代码
+        url: /zh/#code
+        weight: 40
+
+ar:
+  locale: ar
+  direction: rtl
+  weight: 8
+  params:
+    hugoblox:
+      identity:
+        description: "الموقع الأكاديمي لكليمان غودبارج، دكتوراه"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: الرئيسية
+        url: /ar/
+        weight: 10
+      - name: Zibaldone
+        url: /ar/#posts
+        weight: 20
+      - name: المشاريع
+        url: /ar/#projects
+        weight: 30
+      - name: الكود
+        url: /ar/#code
+        weight: 40
+
+pt:
+  locale: pt-pt
+  weight: 9
+  params:
+    hugoblox:
+      identity:
+        description: "Sítio académico de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Início
+        url: /pt/
+        weight: 10
+      - name: Zibaldone
+        url: /pt/#posts
+        weight: 20
+      - name: Projetos
+        url: /pt/#projects
+        weight: 30
+      - name: Código
+        url: /pt/#code
+        weight: 40
+
+fa:
+  locale: fa
+  direction: rtl
+  weight: 10
+  params:
+    hugoblox:
+      identity:
+        description: "وب‌گاه دانشگاهی کلمان گودبارژ، دکترا"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: خانه
+        url: /fa/
+        weight: 10
+      - name: Zibaldone
+        url: /fa/#posts
+        weight: 20
+      - name: پروژه‌ها
+        url: /fa/#projects
+        weight: 30
+      - name: کد
+        url: /fa/#code
+        weight: 40
+
+vi:
+  locale: vi-vn
+  weight: 11
+  params:
+    hugoblox:
+      identity:
+        description: "Trang học thuật của Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Trang chủ
+        url: /vi/
+        weight: 10
+      - name: Zibaldone
+        url: /vi/#posts
+        weight: 20
+      - name: Dự án
+        url: /vi/#projects
+        weight: 30
+      - name: Mã nguồn
+        url: /vi/#code
+        weight: 40

@@ -1,0 +1,24 @@
+# French overrides for data/authors/clement.yaml (merged on top of the default)
+role: Maître de conférences en humanités numériques
+bio: |
+  Clément Godbarge est maître de conférences en humanités numériques à l'université de St Andrews. Ses recherches portent sur les rapports entre science et art de gouverner dans l'Europe de la première modernité. Dans son livre à paraître, il examine comment des médecins attachés aux cours de France et d'Italie au XVI^e^ siècle se sont imposés comme des experts politiques d'un genre nouveau. Ses travaux ont été soutenus par la Fondation Andrew W. Mellon, la Commission Fulbright, la Renaissance Society of America et l'université Harvard.
+
+affiliations:
+  - name: Université de St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: Courriel
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Histoire de la première modernité
+  - Littérature européenne
+  - Humanités numériques
