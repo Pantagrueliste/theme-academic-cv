@@ -48,8 +48,10 @@ hugoblox:
   # TYPOGRAPHY
   # ────────────────────────────────────────────────────────────────────────────
   typography:
-    # Font pack: name from data/fonts/ (academic, editorial, humanist, modern, ...)
-    pack: "academic"
+    # Font pack: name from data/fonts/ — geometric (Montserrat/Poppins) is the closest
+    # to the previous "minimal" theme (Montserrat/Roboto); others: modern (Inter),
+    # academic (Lora/Source Serif), editorial, humanist, developer, system.
+    pack: "geometric"
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT
