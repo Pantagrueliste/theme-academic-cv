@@ -1,6 +1,6 @@
 ---
 title: Emulatore del telegrafo ITA2
-summary: Una dimostrazione interattiva del codice telegrafico ITA2 (Baudot-Murray) che aiuta gli studenti a cogliere i concetti fondamentali della codifica binaria e delle macchine a stati.
+summary: Una dimostrazione interattiva del codice telegrafico ITA2 (Baudot-Murray) con cui gli studenti toccano con mano i fondamenti della codifica binaria e delle macchine a stati.
 tags:
   - JavaScript
   - Interattivo
@@ -18,7 +18,7 @@ image:
 links:
   - type: code
     icon: brands/github
-    label: Code
+    label: Codice
     url: https://github.com/Pantagrueliste/BaudotMurray_Emulator
 url_code: ""
 url_pdf: ""
@@ -34,18 +34,18 @@ slides: ""
 machine_translated: true
 ---
 
-Questo emulatore ITA2 è un sussidio didattico pratico che rende visibili e interattivi i concetti astratti della codifica. Quando gli studenti digitano un testo e ne vedono la conversione immediata in sequenze di fori, imparano diversi concetti chiave dell’informatica e delle telecomunicazioni.
+Questo emulatore ITA2 è un sussidio didattico: rende visibile e manipolabile ciò che, nella codifica, di solito resta astratto. Quando gli studenti battono un testo e lo vedono trasformarsi all’istante in sequenze di fori, imparano senza accorgersene parecchi concetti chiave dell’informatica e delle telecomunicazioni.
 
-## Vantaggi didattici
+## Che cosa si impara
 
-In primo luogo, dimostra la rappresentazione binaria, ossia il modo in cui un testo si trasforma in sequenze di 1 e di 0. Di solito la insegniamo in modo astratto; vedere i fori comparire davvero sul nastro aiuta invece gli studenti a capire come un sistema fisico possa rappresentare informazione digitale.
+In primo luogo, la rappresentazione binaria: il modo in cui un testo diventa una sequenza di 1 e di 0. Se ne parla quasi sempre in astratto; ma vedere i fori comparire uno dopo l’altro sul nastro fa capire, meglio di qualsiasi spiegazione, come un oggetto fisico possa portare informazione digitale.
 
 {{< Baudot >}}
 
-Il meccanismo di commutazione LETTERE/CIFRE introduce in modo naturale le macchine a stati. Sperimentando, gli studenti scoprono che la stessa sequenza può rappresentare caratteri diversi a seconda della modalità corrente. Questa esperienza diretta con una codifica dipendente dallo stato li prepara a concetti informatici più complessi.
+La commutazione LETTERS/FIGURES, fra lettere e cifre, è poi il modo più naturale di introdurre le macchine a stati. Provando e riprovando, gli studenti scoprono da soli che la stessa sequenza di fori significa caratteri diversi a seconda della modalità in cui si trova la macchina; e questa esperienza diretta di una codifica che dipende dallo stato li prepara a nozioni informatiche ben più complesse.
 
-## Dettagli di implementazione
+## Note tecniche
 
-L’emulatore è scritto in JavaScript e HTML/CSS, il che lo rende facilmente incorporabile in qualsiasi pagina web. Il codice è modulare e può essere adattato a contesti didattici diversi.
+L’emulatore è scritto in JavaScript e HTML/CSS, e si incorpora senza fatica in qualunque pagina web. Il codice è modulare e si lascia adattare a contesti didattici diversi.
 
-Il codice sorgente è disponibile, e l’emulatore si può provare, nel [repository GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).
+Il codice sorgente, con l’emulatore da provare, è nel [repository GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).

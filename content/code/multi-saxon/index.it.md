@@ -1,6 +1,6 @@
 ---
 title: Multi-Saxon
-summary: Uno strumento ad alte prestazioni per trasformazioni XSLT 2.0/3.0 in parallelo su grandi corpora XML TEI, che gestisce trasformazioni che LXML non può elaborare.
+summary: Uno strumento ad alte prestazioni per eseguire in parallelo trasformazioni XSLT 2.0/3.0 su grandi corpora XML TEI, comprese quelle che LXML non sa elaborare.
 tags:
   - XSLT
   - XML
@@ -16,13 +16,13 @@ date: "2025-03-28T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Multi-Saxon in azione
+  caption: Multi-Saxon al lavoro
   focal_point: Smart
 
 links:
   - type: code
     icon: brands/github
-    label: Code
+    label: Codice
     url: https://github.com/Pantagrueliste/multi-saxon
 url_code: ""
 url_pdf: ""
@@ -38,35 +38,35 @@ slides: ""
 machine_translated: true
 ---
 
-## Multi-Saxon: elaborazione XSLT in parallelo per grandi corpora TEI
+## Multi-Saxon: trasformazioni XSLT in parallelo per grandi corpora TEI
 
-Multi-Saxon colma una lacuna critica negli strumenti di elaborazione XML, permettendo l’esecuzione in parallelo di trasformazioni XSLT 2.0 e 3.0 che LXML (una diffusa libreria XML per Python) non è in grado di gestire. Progettato specificamente per grandi collezioni di documenti XML TEI, Multi-Saxon accelera in modo significativo i tempi di elaborazione grazie a un’esecuzione parallela efficiente.
+Multi-Saxon colma una lacuna seria fra gli strumenti di elaborazione XML: esegue in parallelo trasformazioni XSLT 2.0 e 3.0 che LXML, la diffusa libreria XML per Python, non sa gestire. Pensato per grandi collezioni di documenti XML TEI, abbatte i tempi di elaborazione grazie a un’esecuzione parallela efficiente.
 
 ## Caratteristiche principali
 
-- **Supporto XSLT avanzato**: elabora trasformazioni XSLT 2.0 e 3.0 al di là delle capacità di LXML
-- **Elaborazione parallela**: riduce drasticamente i tempi di trasformazione di grandi collezioni di documenti grazie alla parallelizzazione
-- **Ottimizzato per la TEI**: progettato specificamente per i documenti XML della Text Encoding Initiative (TEI)
-- **Prestazioni scalabili**: gestisce in modo efficiente corpora da centinaia a migliaia di documenti
+- **XSLT avanzato**: elabora trasformazioni XSLT 2.0 e 3.0, fuori dalla portata di LXML
+- **Elaborazione parallela**: la parallelizzazione riduce drasticamente i tempi di trasformazione delle grandi collezioni di documenti
+- **Su misura per la TEI**: progettato apposta per i documenti XML della Text Encoding Initiative (TEI)
+- **Prestazioni scalabili**: gestisce con efficienza corpora da centinaia a migliaia di documenti
 - **Multipiattaforma**: funziona su sistemi operativi e ambienti diversi
 
 ## Il problema che Multi-Saxon risolve
 
-Gli studiosi di umanistica digitale che lavorano con la TEI si trovano spesso di fronte a due difficoltà notevoli:
+Chi lavora con la TEI nell’umanistica digitale si scontra spesso con due ostacoli:
 
-1. LXML (una comune libreria Python per l’elaborazione XML) supporta solo XSLT 1.0, rendendo impossibile l’uso delle funzionalità più avanzate di XSLT 2.0/3.0
+1. LXML (una comune libreria Python per l’elaborazione XML) sostiene soltanto XSLT 1.0, e preclude quindi le funzionalità più avanzate di XSLT 2.0/3.0
 2. Elaborare in sequenza grandi corpora di documenti TEI può richiedere tempi proibitivi
 
-Multi-Saxon affronta entrambi i problemi sfruttando le capacità XSLT avanzate di Saxon e distribuendo l’elaborazione su più core, con guadagni di prestazioni significativi.
+Multi-Saxon risponde a entrambi sfruttando le capacità XSLT avanzate di Saxon e distribuendo l’elaborazione su più core, con guadagni di prestazioni notevoli.
 
-## Implementazione
+## Realizzazione
 
-Multi-Saxon combina Python con il processore Saxon per Java per creare una pipeline di trasformazione ad alte prestazioni:
+Multi-Saxon accoppia Python al processore Saxon per Java in una pipeline di trasformazione ad alte prestazioni:
 
 - usa la libreria Saxon per Java per un’elaborazione XSLT 2.0/3.0 robusta
-- implementa il multiprocessing per distribuire le trasformazioni sui core CPU disponibili
-- gestisce in modo efficiente i pool di processi per massimizzare il throughput
-- offre un’interfaccia semplice per l’elaborazione in batch di documenti TEI
+- ricorre al multiprocessing per distribuire le trasformazioni sui core disponibili
+- gestisce con efficienza i pool di processi per massimizzare il throughput
+- offre un’interfaccia semplice per l’elaborazione in batch dei documenti TEI
 
 ## Esempio d’uso
 
@@ -83,13 +83,13 @@ transformer.transform("input.xml", "output.xml")
 transformer.transform_directory("input_dir", "output_dir")
 ```
 
-## Impatto per l’umanistica digitale
+## Che cosa cambia per l’umanistica digitale
 
-Per i progetti di umanistica digitale che trattano grandi collezioni di documenti TEI, Multi-Saxon rende possibili:
+Per i progetti di umanistica digitale alle prese con grandi collezioni di documenti TEI, Multi-Saxon rende possibili:
 
-- trasformazioni complesse sull’intero corpus, impossibili con LXML
-- tempi di elaborazione drasticamente ridotti (spesso di un fattore 5-10 sui sistemi multi-core)
+- trasformazioni complesse sull’intero corpus, impensabili con LXML
+- tempi di elaborazione drasticamente ridotti (spesso di 5-10 volte sui sistemi multi-core)
 - analisi più sofisticate grazie alle funzionalità avanzate di XSLT 2.0/3.0
-- un flusso di lavoro semplificato per l’elaborazione di intere collezioni di documenti
+- un flusso di lavoro più semplice per elaborare intere collezioni di documenti
 
-Il codice sorgente e la documentazione sono disponibili nel [repository GitHub](https://github.com/Pantagrueliste/multi-saxon).
+Il codice sorgente e la documentazione sono nel [repository GitHub](https://github.com/Pantagrueliste/multi-saxon).

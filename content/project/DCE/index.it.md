@@ -1,6 +1,6 @@
 ---
 title: Edizione efficiente
-summary: Una serie di post in cui valuto diversi approcci per abbattere il costo delle edizioni critiche
+summary: Una serie di post in cui passo in rassegna diversi modi di abbattere il costo delle edizioni critiche
 tags: 
 - Umanistica digitale
 date: "2021-12-12T00:00:00Z"
@@ -30,14 +30,14 @@ image:
 #slides: example
 machine_translated: true
 ---
-Le edizioni critiche digitali sono onerose. Il lavoro di trascrizione, traduzione e annotazione che una forza lavoro altamente qualificata deve svolgere rappresenta migliaia di ore di lavoro e richiede finanziamenti sostanziosi, oltre a un sostegno istituzionale di lungo periodo.  
+Le edizioni critiche digitali costano. Trascrivere, tradurre, annotare: un lavoro da personale altamente qualificato, che rappresenta migliaia di ore e richiede finanziamenti ingenti, oltre a un sostegno istituzionale di lungo periodo.  
 
-In un certo senso, che i progetti di punta dell’umanistica digitale riescano a ottenere gli ingenti finanziamenti di cui hanno bisogno è una fortuna.   
+Per certi versi è una fortuna che i progetti più in vista dell’umanistica digitale riescano a raccogliere le somme enormi di cui hanno bisogno.   
 
-Eppure la forte dipendenza dalla generosità di fondazioni facoltose, università e agenzie governative, e il bisogno prolungato di risorse umane considerevoli, non costituiscono un modello economico sostenibile per il futuro. Se sempre più studiosi possono permettersi di produrre ambiziose edizioni digitali di fonti primarie, questa pratica resta il privilegio di pochi paesi ricchi, rafforzandone così l’egemonia culturale.  
+Ma una dipendenza così stretta dalla munificenza di fondazioni facoltose, università e agenzie governative, unita al bisogno prolungato di tante risorse umane, non è un modello economico su cui costruire il futuro. Se sempre più studiosi possono permettersi edizioni digitali ambiziose di fonti primarie, la pratica resta il privilegio di pochi paesi ricchi, e ne rafforza l’egemonia culturale.  
 
-Per rendere accessibili a un pubblico più ampio i documenti storici di tutto il mondo, {{< hl >}}il costo delle edizioni critiche digitali dovrebbe diminuire di diversi ordini di grandezza{{< /hl >}}.
+Perché i documenti storici di tutto il mondo diventino accessibili a un pubblico più vasto, {{< hl >}}il costo delle edizioni critiche digitali dovrebbe scendere di parecchi ordini di grandezza{{< /hl >}}.
 
-In questa serie di post valuto i diversi approcci e mattoni tecnologici che gli studiosi di tutto il mondo possono usare per pubblicare fonti primarie più rapidamente e con una spesa minima.  
+In questa serie di post passo in rassegna gli approcci e i mattoni tecnologici con cui gli studiosi di ogni paese possono pubblicare fonti primarie più in fretta e con una spesa minima.  
 
-Valuterò, in particolare, tecnologie come l’apprendimento automatico, la blockchain e l’archiviazione decentralizzata.
+Valuterò in particolare tecnologie come l’apprendimento automatico, la blockchain e l’archiviazione decentralizzata.

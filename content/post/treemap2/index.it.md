@@ -1,9 +1,9 @@
 ---
 title: Visualizzare i manoscritti 2 (aggiornamento)
-subtitle: Uno strumento multicriterio per la visualizzazione dei manoscritti
+subtitle: Uno strumento a più criteri per visualizzare i manoscritti
 
 # Summary for listings and search engines
-summary: Nuova versione della treemap interattiva, con funzioni aggiuntive. 
+summary: Nuova versione della treemap interattiva, con qualche funzione in più. 
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -42,10 +42,10 @@ tags:
 categories:
 - Note
 ---
-Come promesso, ecco una nuova versione della treemap interattiva presentata in un [post precedente]({{< relref "/post/treemap" >}}), questa volta con due modalità di visualizzazione.
+Come promesso, ecco la nuova versione della treemap interattiva presentata in un [post precedente]({{< relref "/post/treemap" >}}): questa volta con due modalità di visualizzazione.
 
 > [!NOTE]
-> Per una migliore esperienza di visualizzazione, assicuratevi che le impostazioni della pagina siano in modalità chiara (cliccate sull’icona della luna in alto a destra).
+> Per una resa migliore, impostate la pagina in modalità chiara (cliccate sull’icona della luna in alto a destra).
 
    <head>
     <meta charset="UTF-8" />

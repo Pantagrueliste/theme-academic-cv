@@ -1,9 +1,9 @@
 ---
 title: Un navigatore visivo per l’archivio
-subtitle: Un approccio intuitivo ai documenti d’archivio digitalizzati
+subtitle: Un modo più amichevole di accostarsi ai documenti d’archivio digitalizzati
 
 # Summary for listings and search engines
-summary: Le visualizzazioni interattive offrono ai lettori uno stimolo sensoriale alternativo per orientarsi in documenti d’archivio complessi.
+summary: Le visualizzazioni interattive offrono al lettore uno stimolo sensoriale alternativo per orientarsi fra documenti d’archivio complessi.
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -41,17 +41,17 @@ categories:
 - Note
 ---
 # Il problema
-Le edizioni digitali soffrono di un paradosso: se da un lato rendono accessibili a un pubblico più ampio documenti reconditi, dall’altro la perdita di stimoli sensoriali dovuta alla loro smaterializzazione tende a disorientare i lettori e persino a scoraggiarli dal confrontarsi con i contenuti. Rendono la navigazione di vasti depositi documentari piuttosto macchinosa e intimidatoria. Questo non vale solo per gli utenti inesperti di ricerca d’archivio, ma anche per i lettori con disabilità cognitive.
+Le edizioni digitali vivono di un paradosso: rendono accessibili a un pubblico più ampio documenti reconditi, ma la perdita di stimoli sensoriali che accompagna la loro smaterializzazione tende a disorientare i lettori, e persino a distoglierli dal contenuto. Muoversi in vasti depositi di documenti diventa macchinoso, quando non intimidatorio; e non solo per chi è a digiuno di ricerca d’archivio, ma anche per i lettori con disabilità cognitive.
 
 # La soluzione
-È qui che i metadati archivistici possono aiutarci. Questi dati ci permettono infatti di creare astrazioni visive interattive che offrono ai lettori uno stimolo sensoriale alternativo, aumentando così tanto l’ergonomia quanto l’accessibilità. Per rendere l’archivio navigabile visivamente, una treemap, o qualsiasi diagramma che scomponga in modo efficace dati gerarchici, può fare al caso nostro. 
+È qui che i metadati archivistici ci vengono in aiuto. Con essi si possono costruire astrazioni visive interattive che offrono al lettore uno stimolo sensoriale alternativo, a vantaggio insieme dell’ergonomia e dell’accessibilità. Per rendere l’archivio navigabile con gli occhi basta una treemap, o qualunque altro diagramma che scomponga con efficacia dati gerarchici. 
 
 # L’esperimento
-Il mio primo esperimento adatta il [codice della Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) per `D3.js`, aggiungendovi dei collegamenti ipertestuali. Rappresenta il manoscritto BnF Ms. Fr. 640, i suoi fogli e le voci contenute in ciascun foglio. I colori rappresentano la categoria dominante. Altri dati sono disponibili passando il cursore su ciascuna voce, compreso il collegamento al manoscritto.   
-In questo modo la treemap diventa un indice visivo interattivo, che offre ai lettori una panoramica rapidissima e reattiva non solo dei contenuti del manoscritto, ma anche delle dimensioni di ciascun foglio e di ciascuna voce.  
-~~Nei prossimi mesi continuerò a sperimentare con questa idea provando altri diagrammi e altre gerarchie… Restate sintonizzati!~~ Per una nuova versione della treemap, cliccate [qui]({{< relref "/post/treemap2" >}}).  
+Il mio primo esperimento adatta il [codice della Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) per `D3.js`, aggiungendovi i collegamenti ipertestuali. Rappresenta il manoscritto BnF Ms. Fr. 640, i suoi fogli e le voci di ciascun foglio; i colori indicano la categoria dominante, e passando il cursore su una voce compaiono altri dati, compreso il collegamento al manoscritto.   
+La treemap diventa così un indice visivo interattivo, che dà al lettore, in un colpo d’occhio, una panoramica non solo dei contenuti del manoscritto ma anche delle dimensioni di ciascun foglio e di ciascuna voce.  
+~~Nei prossimi mesi continuerò a sperimentare con questa idea, provando altri diagrammi e altre gerarchie… A presto!~~ Una nuova versione della treemap è [qui]({{< relref "/post/treemap2" >}}).  
 > [!NOTE]
-> Per una migliore esperienza di visualizzazione, assicuratevi che le impostazioni della pagina siano in modalità chiara (cliccate sull’icona della luna in alto a destra).
+> Per una resa migliore, impostate la pagina in modalità chiara (cliccate sull’icona della luna in alto a destra).
 
   <head>
     <meta charset="UTF-8" />

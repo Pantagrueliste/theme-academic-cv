@@ -13,7 +13,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Particolare dell’affresco di Giorgio Vasari nella Sala Regia a Roma
+  caption: Particolare dell’affresco di Giorgio Vasari nella Sala Regia, a Roma
   focal_point: Smart
 
 #links:
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-Maggiori informazioni a breve.
+Prossimamente maggiori dettagli.
 

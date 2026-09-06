@@ -1,9 +1,9 @@
 ---
-title: L’hosting web distribuito può garantire la sostenibilità a basso costo?
-subtitle: Pro e contro dell’hosting di un’edizione critica digitale su IPFS
+title: L’hosting distribuito può dare sostenibilità a basso costo?
+subtitle: Pro e contro di un’edizione critica digitale ospitata su IPFS
 
 # Summary for listings and search engines
-summary: "In questo post sostengo che l’hosting web distribuito permette agli editori di pubblicare contenuti in modo sostenibile riducendo al tempo stesso i costi. È possibile raggiungere la sostenibilità a costo quasi nullo? E se sì, quali compromessi deve accettare un’edizione digitale?" 
+summary: "In questo post sostengo che l’hosting web distribuito permette a chi cura un’edizione di pubblicare in modo sostenibile e, insieme, di spendere meno. Si può arrivare alla sostenibilità a costo quasi zero? E se sì, a quali compromessi deve piegarsi un’edizione digitale?" 
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -43,4 +43,4 @@ categories:
 ---
 
 # Introduzione
-Come produrre edizioni critiche digitali senza rovinarsi? In questo post, il primo di una serie dedicata all’edizione efficiente, valuto il ruolo che i modelli linguistici pre-addestrati possono svolgere nell’automazione delle operazioni editoriali, come la marcatura semantica.
+Come si producono edizioni critiche digitali senza svenarsi? Con questo post apro una serie dedicata all’edizione efficiente; qui valuto quale parte possano avere i modelli linguistici pre-addestrati nell’automazione delle operazioni editoriali, a cominciare dalla marcatura semantica.

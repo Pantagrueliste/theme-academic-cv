@@ -1,5 +1,5 @@
 ---
-title: Avviso | Pubblicare le notizie che ci hanno resi moderni (1537—1743)
+title: Avviso | Pubblicare le notizie che ci hanno fatto moderni (1537—1743)
 summary: Un progetto del Medici Archive Project finanziato dal NEH
 tags: 
 - Avviso
@@ -12,7 +12,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: L’annuncio della morte del re Enrico III | BnF
+  caption: La notizia della morte del re Enrico III | BnF
   focal_point: Smart
 
 #links:
@@ -33,8 +33,8 @@ image:
 #slides: example
 machine_translated: true
 ---
-L’obiettivo principale del progetto *Avviso* è digitalizzare, conservare, catalogare, editare, contestualizzare e diffondere i 35.000 fogli di notizie manoscritti della prima età moderna, noti come *avvisi*, che facevano parte della collezione medicea e sono oggi conservati all’Archivio di Stato di Firenze. 
-La catalogazione, la digitalizzazione e la diffusione di circa 35.000 *avvisi*, fogli di notizie manoscritti della prima età moderna, avvengono attraverso la piattaforma Medici Interactive Archive del Medici Archive Project.
+L’obiettivo principale del progetto *Avviso* è digitalizzare, conservare, catalogare, curare, contestualizzare e diffondere i 35.000 notiziari manoscritti della prima età moderna – gli *avvisi* – che facevano parte della collezione medicea e sono oggi conservati all’Archivio di Stato di Firenze. 
+La catalogazione, la digitalizzazione e la diffusione di circa 35.000 *avvisi*, i notiziari manoscritti della prima età moderna, passano per la piattaforma Medici Interactive Archive del Medici Archive Project.
 
 
 

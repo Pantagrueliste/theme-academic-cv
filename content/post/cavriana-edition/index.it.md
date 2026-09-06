@@ -1,12 +1,12 @@
 ---
-title: "Un’edizione digitale di tipo diverso"
-subtitle: Oltre il ciclo dei finanziamenti, una via sostenibile alle edizioni critiche
+title: "Un’edizione digitale d’altro genere"
+subtitle: Fuori dal ciclo dei bandi, una via sostenibile all’edizione critica
 
 summary: >
-  La maggior parte delle fonti primarie non viene mai pubblicata. Il modello
-  dell’edizione digitale finanziata con bandi è troppo costoso, troppo
-  centralizzato e troppo fragile per funzionare su larga scala. Ecco perché
-  sto costruendo l’edizione critica delle lettere di Cavriana in modo diverso.
+  La maggior parte delle fonti primarie non vede mai la luce. Il modello
+  dell’edizione digitale finanziata a bando è troppo caro, troppo accentrato
+  e troppo fragile per reggere su larga scala. Ecco perché l’edizione critica
+  delle lettere di Cavriana la sto costruendo in un altro modo.
 
 date: "2026-03-24T00:00:00Z"
 lastmod: "2026-03-24T00:00:00Z"
@@ -26,4 +26,4 @@ categories:
 - Umanistica digitale
 ---
 
-La maggior parte delle fonti primarie non viene mai pubblicata. Il modello su cui contiamo per rimediare, l’edizione digitale finanziata con bandi, è troppo costoso, troppo centralizzato e troppo fragile per funzionare su larga scala. Ho appena pubblicato [un post](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/blog/2026/03/23/welcome) in cui spiego perché sto costruendo l’edizione critica delle lettere di Cavriana in modo diverso: fonti primarie digitalizzate che crescono organicamente, con un’infrastruttura minima, una manutenzione automatizzata, aperte alla collaborazione e così economiche da non richiedere alcun finanziamento. È un argomento a favore di un’umanistica digitale che funziona a prescindere dal sostegno istituzionale.
+La maggior parte delle fonti primarie non vede mai la luce. Il modello a cui ci affidiamo per rimediare, l’edizione digitale finanziata a bando, è troppo caro, troppo accentrato e troppo fragile per reggere su larga scala. Ho appena pubblicato [un post](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/blog/2026/03/23/welcome) in cui spiego perché l’edizione critica delle lettere di Cavriana la sto costruendo in un altro modo: fonti primarie digitalizzate che crescono per accumulo, con un’infrastruttura minima e una manutenzione automatica, aperte alla collaborazione e così poco costose da non aver bisogno di alcun finanziamento. È un argomento a favore di un’umanistica digitale che stia in piedi anche senza il sostegno delle istituzioni.

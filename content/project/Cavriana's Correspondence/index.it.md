@@ -1,6 +1,6 @@
 ---
 title: La corrispondenza segreta di Filippo Cavriana, 1568—1589.
-summary: Costruire un’edizione minimale dell’*epistolarium* segreto di Filippo Cavriana
+summary: Un’edizione minimale dell’*epistolarium* segreto di Filippo Cavriana
 tags: 
 - Umanistica digitale
 - Fonti primarie
@@ -12,7 +12,7 @@ date: "2019-12-27T00:00:00Z"
 external_link: ""
 
 image:
-  caption: facsimile di ASFi MP 4726a, ff. 17v–18r
+  caption: facsimile di ASFi MP 4726a, cc. 17v–18r
   focal_point: Smart
 
 links:
@@ -34,12 +34,12 @@ url_video: ""
 machine_translated: true
 ---
 
-Le lettere segrete di Filippo Cavriana offrono una testimonianza unica delle guerre di religione francesi, coprendo per più di vent’anni gli intrighi, le battaglie, i negoziati e le congiure che scandivano la vita alla corte di Francia e oltre.  
+Le lettere segrete di Filippo Cavriana sono una testimonianza senza pari sulle guerre di religione francesi: per più di vent’anni seguono gli intrighi, le battaglie, i negoziati e le congiure che scandivano la vita alla corte di Francia, e non solo.  
 
-Le lettere, conservate all’[Archivio di Stato di Firenze](https://www.archiviodistato.firenze.it/asfi/home), sono per la maggior parte disperse in centinaia di fasci non inventariati, o *filze*, come si chiamano a Firenze. Sebbene negli ultimi anni sia riuscito a scoprire decine di lettere nuove, questo tipo di ricerca d’archivio si sta rivelando sempre più difficile. La distanza geografica da Firenze, il degrado di alcuni servizi pubblici in Italia e la pandemia di Covid-19 contribuiscono tutti a rendere questo genere di progetti di pubblicazione un processo lungo e incerto.
+Conservate all’[Archivio di Stato di Firenze](https://www.archiviodistato.firenze.it/asfi/home), le lettere sono in gran parte disperse in centinaia di fasci non inventariati – le *filze*, come si chiamano a Firenze. Negli ultimi anni ne ho scoperte decine di nuove, ma questo genere di ricerca d’archivio si fa sempre più arduo: la distanza da Firenze, il degrado di alcuni servizi pubblici in Italia e la pandemia di Covid-19 concorrono a fare di un progetto di pubblicazione come questo un’impresa lunga e incerta.
 
-Pubblicare fonti primarie dovrebbe restare, nonostante le difficoltà crescenti, parte del mestiere dello storico. La forma che queste pubblicazioni possono assumere, però, dovrebbe probabilmente evolvere. Le pubblicazioni di fonti primarie non solo dovrebbero adattarsi alla situazione che ho descritto sopra, ma anche riflettere meglio la natura incrementale di questa ricerca, rendendo possibile a qualcun altro di continuarla.
+Pubblicare fonti primarie dovrebbe restare, nonostante tutto, parte del mestiere dello storico. La forma di queste pubblicazioni, però, dovrebbe probabilmente cambiare: non solo adattarsi alle condizioni che ho appena descritto, ma rispecchiare meglio la natura incrementale di questa ricerca, e permettere a qualcun altro di continuarla.
 
-Da qui l’idea di sviluppare un nuovo tipo di progetto di pubblicazione digitale che sia **scalabile**, **sostenibile**, **affidabile**, **indipendente dalla piattaforma** e potenzialmente **collaborativo**. 
+Da qui l’idea di un nuovo tipo di pubblicazione digitale: **scalabile**, **sostenibile**, **affidabile**, **indipendente dalla piattaforma** e, potenzialmente, **collaborativa**. 
 
-L’edizione è ora online: **[Filippo Cavriana: The Secret Correspondence](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Raccoglie le lettere finora trascritte, provenienti dagli Archivi di Stato di Firenze e di Mantova e dalla BnF, e cresce man mano che ne emergono di nuove. Ho spiegato le ragioni alla base della sua progettazione in [un post a parte](/post/cavriana-edition/).
+L’edizione è ora in rete: **[Filippo Cavriana: The Secret Correspondence](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Raccoglie le lettere trascritte finora, dagli Archivi di Stato di Firenze e di Mantova e dalla BnF, e cresce man mano che ne affiorano di nuove. Le ragioni della sua architettura le ho spiegate in [un post a parte](/post/cavriana-edition/).
