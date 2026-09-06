@@ -1,6 +1,6 @@
 # Stringhe specifiche del sito (unite ai file i18n di HugoBlox Kit)
 translation_notice:
-  other: "Questa pagina è stata tradotta automaticamente (da Claude, un modello di IA) e non è ancora stata rivista da un madrelingua."
+  other: "Questa pagina è stata tradotta automaticamente e non è ancora stata rivista da un madrelingua."
 translation_original:
   other: "Leggi l'originale"
 translation_vote_question:

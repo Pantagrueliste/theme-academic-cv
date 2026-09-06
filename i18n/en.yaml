@@ -1,6 +1,6 @@
 # Site-specific strings (merged with the HugoBlox Kit i18n files)
 translation_notice:
-  other: "This page was translated automatically (by Claude, an AI model) and has not yet been reviewed by a native speaker."
+  other: "This page was translated automatically and has not yet been reviewed by a native speaker."
 translation_original:
   other: "Read the original"
 translation_vote_question:

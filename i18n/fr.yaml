@@ -1,6 +1,6 @@
 # Chaînes propres au site (fusionnées avec les fichiers i18n de HugoBlox Kit)
 translation_notice:
-  other: "Cette page a été traduite automatiquement (par Claude, un modèle d'IA) et n'a pas encore été relue par un locuteur natif."
+  other: "Cette page a été traduite automatiquement et n'a pas encore été relue par un locuteur natif."
 translation_original:
   other: "Lire l'original"
 translation_vote_question:
