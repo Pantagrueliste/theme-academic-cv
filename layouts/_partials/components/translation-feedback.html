@@ -9,7 +9,9 @@
 */}}
 {{- $defaultLang := hugo.Sites.Default.Language.Lang -}}
 {{- $isTranslation := ne .Language.Lang $defaultLang -}}
-{{- if and $isTranslation .Params.machine_translated -}}
+{{/* Only for languages listed in params.yaml → translation_feedback.languages (those the author cannot proofread). */}}
+{{- $feedbackLangs := site.Params.translation_feedback.languages | default slice -}}
+{{- if and $isTranslation (in $feedbackLangs .Language.Lang) .Params.machine_translated -}}
   {{- $original := "" -}}
   {{- range .AllTranslations -}}
     {{- if eq .Language.Lang $defaultLang -}}{{- $original = .RelPermalink -}}{{- end -}}
