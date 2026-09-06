@@ -1,0 +1,24 @@
+# Spanish overrides for data/authors/clement.yaml (merged on top of the default)
+role: Profesor de Humanidades Digitales
+bio: |
+  Clément Godbarge es profesor de Humanidades Digitales en la Universidad de St Andrews. Su investigación gira en torno a la ciencia y el arte de gobernar en la Europa de la Edad Moderna. En su libro de próxima publicación examina cómo los médicos integrados en las cortes de Francia e Italia del siglo XVI se promocionaron como expertos políticos de un nuevo género. Su investigación ha contado con el apoyo de la Fundación Andrew W. Mellon, la Comisión Fulbright, la Renaissance Society of America y la Universidad de Harvard.
+
+affiliations:
+  - name: Universidad de St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: Correo electrónico
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Historia de la Edad Moderna
+  - Literatura europea
+  - Humanidades digitales

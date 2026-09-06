@@ -1,0 +1,31 @@
+# Stringhe specifiche del sito (unite ai file i18n di HugoBlox Kit)
+translation_notice:
+  other: "Questa pagina è stata tradotta automaticamente (da Claude, un modello di IA) e non è ancora stata rivista da un madrelingua."
+translation_original:
+  other: "Leggi l'originale"
+translation_vote_question:
+  other: "Questa traduzione è di buona qualità?"
+translation_vote_good:
+  other: "Sì"
+translation_vote_bad:
+  other: "No"
+translation_vote_thanks:
+  other: "Grazie per il tuo parere!"
+
+# Chiavi mancanti nel pacchetto it di HugoBlox Kit
+questions:
+  other: "Domande"
+faq:
+  other: "FAQ"
+docs:
+  other: "Documentazione"
+poweredby_button:
+  other: "Crea il tuo →"
+read_more:
+  other: "Leggi tutto"
+callout_note:
+  other: "Nota"
+portfolio_link_default:
+  other: "Link"
+backlinks:
+  other: "Backlink"

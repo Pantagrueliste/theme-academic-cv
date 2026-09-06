@@ -1,7 +1,82 @@
 # Languages
-#   Create a section for each of your site's languages.
+#   One section per site language. English is the default and stays at the site
+#   root; other languages live under /fr/, /es/, /it/.
+#   Translations sit next to the originals as `index.<lang>.md` (same bundle, so
+#   images and other resources are shared).
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
-# Default language
 en:
   locale: en-us
+  weight: 1
+
+fr:
+  locale: fr-fr
+  weight: 2
+  params:
+    hugoblox:
+      identity:
+        description: "Site académique de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Accueil
+        url: /fr/
+        weight: 10
+      - name: Zibaldone
+        url: /fr/#posts
+        weight: 20
+      - name: Projets
+        url: /fr/#projects
+        weight: 30
+      - name: Code
+        url: /fr/#code
+        weight: 40
+
+es:
+  locale: es-es
+  weight: 3
+  params:
+    hugoblox:
+      identity:
+        description: "Sitio académico de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Inicio
+        url: /es/
+        weight: 10
+      - name: Zibaldone
+        url: /es/#posts
+        weight: 20
+      - name: Proyectos
+        url: /es/#projects
+        weight: 30
+      - name: Código
+        url: /es/#code
+        weight: 40
+
+it:
+  locale: it-it
+  weight: 4
+  params:
+    hugoblox:
+      identity:
+        description: "Sito accademico di Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Home
+        url: /it/
+        weight: 10
+      - name: Zibaldone
+        url: /it/#posts
+        weight: 20
+      - name: Progetti
+        url: /it/#projects
+        weight: 30
+      - name: Codice
+        url: /it/#code
+        weight: 40
