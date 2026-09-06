@@ -2,8 +2,8 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "黎凡特的感知地理"
-subtitle: "在十六世纪的佛罗伦萨，黎凡特让人联想到什么？"
-summary: "黎凡特（Levante）是一个难以捉摸的地名，因为它通常是相对于——或对立于——另一片领土来界定的。那么，十六世纪托斯卡纳的黎凡特究竟是什么？我从MIA数据库中收集的数据给出了一个出乎意料的答案。"
+subtitle: "十六世纪的佛罗伦萨人，一提黎凡特想到什么？"
+summary: "黎凡特（Levante）是个捉摸不定的地名：它通常要相对于——或者对立于——另一片地域才有定义。那么，十六世纪托斯卡纳人心中的黎凡特在哪里？我从MIA数据库收集的数据给出了一个出人意料的答案。"
 authors: [clement]
 tags: [MAP, Avviso]
 categories: [札记]
@@ -31,15 +31,15 @@ projects: ["MAP"]
 ---
 
 # 引言
-*Levante*（黎凡特）是一个难以捉摸的地方。它通常是相对于——或对立于——另一片领土来界定的，其含义很少稳定，随使用该词的地点和时代不同而唤起不同的地理图景。然而，即使难以给出客观、准确的定义，我们仍可以希望以某一文本语料库内部存在的关联为基础，为该地区绘制一幅主观的地图。换言之，*Levante*在特定的一群读者心中会唤起怎样的空间？
-在本文中，我将向您展示如何利用美第奇档案计划（Medici Archive Project）的[MIA数据库](https://mia.medici.org/)中的数据，
-将与这一地名相关联的具体地点可视化。
+*Levante*（黎凡特）是个捉摸不定的地方。它通常要相对于——或者对立于——另一片地域才有定义，含义很少稳定：用这个词的地点和时代不同，唤起的地理图景也不同。不过，客观、精确的定义固然难下，我们仍可以指望画出这片地区的一幅主观地图，依据便是某个文本语料库内部的关联。换句话说：对特定的一群读者，*Levante*唤起的是怎样一片空间？  
+本文将向您展示，如何利用美第奇档案计划（Medici Archive Project）[MIA数据库](https://mia.medici.org/)中的数据，
+把与这个地名相关联的具体地点画出来。  
 
 # MIA数据库
-MIA数据库是一个协作平台，供希望上传并分享自己所拍摄的[佛罗伦萨国家档案馆](https://archiviodistatofirenze.cultura.gov.it/asfi/home)档案材料照片的学者使用。过去一年里，在[美国国家人文基金会](https://www.neh.gov)的资助下，我们的团队对佛罗伦萨*Mediceo del Principato*档案*avvisi*部分所藏的数千份文献进行了拍摄、转录、摘要和分类。虽然我们的数据库最初并非为统计分析而设计，但我们公开的元数据仍然可以下载并用作数据集。
+MIA数据库是一个协作平台，供学者上传、分享自己在[佛罗伦萨国家档案馆](https://archiviodistatofirenze.cultura.gov.it/asfi/home)拍摄的档案照片。过去一年，在[美国国家人文基金会](https://www.neh.gov)的资助下，我们的团队对佛罗伦萨*Mediceo del Principato*全宗中*avvisi*部分的数千份文献做了拍摄、转录、摘要和分类。数据库当初并非为统计分析而设，但我们公开的元数据照样可以下载，当作数据集来用。
 
 # 数据集
-在本例中，我创建的数据集涵盖1543年至1566年间所有来自*Levante*的新闻，也就是说，从档案中记录的第一份avviso到苏丹[苏莱曼一世](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent)去世的那一年。以下是我从服务器提取的数据样本。数据由三列组成：唯一的文献编号、地名和日期。
+这次我建的数据集，涵盖1543年至1566年所有来自*Levante*的新闻——也就是从档案中记录的第一份avviso，直到苏丹[苏莱曼一世](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent)去世的那一年。下面是我从服务器提取的数据样本，共三列：唯一的文献编号、地名、日期。
 
 ```csv
 57386 Malta / Europe / World / Top of the TGN hierarchy 1565-1-3
@@ -61,7 +61,7 @@ MIA数据库是一个协作平台，供希望上传并分享自己所拍摄的[�
 ```
 
 ## 清理数据
-为了将这些数据可视化，我们需要使其可读为csv（逗号分隔值）数据集。我们还需要把其中包含的地理信息转换为更“机器友好”的格式：GPS坐标。由于数据集包含数百个条目，我们更希望将这一过程自动化。借助[GPT-3](https://wwww.openai.org)、[Bloom](https://huggingface.co/bigscience/bloom)或[AI-21](https://www.ai21.com)等预训练语言模型（仅举几例），这可以相当快速且相当准确地完成。不过，这一操作需要密切监督，因为预训练语言模型略有产生幻觉的倾向。
+要把这些数据画出来，先得让它们能以csv（逗号分隔值）格式读取。其中的地理信息也要转换成更“机器友好”的形式：GPS坐标。数据集有数百条，这一步自然希望交给机器。借助[GPT-3](https://wwww.openai.org)、[Bloom](https://huggingface.co/bigscience/bloom)或[AI-21](https://www.ai21.com)之类的预训练语言模型（仅举数例），这件事可以做得又快又准。不过必须盯紧了，因为预训练语言模型多少有点爱产生幻觉。
 
 
 ```csv
@@ -85,20 +85,20 @@ documentId,latitude,longitude,documentDate
 ```
 
 # 密度图
-密度图是一种可视化类型，用于突出显示某个地点在给定数据集中被提及的频率。这不仅有助于理解数据的地理范围，更有助于理解其焦点所在。地图上哪些地方被更频繁地提及？哪些地方只是偶尔出现？中心在哪里，边缘又有多远？读者的注意力最可能集中在地图的哪个位置？
+密度图是一种可视化，用来突出某个地点在给定数据集中被提及的频率。它不仅有助于把握数据的地理范围，更能显出数据的焦点所在。地图上哪些地方提得最勤？哪些只是偶一露面？中心在哪里，边缘又有多远？读者的注意力最可能落在地图的哪一处？
 
 <iframe width='100%' height='600px' src="https://api.mapbox.com/styles/v1/clemclem/cl9q7c77p004y14mqytjrfnex.html?title=false&access_token=pk.eyJ1IjoiY2xlbWNsZW0iLCJhIjoiY2lmbGpvbjMwZjh3NnJ5bHg4ZzkzeWZzeCJ9.IgOF4fphVbsWAIKyzAV-DQ&zoomwheel=false#3.83/43.29/33.61" title="Levante" style="border:none;"></iframe>
 
-为了这次实验——也因为当时我很赶时间——我使用了[Map Box](https://www.mapbox.com)的一个API。不过，许多可视化库和地理信息系统都能让您制作出同类的密度图。
+为了这次实验——也因为当时赶时间——我用了[Map Box](https://www.mapbox.com)的一个API。不过，许多可视化库和地理信息系统都能做出同类的密度图。
 
 # 几点观察
-结果更像是一幅印象派画作，而非对一个可明确界定的概念的精确呈现，而这正是我喜欢这个实验的地方。的确，{{< hl >}}数据科学可以成为人文学科的强大盟友，但我们不一定非得遵守它的规则。{{< /hl >}}
+结果与其说是对一个界限分明的概念的精确呈现，不如说是一幅印象派的画；而我喜欢这个实验的，恰恰是这一点。的确，{{< hl >}}数据科学可以是人文学科的有力盟友，但我们不一定非得照它的规矩行事。{{< /hl >}}
 
-这个实验另一个有趣之处在于，地图揭示出一个与欧洲其他地区和地中海完全融为一体的*Levante*。它还凸显了埃迪尔内在奥斯曼帝国政治地理中的中心地位。此外，地图上西班牙最重要的城市既不是马德里也不是埃斯科里亚尔，而是那不勒斯。最后但同样重要的是，岛屿以及拉古萨等小型城邦似乎在该地区各方势力之间扮演着重要的中介角色。
+这个实验还有一处有趣：地图上的*Levante*，与欧洲其余部分和地中海完全打成一片。地图还凸显了埃迪尔内在奥斯曼帝国政治地理中的核心地位。再者，图上西班牙最要紧的城市既非马德里，也非埃斯科里亚尔，而是那不勒斯。最后同样重要的是，岛屿以及拉古萨这样的小城邦，似乎在该地区各方势力之间充当着重要的中介。
 
 
 # 如何向MIA请求数据
-尽管MIA是一个出色的研究者协作工具，但其服务器中存储的数据并不容易获取。例如，它的后端并未发布在公共代码仓库中。不过，您仍然可以通过注册MIA并用Python向服务器发送请求来获取数据。
+MIA是一件出色的研究协作工具，可它服务器里存的数据并不容易拿到手：比如，它的后端并未发布在公共仓库里。不过，您仍可以注册MIA，然后用Python向服务器发请求，取得数据。
 
 ### 请求
 ```python
@@ -107,7 +107,7 @@ payload = [{"searchSection":"archivalLocationSearch","type":"archivalLocationAdv
 headers = {'Content-type': 'application/json', 'Accept': '*/*'}
 r = requests.post(url, data=json.dumps(payload), headers=headers, auth=('LOGIN','PASSWORD'))
 ```
-请务必将LOGIN和PASSWORD替换为您自己的凭据。
+请务必把LOGIN和PASSWORD换成您自己的凭据。
 
 ### 将响应写入文件
 ```python
@@ -141,4 +141,4 @@ with open('results.csv', 'w', newline='') as csvfile:
                 writer.writerow({'documentId': documentId, 'placeCited': placeCited, 'documentDate': documentDate})
 ```
 
-下载`results.csv`文件后，您就可以按照上文所述清理数据了。
+下载`results.csv`之后，就可以按上文所说清理数据了。

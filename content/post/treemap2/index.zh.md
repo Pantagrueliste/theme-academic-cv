@@ -1,9 +1,9 @@
 ---
 title: 手稿可视化2（更新）
-subtitle: 一个多标准的手稿可视化工具
+subtitle: 多标准的手稿可视化工具
 
 # Summary for listings and search engines
-summary: 交互式树状图的新版本，增加了新功能。
+summary: 交互式树状图的新版本，添了新功能。
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -42,10 +42,10 @@ tags:
 categories:
 - 札记
 ---
-如约而至，这是[上一篇文章]({{< relref "/post/treemap" >}})中介绍的交互式树状图的新版本，这次带有两种查看模式。
+如约而至：[上一篇]({{< relref "/post/treemap" >}})介绍的交互式树状图出了新版本，这回有两种查看模式。
 
 > [!NOTE]
-> 为获得更好的浏览体验，请确保网页设置为浅色模式（点击右上角的月亮图标）。
+> 为获得更佳的浏览效果，请确保网页设置为浅色模式（点击右上角的月亮图标）。
 
    <head>
     <meta charset="UTF-8" />

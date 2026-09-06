@@ -1,6 +1,6 @@
 ---
 title: The Spy Who Wished Them Well
-summary: 一部关于宗教战争时期医学、政治与认识论的专著。
+summary: 一部专著，论宗教战争年代的医学、政治与认识论。
 tags: 
 - 医学史
 - 法国宗教战争
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-更多信息即将发布。
+更多信息，敬请期待。
 

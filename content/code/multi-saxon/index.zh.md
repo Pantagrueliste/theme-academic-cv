@@ -1,6 +1,6 @@
 ---
 title: Multi-Saxon
-summary: 一个高性能工具，用于对大型XML TEI语料库进行并行的XSLT 2.0/3.0转换，处理LXML无法处理的转换。
+summary: 一个高性能工具，对大型XML TEI语料库并行执行XSLT 2.0/3.0转换，处理LXML无能为力的转换。
 tags:
   - XSLT
   - XML
@@ -16,7 +16,7 @@ date: "2025-03-28T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Multi-Saxon运行实况
+  caption: Multi-Saxon运行中
   focal_point: Smart
 
 links:
@@ -38,34 +38,34 @@ slides: ""
 machine_translated: true
 ---
 
-## Multi-Saxon：面向大型TEI语料库的并行XSLT处理
+## Multi-Saxon：大型TEI语料库的并行XSLT处理
 
-Multi-Saxon填补了XML处理工具中的一个关键空白，使LXML（一个流行的Python XML库）无法处理的XSLT 2.0和3.0转换得以并行执行。Multi-Saxon专为大型XML TEI文档集合设计，通过高效的并行执行显著缩短处理时间。
+Multi-Saxon填补了XML处理工具的一处要害空白：LXML（一个流行的Python XML库）处理不了的XSLT 2.0和3.0转换，它能并行执行。它专为大型XML TEI文档集合而设计，凭高效的并行执行大幅缩短处理时间。
 
 ## 主要特性
 
-- **高级XSLT支持**：处理超出LXML能力范围的XSLT 2.0和3.0转换
-- **并行处理**：通过并行化大幅缩短大型文档集合的转换时间
-- **为TEI优化**：专为文本编码倡议（TEI）XML文档设计
-- **可扩展的性能**：高效处理从数百到数千份文档的语料库
-- **跨平台**：可在不同的操作系统和环境中运行
+- **高级XSLT支持**：处理LXML力所不及的XSLT 2.0和3.0转换
+- **并行处理**：借并行化大幅缩短大型文档集合的转换时间
+- **为TEI优化**：专为文本编码倡议（TEI）XML文档打造
+- **性能可扩展**：从数百到数千份文档的语料库，均可高效处理
+- **跨平台**：可在不同操作系统和环境下运行
 
-## Multi-Saxon解决的问题
+## Multi-Saxon解决什么问题
 
-使用TEI的数字人文学者常常面临两大挑战：
+使用TEI的数字人文学者常常面临两大难题：
 
-1. LXML（一个常用的Python XML处理库）仅支持XSLT 1.0，无法使用更高级的XSLT 2.0/3.0特性
-2. 顺序处理大型TEI文档语料库可能耗时到令人却步
+1. LXML（常用的Python XML处理库）只支持XSLT 1.0，XSLT 2.0/3.0的高级特性无从使用
+2. 大型TEI语料库若逐份顺序处理，耗时可能长到令人却步
 
-Multi-Saxon通过利用Saxon的高级XSLT能力，并将处理分布到多个核心上以获得显著的性能提升，同时解决了这两个问题。
+Multi-Saxon一举解决这两个问题：借用Saxon的高级XSLT能力，同时把处理分摊到多个核心，性能因此大增。
 
 ## 实现
 
-Multi-Saxon将Python与Java的Saxon处理器结合，构建了一条高性能的转换流水线：
+Multi-Saxon把Python与Java的Saxon处理器结合起来，构成一条高性能的转换流水线：
 
-- 使用Java的Saxon库进行稳健的XSLT 2.0/3.0处理
-- 实现多进程处理，将转换分布到可用的CPU核心上
-- 高效管理处理器池以最大化吞吐量
+- 用Java的Saxon库稳健地处理XSLT 2.0/3.0
+- 以多进程把转换分摊到可用的CPU核心
+- 高效管理处理器池，以求吞吐量最大化
 - 为批量处理TEI文档提供简洁的接口
 
 ## 用法示例
@@ -83,13 +83,13 @@ transformer.transform("input.xml", "output.xml")
 transformer.transform_directory("input_dir", "output_dir")
 ```
 
-## 对数字人文的影响
+## 对数字人文的意义
 
-对于处理大型TEI文档集合的数字人文项目，Multi-Saxon使以下成为可能：
+对处理大型TEI文档集合的数字人文项目，Multi-Saxon让以下成为可能：
 
-- 用LXML不可能完成的复杂的全语料库转换
-- 大幅缩短的处理时间（在多核系统上通常可提速5至10倍）
-- 借助高级XSLT 2.0/3.0特性进行更精细的分析
-- 简化处理整个文档集合的工作流
+- LXML无法完成的复杂全语料库转换
+- 大幅缩短处理时间（多核系统上常可提速5至10倍）
+- 借助XSLT 2.0/3.0的高级特性做更精细的分析
+- 简化整个文档集合的处理流程
 
-源代码与文档请见[GitHub仓库](https://github.com/Pantagrueliste/multi-saxon)。
+源代码与文档见[GitHub仓库](https://github.com/Pantagrueliste/multi-saxon)。

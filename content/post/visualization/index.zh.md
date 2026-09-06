@@ -1,9 +1,9 @@
 ---
-title: BnF Ms. Fr. 640中语义标记的可视化
-subtitle: 用Python快速创建数字学术版本的可视化  
+title: BnF Ms. Fr. 640语义标记的可视化
+subtitle: 用Python快速为数字学术版本作图  
 
 # Summary for listings and search engines
-summary: 用Python快速关联*Secrets of Craft and Nature in Renaissance France*等带注释数字版本的标记的方法
+summary: 用Python快速关联带注释数字版本（如*Secrets of Craft and Nature in Renaissance France*）中各类标记的一种办法
 
 # Link this post with a project
 projects: ["M&K"]
@@ -43,14 +43,14 @@ categories:
 ---
 
 # 概述
-数据丰富的学术版本包含宝贵的编辑注释，人们可以出于各种学术目的对其进行提取、分析和可视化。2020年发布的[*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org)（《文艺复兴时期法国的工艺与自然之秘》）就是如此，其元数据文件可从其GitHub仓库下载。在本文中，我将展示如何把所有这些变量汇集到一个相关矩阵中，并以不同方式将其可视化。
+数据丰富的学术版本里藏着宝贵的编辑注释，可以提取、分析、可视化，服务于各种学术目的。2020年发布的[*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org)（《文艺复兴时期法国的工艺与自然之秘》）便是如此：它的元数据文件可从GitHub仓库下载。本文展示如何把这些变量汇成一个相关矩阵，再以不同方式画出来。
 
 # 数据
-Making and Knowing Project生成了一份包含手稿内容最新信息的电子表格：```entry_metadata.csv```。该文件可从Making & Knowing的[GitHub仓库](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv)获取。或者，也可以借助Matthew Kumar出色的[manuscript-object](https://github.com/cu-mkp/manuscript-object)——BnF Ms. Fr. 640的Python版本——生成定制的.csv文件，加入更多标记。
+Making and Knowing Project生成了一份电子表格，载有手稿内容的最新信息：```entry_metadata.csv```。该文件可从Making & Knowing的[GitHub仓库](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv)取得。另外，也可以借助Matthew Kumar出色的[manuscript-object](https://github.com/cu-mkp/manuscript-object)——BnF Ms. Fr. 640的Python版本——生成定制的.csv文件，加入更多标记。
 
 ## 设置Python
-我们将使用Pandas进行数据整理，用Matplotlib和seaborn绘制热图，最后用NetworkX生成基于相关性的网络。
-对于这类变量，我们将避开Pearson方法，改用𝜙𝐾方法。请务必[了解](https://phik.readthedocs.io/en/latest/index.html)这种相关方法及其对应的库`PhiK`。
+数据整理用Pandas，热图用Matplotlib和seaborn，最后用NetworkX生成基于相关的网络。  
+对这类变量，我们避开Pearson法，改用𝜙𝐾法。请务必先[了解](https://phik.readthedocs.io/en/latest/index.html)这种相关方法及其对应的库`PhiK`。
 
 ```python
 #install packages
@@ -64,10 +64,10 @@ import networkx as nx
 ```
 
 ## 准备数据
-首先，让我们从他们的[GitHub仓库](https://github.com/cu-mkp/m-k-manuscript-data)的metadata文件夹下载该版本最新的元数据文件。
-我们只选取需要的列。在本演示中，我选择英文译文`tl`中的所有语义标签，但您也可以选择法文转录`tc`或规范化版本`tcn`中的标签。
-数据以分号分隔值的形式提供，我们需要Python替我们计数。因此，我们将使用stack-unstack方法，配合正则表达式`[^;\s][^\;]*[^;\s]*`来完成。
-为了让矩阵更易读，我们重命名每一列。如果您赶时间可以跳过这一步，只需记住此时我们的数据框名为`tagsrn`。
+首先，从该版本[GitHub仓库](https://github.com/cu-mkp/m-k-manuscript-data)的metadata文件夹下载最新的元数据文件。
+我们只选需要的列。本演示中，我选了英文译文`tl`里的全部语义标签；您也可以选法文转录`tc`或规范化版本`tcn`里的标签。
+数据是分号分隔的值，得让Python替我们数。于是用stack-unstack方法，配合正则表达式`[^;\s][^\;]*[^;\s]*`来数。
+为了让矩阵更好读，我们把每一列重新命名。赶时间的话，这一步可以跳过，只需记住此时的数据框叫`tagsrn`。
 
 ```python
 # load the edition's metadata
@@ -85,16 +85,16 @@ tagsrn = tagcount.rename(columns={'al_tl': 'animals', 'bp_tl': 'body parts', 'cn
 
 # 计算相关
 
-数据框清理干净后，我们就可以着手计算各变量之间的相关系数了。在这一阶段，重要的是理解您的数据，并确保使用最合适的相关方法。`pandas-profiling`包对这项任务特别有帮助。
+数据框清理干净，就可以计算各变量之间的相关系数了。这一步要紧的是吃透您的数据，确保用的是最合适的相关方法。`pandas-profiling`包对此特别有帮助。
 
 ```python
 # calculate correlation coefficient with the phi k method
 cortag = tagsrn.phik_matrix()
 ```
-`cortag`就是我们的相关矩阵。现在我们可以尝试不同类型的可视化了。
+`cortag`就是我们的相关矩阵。现在可以试试不同类型的可视化了。
 
 # 可视化
-首先可以尝试用`seaborn`的[heatmap模块](https://seaborn.pydata.org/generated/seaborn.heatmap.html)将其可视化为一个颜色编码的矩阵。
+首先可以试的，是用`seaborn`的[heatmap模块](https://seaborn.pydata.org/generated/seaborn.heatmap.html)把它画成一个颜色编码的矩阵。
 
 ### 相关热图
 ```python
@@ -103,27 +103,27 @@ ax = sns.heatmap(cortag, linewidths=.03, vmin=0, cmap="Oranges", square=True)
 ```
 ![BnF Ms. Fr. 640的相关热图](heatmap.png)
 
-如果您熟悉这份文本，就能立刻看出热图很有道理。例如，人名与拉丁语强相关，因为把人名拉丁化是当时的习惯，尤其是在十六世纪的人文主义者中间。
+熟悉这份文本的人，一眼就能看出这张热图很有道理。譬如，人名与拉丁语强相关，因为把人名拉丁化是当时的风气，尤以十六世纪的人文主义者为甚。
 
-有人可能会说，这张热图不过是在陈述显而易见的事实。他们不完全错，乍看之下，医学标签似乎就是个例子，因为它们不出所料地与身体部位、计量和植物相关。
+有人会说，这张热图不过是在陈述显而易见的事。他们不全错；乍看之下，医学标签正是一例——它与身体部位、计量和植物相关，本在意料之中。
 
-但如果我们更仔细地逐行阅读热图，可能会发现一些有趣而意外的相关。例如，医学标签与意大利语和拉丁语词汇相关，这为我们提供了关于Ms. Fr. 640中医学配方来源的线索。同样，职业、定义与计量之间的相关，显示出职业身份在多大程度上构造了十六世纪的技术话语。
+但要是逐行细读热图，或许会发现一些有趣而意外的相关。例如，医学标签与意大利语、拉丁语词汇相关，这就为Ms. Fr. 640中医学配方的来源提供了线索。同样，职业、定义与计量三者之间的相关，显示出职业身份在多大程度上构造了十六世纪的技术话语。
 
 ### 相关聚类图
 
-热图在“探索性”情境中很有帮助，但在您的听众看来可能有些凌乱，尤其是当您在讨论——或仍在寻找——手稿中特定的语义簇时。Seaborn的`clustermap`模块可能会给出有趣的结果。
+热图适合“探索”阶段，可在听众眼里未免有些凌乱，尤其当您正在讨论——或仍在寻找——手稿中特定的语义簇时。Seaborn的`clustermap`模块也许能给出有趣的结果。
 
 ```python
 clustermap = sns.clustermap(cortag, figsize=(12, 13), dendrogram_ratio=(.1, .2), vmin=0, cmap="Oranges", cbar_pos=(-.06, .12, .03, .68))
 ```
 ![BnF Ms. Fr. 640的相关聚类图](clustermap.png)
 
-除了看起来像一只像素化的（没错，这个词已收入《牛津英语词典》）昆虫之外，聚类图清楚地把孤立的标签（在顶部和左侧）与联系更紧密的标签区分开来。我们还能分辨出孤立的簇，如音乐和普瓦图方言（谁能想到！），以及更为核心的簇，如计量、材料、定义和武器。职业的联系更广，但至少在这个特定的相关矩阵中，它不属于某个特定的簇。
+聚类图看起来像一只像素化的（没错，这个词已收入《牛津英语词典》）昆虫；除此之外，它清楚地把孤立的标签（顶部和左侧）与联系更紧密的标签分了开来。我们还能分辨出孤立的簇，如音乐和普瓦图方言（谁能想到！），以及更为核心的簇，如计量、材料、定义和武器。职业的联系更广，但至少在这个相关矩阵里，它不属于哪个特定的簇。
 
 ### 相关网络
 
-如果我们想进一步综合矩阵中包含的相关，网络图提供了一个优雅的解决方案。这在我们想要传达手稿内容的情境下尤其如此。
-为此，我们需要把矩阵转换为边和节点的列表，并定义一个阈值，以从图中剔除较弱的相关。
+若想把矩阵里的相关进一步提炼，网络图是个优雅的办法，尤其适合向人介绍手稿内容的场合。  
+为此，我们要把矩阵转成边和节点的列表，并定一个阈值，把较弱的相关从图中剔除。
 
 ```python
 # transform the data
@@ -143,7 +143,7 @@ nx.draw_kamada_kawai(G, with_labels = True, node_color = 'red', node_size = 400,
 ```
 ![BnF Ms. Fr. 640的相关图](graph.png)
 
-如果边和节点太多，您仍可以调整阈值以获得更清爽的结果。否则，您可以用`.write_gexf()`函数把图导出，到`Gephi`中把玩。
+边和节点太多的话，可以调整阈值，让结果更清爽。要不然，也可以用`.write_gexf()`函数把图导出，到`Gephi`里把玩。
 
 ```python 
 nx.write_gexf(G, 'graph.gexf')
@@ -153,7 +153,7 @@ nx.write_gexf(G, 'graph.gexf')
 
 ### 更新：环形加权网络
 
-我一直在寻找把相关矩阵显示为加权网络的方法，找到了[Julian West分享的](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold)这个有趣的方法，在此把它改编到我们的数据集上。
+我一直在找把相关矩阵显示为加权网络的办法，找到了[Julian West分享的](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold)这个有趣的思路，在此改编到我们的数据集上。
 
 ```python
 # create graph weighted by correlation coefficients (unfiltered)
@@ -177,7 +177,7 @@ Gx.remove_edges_from(remove)
 
 print(str(len(remove)) + ' edges removed')
 ```
-去掉几条边之后，我们可以确定它们的颜色和粗细。
+去掉几条边之后，就可以决定边的颜色和粗细了。
 
 ```python
 # determine the colors of edges
@@ -204,6 +204,6 @@ node_size = []
 for key, value in dict(Gx.degree).items():
     node_size.append(assign_node_size(value))
 ```
-结果是一个加权图，它容纳了更多节点和多得多的边，同时保持可读且信息丰富。
+结果是一张加权图：容纳了更多节点和多得多的边，却依然清晰可读、信息丰富。
 
 ![BnF Ms. Fr. 640的加权相关图](weightedgraph.png) 

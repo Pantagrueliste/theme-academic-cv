@@ -1,6 +1,6 @@
 ---
 title: Filippo Cavriana的秘密通信，1568—1589
-summary: 为Filippo Cavriana的秘密*书信集*（*epistolarium*）构建一个极简版本
+summary: 为Filippo Cavriana的秘密*书信集*（*epistolarium*）做一个极简版本
 tags: 
 - 数字人文
 - 原始史料
@@ -12,13 +12,13 @@ date: "2019-12-27T00:00:00Z"
 external_link: ""
 
 image:
-  caption: ASFi MP 4726a f.17v–18r的影印件
+  caption: ASFi MP 4726a f.17v–18r影印件
   focal_point: Smart
 
 links:
   - type: site
     icon: book-open
-    label: 阅读该版本
+    label: 阅读版本
     url: https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/
 url_code: ""
 url_pdf: ""
@@ -34,12 +34,12 @@ url_video: ""
 machine_translated: true
 ---
 
-Filippo Cavriana的秘密信件为法国宗教战争提供了独一无二的见证，二十多年间记录了主导法国宫廷内外生活节奏的阴谋、战役、谈判和密谋。
+Filippo Cavriana的秘密书信，是法国宗教战争独一无二的见证：二十余年间，法国宫廷内外由阴谋、战役、谈判与密谋所主宰的生活，尽在其中。
 
-这些信件藏于[佛罗伦萨国家档案馆](https://www.archiviodistato.firenze.it/asfi/home)，大部分散落在数百个未编目录的卷宗中——在佛罗伦萨，人们称之为*filze*。过去几年里，我得以发现数十封新信件，但这类档案研究正变得越来越困难。与佛罗伦萨的地理距离、意大利某些公共服务的退化，以及新冠疫情，都使这类出版项目成为一个漫长而不确定的过程。
+这些信藏于[佛罗伦萨国家档案馆](https://www.archiviodistato.firenze.it/asfi/home)，大多散落在数百卷未编目的卷宗里——佛罗伦萨人管这叫*filze*。过去几年，我发现了数十封新信，但这类档案研究正变得越来越难：远离佛罗伦萨，意大利某些公共服务的退化，再加上新冠疫情，都让这类出版项目成了一场漫长而没有把握的工程。
 
-尽管困难与日俱增，出版原始史料文献仍应是历史学家工作的一部分。然而，这些出版物所采取的形式或许应当演变。原始史料的出版不仅应适应我上述的情况，还应更好地反映这类研究的渐进性质，同时让他人有可能接续下去。
+困难虽与日俱增，出版原始史料仍应是历史学家分内之事。不过，这类出版物的形态或许该变一变了：原始史料的出版不仅要适应上述处境，还应更好地体现这类研究的渐进性质，同时让别人有可能接着做下去。
 
-由此产生了开发一种新型数字出版项目的想法，它应当是**可扩展的**、**可持续的**、**可信的**、**平台无关的**，并且有可能是**协作的**。
+由此便有了这个想法：开发一种新型的数字出版项目，要**可扩展**、**可持续**、**可信**、**不依赖平台**，并且有可能**协作**。
 
-该版本现已上线：**[Filippo Cavriana：秘密通信](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**。它汇集了迄今为止转录的信件，来自佛罗伦萨、曼托瓦的国家档案馆以及法国国家图书馆（BnF），并随着新信件的浮现而不断增长。我在[另一篇文章](/post/cavriana-edition/)中解释了其设计背后的思路。
+版本现已上线：**[Filippo Cavriana：秘密通信](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**。它汇集了迄今转录的信件——来自佛罗伦萨、曼托瓦的国家档案馆以及法国国家图书馆（BnF）——并随着新信的浮现而不断增长。设计背后的思路，我在[另一篇文章](/post/cavriana-edition/)里作了说明。
