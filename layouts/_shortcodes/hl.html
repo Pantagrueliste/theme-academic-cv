@@ -1,0 +1,6 @@
+{{/*
+    Highlight quote — ported from the blox-bootstrap `hl` shortcode.
+    Usage: {{< hl >}}text to highlight{{< /hl >}}
+    (Equivalent to the ==text== Markdown syntax supported by HugoBlox Kit.)
+*/}}
+<mark>{{ .Inner | markdownify | emojify }}</mark>

@@ -1,23 +1,50 @@
 [build]
-  command = "hugo --gc --minify -b $URL"
+  command = """
+    set -e
+    echo "=== Toolchain ==="
+    echo "Node: $(node --version)  pnpm: $(pnpm --version)  Hugo: $(hugo version)"
+
+    echo "=== Installing dependencies ==="
+    pnpm install --no-frozen-lockfile
+
+    echo "=== Building site ==="
+    hugo --gc --minify -b $URL --printI18nWarnings --printPathWarnings
+
+    echo "=== Indexing search (Pagefind) ==="
+    pnpm run pagefind
+  """
   publish = "public"
 
 [build.environment]
-  # Pinned to 0.119.0: blox-bootstrap v5.9.7 (the module's final release) fails
-  # to build on Hugo >= 0.134 — site.GoogleAnalytics was removed, and 0.146's
-  # template rewrite breaks the theme's block lookup. Do not bump without
-  # first migrating off blox-bootstrap.
-  HUGO_VERSION = "0.119.0"
+  # HugoBlox Kit requires Hugo >= 0.161.1 (extended) with Node >= 22 for Tailwind.
+  # Keep in sync with hugoblox.yaml and with the version installed locally.
+  HUGO_VERSION = "0.165.0"
+  GO_VERSION = "1.21.5"
+  NODE_VERSION = "22"
+  # Netlify runs an implicit install step; ensure it never enforces frozen lockfiles
+  PNPM_FLAGS = "--no-frozen-lockfile"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_LOG_I18N_WARNINGS = "true"
+  HUGO_LOG_WARNINGS = "true"
 
 [context.production.environment]
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = """
+    set -e
+    pnpm install --no-frozen-lockfile
+    hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --printI18nWarnings --printPathWarnings
+    pnpm run pagefind
+  """
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = """
+    set -e
+    pnpm install --no-frozen-lockfile
+    hugo --gc --minify -b $DEPLOY_PRIME_URL --printI18nWarnings --printPathWarnings
+    pnpm run pagefind
+  """
 
 [[plugins]]
   package = "netlify-plugin-hugo-cache-resources"

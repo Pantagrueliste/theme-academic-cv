@@ -1,13 +1,30 @@
-# IDEs
+# IDEs / local tooling
 .idea/
+.vscode/
+.claude/launch.json
 
-# Hugo
-resources/
+# Hugo build artifacts
 public/
-jsconfig.json
-node_modules/
-go.sum
+resources/
 .hugo_build.lock
+hugo_stats.json
+**/assets/jsconfig.json
 
-# MacOS
+# Node.js / pnpm
+node_modules/
+
+# Pagefind search index (generated at build time)
+pagefind/
+static/pagefind/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# macOS
 .DS_Store
+._*
+
+# Logs
+*.log

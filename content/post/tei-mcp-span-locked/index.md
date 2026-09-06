@@ -17,7 +17,7 @@ draft: false
 featured: true
 
 authors:
-- admin
+- clement
 
 tags:
 - Digital Humanities

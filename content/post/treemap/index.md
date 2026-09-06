@@ -29,7 +29,7 @@ image:
   preview_only: true
 
 authors:
-- admin
+- clement
 
 tags:
 - Digital Humanities
@@ -49,9 +49,8 @@ This is where archival metadata can help us. Indeed, such data enable us to crea
 My first experiment adapts the [Zoomable Treemap code](https://observablehq.com/@d3/zoomable-treemap) for `D3.js`, adding hyperlinks to it. It represents the manuscript BnF Ms Fr 640, its folios, and the entries inside each folio. The colors represent the dominating category. More data is available by hovering over each entry, including the hyperlink to the manuscript.   
 In doing so, the treemap becomes an interactive visual index, showing readers a very quick and responsive overview, not only of the manuscript's contents but also of the dimensions of each folio and each entry.  
 ~~Over the coming months I will continue experimenting with this idea trying other diagrams and other hierarchies... Stay tuned!~~ For a new version of the treemap, click [here]({{< relref "/post/treemap2" >}}).  
-{{% callout note %}}
-  For a better viewing experience, make sure the webpage settings are in Light mode (click on the top-right moon icon).
-{{% /callout %}}
+> [!NOTE]
+> For a better viewing experience, make sure the webpage settings are in Light mode (click on the top-right moon icon).
 
   <head>
     <meta charset="UTF-8" />

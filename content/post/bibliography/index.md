@@ -4,7 +4,7 @@
 title: "Large-scale Bibliographic Parsing with Pre-Trained Language Models"
 subtitle: "How to rapidly convert thousands of bibliographic references into a BibTeX database"
 summary: "GPT-3 helps converting large amounts of bibliography into a database in a short amount of time"
-authors: [admin]
+authors: [clement]
 tags: [Digital Humanities, GPT-3, Bibliography, Automation]
 categories: [Efficient Editing]
 date: 2022-07-07T19:04:14+02:00
@@ -103,9 +103,8 @@ Findlen, Paula. *Possessing Nature: Museums, Collecting, and Scientific Culture 
 ### Results
 The {{< hl >}}[results](https://github.com/Pantagrueliste/m-k-manuscript-data/blob/master/bibliographies/essays/EssaysBibliography.bib) are striking, with more than 2,000 bibliographic references converted in a matter of days.{{< /hl >}} Not only did this approach accurately reproduce the pattern exposed in my input prompt, but it also correctly added entry and field types that were not included in the input prompt. `GPT-3`, in other words is perfectly fluent in `BibTeX`. Perhaps more surprisingly for a model essentially trained in English, it recognized all the languages (Russian, French, Italian, Latin, Greek, German, Spanish, etc) adding everytime the correct `langid` field.
 
-{{% callout note %}}
-GPT-3 currently has limited input and output sizes, as it can process a maximum 2048 linguistic tokens. As soon as this limitation will be lifted, the same task would probably take one hour or less.
-{{% /callout %}}
+> [!NOTE]
+> GPT-3 currently has limited input and output sizes, as it can process a maximum 2048 linguistic tokens. As soon as this limitation will be lifted, the same task would probably take one hour or less.
 
 Somewhat undexpectedly, GPT-3 also added information that was not in the original references. 
 >Baillot, Anne, and Anna Busch. “Editing for Man and Machine.” In _Users of Scholarly Editions: Editorial Anticipations of Reading, Studying and Consulting_, Vol. 13. Variants (Journal of the European Society for Textual Scholarship). Leicester, 2015. 

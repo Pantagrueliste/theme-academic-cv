@@ -29,7 +29,7 @@ image:
   preview_only: true
 
 authors:
-- admin
+- clement
 
 tags:
 - Digital Humanities
@@ -43,9 +43,8 @@ categories:
 ---
 As promised, a new version of the interactive treemap presented in a [previous post]({{< relref "/post/treemap" >}}), this time with two viewing modes.
 
-{{% callout note %}}
-  For a better viewing experience, make sure the webpage settings are in Light mode (click on the top-right moon icon).
-{{% /callout %}}
+> [!NOTE]
+> For a better viewing experience, make sure the webpage settings are in Light mode (click on the top-right moon icon).
 
    <head>
     <meta charset="UTF-8" />

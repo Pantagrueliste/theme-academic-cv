@@ -1,4 +1,4 @@
-# Builds the site exactly the way Netlify does, so a broken build shows up as a
+# Builds the site the way Netlify does, so a broken build shows up as a
 # red X on the commit instead of silently failing to deploy.
 #
 # In May 2026 a HUGO_VERSION bump broke every production build for ~2.5 months
@@ -11,7 +11,7 @@ name: Build check
 
 on:
   push:
-    branches: [main]
+    branches: [main, hugoblox-kit]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -48,6 +48,16 @@ jobs:
         with:
           go-version: '1.21'
 
+      # HugoBlox Kit compiles Tailwind CSS through Node/pnpm.
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
       - name: Install Hugo (extended)
         env:
           VERSION: ${{ steps.hugo.outputs.version }}
@@ -58,12 +68,17 @@ jobs:
           sudo mv hugo /usr/local/bin/hugo
           hugo version
 
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
       - name: Build
         env:
           HUGO_ENV: production
           HUGO_ENABLEGITINFO: 'true'
         # Mirrors the `command` in netlify.toml.
-        run: hugo --gc --minify -b https://clementgodbarge.com
+        run: |
+          hugo --gc --minify -b https://clementgodbarge.com --printI18nWarnings --printPathWarnings
+          pnpm run pagefind
 
       - name: Report output size
         run: |

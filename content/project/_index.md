@@ -1,4 +1,4 @@
 ---
-title: Zibaldone
+title: Projects
 view: article-grid
 ---

@@ -1,10 +1,11 @@
 # Configuration of Hugo
 # Guide: https://docs.hugoblox.com/tutorial/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Clément Godbarge # Website name
-baseURL: 'https://www.clementgodbarge.com/' # Website URL
+# Website name is set in params.yaml under hugoblox.identity.name
+title: ''
+# Website URL
+baseURL: 'https://www.clementgodbarge.com/'
 
 ############################
 ## LANGUAGE
@@ -19,46 +20,43 @@ removePathAccents: true
 ## ADVANCED
 ############################
 
+build:
+  writeStats: true
 enableGitInfo: false
 summaryLength: 30
-paginate: 10
+pagination:
+  pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
+ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+# Keep the URL scheme of the previous site (/tag/..., /category/...)
 permalinks:
-  event: '/talk/:slug/'
   tags: '/tag/:slug/'
   categories: '/category/:slug/'
-  publication_types: '/publication-type/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
+  home: [HTML, RSS, headers, redirects, backlinks]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
   quality: 90
   anchor: smart
+  hint: picture
 timeout: 600000
 taxonomies:
+  author: authors
   tag: tags
   category: categories
-  publication_type: publication_types
-  author: authors
 markup:
   _merge: deep
-related:
-  threshold: 80
-  includeNewer: true
-  toLower: true
-  indices:
-    - name: tags
-      weight: 80
-    - name: categories
-      weight: 70
+  highlight:
+    lineNos: false
 security:
   _merge: deep
+  exec:
+    # HugoBlox Kit compiles Tailwind CSS through Node; Hugo >= 0.163 checks the
+    # `tailwindcss` command name against this allow-list, so it must be listed.
+    allow: ['^(dart-)?sass(-embedded)?$', '^go$', '^git$', '^node$', '^npx$', '^postcss$', '^tailwindcss$']
 sitemap:
-  _merge: deep
-minify:
   _merge: deep

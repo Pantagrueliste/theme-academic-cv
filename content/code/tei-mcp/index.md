@@ -18,13 +18,13 @@ image:
   focal_point: Smart
 
 links:
-  - icon: github
-    icon_pack: fab
-    name: Code
+  - type: code
+    icon: brands/github
+    label: Code
     url: https://github.com/Pantagrueliste/tei-mcp
-  - icon: python
-    icon_pack: fab
-    name: PyPI
+  - type: site
+    icon: brands/python
+    label: PyPI
     url: https://pypi.org/project/tei-mcp/
 url_code: ""
 url_pdf: ""
