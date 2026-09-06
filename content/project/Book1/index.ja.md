@@ -1,6 +1,6 @@
 ---
 title: The Spy Who Wished Them Well
-summary: 宗教戦争の時代における医学、政治、認識論についての研究書。
+summary: 宗教戦争の時代における医学、政治、認識論をめぐる研究書。
 tags: 
 - 医学史
 - フランス宗教戦争
@@ -13,7 +13,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: ローマのサラ・レジアにあるジョルジョ・ヴァザーリのフレスコ画の細部
+  caption: ローマのサラ・レジアにあるジョルジョ・ヴァザーリのフレスコ画（部分）
   focal_point: Smart
 
 #links:
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-詳細は近日公開予定です。
+詳しくは近日中にお知らせします。
 

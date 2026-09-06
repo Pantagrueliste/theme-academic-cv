@@ -33,11 +33,11 @@ image:
 #slides: example
 machine_translated: true
 ---
-2014年にPamela H. Smithによって設立され、数百人の協力者が参加する[Making & Knowing Project](https://www.makingandknowing.org)は、コロンビア大学の[Center for Science and Society](https://edition640.makingandknowing.org)における研究・教育イニシアチブです。
+[Making & Knowing Project](https://www.makingandknowing.org)は、2014年にPamela H. Smithが創設し、数百人の協力者を擁する研究・教育プロジェクトで、コロンビア大学の[Center for Science and Society](https://edition640.makingandknowing.org)を拠点としています。
 
-ポストドクトラル・フェローとして、私はこのプロジェクトに参加し、とりわけBnF Ms. Fr. 640の[デジタル校訂版](https://edition640.makingandknowing.org)に取り組みました。この比類ない16世紀のフランス語写本は、芸術家が科学者でもあった時代のものづくりと素材について、直接的な洞察を与えてくれます。
+私はポストドクトラル・フェローとしてこのプロジェクトに加わり、とりわけBnF Ms. Fr. 640の[デジタル校訂版](https://edition640.makingandknowing.org)に携わりました。この比類ない16世紀フランス語写本は、芸術家がすなわち科学者でもあった時代のものづくりと素材について、生の声を伝えてくれます。
 
-このデジタル版は、[GitHubリポジトリ](https://github.com/cu-mkp/m-k-manuscript-data)で豊富なデータを自由に利用できるようにしています。来年にかけて、この校訂版とそのデータに関する一連のブログ記事を公開する予定です。PythonやRを使って、テキストをいかに簡単にダウンロードし分析できるかをお見せします。ご期待ください！
+デジタル版は[GitHubリポジトリ](https://github.com/cu-mkp/m-k-manuscript-data)で豊富なデータを自由に使えるようにしています。来年にかけて、この校訂版とそのデータをめぐる一連のブログ記事を公開する予定です。PythonやRでテキストをいかに簡単にダウンロードし、分析できるかをお見せしましょう。どうぞお楽しみに。
 
 
 

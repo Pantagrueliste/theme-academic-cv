@@ -5,7 +5,7 @@
 # shown at the end of pages that carry `machine_translated: true` AND whose language
 # is listed here — i.e. the languages the author cannot proofread himself.
 translation_feedback:
-  languages: [de, ja, zh, ar]
+  languages: [de, ja, zh, ar, pt, fa, vi]
 
 # ══════════════════════════════════════════════════════════════════════════════
 # HUGO BLOX CONFIGURATION

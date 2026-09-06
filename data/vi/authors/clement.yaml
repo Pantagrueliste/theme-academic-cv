@@ -1,0 +1,24 @@
+# Vietnamese overrides for data/authors/clement.yaml (merged on top of the default)
+role: Giảng viên Nhân văn số
+bio: |
+  Clément Godbarge là giảng viên Nhân văn số tại Đại học St Andrews. Nghiên cứu của ông xoay quanh khoa học và nghệ thuật trị quốc ở châu Âu đầu thời kỳ cận đại. Trong cuốn sách sắp xuất bản, ông khảo sát cách các thầy thuốc phục vụ tại triều đình Pháp và Ý thế kỷ XVI đã tự khẳng định mình như một kiểu chuyên gia chính trị mới. Nghiên cứu của ông đã nhận được tài trợ từ Quỹ Andrew W. Mellon, Ủy ban Fulbright, Hội Phục hưng Hoa Kỳ và Đại học Harvard.
+
+affiliations:
+  - name: Đại học St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: Thư điện tử
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Lịch sử đầu thời cận đại
+  - Văn học châu Âu
+  - Nhân văn số

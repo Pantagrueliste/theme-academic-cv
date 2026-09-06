@@ -177,3 +177,76 @@ ar:
       - name: الكود
         url: /ar/#code
         weight: 40
+
+pt:
+  locale: pt-pt
+  weight: 9
+  params:
+    hugoblox:
+      identity:
+        description: "Sítio académico de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Início
+        url: /pt/
+        weight: 10
+      - name: Zibaldone
+        url: /pt/#posts
+        weight: 20
+      - name: Projetos
+        url: /pt/#projects
+        weight: 30
+      - name: Código
+        url: /pt/#code
+        weight: 40
+
+fa:
+  locale: fa
+  direction: rtl
+  weight: 10
+  params:
+    hugoblox:
+      identity:
+        description: "وب‌گاه دانشگاهی کلمان گودبارژ، دکترا"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: خانه
+        url: /fa/
+        weight: 10
+      - name: Zibaldone
+        url: /fa/#posts
+        weight: 20
+      - name: پروژه‌ها
+        url: /fa/#projects
+        weight: 30
+      - name: کد
+        url: /fa/#code
+        weight: 40
+
+vi:
+  locale: vi-vn
+  weight: 11
+  params:
+    hugoblox:
+      identity:
+        description: "Trang học thuật của Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Trang chủ
+        url: /vi/
+        weight: 10
+      - name: Zibaldone
+        url: /vi/#posts
+        weight: 20
+      - name: Dự án
+        url: /vi/#projects
+        weight: 30
+      - name: Mã nguồn
+        url: /vi/#code
+        weight: 40

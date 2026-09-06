@@ -1,9 +1,9 @@
 ---
 title: 写本の可視化2（アップデート）
-subtitle: 多基準の写本可視化ツール
+subtitle: 複数の基準で写本を眺める可視化ツール
 
 # Summary for listings and search engines
-summary: 追加機能を備えたインタラクティブ・ツリーマップの新バージョン。
+summary: インタラクティブ・ツリーマップの新バージョン。機能を追加しました。
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -42,10 +42,10 @@ tags:
 categories:
 - ノート
 ---
-お約束どおり、[以前の記事]({{< relref "/post/treemap" >}})で紹介したインタラクティブ・ツリーマップの新バージョンです。今回は2つの表示モードを備えています。
+お約束どおり、[前回の記事]({{< relref "/post/treemap" >}})で紹介したインタラクティブ・ツリーマップの新バージョンです。今回は表示モードが二つあります。
 
 > [!NOTE]
-> より快適に閲覧するには、ウェブページの設定がライトモードになっていることを確認してください（右上の月のアイコンをクリック）。
+> 快適に閲覧するには、ページの設定をライトモードにしてください（右上の月のアイコンをクリック）。
 
    <head>
     <meta charset="UTF-8" />

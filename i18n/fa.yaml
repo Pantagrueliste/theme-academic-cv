@@ -1,0 +1,31 @@
+# رشته‌های ویژهٔ سایت (با پرونده‌های i18n بستهٔ HugoBlox Kit ادغام می‌شود)
+translation_notice:
+  other: "این صفحه به‌صورت خودکار ترجمه شده و هنوز به دست گویشور بومی بازبینی نشده است."
+translation_original:
+  other: "خواندن متن اصلی"
+translation_vote_question:
+  other: "آیا این ترجمه خوب است؟"
+translation_vote_good:
+  other: "بله"
+translation_vote_bad:
+  other: "خیر"
+translation_vote_thanks:
+  other: "از بازخورد شما سپاسگزاریم!"
+
+# کلیدهای غایب در بستهٔ fa ی HugoBlox Kit
+questions:
+  other: "پرسش‌ها"
+faq:
+  other: "پرسش‌های متداول"
+docs:
+  other: "مستندات"
+poweredby_button:
+  other: "سایت خودتان را بسازید →"
+read_more:
+  other: "ادامهٔ مطلب"
+callout_note:
+  other: "نکته"
+portfolio_link_default:
+  other: "پیوند"
+backlinks:
+  other: "پیوندهای بازگشتی"

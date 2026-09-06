@@ -1,0 +1,31 @@
+# Chuỗi riêng của trang (được gộp với các tệp i18n của HugoBlox Kit)
+translation_notice:
+  other: "Trang này được dịch tự động và chưa được người bản ngữ hiệu đính."
+translation_original:
+  other: "Đọc bản gốc"
+translation_vote_question:
+  other: "Bản dịch này có tốt không?"
+translation_vote_good:
+  other: "Có"
+translation_vote_bad:
+  other: "Không"
+translation_vote_thanks:
+  other: "Cảm ơn ý kiến của bạn!"
+
+# Các khóa còn thiếu trong gói vi của HugoBlox Kit
+questions:
+  other: "Câu hỏi"
+faq:
+  other: "Câu hỏi thường gặp"
+docs:
+  other: "Tài liệu"
+poweredby_button:
+  other: "Tạo trang của bạn →"
+read_more:
+  other: "Đọc thêm"
+callout_note:
+  other: "Lưu ý"
+portfolio_link_default:
+  other: "Liên kết"
+backlinks:
+  other: "Liên kết ngược"

@@ -1,0 +1,31 @@
+# Cadeias próprias do sítio (fundidas com os ficheiros i18n do HugoBlox Kit)
+translation_notice:
+  other: "Esta página foi traduzida automaticamente e ainda não foi revista por um falante nativo."
+translation_original:
+  other: "Ler o original"
+translation_vote_question:
+  other: "Esta tradução é boa?"
+translation_vote_good:
+  other: "Sim"
+translation_vote_bad:
+  other: "Não"
+translation_vote_thanks:
+  other: "Obrigado pela sua opinião!"
+
+# Chaves em falta no pacote pt do HugoBlox Kit
+questions:
+  other: "Perguntas"
+faq:
+  other: "Perguntas frequentes"
+docs:
+  other: "Documentação"
+poweredby_button:
+  other: "Crie o seu →"
+read_more:
+  other: "Ler mais"
+callout_note:
+  other: "Nota"
+portfolio_link_default:
+  other: "Ligação"
+backlinks:
+  other: "Ligações de retorno"
