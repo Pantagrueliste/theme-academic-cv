@@ -1,6 +1,6 @@
 ---
 title: tei-mcp
-summary: Un serveur MCP qui aide les agents IA à lire et à écrire du XML TEI valide, avec 16 outils couvrant la consultation des éléments, la résolution des attributs, le développement des modèles de contenu, la validation de l’imbrication, la validation de documents et la personnalisation ODD.
+summary: Un serveur MCP qui aide les agents IA à lire et à écrire du XML TEI valide, grâce à seize outils couvrant la consultation des éléments, la résolution des attributs, le développement des modèles de contenu, le contrôle de l’imbrication, la validation des documents et la personnalisation ODD.
 tags:
   - XML
   - TEI
@@ -35,22 +35,22 @@ slides: ""
 machine_translated: true
 ---
 
-## tei-mcp : la TEI P5 pour les agents IA
+## tei-mcp : la TEI P5 à la portée des agents IA
 
-tei-mcp est un serveur [MCP](https://modelcontextprotocol.io) open source qui donne aux assistants de programmation IA un accès direct à la spécification [TEI P5](https://tei-c.org/guidelines/). Au lieu de se fier à des données d’entraînement mémorisées – ce qui produit souvent un balisage plausible mais incorrect – l’IA peut interroger la spécification en temps réel.
+tei-mcp est un serveur [MCP](https://modelcontextprotocol.io) libre qui ouvre aux assistants de programmation un accès direct à la spécification [TEI P5](https://tei-c.org/guidelines/). Au lieu de puiser dans le souvenir de ses données d’entraînement – d’où sort souvent un balisage plausible, mais faux – l’IA interroge la spécification en temps réel.
 
-## Fonctionnalités
+## Fonctions
 
-Le serveur analyse l’ODD de la TEI P5 et expose 16 outils :
+Le serveur lit l’ODD de la TEI P5 et expose seize outils :
 
-- **Rechercher** n’importe quel élément, classe, macro ou module par son nom, avec correspondance insensible à la casse et suggestions en cas de faute de frappe
-- **Résoudre les attributs** à travers toute la hiérarchie de classes de la TEI (locaux + hérités)
+- **Consulter** tout élément, classe, macro ou module par son nom, sans distinction de casse et avec suggestions en cas de coquille
+- **Résoudre les attributs** à travers toute la hiérarchie des classes de la TEI (locaux et hérités)
 - **Développer les modèles de contenu** en arbres structurés, avec résolution des classes et des macros
-- **Valider l’imbrication** – relation parent-enfant directe ou accessibilité récursive, avec suivi du chemin
-- **Valider des documents** par rapport à la TEI P5 : modèles de contenu, attributs, listes de valeurs fermées, intégrité des références et avertissements d’obsolescence
-- **Valider des éléments isolés** pour les flux de travail d’édition incrémentale
-- **Charger des personnalisations ODD** pour restreindre le schéma à un sous-ensemble propre au projet
-- **Chercher** parmi tous les types d’entités avec des expressions régulières
+- **Contrôler l’imbrication** – filiation directe ou accessibilité récursive, avec le chemin suivi
+- **Valider des documents** contre la TEI P5 : modèles de contenu, attributs, listes de valeurs fermées, intégrité des renvois et avertissements d’obsolescence
+- **Valider un élément isolé**, pour l’édition pas à pas
+- **Charger des personnalisations ODD**, qui restreignent le schéma au sous-ensemble propre à un projet
+- **Chercher** parmi tous les types d’entités au moyen d’expressions régulières
 
 ## Installation
 
@@ -58,7 +58,7 @@ Le serveur analyse l’ODD de la TEI P5 et expose 16 outils :
 pip install tei-mcp
 ```
 
-Ou exécutez-le directement avec :
+Ou, pour l’exécuter directement :
 
 ```bash
 uvx tei-mcp
@@ -79,4 +79,4 @@ Ajoutez-le à n’importe quel client compatible MCP (Claude, Cursor, Windsurf, 
 }
 ```
 
-Le code source et la documentation sont disponibles sur le [dépôt GitHub](https://github.com/Pantagrueliste/tei-mcp).
+Le code source et la documentation sont sur le [dépôt GitHub](https://github.com/Pantagrueliste/tei-mcp).

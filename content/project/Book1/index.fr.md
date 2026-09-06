@@ -1,6 +1,6 @@
 ---
 title: The Spy Who Wished Them Well
-summary: Une monographie sur la médecine, la politique et l’épistémologie en temps de guerres de religion. 
+summary: Une monographie sur la médecine, la politique et le savoir au temps des guerres de Religion. 
 tags: 
 - Histoire de la médecine
 - Guerres de Religion
@@ -35,5 +35,5 @@ image:
 machine_translated: true
 ---
 
-Plus d’informations à venir.
+Plus de détails prochainement.
 

@@ -1,14 +1,14 @@
 ---
-title: "Enseigner le binaire avec l’émulateur de télégraphe ITA2"
-subtitle: "Une approche pratique pour comprendre les débuts de la communication numérique"
-summary: Une démonstration interactive du code télégraphique ITA2 (Baudot-Murray) qui aide les étudiants à saisir les concepts fondamentaux du codage binaire et des machines à états
+title: "Le binaire à portée de main : un émulateur de télégraphe ITA2"
+subtitle: "Comprendre les débuts de la communication numérique en manipulant la machine"
+summary: Une démonstration interactive du code télégraphique ITA2 (Baudot-Murray), pour donner aux étudiants une intuition du codage binaire et des machines à états
 date: "2025-02-13T00:00:00Z"
 lastmod: "2025-02-13T00:00:00Z"
 draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'Bande de télégraphe ITA2 montrant un message codé'
+  caption: 'Bande de télégraphe ITA2 portant un message codé'
   focal_point: ""
   placement: 2
   preview_only: false
@@ -23,32 +23,32 @@ categories:
 - Humanités numériques
 - Outils pédagogiques
 ---
-## Rendre tangibles les concepts abstraits
-Cet émulateur ITA2 est un support pédagogique concret. En rendant visibles et interactifs des concepts abstraits de codage, il initie les étudiants à une notion clé de l’informatique et des télécommunications : la représentation binaire, c’est-à-dire la manière dont un texte devient une suite de uns et de zéros.
-Nous enseignons souvent cette notion de façon abstraite ; voir les trous apparaître réellement aide les étudiants à comprendre comment des systèmes physiques peuvent représenter de l’information numérique.
+## Donner corps à l’abstraction
+Cet émulateur ITA2 est d’abord un outil de classe. Il rend visible, et manipulable, une notion qui est au cœur de l’informatique comme des télécommunications : la représentation binaire, c’est-à-dire la façon dont un texte se change en une suite de uns et de zéros.
+On l’enseigne d’ordinaire au tableau, abstraitement ; or il suffit de voir les trous se percer un à un dans la bande pour comprendre qu’un dispositif matériel peut porter de l’information numérique.
 {{< Baudot >}}
-## Contexte historique : du télégraphe à l’informatique
-Le code ITA2 (International Telegraph Alphabet No. 2), aussi appelé code Baudot-Murray, a été mis au point dans les années 1920 comme un perfectionnement du code télégraphique original d’Émile Baudot, datant des années 1870. Ces premiers systèmes de télécommunication ont directement influencé les développements ultérieurs de l’informatique :
-- Le codage sur 5 bits est un exemple précoce de codage de caractères
-- Les limites du jeu de caractères (seulement 32 combinaisons possibles avec 5 bits) ont conduit à l’ingénieux mécanisme de bascule LETTRES/CHIFFRES (LETTERS/FIGURES)
-- Ce système a été utilisé jusque tard dans le XX^e^ siècle pour les téléscripteurs
-## Apprendre les machines à états en jouant
-Le mécanisme de bascule LETTRES/CHIFFRES introduit naturellement la notion de machine à états. Les étudiants découvrent par l’expérimentation qu’un même motif peut représenter des caractères différents selon le mode en cours. Cette expérience concrète d’un codage dépendant de l’état les prépare à des concepts informatiques plus complexes.
-Par exemple, le motif de bits `00011` représente :
-- La lettre « A » en mode LETTRES
-- Le chiffre « 1 » en mode CHIFFRES
-Cette double interprétation selon l’état est fondamentale dans la manière dont les ordinateurs traitent les données.
-## Activités en classe
-Voici quelques façons d’intégrer l’émulateur ITA2 à l’enseignement :
-1. **Défi de décryptage** : faire décoder aux étudiants des messages encodés en motifs ITA2
-2. **Codage efficace** : discuter de l’importance du mécanisme de bascule pour économiser la bande passante
-3. **Évolution des codages** : comparer le code ITA2 sur 5 bits à l’ASCII (7 bits) et à Unicode
-4. **Informatique physique** : relier ce système historique aux microcontrôleurs modernes comme Arduino
-## Atouts en matière d’accessibilité
-Au-delà de son intérêt historique, cette approche aide des étudiants aux styles d’apprentissage variés :
-- Les apprenants visuels voient les motifs
-- Les apprenants kinesthésiques interagissent directement avec le processus de codage
-- Les esprits conceptuels peuvent explorer les aspects mathématiques de la théorie de l’information
-## Détails d’implémentation
-L’émulateur est implémenté en JavaScript et peut être facilement intégré à n’importe quelle plateforme d’apprentissage en ligne. Le code est modulaire et personnalisable selon les contextes d’enseignement.
-Vous trouverez le code source et pourrez essayer l’émulateur vous-même ici : [Dépôt GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator)
+## Un peu d’histoire : du télégraphe à l’ordinateur
+Le code ITA2 (International Telegraph Alphabet No. 2), dit aussi code Baudot-Murray, fut mis au point dans les années 1920 ; il perfectionnait le code télégraphique conçu par Émile Baudot dès les années 1870. Ces premiers systèmes de télécommunication ont pesé directement sur l’informatique qui allait suivre :
+- le codage sur 5 bits est l’un des premiers exemples de codage de caractères ;
+- l’étroitesse du jeu de caractères (5 bits ne donnent que 32 combinaisons) a suscité l’ingénieuse bascule LETTRES/CHIFFRES (LETTERS/FIGURES) ;
+- les téléscripteurs ont continué de s’en servir jusque fort avant dans le XX^e^ siècle.
+## Les machines à états, en jouant
+La bascule LETTRES/CHIFFRES introduit sans qu’on y prenne garde la notion de machine à états. À force d’essais, les étudiants s’aperçoivent qu’un même motif désigne des caractères différents selon le mode en vigueur ; cette expérience concrète d’un codage qui dépend de l’état leur ouvre la voie vers des notions informatiques plus ardues.
+Ainsi, le motif `00011` représente :
+- la lettre « A » en mode LETTRES ;
+- le chiffre « 1 » en mode CHIFFRES.
+Cette double lecture, commandée par l’état, est au fondement même de la manière dont les ordinateurs traitent les données.
+## En classe
+Quelques manières d’intégrer l’émulateur ITA2 à un cours :
+1. **Déchiffrement** : donner aux étudiants des messages codés en ITA2 à décoder
+2. **Économie du codage** : expliquer pourquoi la bascule était précieuse pour ménager la bande passante
+3. **Généalogie des codages** : comparer les 5 bits de l’ITA2 aux 7 bits de l’ASCII, puis à Unicode
+4. **Informatique physique** : rapprocher ce système ancien des microcontrôleurs d’aujourd’hui, Arduino par exemple
+## Un outil pour tous les profils
+Au-delà de son intérêt historique, l’émulateur convient à des étudiants dont les manières d’apprendre diffèrent :
+- les visuels voient les motifs ;
+- les manuels agissent directement sur le codage ;
+- les esprits théoriciens peuvent pousser jusqu’aux mathématiques de la théorie de l’information.
+## Sous le capot
+L’émulateur est écrit en JavaScript et s’intègre sans peine à toute plateforme pédagogique en ligne ; son code, modulaire, s’adapte à des contextes d’enseignement variés.
+Le code source est disponible, et l’émulateur peut s’essayer, ici : [dépôt GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator)

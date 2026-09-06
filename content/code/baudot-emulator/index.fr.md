@@ -1,6 +1,6 @@
 ---
 title: Émulateur de télégraphe ITA2
-summary: Une démonstration interactive du code télégraphique ITA2 (Baudot-Murray) qui aide les étudiants à saisir les concepts fondamentaux du codage binaire et des machines à états.
+summary: Une démonstration interactive du code télégraphique ITA2 (Baudot-Murray), pour donner aux étudiants une intuition du codage binaire et des machines à états.
 tags:
   - JavaScript
   - Interactif
@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Bande de télégraphe ITA2 montrant un message codé
+  caption: Bande de télégraphe ITA2 portant un message codé
   focal_point: Smart
 
 links:
@@ -34,18 +34,18 @@ slides: ""
 machine_translated: true
 ---
 
-Cet émulateur ITA2 est un support pédagogique concret : il rend visibles et interactifs des concepts abstraits de codage. Lorsque les étudiants saisissent un texte et voient sa conversion immédiate en motifs de perforations, ils apprennent plusieurs concepts clés de l’informatique et des télécommunications.
+Cet émulateur ITA2 est d’abord un outil de classe : il rend visibles, et manipulables, des notions de codage qui restent d’ordinaire abstraites. Quand les étudiants tapent un texte et le voient aussitôt se changer en perforations, ils apprennent, sans y penser, plusieurs notions clés de l’informatique et des télécommunications.
 
 ## Intérêt pédagogique
 
-D’abord, il illustre la représentation binaire, c’est-à-dire la manière dont un texte devient une suite de 1 et de 0. Nous enseignons souvent cette notion de façon abstraite ; voir les trous apparaître réellement aide les étudiants à comprendre comment des systèmes physiques peuvent représenter de l’information numérique.
+La première est la représentation binaire, c’est-à-dire la façon dont un texte se change en une suite de 1 et de 0. On l’enseigne d’ordinaire au tableau, abstraitement ; or il suffit de voir les trous se percer un à un dans la bande pour comprendre qu’un dispositif matériel peut porter de l’information numérique.
 
 {{< Baudot >}}
 
-Le mécanisme de bascule LETTRES/CHIFFRES (LETTERS/FIGURES) introduit naturellement la notion de machine à états. Les étudiants découvrent par l’expérimentation qu’un même motif peut représenter des caractères différents selon le mode en cours. Cette expérience concrète d’un codage dépendant de l’état les prépare à des concepts informatiques plus complexes.
+La bascule LETTRES/CHIFFRES (LETTERS/FIGURES) introduit ensuite, sans qu’on y prenne garde, la notion de machine à états. À force d’essais, les étudiants s’aperçoivent qu’un même motif désigne des caractères différents selon le mode en vigueur ; cette expérience concrète d’un codage qui dépend de l’état leur ouvre la voie vers des notions informatiques plus ardues.
 
-## Détails d’implémentation
+## Sous le capot
 
-L’émulateur est implémenté en JavaScript et HTML/CSS, ce qui le rend facile à intégrer dans n’importe quelle page web. Le code est modulaire et peut être adapté à différents contextes pédagogiques.
+L’émulateur est écrit en JavaScript et HTML/CSS, de sorte qu’il s’insère sans peine dans n’importe quelle page web ; son code, modulaire, s’adapte à des contextes d’enseignement variés.
 
-Vous trouverez le code source et pourrez essayer l’émulateur vous-même sur le [dépôt GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).
+Le code source est disponible, et l’émulateur peut s’essayer, sur le [dépôt GitHub](https://github.com/Pantagrueliste/BaudotMurray_Emulator).

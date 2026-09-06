@@ -1,9 +1,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Une géographie perceptive du Levante"
-subtitle: "À quoi le Levante était-il associé dans la Florence du XVIe siècle ?"
-summary: "Le Levante est un toponyme insaisissable, car on le définit généralement par rapport à – ou par opposition à – un autre territoire. Qu’était donc le Levante de la Toscane au XVIe siècle ? Les données que j’ai recueillies dans la base MIA apportent une réponse inattendue."
+title: "Le Levante, géographie d’une perception"
+subtitle: "Qu’évoquait le Levante dans la Florence du XVIe siècle ?"
+summary: "Le Levante est un toponyme fuyant : on ne le définit jamais que par rapport à un autre territoire, ou contre lui. Quel était donc le Levante des Toscans au XVIe siècle ? Les données que j’ai tirées de la base MIA donnent une réponse à laquelle on ne s’attendait pas."
 authors: [clement]
 tags: [MAP, Avviso]
 categories: [Notes]
@@ -18,7 +18,7 @@ draft: false
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Carte de densité des toponymes mentionnés dans ASFi MdP 4277, de 1543 à 1566"
+  caption: "Carte de densité des toponymes cités dans ASFi MdP 4277, 1543-1566"
   focal_point: ""
   preview_only: true
 
@@ -31,15 +31,15 @@ projects: ["MAP"]
 ---
 
 # Introduction
-Le *Levante* est un lieu insaisissable. Généralement défini par rapport à – ou par opposition à – un autre territoire, son sens a rarement été stable, évoquant des géographies différentes selon le lieu et l’époque où le terme était employé. Pourtant, s’il est difficile d’en articuler une définition objective et précise, on peut encore espérer dresser une carte subjective de cette région, en prenant pour base les corrélations qui existent au sein d’un corpus de textes donné. Autrement dit, quel espace le *Levante* pouvait-il évoquer pour un groupe de lecteurs déterminé ?  
-Dans ce billet, je vous montre comment utiliser les données de la [base MIA](https://mia.medici.org/) du Medici Archive Project 
-pour visualiser les lieux précis auxquels ce toponyme était associé.  
+Le *Levante* est un lieu qui se dérobe. On ne le définit jamais que par rapport à un autre territoire, ou contre lui ; aussi son sens n’a-t-il guère été stable, et le mot a désigné des géographies fort différentes selon le lieu et l’époque où on l’employait. Mais si une définition objective et précise reste hors de portée, on peut du moins tenter d’en dresser une carte subjective, en s’appuyant sur les corrélations qu’un corpus donné laisse apparaître. Autrement dit : quel espace le *Levante* évoquait-il pour tel groupe de lecteurs ?  
+Je montre dans ce billet comment exploiter les données de la [base MIA](https://mia.medici.org/) du Medici Archive Project 
+pour visualiser les lieux auxquels ce toponyme se trouvait associé.  
 
 # La base MIA
-La base MIA est une plateforme collaborative destinée aux chercheurs qui souhaitent téléverser et partager leurs propres photographies de documents d’archives conservés aux [Archives d’État de Florence](https://archiviodistatofirenze.cultura.gov.it/asfi/home). Au cours de l’année écoulée, et sous le patronage du [National Endowment for the Humanities](https://www.neh.gov), notre équipe a photographié, transcrit, résumé et classé des milliers de documents conservés dans la section des *avvisi* du fonds *Mediceo del Principato* à Florence. Bien que notre base n’ait pas été conçue en premier lieu pour l’analyse statistique, les métadonnées que nous avons mises à disposition peuvent néanmoins être téléchargées et utilisées comme jeux de données.
+MIA est une plateforme collaborative où les chercheurs déposent et partagent leurs propres photographies de documents conservés aux [Archives d’État de Florence](https://archiviodistatofirenze.cultura.gov.it/asfi/home). Depuis un an, avec le soutien du [National Endowment for the Humanities](https://www.neh.gov), notre équipe a photographié, transcrit, résumé et classé des milliers de documents de la section des *avvisi* du fonds *Mediceo del Principato*. La base n’a pas été conçue d’abord pour l’analyse statistique ; il n’en reste pas moins que les métadonnées que nous avons mises en ligne se laissent télécharger et traiter comme des jeux de données.
 
 # Le jeu de données
-Dans le cas présent, le jeu de données que j’ai constitué couvre toutes les nouvelles du *Levante* de 1543 à 1566, c’est-à-dire du premier avviso enregistré dans les archives jusqu’à l’année de la mort du sultan [Soliman I^er^](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). Voici un échantillon des données que j’ai extraites du serveur. Composées de trois colonnes, elles comprennent un numéro de document unique, un nom de lieu et une date.
+Le jeu que j’ai constitué ici couvre toutes les nouvelles du *Levante* de 1543 à 1566, c’est-à-dire du premier avviso conservé dans le fonds jusqu’à l’année de la mort du sultan [Soliman I^er^](https://en.wikipedia.org/wiki/Suleiman_the_Magnificent). En voici un échantillon, tel que je l’ai extrait du serveur : trois colonnes, avec le numéro unique du document, un nom de lieu et une date.
 
 ```csv
 57386 Malta / Europe / World / Top of the TGN hierarchy 1565-1-3
@@ -60,8 +60,8 @@ Dans le cas présent, le jeu de données que j’ai constitué couvre toutes les
 57389 Çorlu / Thraki / Ellas / Europe 1565-1-3
 ```
 
-## Nettoyer les données
-Pour visualiser ces données, il faut les rendre lisibles sous forme de jeu de données csv (valeurs séparées par des virgules). Il faut aussi convertir les informations géographiques qu’elles contiennent dans un format plus « lisible par la machine » : des coordonnées GPS. Le jeu de données comptant des centaines d’entrées, mieux vaut automatiser ce processus. On peut le faire assez rapidement et avec une bonne précision à l’aide de modèles de langue pré-entraînés comme [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) ou [AI-21](https://www.ai21.com), pour n’en citer que quelques-uns. Cette opération doit toutefois être étroitement supervisée, car les modèles de langue pré-entraînés ont une légère tendance à halluciner.
+## Toilette des données
+Avant toute visualisation, il faut mettre ces données au format csv (valeurs séparées par des virgules), et traduire l’information géographique qu’elles contiennent dans une langue que la machine entende mieux : celle des coordonnées GPS. Comme le jeu compte des centaines d’entrées, on préférera automatiser l’opération. Des modèles de langue pré-entraînés comme [GPT-3](https://wwww.openai.org), [Bloom](https://huggingface.co/bigscience/bloom) ou [AI-21](https://www.ai21.com), pour ne citer qu’eux, s’en acquittent vite et plutôt bien ; mais il faut les surveiller de près, car ces modèles ont une légère propension à l’hallucination.
 
 
 ```csv
@@ -85,20 +85,20 @@ documentId,latitude,longitude,documentDate
 ```
 
 # La carte de densité
-Une carte de densité est un type de visualisation qui met en évidence la fréquence à laquelle un lieu est mentionné dans un jeu de données donné. Elle est particulièrement utile pour comprendre non seulement l’étendue géographique de ses données, mais aussi leurs points focaux. Quels lieux de la carte sont mentionnés le plus souvent ? Et lesquels ne le sont qu’épisodiquement ? Où sont les centres, et à quelle distance se trouve la périphérie ? Sur quelle partie de la carte l’attention d’un lecteur a-t-elle le plus de chances de se porter ?
+Une carte de densité fait ressortir la fréquence avec laquelle chaque lieu est cité dans un jeu de données. On y lit non seulement l’étendue géographique du corpus, mais aussi ses foyers : quels lieux reviennent sans cesse, lesquels ne font que passer ? Où sont les centres, et jusqu’où s’étend la périphérie ? Vers quel point de la carte, en somme, l’attention d’un lecteur avait-elle le plus de chances de se porter ?
 
 <iframe width='100%' height='600px' src="https://api.mapbox.com/styles/v1/clemclem/cl9q7c77p004y14mqytjrfnex.html?title=false&access_token=pk.eyJ1IjoiY2xlbWNsZW0iLCJhIjoiY2lmbGpvbjMwZjh3NnJ5bHg4ZzkzeWZzeCJ9.IgOF4fphVbsWAIKyzAV-DQ&zoomwheel=false#3.83/43.29/33.61" title="Levante" style="border:none;"></iframe>
 
-Pour les besoins de cette expérience – et comme j’étais pressé – j’ai utilisé l’une des API de [Mapbox](https://www.mapbox.com). Mais de nombreuses bibliothèques de visualisation et de nombreux systèmes d’information géographique permettent de produire le même type de carte de densité.
+Pour cette expérience – et parce que le temps pressait – j’ai eu recours à l’une des API de [Mapbox](https://www.mapbox.com) ; mais bien des bibliothèques de visualisation et des systèmes d’information géographique produisent le même genre de carte.
 
 # Quelques observations
-Le résultat tient davantage du tableau impressionniste que de la représentation exacte d’un concept clairement définissable, et c’est précisément ce qui me plaît dans cette expérience. En effet, {{< hl >}}si la science des données peut être une alliée puissante des humanités, nous ne sommes pas nécessairement tenus de nous plier à ses règles.{{< /hl >}}
+Le résultat tient plus du tableau impressionniste que de la représentation exacte d’un concept bien délimité, et c’est justement ce qui me plaît dans l’exercice : {{< hl >}}la science des données peut être une alliée précieuse des humanités, sans que nous soyons tenus pour autant de nous plier à ses règles.{{< /hl >}}
 
-Un autre aspect intéressant de cette expérience est que la carte révèle un *Levante* complètement intégré au reste de l’Europe et de la Méditerranée. Elle souligne aussi la centralité d’Edirne dans la géographie politique de l’Empire ottoman. En outre, la ville la plus importante de l’Espagne sur la carte n’est ni Madrid ni l’Escurial, mais Naples. Enfin, et ce n’est pas le moins important, les îles et les petites cités-États comme Raguse semblent jouer un rôle important de médiation entre les différentes puissances de la région.
+Autre enseignement : la carte fait voir un *Levante* pleinement intégré au reste de l’Europe et de la Méditerranée. Elle met en lumière la place centrale d’Edirne dans la géographie politique de l’Empire ottoman. La ville d’Espagne qui y pèse le plus n’est ni Madrid ni l’Escurial, mais Naples. Enfin, et ce n’est pas le moindre, les îles et les petites cités-États comme Raguse semblent avoir joué un rôle d’intermédiaire de premier plan entre les puissances de la région.
 
 
-# Comment demander des données à MIA
-Bien que MIA soit un remarquable outil collaboratif pour les chercheurs, les données stockées sur ses serveurs ne sont pas facilement accessibles. Son back-end, par exemple, n’est pas publié dans des dépôts publics. Vous pouvez néanmoins obtenir les données en vous inscrivant à MIA et en adressant des requêtes au serveur avec Python.
+# Comment obtenir les données de MIA
+MIA est un remarquable outil de travail collectif, mais les données de ses serveurs ne se laissent pas prendre facilement ; la salle des machines, par exemple, n’est publiée dans aucun dépôt public. On peut cependant les obtenir en s’inscrivant sur MIA, puis en interrogeant le serveur depuis Python.
 
 ### Requête
 ```python
@@ -107,7 +107,7 @@ payload = [{"searchSection":"archivalLocationSearch","type":"archivalLocationAdv
 headers = {'Content-type': 'application/json', 'Accept': '*/*'}
 r = requests.post(url, data=json.dumps(payload), headers=headers, auth=('LOGIN','PASSWORD'))
 ```
-Veillez à remplacer LOGIN et PASSWORD par vos propres identifiants.
+Remplacez LOGIN et PASSWORD par vos propres identifiants.
 
 ### Écrire la réponse dans un fichier
 ```python
@@ -119,11 +119,11 @@ with open('response.json', 'wb') as fd:
 ```python
 f = open('response.json', encoding="utf8")
 ```
-### Renvoyer l’objet JSON sous forme de dictionnaire
+### Charger l’objet JSON dans un dictionnaire
 ```python
 json_complete = json.load(f)
 ```
-### Sélectionner les données du JSON et les écrire au format CSV
+### Extraire les données du JSON et les écrire au format CSV
 ```python
 with open('results.csv', 'w', newline='') as csvfile:
     fieldnames = ['documentId', 'placeCited', 'documentDate']
@@ -141,4 +141,4 @@ with open('results.csv', 'w', newline='') as csvfile:
                 writer.writerow({'documentId': documentId, 'placeCited': placeCited, 'documentDate': documentDate})
 ```
 
-Une fois le fichier `results.csv` téléchargé, vous pouvez procéder au nettoyage des données comme expliqué plus haut.
+Une fois le fichier `results.csv` en main, il ne reste qu’à procéder à la toilette des données décrite plus haut.

@@ -1,9 +1,9 @@
 ---
 title: Visualiser le balisage sémantique du BnF Ms. Fr. 640
-subtitle: Créer rapidement des visualisations d’une édition savante numérique avec Python  
+subtitle: Des visualisations rapides d’une édition savante numérique, avec Python  
 
 # Summary for listings and search engines
-summary: Un moyen rapide de corréler avec Python le balisage d’éditions numériques annotées comme *Secrets of Craft and Nature in Renaissance France*
+summary: Un moyen rapide de mettre en corrélation, avec Python, le balisage d’une édition numérique annotée comme *Secrets of Craft and Nature in Renaissance France*
 
 # Link this post with a project
 projects: ["M&K"]
@@ -43,14 +43,14 @@ categories:
 ---
 
 # Vue d’ensemble 
-Les éditions savantes riches en données contiennent de précieuses annotations éditoriales que l’on peut extraire, analyser et visualiser à toutes sortes de fins scientifiques. C’est le cas de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), parue en 2020, qui met son fichier de métadonnées à disposition en téléchargement sur son dépôt GitHub. Dans ce billet, je montre comment rassembler toutes ces variables dans une matrice de corrélation et les visualiser de différentes manières.
+Les éditions savantes riches en données regorgent d’annotations éditoriales qu’on peut extraire, analyser et visualiser à toutes sortes de fins scientifiques. C’est le cas de [*Secrets of Craft and Nature in Renaissance France*](https://edition640.makingandknowing.org), parue en 2020, dont le fichier de métadonnées se télécharge depuis le dépôt GitHub du projet. Je montre dans ce billet comment réunir toutes ces variables dans une matrice de corrélation, puis la visualiser de plusieurs manières.
 
 # Les données
-Le Making and Knowing Project génère une feuille de calcul contenant des informations à jour sur le contenu du manuscrit : ```entry_metadata.csv```. Le fichier peut être récupéré sur le [dépôt GitHub](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv) du Making & Knowing. On peut aussi générer des fichiers .csv sur mesure, en ajoutant davantage de balisage grâce à l’excellent [manuscript-object](https://github.com/cu-mkp/manuscript-object) de Matthew Kumar, une version Python du BnF Ms. Fr. 640.
+Le Making and Knowing Project tient à jour une feuille de calcul qui décrit le contenu du manuscrit : ```entry_metadata.csv```. On la trouvera sur le [dépôt GitHub](https://github.com/cu-mkp/m-k-manuscript-data/blob/master/metadata/entry_metadata.csv) du Making & Knowing. On peut aussi se fabriquer des fichiers .csv sur mesure, avec davantage de balisage, grâce à l’excellent [manuscript-object](https://github.com/cu-mkp/manuscript-object) de Matthew Kumar, qui est une version Python du BnF Ms. Fr. 640.
 
-## Configurer Python 
-Nous utiliserons Pandas pour la préparation des données, Matplotlib et seaborn pour les cartes de chaleur, et enfin NetworkX pour produire des réseaux fondés sur les corrélations.  
-Pour ce type de variables, nous éviterons la méthode de Pearson et utiliserons plutôt la méthode 𝜙𝐾. Prenez le temps de [vous documenter](https://phik.readthedocs.io/en/latest/index.html) sur cette méthode de corrélation et sur `PhiK`, la bibliothèque correspondante.
+## Préparer Python 
+Pandas servira à mettre les données en forme, Matplotlib et seaborn aux cartes de chaleur, et NetworkX, pour finir, aux réseaux fondés sur les corrélations.  
+Pour des variables de ce type, on évitera la méthode de Pearson au profit de la méthode 𝜙𝐾 ; prenez le temps de [vous documenter](https://phik.readthedocs.io/en/latest/index.html) sur cette mesure de corrélation et sur `PhiK`, la bibliothèque qui l’implémente.
 
 ```python
 #install packages
@@ -64,10 +64,10 @@ import networkx as nx
 ```
 
 ## Préparer les données
-Téléchargeons d’abord le dernier fichier de métadonnées de l’édition depuis son [dépôt GitHub](https://github.com/cu-mkp/m-k-manuscript-data), dans le dossier metadata.
-Nous ne sélectionnerons que les colonnes dont nous avons besoin. Pour cette démonstration, je choisis toutes les balises sémantiques de la traduction anglaise `tl`, mais vous pouvez aussi choisir les balises de la transcription française `tc`, ou de la version normalisée `tcn`. 
-Les données se présentent sous forme de valeurs séparées par des points-virgules, et il nous faut que Python les compte pour nous. Nous utiliserons donc la méthode stack-unstack avec l’expression régulière `[^;\s][^\;]*[^;\s]*`.
-Pour rendre la matrice plus lisible, nous renommons chaque colonne. Vous pouvez sauter cette étape si vous êtes pressé ; gardez simplement à l’esprit que notre dataframe, à ce stade, s’appelle `tagsrn`.
+Téléchargeons d’abord, dans le dossier metadata du [dépôt GitHub](https://github.com/cu-mkp/m-k-manuscript-data), la dernière version du fichier de métadonnées de l’édition.
+Nous n’en garderons que les colonnes utiles. Pour cette démonstration, je retiens toutes les balises sémantiques de la traduction anglaise `tl` ; on peut tout aussi bien prendre celles de la transcription française `tc`, ou de la version normalisée `tcn`. 
+Les valeurs sont séparées par des points-virgules, et c’est à Python de les compter : d’où la méthode stack-unstack, avec l’expression régulière `[^;\s][^\;]*[^;\s]*`.
+Pour rendre la matrice plus lisible, nous renommons chaque colonne. Les pressés peuvent sauter cette étape ; qu’ils retiennent seulement qu’à ce stade notre dataframe s’appelle `tagsrn`.
 
 ```python
 # load the edition's metadata
@@ -85,16 +85,16 @@ tagsrn = tagcount.rename(columns={'al_tl': 'animals', 'bp_tl': 'body parts', 'cn
 
 # Corréler
 
-Une fois le dataframe nettoyé, nous pouvons passer au calcul des coefficients de corrélation entre chaque variable. Il est important, à ce stade, de comprendre vos données et de vous assurer d’utiliser la méthode de corrélation la plus appropriée. Le paquet `pandas-profiling` est particulièrement utile pour cette tâche. 
+Le dataframe une fois nettoyé, on peut calculer les coefficients de corrélation entre les variables. C’est le moment de bien comprendre ses données et de s’assurer qu’on emploie la mesure de corrélation qui leur convient ; le paquet `pandas-profiling` rend ici de grands services. 
 
 ```python
 # calculate correlation coefficient with the phi k method
 cortag = tagsrn.phik_matrix()
 ```
-`cortag` est notre matrice de corrélation. Nous pouvons maintenant essayer différents types de visualisation.
+`cortag` est notre matrice de corrélation. Reste à l’explorer sous plusieurs formes.
 
 # Visualiser
-La première chose à essayer est de la visualiser sous forme de matrice colorée, avec le [module heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) de `seaborn`. 
+Le plus simple est d’abord de la représenter comme une matrice colorée, à l’aide du [module heatmap](https://seaborn.pydata.org/generated/seaborn.heatmap.html) de `seaborn`. 
 
 ### Carte de chaleur des corrélations
 ```python
@@ -103,27 +103,27 @@ ax = sns.heatmap(cortag, linewidths=.03, vmin=0, cmap="Oranges", square=True)
 ```
 ![Carte de chaleur des corrélations du BnF Ms. Fr. 640](heatmap.png)
 
-Si vous connaissez bien le texte, vous voyez immédiatement que la carte de chaleur a beaucoup de sens. Par exemple, les noms de personnes sont fortement corrélés au latin, car il était d’usage, surtout chez les humanistes du XVI^e^ siècle, de les latiniser.  
+Qui connaît bien le texte voit aussitôt que la carte tient debout. Les noms de personnes, par exemple, sont fortement corrélés au latin : rien d’étonnant, quand on sait combien les humanistes du XVI^e^ siècle aimaient latiniser les noms.  
 
-Certains diront que cette carte de chaleur ne fait qu’énoncer des évidences. Ils n’ont pas entièrement tort et, à première vue, les balises médicales semblent en être un bon exemple, puisqu’elles sont, comme on pouvait s’y attendre, corrélées aux parties du corps, aux mesures et aux plantes.
+On m’objectera que cette carte enfonce des portes ouvertes. Ce n’est pas tout à fait faux, et les balises médicales semblent au premier abord donner raison à l’objection, elles qui sont corrélées, comme on s’y attendait, aux parties du corps, aux mesures et aux plantes.
 
-Mais si l’on lit la carte de chaleur plus attentivement, ligne par ligne, on peut trouver des corrélations intéressantes et inattendues. Que les balises médicales, par exemple, soient corrélées aux mots italiens et latins nous donne des indices sur l’origine des recettes médicales du Ms. Fr. 640. De même, la corrélation entre professions, définitions et mesures montre à quel point l’identité professionnelle structure les discours techniques du XVI^e^ siècle. 
+Mais qu’on lise la carte avec plus d’attention, ligne à ligne, et des corrélations plus curieuses apparaissent. Que les balises médicales aillent de pair avec les mots italiens et latins, voilà qui renseigne sur l’origine des recettes médicales du Ms. Fr. 640 ; et la corrélation entre professions, définitions et mesures montre à quel point l’identité professionnelle structure les discours techniques du XVI^e^ siècle. 
 
 ### Clustermap des corrélations
 
-Les cartes de chaleur sont utiles dans des contextes « exploratoires », mais elles peuvent paraître un peu brouillonnes à votre public, surtout si vous discutez – ou cherchez encore – des groupes sémantiques précis dans le manuscrit. Le module `clustermap` de seaborn peut donner des résultats intéressants.
+Les cartes de chaleur sont précieuses en phase « exploratoire », mais elles peuvent sembler brouillonnes à votre auditoire, surtout si vous discutez de groupes sémantiques précis du manuscrit – ou si vous les cherchez encore. Le module `clustermap` de seaborn donne alors des résultats intéressants.
 
 ```python
 clustermap = sns.clustermap(cortag, figsize=(12, 13), dendrogram_ratio=(.1, .2), vmin=0, cmap="Oranges", cbar_pos=(-.06, .12, .03, .68))
 ```
 ![Clustermap des corrélations du BnF Ms. Fr. 640](clustermap.png)
 
-Outre qu’elle ressemble à un insecte pixélisé (oui, le mot est dans le Robert), la clustermap distingue clairement les balises isolées (en haut et à gauche) de celles qui sont plus interconnectées. On distingue aussi des groupes isolés, comme la musique et le poitevin (qui l’eût cru !), de groupes plus centraux comme les mesures, les matériaux, les définitions et les armes. Les professions sont plus interconnectées, mais elles ne font pas partie, du moins dans cette matrice de corrélation précise, d’un groupe particulier.
+Outre qu’elle ressemble à un insecte pixélisé (oui, le mot est dans le Robert), la clustermap sépare nettement les balises isolées (en haut et à gauche) de celles qui sont mieux reliées aux autres. On y distingue aussi des groupes à l’écart, comme la musique et le poitevin (qui l’eût cru !), et des groupes plus centraux, comme les mesures, les matériaux, les définitions et les armes. Les professions sont bien reliées, mais ne se rattachent à aucun groupe particulier, du moins dans cette matrice-ci.
 
 ### Réseau de corrélations
 
-Si l’on veut synthétiser encore davantage les corrélations contenues dans notre matrice, les graphes de réseau offrent une solution élégante. C’est particulièrement vrai dans les contextes où l’on veut communiquer sur le contenu du manuscrit.  
-Pour ce faire, il nous faut transformer notre matrice en une liste d’arêtes et de nœuds, et définir un seuil pour éliminer les corrélations les plus faibles de notre graphe.
+Pour condenser encore les corrélations de notre matrice, les graphes de réseau offrent une solution élégante, surtout lorsqu’il s’agit de présenter le contenu du manuscrit à un public.  
+Il faut pour cela convertir la matrice en une liste d’arêtes et de nœuds, et fixer un seuil au-dessous duquel les corrélations les plus faibles disparaissent du graphe.
 
 ```python
 # transform the data
@@ -143,17 +143,17 @@ nx.draw_kamada_kawai(G, with_labels = True, node_color = 'red', node_size = 400,
 ```
 ![Graphe des corrélations du BnF Ms. Fr. 640](graph.png)
 
-S’il y a trop d’arêtes et de nœuds, vous pouvez toujours modifier le seuil pour obtenir un résultat plus net. Sinon, vous pouvez exporter le graphe pour le manipuler dans `Gephi`, avec la fonction `.write_gexf()`.
+S’il reste trop d’arêtes et de nœuds, on peut toujours relever le seuil pour obtenir un résultat plus net ; ou bien exporter le graphe, avec la fonction `.write_gexf()`, pour le retravailler dans `Gephi`.
 
 ```python 
 nx.write_gexf(G, 'graph.gexf')
 ``` 
-Vous pouvez voir le résultat au début de ce billet.
+Le résultat se voit en tête de ce billet.
 
 
 ### Mise à jour : réseau circulaire pondéré
 
-Je cherchais des moyens d’afficher des matrices de corrélation sous forme de réseaux pondérés, et j’ai trouvé cette approche intéressante [partagée par Julian West](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold), que j’adapte ici à notre jeu de données.
+Je cherchais un moyen de représenter les matrices de corrélation sous forme de réseaux pondérés, et j’ai trouvé chez [Julian West](https://julian-west.github.io/blog/visualising-asset-price-correlations/#remove-edges-below-a-threshold) une approche intéressante, que j’adapte ici à notre jeu de données.
 
 ```python
 # create graph weighted by correlation coefficients (unfiltered)
@@ -177,7 +177,7 @@ Gx.remove_edges_from(remove)
 
 print(str(len(remove)) + ' edges removed')
 ```
-Une fois quelques arêtes supprimées, nous pouvons déterminer leur couleur et leur épaisseur.
+Quelques arêtes supprimées, on peut fixer la couleur et l’épaisseur des autres.
 
 ```python
 # determine the colors of edges
@@ -196,7 +196,7 @@ def assign_node_size(degree, scaling_factor=50):
     return degree * scaling_factor
 ```
 
-Nous donnons aussi aux nœuds une taille proportionnelle à leur nombre de connexions. 
+On donne aussi aux nœuds une taille proportionnelle à leur nombre de connexions. 
 
 ```python
 # assign node size depending on number of connections (degree)
@@ -204,6 +204,6 @@ node_size = []
 for key, value in dict(Gx.degree).items():
     node_size.append(assign_node_size(value))
 ```
-Le résultat est un graphe pondéré qui admet davantage de nœuds et considérablement plus d’arêtes, tout en restant lisible et informatif. 
+On obtient un graphe pondéré qui accueille davantage de nœuds et bien plus d’arêtes, sans rien perdre de sa lisibilité ni de son pouvoir d’information. 
 
 ![Graphe de corrélations pondéré du BnF Ms. Fr. 640](weightedgraph.png) 

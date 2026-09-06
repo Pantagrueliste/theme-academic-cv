@@ -1,9 +1,9 @@
 ---
-title: "L’hébergement web distribué peut-il offrir une pérennité à bas coût ?"
-subtitle: Avantages et inconvénients de l’hébergement d’une édition critique numérique sur IPFS
+title: "L’hébergement distribué, ou la pérennité à bon compte ?"
+subtitle: Ce que l’on gagne et ce que l’on perd à héberger une édition critique numérique sur IPFS
 
 # Summary for listings and search engines
-summary: "Dans ce billet, je soutiens que l’hébergement web distribué permet aux éditeurs de publier des contenus de manière pérenne tout en réduisant les coûts. Peut-on atteindre la pérennité pour un coût faible ou nul ? Et si oui, quels compromis une édition numérique doit-elle accepter ?"
+summary: "Je soutiens dans ce billet que l’hébergement distribué permet aux éditeurs de publier de façon pérenne tout en réduisant les coûts. La pérennité peut-elle ne coûter presque rien ? Et si oui, à quels compromis une édition numérique doit-elle consentir ?"
 
 # Link this post with a project
 projects: [Efficient Editing]
@@ -43,4 +43,4 @@ categories:
 ---
 
 # Introduction
-Comment produire des éditions savantes numériques sans se ruiner ? Dans ce billet, le premier d’une série consacrée à l’édition efficace, j’évalue le rôle que les modèles de langue pré-entraînés peuvent jouer dans l’automatisation des tâches éditoriales, comme le balisage sémantique.
+Comment produire des éditions savantes numériques sans y engloutir des fortunes ? Ce billet ouvre une série consacrée à l’édition efficace ; j’y examine ce que les modèles de langue pré-entraînés peuvent apporter à l’automatisation des tâches éditoriales, le balisage sémantique au premier chef.

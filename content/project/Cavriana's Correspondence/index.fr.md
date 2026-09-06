@@ -1,6 +1,6 @@
 ---
 title: La correspondance secrète de Filippo Cavriana, 1568—1589.
-summary: Construire une édition minimale de l’*epistolarium* secret de Filippo Cavriana
+summary: Une édition minimale de l’*epistolarium* secret de Filippo Cavriana
 tags: 
 - Humanités numériques
 - Sources primaires
@@ -34,12 +34,12 @@ url_video: ""
 machine_translated: true
 ---
 
-Les lettres secrètes de Filippo Cavriana offrent un témoignage unique sur les guerres de Religion, couvrant pendant plus de vingt ans les intrigues, batailles, négociations et conspirations qui rythmaient la vie à la cour de France et au-delà.  
+Les lettres secrètes de Filippo Cavriana sont un témoignage sans équivalent sur les guerres de Religion : pendant plus de vingt ans, elles suivent les intrigues, les batailles, les négociations et les complots qui rythmaient la vie de la cour de France, et bien au-delà.  
 
-Ces lettres, conservées aux [Archives d’État de Florence](https://www.archiviodistato.firenze.it/asfi/home), sont pour la plupart dispersées dans des centaines de liasses non inventoriées, ou *filze* comme on les appelle à Florence. Si j’ai pu découvrir des dizaines de nouvelles lettres au cours des dernières années, ce type de recherche en archives s’avère de plus en plus difficile. L’éloignement géographique de Florence, la dégradation de certains services publics en Italie et la pandémie de Covid-19 contribuent tous à faire de ce genre de projet de publication un processus long et incertain.
+Conservées aux [Archives d’État de Florence](https://www.archiviodistato.firenze.it/asfi/home), elles sont pour la plupart dispersées dans des centaines de liasses non inventoriées, ces *filze* dont on parle à Florence. J’ai pu en exhumer des dizaines de nouvelles ces dernières années, mais ce genre de recherche devient de plus en plus ardu : l’éloignement de Florence, la dégradation de certains services publics en Italie, la pandémie de Covid-19, tout concourt à faire d’un projet de publication de cette sorte une entreprise longue et incertaine.
 
-Publier des sources primaires devrait rester, malgré ces difficultés croissantes, une partie du métier d’historien. La forme que ces publications peuvent prendre, en revanche, devrait probablement évoluer. Non seulement les publications de sources primaires devraient s’adapter à la situation que je viens de décrire, mais elles devraient aussi mieux refléter la nature incrémentale de cette recherche, tout en permettant à quelqu’un d’autre de la poursuivre.
+Publier des sources primaires doit pourtant rester, en dépit des obstacles, une part du métier d’historien. C’est la forme de ces publications qui, sans doute, doit changer : il faut non seulement qu’elle s’accommode de la situation que je viens de décrire, mais encore qu’elle rende mieux compte du caractère cumulatif de cette recherche, et qu’elle permette à d’autres de la poursuivre.
 
-D’où l’idée de développer un nouveau type de projet de publication numérique qui soit **évolutif**, **pérenne**, **fiable**, **indépendant de toute plateforme** et potentiellement **collaboratif**. 
+D’où l’idée d’un nouveau type de publication numérique, qui soit **extensible**, **pérenne**, **digne de confiance**, **indépendante de toute plateforme** et, autant que possible, **collaborative**. 
 
-L’édition est désormais en ligne : **[Filippo Cavriana : la correspondance secrète](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Elle rassemble les lettres transcrites jusqu’ici, provenant des Archives d’État de Florence et de Mantoue ainsi que de la BnF, et s’enrichit à mesure que de nouvelles lettres refont surface. J’ai expliqué le raisonnement qui sous-tend sa conception dans [un billet séparé](/post/cavriana-edition/).
+L’édition est désormais en ligne : **[Filippo Cavriana : la correspondance secrète](https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/)**. Elle réunit les lettres transcrites à ce jour, tirées des Archives d’État de Florence et de Mantoue ainsi que de la BnF, et s’enrichit à mesure que d’autres refont surface. J’ai exposé les raisons de sa conception dans [un billet à part](/post/cavriana-edition/).

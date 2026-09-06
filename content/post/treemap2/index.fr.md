@@ -1,9 +1,9 @@
 ---
 title: Visualiser les manuscrits 2 (mise à jour)
-subtitle: Un outil de visualisation multicritère des manuscrits
+subtitle: Un outil de visualisation des manuscrits à plusieurs critères
 
 # Summary for listings and search engines
-summary: Nouvelle version du treemap interactif, avec des fonctionnalités supplémentaires. 
+summary: Nouvelle version du treemap interactif, enrichie de fonctions supplémentaires. 
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -42,10 +42,10 @@ tags:
 categories:
 - Notes
 ---
-Comme promis, voici une nouvelle version du treemap interactif présenté dans un [billet précédent]({{< relref "/post/treemap" >}}), cette fois avec deux modes d’affichage.
+Chose promise, chose due : voici une nouvelle version du treemap interactif présenté dans un [billet précédent]({{< relref "/post/treemap" >}}), qui offre cette fois deux modes d’affichage.
 
 > [!NOTE]
-> Pour un meilleur confort de lecture, vérifiez que les paramètres de la page sont en mode clair (cliquez sur l’icône de lune en haut à droite).
+> Pour un meilleur confort de lecture, vérifiez que la page est en mode clair (cliquez sur l’icône de lune en haut à droite).
 
    <head>
     <meta charset="UTF-8" />

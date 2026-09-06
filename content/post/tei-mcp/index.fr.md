@@ -1,11 +1,11 @@
 ---
-title: "tei-mcp : la TEI P5 pour les agents IA"
-subtitle: Un serveur MCP qui aide les assistants IA à comprendre les Guidelines de la TEI
+title: "tei-mcp : la TEI P5 à la portée des agents IA"
+subtitle: Un serveur MCP qui met les Guidelines de la TEI sous les yeux des assistants IA
 
 summary: >
-  tei-mcp est un serveur MCP open source qui donne aux assistants de programmation IA
+  tei-mcp est un serveur MCP libre qui ouvre aux assistants de programmation
   un accès direct à la spécification TEI P5 – consultation des éléments, résolution
-  des attributs, validation de l’imbrication, validation de documents et
+  des attributs, contrôle de l’imbrication, validation des documents et
   personnalisation ODD.
 
 date: "2026-03-15T00:00:00Z"
@@ -28,72 +28,71 @@ categories:
 - Humanités numériques
 ---
 
-Si vous avez déjà utilisé un assistant de programmation IA pour écrire du XML TEI, 
-vous avez probablement remarqué qu’il se trompe. Des éléments apparaissent là où 
-ils ne devraient pas. Des attributs sont inventés. Les règles d’imbrication sont 
-ignorées. Le modèle a une idée approximative de ce à quoi ressemble la TEI, mais 
-aucune connaissance fiable de la spécification.
+Quiconque a demandé à un assistant IA d’écrire du XML TEI l’a constaté : 
+il se trompe. Des éléments surgissent là où ils n’ont rien à faire, des attributs 
+sont inventés de toutes pièces, les règles d’imbrication sont foulées aux pieds. 
+Le modèle a une vague idée de ce à quoi ressemble la TEI ; de la spécification 
+elle-même, il n’a aucune connaissance sûre.
 
-tei-mcp résout ce problème en donnant aux agents IA un accès direct, sous forme 
-d’outils, aux Guidelines de la TEI P5.
+tei-mcp y remédie en donnant aux agents IA un accès direct, par des outils, 
+aux Guidelines de la TEI P5.
 
 {{< toc >}}
 
 ## Qu’est-ce que MCP ?
 
-Le [Model Context Protocol](https://modelcontextprotocol.io) (MCP) est un standard 
-ouvert qui permet aux applications d’IA de se connecter à des sources de données et 
-à des outils externes. Voyez-le comme un port USB pour l’IA : un protocole unique 
-qui permet à n’importe quel client compatible – Claude, Cursor, Windsurf et 
-d’autres – de se brancher sur des services spécialisés.
+Le [Model Context Protocol](https://modelcontextprotocol.io) (MCP) est une norme 
+ouverte qui permet aux applications d’IA de se relier à des sources de données et 
+à des outils extérieurs. C’est, si l’on veut, le port USB de l’IA : un protocole 
+unique grâce auquel n’importe quel client compatible – Claude, Cursor, Windsurf 
+et d’autres – se branche sur des services spécialisés.
 
-Un serveur MCP expose des *outils* que l’IA peut appeler au cours d’une conversation. 
-Au lieu de se fier à des données d’entraînement mémorisées, le modèle peut interroger 
-une source vivante et faisant autorité.
+Un serveur MCP expose des *outils* que l’IA peut appeler au fil de la conversation ; 
+au lieu de puiser dans le souvenir de ses données d’entraînement, le modèle 
+interroge une source vivante, qui fait autorité.
 
 ## Ce que fait tei-mcp
 
-tei-mcp analyse la spécification ODD de la TEI P5 et expose 16 outils qui couvrent 
-les questions les plus courantes qu’un éditeur ou un encodeur peut se poser :
+tei-mcp lit la spécification ODD de la TEI P5 et expose seize outils, qui répondent 
+aux questions que se posent le plus souvent un éditeur ou un encodeur :
 
-- **Qu’est-ce que cet élément ?** Recherchez n’importe quel élément, classe, macro 
-  ou module par son nom, avec une correspondance insensible à la casse et des 
-  suggestions en cas de faute de frappe.
-- **Quels attributs accepte-t-il ?** Résolvez les attributs à travers toute la 
-  hiérarchie de classes – les attributs locaux d’abord, puis les attributs hérités, 
-  dans l’ordre.
-- **Que peut-il contenir ?** Développez les modèles de contenu en arbres structurés, 
-  ou obtenez une liste plate des enfants valides.
-- **Cet élément peut-il aller ici ?** Vérifiez l’imbrication parent-enfant, ou 
-  tracez l’accessibilité à travers toute la hiérarchie des éléments.
-- **Mon document est-il valide ?** Validez un fichier XML TEI par rapport à la 
+- **Qu’est-ce que cet élément ?** Recherche de tout élément, classe, macro ou 
+  module par son nom, sans distinction de casse et avec suggestions en cas de 
+  coquille.
+- **Quels attributs admet-il ?** Résolution des attributs à travers toute la 
+  hiérarchie des classes – d’abord les attributs locaux, puis les attributs 
+  hérités, dans l’ordre.
+- **Que peut-il contenir ?** Développement des modèles de contenu en arbres 
+  structurés, ou simple liste des enfants admis.
+- **Cet élément a-t-il sa place ici ?** Contrôle de l’imbrication parent-enfant, 
+  ou recherche d’un chemin à travers toute la hiérarchie des éléments.
+- **Mon document est-il valide ?** Validation d’un fichier XML TEI contre la 
   spécification : modèles de contenu, valeurs d’attributs, listes de valeurs 
-  fermées, intégrité des références et avertissements d’obsolescence.
-- **Et mon schéma de projet ?** Chargez un fichier de personnalisation ODD pour 
-  restreindre tout ce qui précède au sous-ensemble de la TEI propre à votre projet.
+  fermées, intégrité des renvois et avertissements d’obsolescence.
+- **Et le schéma de mon projet ?** Chargement d’un fichier de personnalisation ODD, 
+  qui restreint tout ce qui précède au sous-ensemble de la TEI propre à votre projet.
 
-## Pourquoi c’est important
+## Pourquoi cela compte
 
-L’encodage TEI exige de se référer constamment aux Guidelines. Les encodeurs 
-expérimentés intériorisent les schémas les plus courants, mais même eux doivent 
-consulter la spécification pour les éléments moins familiers ou les modèles de 
-contenu complexes. Pour les assistants IA, qui n’ont pas cette connaissance 
-intériorisée, le problème est pire : ils hallucinent un balisage d’apparence 
-plausible mais incorrect.
+Encoder en TEI, c’est avoir sans cesse les Guidelines sous la main. Les encodeurs 
+chevronnés ont intériorisé les tournures les plus courantes, mais eux-mêmes doivent 
+retourner à la spécification pour les éléments moins familiers ou les modèles de 
+contenu complexes. Pour les assistants IA, qui n’ont rien intériorisé du tout, le 
+mal est pire : ils hallucinent un balisage d’aspect plausible, et faux.
 
-Avec tei-mcp, l’IA n’a plus à deviner. Elle peut chercher la réponse dans la 
-spécification avant d’écrire le moindre chevron. Le résultat est un balisage 
+Avec tei-mcp, l’IA n’a plus à deviner. Elle va chercher la réponse dans la 
+spécification avant d’écrire le moindre chevron, et le balisage qui en sort est 
 conforme à la TEI P5 – ou à la personnalisation ODD de votre projet.
 
-## Pour commencer
+## Premiers pas
 
-Installez depuis PyPI :
+Installation depuis PyPI :
 
 ```bash
 pip install tei-mcp
 ```
 
-Puis ajoutez-le à la configuration de votre client MCP :
+Puis ajoutez le serveur à la configuration de votre client MCP :
 
 ```json
 {
@@ -106,8 +105,8 @@ Puis ajoutez-le à la configuration de votre client MCP :
 }
 ```
 
-Le serveur télécharge la spécification TEI au premier lancement et fonctionne avec 
-n’importe quel client compatible MCP.
+Au premier lancement, le serveur télécharge la spécification TEI ; il fonctionne 
+avec tout client compatible MCP.
 
 Code source et documentation complète : 
 [github.com/Pantagrueliste/tei-mcp](https://github.com/Pantagrueliste/tei-mcp)

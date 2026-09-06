@@ -1,9 +1,9 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Analyse bibliographique à grande échelle avec des modèles de langue pré-entraînés"
-subtitle: "Comment convertir rapidement des milliers de références bibliographiques en une base de données BibTeX"
-summary: "GPT-3 aide à convertir de grandes quantités de bibliographie en base de données en peu de temps"
+title: "Dépouiller des bibliographies en masse avec des modèles de langue pré-entraînés"
+subtitle: "Comment changer en quelques jours des milliers de références en une base BibTeX"
+summary: "Avec GPT-3, une bibliographie de plusieurs milliers de références se change en base de données en peu de temps"
 authors: [clement]
 tags: [Humanités numériques, GPT-3, Bibliographie, Automatisation]
 categories: [Édition efficace]
@@ -29,26 +29,26 @@ image:
 projects: [Efficient Editing]
 ---
 
-L’automatisation est la clé pour réduire le coût des projets en humanités numériques. Jusqu’à présent, les tâches répétitives et fastidieuses liées au travail éditorial en milieu universitaire ont été soit accomplies à grands frais par des chercheurs débordés, soit « sous-traitées » à des étudiants. Dans cette [série de billets](https://www.clementgodbarge.com/category/efficient-editing/), je soutiens que la plupart de ces tâches ingrates non seulement *peuvent*, mais *doivent* être automatisées. L’automatisation des tâches éditoriales réduit le coût global des projets en humanités numériques. Surtout, elle permet aux chercheurs des régions à faibles revenus de publier rapidement et à moindre coût des documents précieux.
+Pour faire baisser le coût des projets en humanités numériques, tout passe par l’automatisation. Jusqu’ici, les tâches répétitives et fastidieuses du travail éditorial ont été, dans le monde universitaire, tantôt accomplies à grands frais par des chercheurs débordés, tantôt « sous-traitées » à des étudiants. Dans cette [série de billets](https://www.clementgodbarge.com/category/efficient-editing/), je soutiens que la plupart de ces corvées non seulement *peuvent*, mais *doivent* être automatisées : le coût d’ensemble des projets s’en trouve réduit, et surtout, des chercheurs de régions peu fortunées peuvent enfin publier vite, et à peu de frais, des documents de valeur.
 
-Dans [le billet précédent](https://www.clementgodbarge.com/post/gpt3/), j’ai montré par exemple comment les modèles de langue pré-entraînés peuvent prendre en charge l’essentiel du travail d’étiquetage XML d’une édition numérique.
+Dans [le billet précédent](https://www.clementgodbarge.com/post/gpt3/), j’ai montré, par exemple, que les modèles de langue pré-entraînés peuvent prendre à leur compte l’essentiel du balisage XML d’une édition numérique.
 
-Dans ce billet, j’expose un second exemple, cette fois avec la bibliographie.
+Voici un second exemple, cette fois-ci du côté de la bibliographie.
 
 
 ## Le problème
-Créer une base de données bibliographique à partir des références citées dans un article savant est assez simple. On peut soit faire une recherche rapide dans un catalogue comme [worldcat](https://www.worldcat.org) et télécharger la référence dans un format donné, soit l’importer automatiquement depuis une base de données locale. Cela fonctionne bien pour un ou deux articles.
-Au-delà d’un certain nombre de références, cependant, la tâche devient rébarbative et chronophage. Pour y remédier, on peut recourir à des algorithmes d’analyse syntaxique (*parsing*) comme [anystyle.io](https://anystyle.io). Mais ces algorithmes peuvent être difficiles à passer à l’échelle.
-Lorsque j’ai utilisé anystyle pour convertir les plus de 150 essais savants inclus dans notre [édition critique du Ms. Fr. 640](https://edition640.makingandknowing.org/#/), la quantité d’erreurs accumulées était tout simplement ingérable. Il n’a pas su reconnaître correctement nombre de nos sources, confondant par exemple les longs titres des livres de la première modernité avec autre chose, et n’a pas reconnu les documents moins typiques, comme certaines pages web, des vidéos en ligne, etc. Les analyseurs fonctionnent bien, à condition que l’auteur suive religieusement les règles d’une convention bien connue comme Chicago, Turabian ou MLA. Tout écart par rapport à la norme se traduit par des erreurs.
+Constituer une base bibliographique à partir des références d’un article savant n’a rien de sorcier : une recherche rapide dans un catalogue comme [WorldCat](https://www.worldcat.org), la référence téléchargée dans le format voulu, ou bien importée automatiquement d’une base locale, et l’affaire est faite. Pour un ou deux articles, cela suffit.
+Passé un certain nombre de références, en revanche, la tâche devient rébarbative et dévore le temps. On peut alors recourir à des algorithmes de dépouillement (*parsing*) comme [anystyle.io](https://anystyle.io) ; mais ceux-ci se prêtent mal au changement d’échelle.
+Quand j’ai voulu convertir avec anystyle les quelque 150 essais savants de notre [édition critique du Ms. Fr. 640](https://edition640.makingandknowing.org/#/), les erreurs se sont accumulées au point de devenir ingérables. L’outil ne reconnaissait pas bon nombre de nos sources, prenant par exemple les longs titres des livres de la première modernité pour tout autre chose, et il restait muet devant les documents moins classiques, pages web ou vidéos en ligne. Les analyseurs de ce genre font bien leur office, à condition que l’auteur suive à la lettre une convention consacrée, Chicago, Turabian ou MLA ; à la moindre entorse, les erreurs pleuvent.
 
 ## La solution
-C’est là que {{< hl >}}les modèles de langue pré-entraînés{{< /hl >}} peuvent aider, car ils {{< hl >}}comprennent rapidement les schémas de n’importe quel style bibliographique{{< /hl >}}, même un style que vous auriez inventé, et n’ont besoin que de quelques exemples pour convertir correctement de grandes quantités de bibliographie formatée en une [base de données BibTeX](http://www.bibtex.org/Format/).
+C’est ici que {{< hl >}}les modèles de langue pré-entraînés{{< /hl >}} viennent à la rescousse : ils {{< hl >}}saisissent en un instant la logique de n’importe quel style bibliographique{{< /hl >}}, fût-ce un style de votre invention, et il leur suffit d’une poignée d’exemples pour convertir des bibliographies entières en une [base BibTeX](http://www.bibtex.org/Format/) sans se tromper.
 
-Début 2021, j’ai eu la chance d’avoir un accès anticipé à [GPT-3 Codex](https://openai.com/blog/openai-codex/) d’OpenAI. Codex est un modèle qui permet de traduire le langage naturel en code et inversement. OpenAI affirme qu’il maîtrise plus d’une douzaine de langages de programmation et, bien que son API soit encore, au moment où j’écris ce billet, accessible en version bêta, il alimente déjà des applications populaires comme [Copilot](https://github.com/features/copilot/) de GitHub.
+Au début de 2021, j’ai eu la chance d’accéder en avant-première à [GPT-3 Codex](https://openai.com/blog/openai-codex/), le modèle d’OpenAI qui traduit le langage naturel en code, et le code en langage naturel. OpenAI lui prête la maîtrise de plus d’une douzaine de langages de programmation ; et bien que son API ne soit encore, à l’heure où j’écris, qu’en version bêta, il fait déjà tourner des applications aussi répandues que [Copilot](https://github.com/features/copilot/), chez GitHub.
 
-Après avoir un peu joué avec cette API, je me suis rendu compte qu’elle pouvait aussi très bien fonctionner avec du code plus simple comme `BibTeX`.
+À force de jouer avec cette API, je me suis aperçu qu’elle se débrouillait fort bien avec un code aussi rudimentaire que `BibTeX`.
 
-Et de fait, il ne m’a fallu que quatre exemples dans la consigne d’entrée pour que cela fonctionne de manière fiable.
+De fait, quatre exemples dans la consigne ont suffi pour que le procédé fonctionne de façon fiable.
 
 ### Consigne d’entrée
 
@@ -102,15 +102,15 @@ Findlen, Paula. *Possessing Nature: Museums, Collecting, and Scientific Culture 
 ```
 
 ### Résultats
-Les {{< hl >}}[résultats](https://github.com/Pantagrueliste/m-k-manuscript-data/blob/master/bibliographies/essays/EssaysBibliography.bib) sont frappants : plus de 2 000 références bibliographiques converties en quelques jours.{{< /hl >}} Non seulement cette approche a reproduit fidèlement le schéma exposé dans ma consigne d’entrée, mais elle a aussi ajouté correctement des types d’entrées et de champs qui n’y figuraient pas. `GPT-3`, autrement dit, parle couramment le `BibTeX`. Plus surprenant peut-être pour un modèle essentiellement entraîné en anglais, il a reconnu toutes les langues (russe, français, italien, latin, grec, allemand, espagnol, etc.), ajoutant à chaque fois le champ `langid` correct.
+Les {{< hl >}}[résultats](https://github.com/Pantagrueliste/m-k-manuscript-data/blob/master/bibliographies/essays/EssaysBibliography.bib) sont saisissants : plus de 2 000 références converties en quelques jours.{{< /hl >}} Non content de reproduire fidèlement le modèle donné dans ma consigne, GPT-3 a ajouté de lui-même, et à bon escient, des types d’entrées et des champs qui n’y figuraient pas : autant dire que `GPT-3` parle le `BibTeX` couramment. Plus étonnant encore, pour un modèle entraîné surtout en anglais, il a reconnu toutes les langues (russe, français, italien, latin, grec, allemand, espagnol, etc.) et renseigné chaque fois correctement le champ `langid`.
 
 > [!NOTE]
-> GPT-3 a pour l’instant des tailles d’entrée et de sortie limitées, puisqu’il ne peut traiter que 2048 jetons linguistiques au maximum. Dès que cette limite sera levée, la même tâche ne prendrait probablement qu’une heure, voire moins.
+> GPT-3 ne peut pour l’instant traiter que 2048 jetons à la fois, ce qui borne la taille des entrées et des sorties. Le jour où cette limite tombera, la même tâche ne demandera vraisemblablement plus qu’une heure, ou moins.
 
-De manière quelque peu inattendue, GPT-3 a également ajouté des informations qui ne figuraient pas dans les références originales.
+Chose plus inattendue, GPT-3 a aussi ajouté des informations absentes des références de départ.
 >Baillot, Anne, and Anna Busch. “Editing for Man and Machine.” In _Users of Scholarly Editions: Editorial Anticipations of Reading, Studying and Consulting_, Vol. 13. Variants (Journal of the European Society for Textual Scholarship). Leicester, 2015. 
 
-Dans cette référence bibliographique, par exemple, GPT-3 a ajouté le lien permanent vers l’archive ouverte ([HAL](https://hal.archives-ouvertes.fr)) où l’article peut être lu, y compris les champs ad hoc `HAL_ID` et `HAL_VERSION` créés par le dépôt HAL :
+Pour cette référence, par exemple, il a ajouté le lien pérenne vers l’archive ouverte ([HAL](https://hal.archives-ouvertes.fr)) où l’article se lit, et jusqu’aux champs ad hoc `HAL_ID` et `HAL_VERSION` propres à ce dépôt :
 ```BibTeX
 @inproceedings{baillot2015, 
   title = {Editing for Man and Machine},
@@ -127,12 +127,12 @@ Dans cette référence bibliographique, par exemple, GPT-3 a ajouté le lien per
 }
 ```
 
-Ces ajouts indiquent que {{< hl >}}GPT-3 ne se contente pas d’analyser la référence bibliographique : il la complète aussi sur la base de ce qu’il a initialement appris.{{< /hl >}} Il serait intéressant, à cet égard, de voir s’il se comporte de la même façon avec des références postérieures à son entraînement…
+Ces ajouts montrent que {{< hl >}}GPT-3 ne se borne pas à analyser la référence : il la complète à partir de ce qu’il a appris.{{< /hl >}} Il serait curieux, à cet égard, de voir s’il en fait autant pour des références postérieures à son entraînement…
 
 ## Limites
-GPT-3 n’est cependant pas parfait. Il doit être supervisé par un humain. L’une de ses limites connues est l’[hallucination](https://arxiv.org/abs/2005.00661) : il lui arrive d’inventer des choses et de faire des suppositions improbables.
+GPT-3 n’est pas infaillible, et un humain doit le surveiller. Parmi ses défauts connus figure l’[hallucination](https://arxiv.org/abs/2005.00661) : il lui arrive d’inventer, et de tenir pour acquises des choses fort improbables.
 
-Dans mon expérience, les accès d’incohérence de GPT-3 se sont manifestés lorsqu’il a spontanément changé le patronyme d’un auteur, « Ruscelli », en « Ruscello ». Techniquement, ce n’est pas une erreur, puisque les patronymes italiens de la première modernité pouvaient s’employer indifféremment au pluriel ou au singulier. Mais la convention actuelle veut que l’on conserve le patronyme tel quel, qu’il soit au pluriel ou au singulier. Aujourd’hui, personne n’appellerait Machiavelli « Machiavello », de même qu’on est censé écrire Rossello et non Rosselli. GPT-3 a-t-il ignoré cette convention faute de conscience chronologique ? Ou bien a-t-il fait une supposition à partir des patronymes voisins, qui, dans cette partie de la bibliographie, se trouvent tous être fléchis au singulier (Bariletto, Cesano, Rossello) ?
+Dans mon expérience, ses accès de fantaisie se sont manifestés lorsqu’il a changé de son propre chef le patronyme d’un auteur, « Ruscelli », en « Ruscello ». À strictement parler, ce n’est pas une faute : les patronymes italiens de la première modernité se déclinaient indifféremment au singulier ou au pluriel. Mais l’usage veut aujourd’hui qu’on les conserve tels quels, singulier ou pluriel. Nul n’écrirait Machiavello pour Machiavelli, de même qu’on doit écrire Rossello et non Rosselli. GPT-3 a-t-il négligé cette convention faute de sens chronologique ? Ou s’est-il laissé influencer par les patronymes voisins, qui, dans cette partie de la bibliographie, se trouvent tous être au singulier (Bariletto, Cesano, Rossello) ?
 Qui sait.
 
 ```Bibtex
@@ -155,8 +155,8 @@ Qui sait.
 ```
 
 ## Conclusion
-Écrits au fil de quatre années d’intense collaboration, les plus de 150 essais [inclus dans notre édition numérique](https://edition640.makingandknowing.org/#/essays) fournissent non seulement des informations essentielles sur le manuscrit que nous avons édité et traduit, mais contiennent aussi de précieuses informations bibliographiques.
+Fruit de quatre années de collaboration intense, les quelque 150 essais [de notre édition numérique](https://edition640.makingandknowing.org/#/essays) apportent des éclairages essentiels sur le manuscrit que nous avons établi et traduit ; ils recèlent aussi une riche matière bibliographique.
 
-Agréger ces références bibliographiques dans une base de données permet aux éditeurs de changer le format bibliographique en un clin d’œil, ce qui leur donne davantage de souplesse pour afficher ces informations comme ils l’entendent. Cette base de données fournit aussi des informations précieuses sur l’édition et sur le projet qui l’a rendue possible, ouvrant de nouvelles perspectives d’analyse aux chercheurs. Une telle base peut être constituée avec une grande précision et dans des délais record.
+Réunir ces références dans une base de données permet aux éditeurs de changer de style bibliographique en un clin d’œil, et de présenter ces informations comme bon leur semble. La base renseigne aussi sur l’édition elle-même et sur le projet qui l’a rendue possible, et ouvre ainsi aux chercheurs de nouvelles perspectives d’analyse. Le tout peut être constitué avec une grande exactitude et dans des délais record.
 
-Certaines erreurs peuvent s’y glisser, certes, notamment en raison de la tendance de GPT-3 à halluciner. Mais les futures itérations des modèles de langue pré-entraînés atténueront ce problème.
+Des erreurs peuvent s’y glisser, on l’accordera, surtout du fait de la propension de GPT-3 à l’hallucination ; mais les prochaines générations de modèles de langue pré-entraînés y porteront remède.

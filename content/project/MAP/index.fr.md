@@ -1,5 +1,5 @@
 ---
-title: "Avviso | Publier les nouvelles qui nous ont rendus modernes (1537—1743)"
+title: "Avviso | Publier les nouvelles qui nous ont faits modernes (1537—1743)"
 summary: Un projet du Medici Archive Project financé par le NEH
 tags: 
 - Avviso
@@ -12,7 +12,7 @@ date: "2021-12-12T00:00:00Z"
 external_link: ""
 
 image:
-  caption: L’annonce de la mort du roi Henri III | BnF
+  caption: La nouvelle de la mort d’Henri III | BnF
   focal_point: Smart
 
 #links:
@@ -33,8 +33,8 @@ image:
 #slides: example
 machine_translated: true
 ---
-L’objectif principal du projet *Avviso* est de numériser, préserver, cataloguer, éditer, contextualiser et diffuser les 35 000 gazettes manuscrites de la première modernité, connues sous le nom d’*avvisi*, qui faisaient partie de la collection des Médicis et sont aujourd’hui conservées aux Archives d’État de Florence. 
-Le catalogage, la numérisation et la diffusion d’environ 35 000 *avvisi*, gazettes manuscrites de la première modernité, via la plateforme Medici Interactive Archive du Medici Archive Project.
+Le projet *Avviso* a pour objet principal de numériser, conserver, cataloguer, publier, contextualiser et diffuser les 35 000 gazettes manuscrites de la première modernité, les *avvisi*, qui appartenaient à la collection des Médicis et sont aujourd’hui conservées aux Archives d’État de Florence. 
+Soit le catalogage, la numérisation et la diffusion d’environ 35 000 *avvisi*, ces gazettes manuscrites de la première modernité, sur la plateforme Medici Interactive Archive du Medici Archive Project.
 
 
 

@@ -1,9 +1,9 @@
 ---
 title: Un navigateur visuel pour l’archive
-subtitle: Une approche conviviale des documents d’archives numérisés
+subtitle: Rendre les documents d’archives numérisés plus accueillants
 
 # Summary for listings and search engines
-summary: Les visualisations interactives offrent aux lecteurs une entrée sensorielle alternative pour naviguer dans des documents d’archives complexes.
+summary: Les visualisations interactives offrent au lecteur une autre prise sensorielle pour se repérer dans des documents d’archives complexes.
 
 # Link this post with a project
 projects: [Making & Knowing Project]
@@ -41,17 +41,17 @@ categories:
 - Notes
 ---
 # Le problème
-Les éditions numériques souffrent d’un paradoxe : si elles mettent des documents peu accessibles à la portée d’un public plus large, la perte d’entrée sensorielle qui résulte de leur dématérialisation tend à désorienter les lecteurs, voire à les décourager d’en explorer le contenu. Elles rendent la navigation dans de vastes dépôts de documents plutôt laborieuse et intimidante. Cela vaut non seulement pour les utilisateurs peu familiers de la recherche en archives, mais aussi pour les lecteurs atteints de troubles cognitifs.
+Les éditions numériques vivent sur un paradoxe : elles mettent des documents difficiles d’accès à la portée d’un large public, mais la dématérialisation prive le lecteur de ses repères sensoriels, le désoriente, et finit par le détourner du contenu. Se déplacer dans de vastes dépôts de documents devient laborieux, voire intimidant, non seulement pour qui n’a pas l’habitude des archives, mais aussi pour les lecteurs atteints de troubles cognitifs.
 
 # La solution
-C’est là que les métadonnées archivistiques peuvent nous aider. Ces données nous permettent en effet de créer des abstractions visuelles interactives qui offrent aux lecteurs une entrée sensorielle alternative, améliorant ainsi à la fois l’ergonomie et l’accessibilité. Pour rendre l’archive visuellement navigable, un treemap, ou n’importe quel diagramme qui décompose efficacement des données hiérarchiques, peut faire l’affaire. 
+C’est ici que les métadonnées archivistiques nous rendent service. Elles permettent en effet de construire des abstractions visuelles interactives qui offrent au lecteur une autre prise sensorielle, et gagnent ainsi sur les deux tableaux de l’ergonomie et de l’accessibilité. Pour qu’on puisse parcourir l’archive à l’œil, un treemap, ou tout diagramme qui décompose bien des données hiérarchiques, fait l’affaire. 
 
 # L’expérience
-Ma première expérience adapte le [code du Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) pour `D3.js`, en y ajoutant des hyperliens. Elle représente le manuscrit BnF Ms. Fr. 640, ses folios et les entrées de chaque folio. Les couleurs représentent la catégorie dominante. D’autres données sont disponibles en survolant chaque entrée, y compris l’hyperlien vers le manuscrit.   
-Ce faisant, le treemap devient un index visuel interactif, qui offre aux lecteurs une vue d’ensemble très rapide et réactive, non seulement du contenu du manuscrit, mais aussi des dimensions de chaque folio et de chaque entrée.  
-~~Au cours des prochains mois, je continuerai d’expérimenter cette idée en essayant d’autres diagrammes et d’autres hiérarchies… Restez à l’écoute !~~ Pour une nouvelle version du treemap, cliquez [ici]({{< relref "/post/treemap2" >}}).  
+Ma première tentative adapte le [code du Zoomable Treemap](https://observablehq.com/@d3/zoomable-treemap) pour `D3.js`, en y ajoutant des hyperliens. Elle représente le manuscrit BnF Ms. Fr. 640, ses folios et les entrées de chaque folio ; les couleurs marquent la catégorie dominante, et l’on obtient davantage d’informations, dont le lien vers le manuscrit, en survolant chaque entrée.   
+Le treemap devient ainsi un index visuel interactif, qui donne au lecteur, en un instant, une vue d’ensemble du contenu du manuscrit, mais aussi de l’étendue de chaque folio et de chaque entrée.  
+~~Dans les mois qui viennent, je poursuivrai l’expérience avec d’autres diagrammes et d’autres hiérarchies… À suivre !~~ Pour une nouvelle version du treemap, cliquez [ici]({{< relref "/post/treemap2" >}}).  
 > [!NOTE]
-> Pour un meilleur confort de lecture, vérifiez que les paramètres de la page sont en mode clair (cliquez sur l’icône de lune en haut à droite).
+> Pour un meilleur confort de lecture, vérifiez que la page est en mode clair (cliquez sur l’icône de lune en haut à droite).
 
   <head>
     <meta charset="UTF-8" />

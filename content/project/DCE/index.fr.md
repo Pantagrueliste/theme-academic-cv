@@ -1,6 +1,6 @@
 ---
 title: Édition efficace
-summary: Une série de billets où j’évalue différentes approches pour faire baisser le coût des éditions savantes
+summary: Une série de billets où j’examine, l’une après l’autre, les manières de faire baisser le coût des éditions savantes
 tags: 
 - Humanités numériques
 date: "2021-12-12T00:00:00Z"
@@ -30,14 +30,14 @@ image:
 #slides: example
 machine_translated: true
 ---
-Les éditions critiques numériques sont onéreuses. Le travail de transcription, de traduction et d’annotation qu’une main-d’œuvre hautement qualifiée doit accomplir représente des milliers d’heures et requiert des financements substantiels, en plus d’un soutien institutionnel de long terme.  
+Les éditions critiques numériques coûtent cher. Transcrire, traduire, annoter : ce travail, qu’il faut confier à une main-d’œuvre hautement qualifiée, représente des milliers d’heures ; il exige des financements considérables, et le soutien durable d’une institution.  
 
-En un sens, que des projets de grande visibilité en humanités numériques puissent obtenir les financements considérables nécessaires à leur fonctionnement est une bénédiction.   
+Que les projets les plus en vue des humanités numériques parviennent à réunir les sommes considérables dont ils ont besoin, c’est, en un sens, une chance.   
 
-Mais une dépendance aussi forte envers la générosité de riches fondations, universités et agences gouvernementales, jointe à un besoin prolongé de ressources humaines importantes, ne constitue pas un modèle économique viable pour l’avenir. Si de plus en plus de chercheurs peuvent se permettre de produire d’ambitieuses éditions numériques de sources primaires, cette pratique reste le privilège de quelques pays riches, renforçant ainsi leur hégémonie culturelle.  
+Mais un modèle qui repose sur la largesse de riches fondations, d’universités et d’agences publiques, et sur la mobilisation durable d’une main-d’œuvre nombreuse, n’a rien d’un modèle économique d’avenir. Si de plus en plus de chercheurs ont les moyens de produire d’ambitieuses éditions numériques de sources primaires, la pratique reste l’apanage de quelques pays riches, dont elle conforte d’autant l’hégémonie culturelle.  
 
-Pour rendre les documents historiques du monde entier accessibles à un public plus large, {{< hl >}}le coût des éditions critiques numériques doit baisser de plusieurs ordres de grandeur{{< /hl >}}.
+Pour que les documents historiques du monde entier deviennent accessibles à un large public, {{< hl >}}le coût des éditions critiques numériques doit être divisé non par deux, mais par cent ou par mille{{< /hl >}}.
 
-Dans cette série de billets, j’évalue les différentes approches et briques technologiques que les chercheurs du monde entier peuvent utiliser pour publier des sources primaires plus rapidement et à moindres frais.  
+Dans cette série de billets, j’examine les approches et les briques techniques grâce auxquelles les chercheurs, où qu’ils soient, peuvent publier des sources primaires plus vite et à moindres frais.  
 
-J’évaluerai en particulier des technologies comme l’apprentissage automatique, la blockchain et le stockage décentralisé.
+J’y étudierai en particulier l’apprentissage automatique, la chaîne de blocs (*blockchain*) et le stockage décentralisé.

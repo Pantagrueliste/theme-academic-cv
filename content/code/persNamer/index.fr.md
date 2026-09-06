@@ -1,6 +1,6 @@
 ---
 title: persNamer
-summary: Un outil Python qui convertit les identifiants VIAF en entrées de personnes et en balises d’annotation TEI XML, simplifiant le contrôle d’autorité dans les éditions savantes numériques.
+summary: Un outil Python qui change les identifiants VIAF en notices de personnes et en balises d’annotation TEI XML, et allège ainsi le contrôle d’autorité dans les éditions savantes numériques.
 tags:
   - XML
   - TEI
@@ -41,37 +41,37 @@ machine_translated: true
 
 [![DOI](https://zenodo.org/badge/933156851.svg)](https://doi.org/10.5281/zenodo.14875030)
 
-persNamer est un outil Python spécialisé qui simplifie l’intégration de données d’autorité sur les personnes provenant du VIAF (Virtual International Authority File, ou Fichier d’autorité international virtuel) dans des documents TEI XML. En convertissant les identifiants VIAF en balisage TEI prêt à l’emploi, persNamer réduit considérablement le travail manuel nécessaire à la création d’entrées de personnes structurées pour les éditions savantes numériques.
+persNamer est un petit outil Python qui facilite l’intégration, dans des documents TEI XML, des données d’autorité sur les personnes que fournit le VIAF (Virtual International Authority File, ou Fichier d’autorité international virtuel). En changeant les identifiants VIAF en balisage TEI prêt à l’emploi, il épargne à l’éditeur une bonne part du travail manuel qu’exige la création de notices de personnes structurées dans une édition savante numérique.
 
-## Le défi du contrôle d’autorité en TEI
+## Le contrôle d’autorité en TEI : une corvée
 
-Les éditions savantes numériques exigent souvent une identification précise des personnages historiques, y compris leurs noms normalisés et leurs dates de vie. Maintenir un contrôle d’autorité cohérent dans un projet suppose de :
+Les éditions savantes numériques exigent souvent d’identifier avec précision les personnages historiques, formes normalisées des noms et dates de vie comprises. Tenir un contrôle d’autorité cohérent sur l’ensemble d’un projet suppose de :
 
-1. Identifier les personnes dans les textes historiques
-2. Trouver des données d’autorité à leur sujet
-3. Créer des entrées TEI correctement formatées
-4. Garantir la cohérence des références dans tout le projet
+1. repérer les personnes dans les textes historiques ;
+2. trouver à leur sujet des données faisant autorité ;
+3. rédiger des notices TEI correctement formées ;
+4. garantir l’uniformité des renvois dans tout le projet.
 
-Ces étapes sont généralement manuelles, chronophages et sujettes aux incohérences.
+Autant d’étapes qui se font d’ordinaire à la main, qui prennent du temps et où se glissent des incohérences.
 
-## Comment fonctionne persNamer
+## Comment persNamer procède
 
-persNamer automatise ce flux de travail en :
+persNamer automatise cette chaîne de travail en :
 
-1. **Récupérant les données VIAF** : à partir d’un identifiant VIAF, l’outil récupère les données RDF par négociation de contenu HTTP
-2. **Extrayant les informations clés** : il analyse le RDF pour en extraire le nom privilégié, la date de naissance et la date de décès
-3. **Générant le balisage TEI** : il crée deux fragments XML essentiels :
-   - une **entrée de fichier d’autorité** (élément `<person>` avec un `xml:id` généré, `<persName>`, `<birth>`, `<death>` et `<idno type="VIAF">`)
-   - une **balise d’annotation** distincte (`<persName>` avec un attribut `ref` renvoyant à l’entrée d’autorité)
+1. **allant chercher les données VIAF** : à partir d’un identifiant VIAF, l’outil récupère les données RDF par négociation de contenu HTTP ;
+2. **en extrayant l’essentiel** : il lit le RDF pour en tirer la forme retenue du nom, la date de naissance et la date de décès ;
+3. **produisant le balisage TEI** : il crée deux fragments XML essentiels :
+   - une **notice de fichier d’autorité** (élément `<person>` muni d’un `xml:id` généré, `<persName>`, `<birth>`, `<death>` et `<idno type="VIAF">`) ;
+   - une **balise d’annotation** distincte (`<persName>` dont l’attribut `ref` renvoie à la notice d’autorité).
 
-Cette double sortie permet aux éditeurs de maintenir un fichier d’autorité centralisé tout en insérant facilement des balises d’annotation dans leurs textes TEI.
+Grâce à cette double sortie, l’éditeur tient un fichier d’autorité centralisé tout en insérant sans effort les balises d’annotation dans ses textes TEI.
 
-## Fonctionnalités principales
+## Principales fonctions
 
-- **Génération d’identifiants normalisés** : crée des identifiants XML cohérents au format `pers-[familyname]-[givenname initial]` (p. ex. `pers-deteligny-c`)
-- **Analyse RDF** : utilise `rdflib` pour extraire les informations de diverses propriétés RDF (p. ex. `rdfs:label`, `schema:name`, `viaf:mainHead`)
-- **Interface en ligne de commande** : exécution simple, avec un numéro VIAF comme seul argument obligatoire
-- **Sortie détaillée** : fournit des informations détaillées sur le traitement en plus de la sortie XML finale
+- **Identifiants normalisés** : produit des identifiants XML uniformes, de la forme `pers-[familyname]-[givenname initial]` (par ex. `pers-deteligny-c`)
+- **Lecture du RDF** : s’appuie sur `rdflib` pour extraire l’information de diverses propriétés RDF (par ex. `rdfs:label`, `schema:name`, `viaf:mainHead`)
+- **Interface en ligne de commande** : s’exécute simplement, le numéro VIAF étant le seul argument obligatoire
+- **Sortie détaillée** : rend compte du traitement en détail, en plus du XML final
 
 ## Exemple d’utilisation
 
@@ -92,21 +92,21 @@ Cette commande produit :
 <persName ref="#pers-deteligny-c">Charles deTéligny</persName>
 ```
 
-## Applications en humanités numériques
+## Usages en humanités numériques
 
-persNamer est particulièrement utile pour :
+persNamer rend particulièrement service pour :
 
-- Les éditions savantes numériques nécessitant un contrôle d’autorité
-- Les projets d’encodage TEI portant sur des personnages historiques
-- Les initiatives de données liées reliant des documents à des notices d’autorité
-- Garantir la cohérence de grands corpus TEI
-- Enseigner les concepts du contrôle d’autorité dans les cours d’humanités numériques
+- les éditions savantes numériques qui exigent un contrôle d’autorité ;
+- les projets d’encodage TEI qui mettent en scène des personnages historiques ;
+- les initiatives de données liées qui rattachent des documents à des notices d’autorité ;
+- l’uniformité des grands corpus TEI ;
+- l’enseignement du contrôle d’autorité dans les cours d’humanités numériques.
 
-## Implémentation
+## Mise en œuvre
 
-persNamer est implémenté en Python et dépend de :
+persNamer est écrit en Python et dépend de :
 - `requests` pour les requêtes HTTP
-- `rdflib` pour l’analyse RDF
-- `lxml` pour la manipulation XML
+- `rdflib` pour la lecture du RDF
+- `lxml` pour la manipulation du XML
 
-Le code source et la documentation sont disponibles sur le [dépôt GitHub](https://github.com/Pantagrueliste/persNamer).
+Le code source et la documentation sont sur le [dépôt GitHub](https://github.com/Pantagrueliste/persNamer).
