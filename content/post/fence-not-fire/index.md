@@ -23,7 +23,7 @@ image:
   preview_only: false
 
 authors:
-- admin
+- clement
 
 tags:
 - AI

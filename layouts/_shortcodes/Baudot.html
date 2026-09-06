@@ -23,15 +23,15 @@
       --dark-color: #1f2937;
       --light-alt-color: #e5e7eb;
       --dark-alt-color: #374151;
-      
+
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
       max-width: 100%;
       margin: 2rem 0;
       padding: 0;
       box-sizing: border-box;
     }
-    
-    /* Dark mode variables */
+
+    /* Light mode variables */
     .baudot-emulator {
       --tape-bg: var(--light-color);
       --hole-bg: var(--light-color);
@@ -49,8 +49,9 @@
       --input-text: var(--dark-color);
       --line-number: #6b7280;
     }
-    
-    /* Override for Hugo Academic dark theme */
+
+    /* Dark mode: HugoBlox Kit toggles the `dark` class on <html> */
+    html.dark .baudot-emulator,
     html[data-theme='dark'] .baudot-emulator,
     body.dark .baudot-emulator {
       --tape-bg: var(--dark-alt-color);
@@ -69,28 +70,7 @@
       --input-text: var(--light-color);
       --line-number: #9ca3af;
     }
-    
-    /* For browsers that support prefers-color-scheme */
-    @media (prefers-color-scheme: dark) {
-      .baudot-emulator:not(html[data-theme='light'] *):not(body:not(.dark) *) {
-        --tape-bg: var(--dark-alt-color);
-        --hole-bg: var(--dark-alt-color);
-        --hole-border: #4b5563;
-        --punched-bg: var(--light-color);
-        --punched-border: var(--light-color);
-        --sprocket-bg: var(--dark-alt-color);
-        --sprocket-border: #9ca3af;
-        --button-bg: var(--dark-alt-color);
-        --button-bg-active: #4b5563;
-        --button-text: var(--light-color);
-        --button-border: #4b5563;
-        --input-bg: var(--dark-alt-color);
-        --input-border: #4b5563;
-        --input-text: var(--light-color);
-        --line-number: #9ca3af;
-      }
-    }
-    
+
     .baudot-controls {
       margin-bottom: 1.5rem;
       display: flex;
@@ -98,7 +78,7 @@
       align-items: center;
       gap: 0.5rem;
     }
-    
+
     .baudot-emulator .text-input {
       flex: 1;
       min-width: 200px;
@@ -109,7 +89,7 @@
       background: var(--input-bg);
       color: var(--input-text);
     }
-    
+
     .baudot-emulator .control-button {
       padding: 0.5rem 1rem;
       background: var(--button-bg);
@@ -119,43 +99,43 @@
       cursor: pointer;
       font-size: 0.9rem;
     }
-    
+
     .baudot-emulator .control-button.active {
       background: var(--button-bg-active);
       font-weight: bold;
     }
-    
+
     .tape-outer-container {
       padding: 0;
       margin-bottom: 1.5rem;
       border-radius: 4px;
       overflow: hidden;
     }
-    
+
     .tape-container {
       width: 100%;
       overflow-x: auto;
       background: var(--tape-bg);
       padding: 1rem 0.5rem;
     }
-    
+
     .baudot-emulator table {
       border-collapse: collapse;
       width: 100%;
       table-layout: fixed;
       border: none;
     }
-    
+
     .baudot-emulator tr {
       height: 24px;
       border: none;
     }
-    
+
     .baudot-emulator td {
       border: none;
       padding: 0;
     }
-    
+
     .baudot-emulator .line-number {
       width: 20px;
       text-align: center;
@@ -164,13 +144,13 @@
       padding: 0 8px 0 0;
       font-weight: bold;
     }
-    
+
     .baudot-emulator .cell {
       position: relative;
       width: 20px;
       height: 20px;
     }
-    
+
     .baudot-emulator .cell-content {
       position: absolute;
       top: 50%;
@@ -182,12 +162,12 @@
       background: var(--hole-bg);
       border: 1px solid var(--hole-border);
     }
-    
+
     .baudot-emulator .punched .cell-content {
       background: var(--punched-bg);
       border: 1px solid var(--punched-border);
     }
-    
+
     .baudot-emulator .sprocket-hole {
       position: absolute;
       left: 50%;
@@ -206,16 +186,16 @@
     document.addEventListener('DOMContentLoaded', function() {
       initBaudotEmulator();
     });
-    
+
     function initBaudotEmulator() {
       // Only initialize if elements exist
       if (!document.getElementById('baudot-input')) return;
-      
+
       const textInput = document.getElementById('baudot-input');
       const tape = document.getElementById('baudot-tape');
       const ltrButton = document.getElementById('baudot-ltr-button');
       const figButton = document.getElementById('baudot-fig-button');
-      
+
       // Define the ITA2 code mapping
       const ita2Code = {
         // Letters
@@ -234,7 +214,7 @@
         // Control characters
         'FIG': '11011', 'LTR': '11111',
       };
-      
+
       // Generate the tape display
       function generateTape() {
         let rows = '';
@@ -254,35 +234,35 @@
         }
         tape.innerHTML = rows;
       }
-      
+
       // Update the tape display based on input text
       function updateITA2Code(word) {
         clearTape();
         word = word.toUpperCase();
         let tapePosition = 0;
         let currentCharType = 'LTR';
-        
+
         ltrButton.classList.add('active');
         figButton.classList.remove('active');
-        
+
         for (let i = 0; i < word.length; i++) {
           const char = word[i];
           let code = ita2Code[char] || ita2Code[' '];
           let requiredCharType = /[A-Z ]/.test(char) ? 'LTR' : 'FIG';
-          
+
           if (requiredCharType !== currentCharType) {
             const shiftCode = requiredCharType === 'LTR' ? ita2Code['LTR'] : ita2Code['FIG'];
             punchTape(shiftCode, tapePosition++);
             currentCharType = requiredCharType;
-            
+
             ltrButton.classList.toggle('active', currentCharType === 'LTR');
             figButton.classList.toggle('active', currentCharType === 'FIG');
           }
-          
+
           punchTape(code, tapePosition++);
         }
       }
-      
+
       // Punch holes in the tape based on the code
       function punchTape(code, tapePosition) {
         if (tapePosition >= 50) return; // Prevent going beyond tape width
@@ -293,7 +273,7 @@
           }
         }
       }
-      
+
       // Clear the tape display
       function clearTape() {
         for (let i = 0; i < 50; i++) {
@@ -305,15 +285,15 @@
           }
         }
       }
-      
+
       // Initialize the emulator
       generateTape();
-      
+
       // Add event listeners
       textInput.addEventListener('input', function() {
         updateITA2Code(this.value);
       });
-      
+
       ltrButton.addEventListener('click', function() {
         this.classList.add('active');
         figButton.classList.remove('active');
@@ -321,7 +301,7 @@
           updateITA2Code(textInput.value);
         }
       });
-      
+
       figButton.addEventListener('click', function() {
         this.classList.add('active');
         ltrButton.classList.remove('active');
@@ -329,7 +309,7 @@
           updateITA2Code(textInput.value);
         }
       });
-      
+
       // Auto-initialize with any text already in the input
       if (textInput.value) {
         updateITA2Code(textInput.value);

@@ -16,9 +16,9 @@ image:
   focal_point: Smart
 
 links:
-  - icon: book-open
-    icon_pack: fas
-    name: Read the Edition
+  - type: site
+    icon: book-open
+    label: Read the Edition
     url: https://pantagrueliste.github.io/CavrianaCorr_FrontEnd/
 url_code: ""
 url_pdf: ""

@@ -29,7 +29,7 @@ image:
   preview_only: false
 
 authors:
-- admin
+- clement
 
 tags:
 - Digital Humanities
@@ -116,9 +116,8 @@ OpenAI, of course, is not the only player in town. As mentioned before, the Beij
 
 # The Experiments
 
-{{% callout note %}}
-The objective of these experiments is to find the most economic path to reliable automation of editorial tasks. One may argue that some of these could also be automated using supervised learning algorithms. We will explore this hypothesis in a future post.
-{{% /callout %}}
+> [!NOTE]
+> The objective of these experiments is to find the most economic path to reliable automation of editorial tasks. One may argue that some of these could also be automated using supervised learning algorithms. We will explore this hypothesis in a future post.
 
 Can a Transformer like GPT-3 learn to annotate, for example, a 16th-century technical and scientific manuscript?
 
@@ -157,9 +156,8 @@ The "jewelry" category does not exist in our edition of Ms. Fr. 640. The editori
 ## Experiment 2 -- Semantic Markup
 Let's raise the bar a little higher. If transformers such as GPT-3 can learn to categorize texts according to specific editorial criteria, can they also identify some of the text's markup?  
 
-{{% callout note %}}
-*Secrets of Craft and Nature* offers a [combination](https://edition640.makingandknowing.org/#/content/resources/principles) of semantic and structural labels. Unfortunately, GPT-3 does not process images, contrary to other projects such as [Wu Dao 2](https/://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). It is likely that future iterations of GPT will include this capability, which is necessary to recognize most of the structural and material aspects of a document. We will skip these particular tags and focus instead on markup that does not require image recognition. 
-{{% /callout %}}
+> [!NOTE]
+> *Secrets of Craft and Nature* offers a [combination](https://edition640.makingandknowing.org/#/content/resources/principles) of semantic and structural labels. Unfortunately, GPT-3 does not process images, contrary to other projects such as [Wu Dao 2](https://towardsdatascience.com/gpt-3-scared-you-meet-wu-dao-2-0-a-monster-of-1-75-trillion-parameters-832cd83db484). It is likely that future iterations of GPT will include this capability, which is necessary to recognize most of the structural and material aspects of a document. We will skip these particular tags and focus instead on markup that does not require image recognition.
 
 ### Prompt engineering
 Semantic tags include references to animals, plants, toponyms, sensorial inputs, etc. In the training prompt, I selected a few examples from the edition:

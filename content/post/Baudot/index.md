@@ -2,7 +2,6 @@
 title: "Teaching Binary with the ITA2 Telegraph Emulator"
 subtitle: "A hands-on approach to understanding early digital communication"
 summary: An interactive demonstration of the ITA2 (Baudot-Murray) telegraph code that helps students grasp fundamental concepts of binary encoding and state machines
-projects: [""]
 date: "2025-02-13T00:00:00Z"
 lastmod: "2025-02-13T00:00:00Z"
 draft: false

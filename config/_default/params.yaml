@@ -1,116 +1,240 @@
-# SITE SETUP
-# Guide: https://docs.hugoblox.com/tutorial/
+# ══════════════════════════════════════════════════════════════════════════════
+# HUGO BLOX CONFIGURATION
+# Schema: hugoblox.com/schema/v2
+# Tutorial: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
+# ══════════════════════════════════════════════════════════════════════════════
+hugoblox:
+  schema: "2.0"
 
-# Appearance
+  # ────────────────────────────────────────────────────────────────────────────
+  # IDENTITY
+  # Site-level branding (the personal profile lives in data/authors/clement.yaml)
+  # ────────────────────────────────────────────────────────────────────────────
+  identity:
+    name: "Clément Godbarge"
+    organization: ""
+    type: person # person | organization | local_business
+    tagline: ""
+    description: "Academic website of Clément Godbarge, PhD."
+    social:
+      twitter: "clementAG"
 
-appearance:
-  theme_day: minimal
-  theme_night: minimal
-  font: minimal
-  font_size: L
+  # ────────────────────────────────────────────────────────────────────────────
+  # THEME
+  # ────────────────────────────────────────────────────────────────────────────
+  theme:
+    # Mode: 'light', 'dark', or 'system' (follows OS preference)
+    mode: system
+    # Theme pack: name from data/themes/ (kit ships default, minimal, coffee, ...)
+    pack: "minimal"
+    colors:
+      primary: ""
+      secondary: ""
+      neutral: ""
+    colors_light: {}
+    colors_dark: {}
+    surfaces:
+      background: ""
+      foreground: ""
+      header:
+        background: ""
+        foreground: ""
+      footer:
+        background: ""
+        foreground: ""
 
-# SEO
+  # ────────────────────────────────────────────────────────────────────────────
+  # TYPOGRAPHY
+  # ────────────────────────────────────────────────────────────────────────────
+  typography:
+    # Font pack: name from data/fonts/ — geometric (Montserrat/Poppins) is the closest
+    # to the previous "minimal" theme (Montserrat/Roboto); others: modern (Inter),
+    # academic (Lora/Source Serif), editorial, humanist, developer, system.
+    pack: "geometric"
 
-marketing:
-  seo:
-    site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'Academic website of Clément Godbarge, PhD.'
-    twitter: 'clementAG'
-  analytics:
-    google_analytics: ''
-    baidu_tongji: ''
-    google_tag_manager: ''
-    microsoft_clarity: ''
-  verification:
-    google: ''
-    baidu: ''
+  # ────────────────────────────────────────────────────────────────────────────
+  # LAYOUT
+  # ────────────────────────────────────────────────────────────────────────────
+  layout:
+    radius: "md" # none | sm | md | lg | full
+    spacing: "comfortable" # compact | comfortable | spacious
+    avatar_shape: circle # circle | square | rounded
 
-# Site header
-
-header:
-  navbar:
+  # ────────────────────────────────────────────────────────────────────────────
+  # HEADER
+  # ────────────────────────────────────────────────────────────────────────────
+  header:
     enable: true
-    align: l
-    show_logo: true
-    show_language: false
-    show_day_night: true
-    show_search: true
-    highlight_active_link: true
+    style: navbar # navbar | navbar-simple | minimal
+    sticky: true
+    align: left # left | center | right
+    search: true
+    theme_toggle: true
+    theme_picker: false
+    language_switcher: true
+    cta:
+      enable: false
+      text: ""
+      url: ""
 
-# Site footer
+  # ────────────────────────────────────────────────────────────────────────────
+  # FOOTER
+  # ────────────────────────────────────────────────────────────────────────────
+  footer:
+    style: minimal # minimal | columns | centered
+    language_switcher: true
+    text: ""
 
-footer:
+  # ────────────────────────────────────────────────────────────────────────────
+  # COPYRIGHT
+  # ────────────────────────────────────────────────────────────────────────────
   copyright:
-    notice: '© {year} Clément Godbarge. This work is licensed under {license}'
+    notice: "© {year} {name}. This work is licensed under {license}"
     license:
-      enable: true
+      type: cc # cc | custom
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
 
-# Localization
+  # ────────────────────────────────────────────────────────────────────────────
+  # SEO
+  # ────────────────────────────────────────────────────────────────────────────
+  seo:
+    title: ""
+    location:
+      address:
+        street: ""
+        city: ""
+        region: ""
+        postal_code: ""
+        country: ""
+      coordinates:
+        latitude: null
+        longitude: null
+      phone: ""
+    # AI/LLM crawler guidance (llms.txt)
+    ai:
+      allow:
+        - /
+      disallow: []
+      note: "Personal academic website. Content is licensed CC BY-NC-SA."
+      contact: ""
 
-locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
-  address_format: en-us
+  # ────────────────────────────────────────────────────────────────────────────
+  # CONTENT
+  # ────────────────────────────────────────────────────────────────────────────
+  content:
+    math:
+      enable: true
+    toc:
+      enable: true
+    reading_time:
+      enable: true
+    citations:
+      style: chicago # apa | mla | chicago | ieee
 
-# Site features
-
-features:
-  syntax_highlighter:
-    theme_light: github-light
-    theme_dark: dracula
-  math:
-    enable: true
-  privacy_pack:
-    enable: false
-  repository:
-    url: 'https://github.com/Pantagrueliste/theme-academic-cv'
-    content_dir: content
-    branch: main
-  avatar:
-    gravatar: false
-    shape: circle
-  comment:
-    provider: ''
-    disqus:
-      shortname: ''
-      show_count: true
-    commento:
-      url: ''
-    giscus:
-      repo: ''
-      repo_id: ''
-      category: ''
-      category_id: ''
+  # ────────────────────────────────────────────────────────────────────────────
+  # SEARCH
+  # ────────────────────────────────────────────────────────────────────────────
   search:
-    provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
-  map:
-    provider: 'mapbox'
-    api_key: ''
-    zoom: 12
-
-# Extensions
-
-extensions:
-  cms:
-    branch: main
-    local_backend: false
-  academicons:
     enable: true
+    suggestions: []
+    quick_actions: []
 
-# Security
+  # ────────────────────────────────────────────────────────────────────────────
+  # COMMENTS
+  # ────────────────────────────────────────────────────────────────────────────
+  comments:
+    enable: false
+    provider: "" # giscus | disqus
+    giscus:
+      repo: ""
+      repo_id: ""
+      category: ""
+      category_id: ""
+    disqus:
+      shortname: ""
 
-security:
-  # Allow frame for embedding speaker notes in slides
-  allow_frame: true
+  # ────────────────────────────────────────────────────────────────────────────
+  # ANALYTICS
+  # Umami is loaded from layouts/_partials/hooks/head-end/umami.html
+  # ────────────────────────────────────────────────────────────────────────────
+  analytics:
+    google:
+      measurement_id: ""
+    google_tag_manager:
+      container_id: ""
+    plausible:
+      domain: ""
+    fathom:
+      site_id: ""
+    pirsch:
+      site_id: ""
+    clarity:
+      project_id: ""
+    baidu:
+      site_id: ""
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # VERIFICATION
+  # ────────────────────────────────────────────────────────────────────────────
+  verification:
+    google: ""
+    bing: ""
+    baidu: ""
+    yandex: ""
+    pinterest: ""
+    naver: ""
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # REPOSITORY
+  # Source code repository for "Edit this page" links
+  # ────────────────────────────────────────────────────────────────────────────
+  repository:
+    enable: true
+    url: "https://github.com/Pantagrueliste/theme-academic-cv"
+    branch: main
+    content_dir: content
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # LOCALE
+  # ────────────────────────────────────────────────────────────────────────────
+  locale:
+    date_format: "Jan 2, 2006" # Go time format
+    time_format: "3:04 PM"
+    address_format: en-us
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # SECURITY
+  # ────────────────────────────────────────────────────────────────────────────
+  security:
+    csp:
+      policy: ""
+      report_only: false
+    frame_options: allow # deny | sameorigin | allow
+    permissions_policy: ""
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PRIVACY
+  # ────────────────────────────────────────────────────────────────────────────
+  privacy:
+    enable: false
+    anonymize_analytics: true
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # DEBUG
+  # ────────────────────────────────────────────────────────────────────────────
+  debug:
+    enable: false
+    hud:
+      position: bottom-left
+      opacity: 1.0
+    export_logs: true
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # PREMIUM
+  # ────────────────────────────────────────────────────────────────────────────
+  pro:
+    hide_attribution: false
+    affiliate_code: ""

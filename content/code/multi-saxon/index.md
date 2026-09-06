@@ -20,9 +20,9 @@ image:
   focal_point: Smart
 
 links:
-  - icon: github
-    icon_pack: fab
-    name: Code
+  - type: code
+    icon: brands/github
+    label: Code
     url: https://github.com/Pantagrueliste/multi-saxon
 url_code: ""
 url_pdf: ""
