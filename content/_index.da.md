@@ -43,13 +43,13 @@ sections:
         - name: Alle
           tag: '*'
         - name: Aktuel forskning
-          tag: Current Research
+          tag: Aktuel forskning
         - name: Tidligere forskning
-          tag: Past Research
+          tag: Tidligere forskning
         - name: Digital humaniora
-          tag: Digital Humanities
+          tag: Digital humaniora
         - name: Bøger
-          tag: Books
+          tag: Bøger
       default_button_index: 0
     design:
       columns: 2
