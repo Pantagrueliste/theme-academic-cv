@@ -68,7 +68,7 @@ There are good reasons to want AI to draw on more languages, more scholarship an
 
 ## Borrowed indignation
 
-Let us return, then, to the Daily Mail. Its article forms part of [Make It Fair](https://newsmediauk.org/make-it-fair/), a campaign by newspaper owners and publishers seeking [a fully scaled licensing market](https://newsmediauk.org/topics/ai-copyright/) for AI. Two convenient substitutions do the work: Big Tech stands for AI, and rights holders stand for British creativity. Readers are invited to defend culture as publishers negotiate the terms of its sale. Scholars sharing the story might ask whose cause their indignation is serving.
+Let us return, then, to the Daily Mail. Its article forms part of [Make It Fair](https://newsmediauk.org/make-it-fair/), a campaign by newspaper owners and publishers seeking [a fully scaled licensing market](https://newsmediauk.org/topics/ai-copyright/) for AI. Two convenient substitutions do the work: Big Tech stands for AI, and rights holders stand for ‘British creativity’. Readers are invited to defend culture as publishers negotiate the terms of its sale. Scholars sharing the story might ask whose cause their indignation is serving.
 
 Big Tech and the [Big Five](https://en.wikipedia.org/wiki/Publishing#Mainstream_publishers) are quarrelling over the rent, but neither objects to the fence. The story of the lone author robbed by a tech giant obscures what expensive licensing deals offer both corporate camps: publishers get paid, and Big Tech gets a market in which its smaller rivals cannot afford to compete. Peter Thiel put Silicon Valley’s preference more bluntly: [‘Competition Is for Losers’](https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536).
 

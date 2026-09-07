@@ -64,7 +64,7 @@ categories:
 
 ## 借来的义愤
 
-那么，回到《每日邮报》。它这篇文章隶属于[Make It Fair](https://newsmediauk.org/make-it-fair/)运动——报业老板与出版商联手发起，目的是为人工智能建立[一个规模完整的许可市场](https://newsmediauk.org/topics/ai-copyright/)。两个顺手的偷换在起作用：大科技公司顶替了人工智能，权利人顶替了英国的创造力。读者受邀捍卫文化，而出版商正在谈判出售文化的价码。转发这则报道的学者不妨自问：自己的义愤在替谁效劳？
+那么，回到《每日邮报》。它这篇文章隶属于[Make It Fair](https://newsmediauk.org/make-it-fair/)运动——报业老板与出版商联手发起，目的是为人工智能建立[一个规模完整的许可市场](https://newsmediauk.org/topics/ai-copyright/)。两个顺手的偷换在起作用：大科技公司顶替了人工智能，权利人顶替了“英国的创造力”。读者受邀捍卫文化，而出版商正在谈判出售文化的价码。转发这则报道的学者不妨自问：自己的义愤在替谁效劳？
 
 大科技公司与[五大出版集团](https://en.wikipedia.org/wiki/Publishing#Mainstream_publishers)争的是租金，却没有谁反对篱笆。“孤身作者被科技巨头掠夺”的故事，遮住了昂贵许可协议给两大企业阵营各自带来的好处：出版商拿到钱，大科技公司得到一个小对手付不起入场费的市场。彼得·蒂尔把硅谷的偏好说得更露骨：[“竞争是留给失败者的”](https://www.wsj.com/articles/peter-thiel-competition-is-for-losers-1410535536)。
 
