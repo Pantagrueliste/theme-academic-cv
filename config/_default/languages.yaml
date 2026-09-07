@@ -347,30 +347,6 @@ pl:
         url: /pl/#code
         weight: 40
 
-cs:
-  locale: cs-cz
-  weight: 17
-  params:
-    hugoblox:
-      identity:
-        description: "Akademický web Clémenta Godbarge, PhD."
-      locale:
-        date_format: ":date_long"
-  menus:
-    main:
-      - name: Domů
-        url: /cs/
-        weight: 10
-      - name: Zibaldone
-        url: /cs/#posts
-        weight: 20
-      - name: Projekty
-        url: /cs/#projects
-        weight: 30
-      - name: Kód
-        url: /cs/#code
-        weight: 40
-
 ru:
   locale: ru-ru
   weight: 18
@@ -393,28 +369,4 @@ ru:
         weight: 30
       - name: Код
         url: /ru/#code
-        weight: 40
-
-id:
-  locale: id-id
-  weight: 19
-  params:
-    hugoblox:
-      identity:
-        description: "Situs akademik Clément Godbarge, PhD."
-      locale:
-        date_format: ":date_long"
-  menus:
-    main:
-      - name: Beranda
-        url: /id/
-        weight: 10
-      - name: Zibaldone
-        url: /id/#posts
-        weight: 20
-      - name: Proyek
-        url: /id/#projects
-        weight: 30
-      - name: Kode
-        url: /id/#code
         weight: 40
