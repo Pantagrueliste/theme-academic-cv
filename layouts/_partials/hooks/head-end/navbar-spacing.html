@@ -1,0 +1,19 @@
+{{/*
+  Navbar spacing correction.
+
+  The kit spaces the menu items further apart than it separates them from the
+  site name (xl:space-x-8 = 2rem between items, ml-6 = 1.5rem after the brand),
+  so the menu does not read as a group. Between lg and xl it is worse: items sit
+  8px apart. This restores the usual hierarchy — items close together, the block
+  clearly detached from the brand. The #site-header id outranks the utility
+  classes, so no !important is needed.
+*/}}
+<style>
+  @media (min-width: 1024px) {
+    #site-header .navbar-nav { margin-left: 4rem; }
+    #site-header .navbar-nav > :not(:last-child) { margin-inline-end: 1.5rem; }
+  }
+  @media (min-width: 1280px) {
+    #site-header .navbar-nav { margin-left: 5rem; }
+  }
+</style>
