@@ -43,13 +43,13 @@ sections:
         - name: Все
           tag: '*'
         - name: Текущие исследования
-          tag: Current Research
+          tag: Текущие исследования
         - name: Прежние исследования
-          tag: Past Research
+          tag: Прежние исследования
         - name: Цифровые гуманитарные науки
-          tag: Digital Humanities
+          tag: Цифровые гуманитарные науки
         - name: Книги
-          tag: Books
+          tag: Книги
       default_button_index: 0
     design:
       columns: 2
