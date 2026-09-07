@@ -105,7 +105,7 @@ violence aux <wp>artifices de foeu</wp></head>
 
 据OpenAI称，GPT-3拥有创纪录的1750亿参数，训练文本超过570GB，其中大部分是英文文档，想必取自[互联网](https://skylion007.github.io/OpenWebTextCorpus/)。凭着这份体量，GPT-3为该领域立下了新标杆：开箱即用，便能完成各式各样的任务，逼真得叫人不安。它能写像模像样的[评论文章](https://www.theguardian.com/commentisfree/2020/sep/08/robot-wrote-this-article-gpt-3)，能在聊天室里[与人对答](https://www.quickchat.ai/emerson)，能[回复电子邮件](https://www.jarvis.ai/?fpr=serpbattle)、[概括文本](https://medium.com/geekculture/a-paper-summarizer-with-python-and-gpt-3-2c718bc3bc88)、翻译文档、解释行话，不一而足。
 
-自2021年5月起，我提前拿到了OpenAI的API使用权，得以试验这个模型解决若干公认难题的本事：把法语诗歌和新拉丁语文本译成英语，解释类比，甚至把康德《道德形而上学奠基》第四卷讲给七岁小孩听（虽说讲得不怎么令人信服）。
+自2021年5月起，我提前拿到了OpenAI的API使用权，得以试验这个模型解决若干公认难题的本事：把法语诗歌和新拉丁语文本译成英语，解释类比，甚至把康德《道德形而上学奠基》第三章讲给七岁小孩听（虽说讲得不怎么令人信服）。
 
 ### Codex
 GPT-3最近的一项进展专攻计算机语言。这个名为*Codex*的模型能在自然语言与计算机语言之间互译。比方说，我想要一个正则表达式，用来“只查找以大写字母开头的单词”，GPT-3立刻把这句话译成一条可用的正则表达式：```[A-Z]+\w+```。
