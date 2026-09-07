@@ -3,7 +3,7 @@ title: Visualizing Semantic Markup in BnF Ms. Fr. 640
 subtitle: Create quick visualizations of a digital scholarly edition with Python  
 
 # Summary for listings and search engines
-summary: A quick way to correlate the markup of annotated digital editions such as *Secrets of Craft and Nature in Renaissance France* with Python
+summary: A quick way to correlate the markup of annotated digital editions such as Secrets of Craft and Nature in Renaissance France with Python
 
 # Link this post with a project
 projects: ["M&K"]

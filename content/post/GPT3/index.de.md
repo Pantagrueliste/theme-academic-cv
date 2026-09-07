@@ -3,7 +3,7 @@ title: Auszeichnung automatisieren in digitalen wissenschaftlichen Editionen
 subtitle: Lässt sich die Produktivität beim Edieren mit vortrainierten Sprachmodellen spürbar steigern?
 
 # Summary for listings and search engines
-summary: Vortrainierte Sprachmodelle können Forschenden einige der mühsamsten und arbeitsintensivsten Schritte des Edierens abnehmen. Anhand der kuratierten Annotationen von *Secrets of Craft and Nature in Renaissance France* prüfe ich, wie weit sich ein Modell wie GPT-3 in kurzer Zeit darauf trainieren lässt, technische Handschriften des 16. Jahrhunderts zu annotieren.
+summary: Vortrainierte Sprachmodelle können Forschenden einige der mühsamsten und arbeitsintensivsten Schritte des Edierens abnehmen. Anhand der kuratierten Annotationen von Secrets of Craft and Nature in Renaissance France prüfe ich, wie weit sich ein Modell wie GPT-3 in kurzer Zeit darauf trainieren lässt, technische Handschriften des 16. Jahrhunderts zu annotieren.
 
 # Link this post with a project
 projects: [Efficient Editing]

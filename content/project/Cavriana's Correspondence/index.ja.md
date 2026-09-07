@@ -1,6 +1,6 @@
 ---
 title: Filippo Cavrianaの秘密書簡、1568—1589年
-summary: Filippo Cavrianaの秘密の*epistolarium*のミニマルな校訂版をつくる
+summary: Filippo Cavrianaの秘密のepistolariumのミニマルな校訂版をつくる
 tags: 
 - デジタル・ヒューマニティーズ
 - 一次史料

@@ -1,6 +1,6 @@
 ---
 title: Thư từ mật của Filippo Cavriana, 1568—1589.
-summary: Xây dựng một ấn bản tối giản cho *epistolarium* mật của Filippo Cavriana
+summary: Xây dựng một ấn bản tối giản cho epistolarium mật của Filippo Cavriana
 tags: 
 - Nhân văn số
 - Nguồn sử liệu gốc

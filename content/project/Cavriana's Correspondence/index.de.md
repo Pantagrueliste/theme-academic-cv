@@ -1,6 +1,6 @@
 ---
 title: Filippo Cavrianas geheime Korrespondenz, 1568–1589.
-summary: Eine minimale Edition von Filippo Cavrianas geheimem *epistolarium*
+summary: Eine minimale Edition von Filippo Cavrianas geheimem epistolarium
 tags: 
 - Digital Humanities
 - Primärquellen

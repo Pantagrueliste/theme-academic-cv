@@ -3,7 +3,7 @@ title: BnF Ms. Fr. 640语义标记的可视化
 subtitle: 用Python快速为数字学术版本作图  
 
 # Summary for listings and search engines
-summary: 用Python快速关联带注释数字版本（如*Secrets of Craft and Nature in Renaissance France*）中各类标记的一种办法
+summary: 用Python快速关联带注释数字版本（如Secrets of Craft and Nature in Renaissance France）中各类标记的一种办法
 
 # Link this post with a project
 projects: ["M&K"]

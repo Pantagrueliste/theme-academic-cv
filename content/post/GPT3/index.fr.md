@@ -3,7 +3,7 @@ title: Automatiser le balisage des éditions savantes numériques
 subtitle: "Les modèles de langue pré-entraînés peuvent-ils rendre l’éditeur sensiblement plus productif ?"
 
 # Summary for listings and search engines
-summary: Les modèles de langue pré-entraînés peuvent décharger les chercheurs de certaines des tâches les plus ingrates et les plus dévoreuses de main-d’œuvre de l’édition. À partir des annotations soigneusement établies de *Secrets of Craft and Nature in Renaissance France*, j’évalue jusqu’où un modèle comme GPT-3 peut être dressé, en peu de temps, à annoter des manuscrits techniques du XVIe siècle.
+summary: Les modèles de langue pré-entraînés peuvent décharger les chercheurs de certaines des tâches les plus ingrates et les plus dévoreuses de main-d’œuvre de l’édition. À partir des annotations soigneusement établies de Secrets of Craft and Nature in Renaissance France, j’évalue jusqu’où un modèle comme GPT-3 peut être dressé, en peu de temps, à annoter des manuscrits techniques du XVIe siècle.
 
 # Link this post with a project
 projects: [Efficient Editing]

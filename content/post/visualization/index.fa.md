@@ -3,7 +3,7 @@ title: مصورسازی نشانه‌گذاری معنایی در BnF Ms. Fr. 64
 subtitle: مصورسازی سریع یک نسخهٔ علمی دیجیتال با Python  
 
 # Summary for listings and search engines
-summary: راهی سریع برای همبسته کردن نشانه‌گذاری نسخه‌های دیجیتال حاشیه‌نویسی‌شده‌ای مانند *Secrets of Craft and Nature in Renaissance France* با Python
+summary: راهی سریع برای همبسته کردن نشانه‌گذاری نسخه‌های دیجیتال حاشیه‌نویسی‌شده‌ای مانند Secrets of Craft and Nature in Renaissance France با Python
 
 # Link this post with a project
 projects: ["M&K"]

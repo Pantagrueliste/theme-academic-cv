@@ -3,7 +3,7 @@ title: Semantische Auszeichnung in BnF Ms. Fr. 640 sichtbar machen
 subtitle: Schnelle Visualisierungen einer digitalen wissenschaftlichen Edition mit Python  
 
 # Summary for listings and search engines
-summary: Wie man die Auszeichnung annotierter digitaler Editionen wie *Secrets of Craft and Nature in Renaissance France* mit Python im Handumdrehen korreliert
+summary: Wie man die Auszeichnung annotierter digitaler Editionen wie Secrets of Craft and Nature in Renaissance France mit Python im Handumdrehen korreliert
 
 # Link this post with a project
 projects: ["M&K"]

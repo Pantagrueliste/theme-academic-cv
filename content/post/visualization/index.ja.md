@@ -3,7 +3,7 @@ title: BnF Ms. Fr. 640の意味的マークアップを可視化する
 subtitle: Pythonでデジタル校訂版を手早く可視化する
 
 # Summary for listings and search engines
-summary: "*Secrets of Craft and Nature in Renaissance France*のような注釈付きデジタル版のマークアップを、Pythonで手早く相関させる方法"
+summary: "Secrets of Craft and Nature in Renaissance Franceのような注釈付きデジタル版のマークアップを、Pythonで手早く相関させる方法"
 
 # Link this post with a project
 projects: ["M&K"]

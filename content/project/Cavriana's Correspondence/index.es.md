@@ -1,6 +1,6 @@
 ---
 title: La correspondencia secreta de Filippo Cavriana, 1568—1589.
-summary: Construir una edición mínima del *epistolarium* secreto de Filippo Cavriana
+summary: Construir una edición mínima del epistolarium secreto de Filippo Cavriana
 tags: 
 - Humanidades digitales
 - Fuentes primarias

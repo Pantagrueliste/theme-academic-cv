@@ -3,7 +3,7 @@ title: Trực quan hóa đánh dấu ngữ nghĩa trong BnF Ms. Fr. 640
 subtitle: Tạo nhanh các hình trực quan cho một ấn bản học thuật kỹ thuật số bằng Python  
 
 # Summary for listings and search engines
-summary: Một cách nhanh gọn để tìm tương quan trong thẻ đánh dấu của các ấn bản kỹ thuật số có chú giải như *Secrets of Craft and Nature in Renaissance France* bằng Python
+summary: Một cách nhanh gọn để tìm tương quan trong thẻ đánh dấu của các ấn bản kỹ thuật số có chú giải như Secrets of Craft and Nature in Renaissance France bằng Python
 
 # Link this post with a project
 projects: ["M&K"]

@@ -3,7 +3,7 @@ title: Visualiser le balisage sémantique du BnF Ms. Fr. 640
 subtitle: Des visualisations rapides d’une édition savante numérique, avec Python  
 
 # Summary for listings and search engines
-summary: Un moyen rapide de mettre en corrélation, avec Python, le balisage d’une édition numérique annotée comme *Secrets of Craft and Nature in Renaissance France*
+summary: Un moyen rapide de mettre en corrélation, avec Python, le balisage d’une édition numérique annotée comme Secrets of Craft and Nature in Renaissance France
 
 # Link this post with a project
 projects: ["M&K"]

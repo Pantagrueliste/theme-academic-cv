@@ -3,7 +3,7 @@ title: Visualizar el marcado semántico del BnF Ms. Fr. 640
 subtitle: Visualizaciones rápidas de una edición crítica digital con Python  
 
 # Summary for listings and search engines
-summary: Una manera rápida de correlacionar con Python el marcado de ediciones digitales anotadas como *Secrets of Craft and Nature in Renaissance France*
+summary: Una manera rápida de correlacionar con Python el marcado de ediciones digitales anotadas como Secrets of Craft and Nature in Renaissance France
 
 # Link this post with a project
 projects: ["M&K"]

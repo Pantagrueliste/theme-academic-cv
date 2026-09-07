@@ -3,7 +3,7 @@ title: تصوّر الترميز الدلالي في المخطوطة BnF Ms. Fr
 subtitle: تصوّرات سريعة لطبعة علمية رقمية بلغة Python  
 
 # Summary for listings and search engines
-summary: طريقة سريعة، بلغة Python، لحساب الارتباطات بين عناصر الترميز في الطبعات الرقمية المعلَّقة من قبيل *Secrets of Craft and Nature in Renaissance France*
+summary: طريقة سريعة، بلغة Python، لحساب الارتباطات بين عناصر الترميز في الطبعات الرقمية المعلَّقة من قبيل Secrets of Craft and Nature in Renaissance France
 
 # Link this post with a project
 projects: ["M&K"]

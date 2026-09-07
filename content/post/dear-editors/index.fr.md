@@ -3,7 +3,7 @@ title: "Chers éditeurs : si vous voulez ma voix, rendez-moi ma langue"
 subtitle: Sur les chartes IA des revues scientifiques, et le pari monolingue qu’elles cachent
 
 summary: >
-  *Progress in Human Geography* menace de rétractation les auteurs qui se servent de
+  Progress in Human Geography menace de rétractation les auteurs qui se servent de
   l’IA pour écrire « dans une langue qu’ils n’emploieraient jamais d’ordinaire par
   eux-mêmes », tout en imposant à tous de publier en anglais. Pour les non-anglophones,
   la charte condamne le seul anglais qu’ils aient jamais possédé.

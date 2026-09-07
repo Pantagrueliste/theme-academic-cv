@@ -3,7 +3,7 @@ title: Automating Markup in Digital Scholarly Editions
 subtitle: Can pre-trained language models significantly increase editorial productivity?
 
 # Summary for listings and search engines
-summary: Pre-trained language models can help scholars automate some of the most tedious and labor-intensive tasks of edition. Based on the curated annotations of *Secrets of Craft and Nature in Renaissance France*, I evaluate the extent to which a model such as GPT-3 can be rapidly trained to annotate 16th-century technical manuscripts.
+summary: Pre-trained language models can help scholars automate some of the most tedious and labor-intensive tasks of edition. Based on the curated annotations of Secrets of Craft and Nature in Renaissance France, I evaluate the extent to which a model such as GPT-3 can be rapidly trained to annotate 16th-century technical manuscripts.
 
 # Link this post with a project
 projects: [Efficient Editing]

@@ -3,7 +3,7 @@ title: デジタル校訂版のマークアップを自動化する
 subtitle: 事前学習済み言語モデルは、校訂作業の生産性を大きく押し上げられるか？
 
 # Summary for listings and search engines
-summary: 事前学習済み言語モデルを使えば、校訂作業のうちでも最も単調で骨の折れる仕事の一部を機械に任せられます。本稿では、*Secrets of Craft and Nature in Renaissance France*の丹念に整備された注釈をもとに、GPT-3のようなモデルを16世紀の技術写本の注釈付けにどこまで手早く仕込めるかを検証します。
+summary: 事前学習済み言語モデルを使えば、校訂作業のうちでも最も単調で骨の折れる仕事の一部を機械に任せられます。本稿では、Secrets of Craft and Nature in Renaissance Franceの丹念に整備された注釈をもとに、GPT-3のようなモデルを16世紀の技術写本の注釈付けにどこまで手早く仕込めるかを検証します。
 
 # Link this post with a project
 projects: [Efficient Editing]

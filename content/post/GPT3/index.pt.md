@@ -3,7 +3,7 @@ title: Automatizar a marcação nas edições académicas digitais
 subtitle: Poderão os modelos de linguagem pré-treinados aumentar significativamente a produtividade editorial?
 
 # Summary for listings and search engines
-summary: Os modelos de linguagem pré-treinados podem ajudar os investigadores a automatizar algumas das tarefas mais fastidiosas e morosas da edição. Com base nas anotações curadas de *Secrets of Craft and Nature in Renaissance France*, avalio até que ponto um modelo como o GPT-3 pode ser rapidamente treinado para anotar manuscritos técnicos do século XVI.
+summary: Os modelos de linguagem pré-treinados podem ajudar os investigadores a automatizar algumas das tarefas mais fastidiosas e morosas da edição. Com base nas anotações curadas de Secrets of Craft and Nature in Renaissance France, avalio até que ponto um modelo como o GPT-3 pode ser rapidamente treinado para anotar manuscritos técnicos do século XVI.
 
 # Link this post with a project
 projects: [Efficient Editing]

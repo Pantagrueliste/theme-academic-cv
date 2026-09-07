@@ -3,7 +3,7 @@ title: 数字学术版本的标记自动化
 subtitle: 预训练语言模型能否大幅提高校勘工作的效率？
 
 # Summary for listings and search engines
-summary: 预训练语言模型能替学者接手版本编纂中最枯燥、最耗人力的一部分活儿。我以*Secrets of Craft and Nature in Renaissance France*（《文艺复兴时期法国的工艺与自然之秘》）精心整理的注释为基础，评估GPT-3之类的模型经过快速训练后，能在多大程度上标注十六世纪的技术手稿。
+summary: 预训练语言模型能替学者接手版本编纂中最枯燥、最耗人力的一部分活儿。我以Secrets of Craft and Nature in Renaissance France（《文艺复兴时期法国的工艺与自然之秘》）精心整理的注释为基础，评估GPT-3之类的模型经过快速训练后，能在多大程度上标注十六世纪的技术手稿。
 
 # Link this post with a project
 projects: [Efficient Editing]

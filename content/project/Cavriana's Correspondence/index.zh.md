@@ -1,6 +1,6 @@
 ---
 title: Filippo Cavriana的秘密通信，1568—1589
-summary: 为Filippo Cavriana的秘密*书信集*（*epistolarium*）做一个极简版本
+summary: 为Filippo Cavriana的秘密书信集（epistolarium）做一个极简版本
 tags: 
 - 数字人文
 - 原始史料

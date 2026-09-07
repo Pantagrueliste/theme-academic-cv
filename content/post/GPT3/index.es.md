@@ -3,7 +3,7 @@ title: "Automatizar el marcado en las ediciones críticas digitales"
 subtitle: "¿Pueden los modelos de lenguaje preentrenados aumentar sustancialmente la productividad editorial?"
 
 # Summary for listings and search engines
-summary: Los modelos de lenguaje preentrenados pueden descargar a los investigadores de algunas de las tareas más tediosas y laboriosas de la edición. A partir de las anotaciones, revisadas con esmero, de *Secrets of Craft and Nature in Renaissance France*, evalúo hasta qué punto un modelo como GPT-3 puede entrenarse en poco tiempo para anotar manuscritos técnicos del siglo XVI.
+summary: Los modelos de lenguaje preentrenados pueden descargar a los investigadores de algunas de las tareas más tediosas y laboriosas de la edición. A partir de las anotaciones, revisadas con esmero, de Secrets of Craft and Nature in Renaissance France, evalúo hasta qué punto un modelo como GPT-3 puede entrenarse en poco tiempo para anotar manuscritos técnicos del siglo XVI.
 
 # Link this post with a project
 projects: [Efficient Editing]

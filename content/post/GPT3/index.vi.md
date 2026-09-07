@@ -3,7 +3,7 @@ title: Tự động hóa đánh dấu trong ấn bản học thuật kỹ thuậ
 subtitle: Mô hình ngôn ngữ tiền huấn luyện có thể nâng năng suất biên tập lên đáng kể không?
 
 # Summary for listings and search engines
-summary: Mô hình ngôn ngữ tiền huấn luyện có thể giúp học giả tự động hóa một số công việc biên tập tẻ nhạt và tốn sức nhất. Dựa trên bộ chú giải đã được chọn lọc của *Secrets of Craft and Nature in Renaissance France*, tôi đánh giá xem một mô hình như GPT-3 có thể được huấn luyện nhanh chóng đến đâu để chú giải các bản thảo kỹ thuật thế kỷ XVI.
+summary: Mô hình ngôn ngữ tiền huấn luyện có thể giúp học giả tự động hóa một số công việc biên tập tẻ nhạt và tốn sức nhất. Dựa trên bộ chú giải đã được chọn lọc của Secrets of Craft and Nature in Renaissance France, tôi đánh giá xem một mô hình như GPT-3 có thể được huấn luyện nhanh chóng đến đâu để chú giải các bản thảo kỹ thuật thế kỷ XVI.
 
 # Link this post with a project
 projects: [Efficient Editing]

@@ -3,7 +3,7 @@ title: Automatizzare la marcatura nelle edizioni critiche digitali
 subtitle: I modelli linguistici pre-addestrati possono far crescere davvero la produttività editoriale?
 
 # Summary for listings and search engines
-summary: "I modelli linguistici pre-addestrati possono togliere agli studiosi alcune delle incombenze più tediose e faticose di un’edizione. A partire dalle annotazioni curate di *Secrets of Craft and Nature in Renaissance France*, valuto fino a che punto un modello come GPT-3 possa essere addestrato in poco tempo ad annotare manoscritti tecnici del Cinquecento."
+summary: "I modelli linguistici pre-addestrati possono togliere agli studiosi alcune delle incombenze più tediose e faticose di un’edizione. A partire dalle annotazioni curate di Secrets of Craft and Nature in Renaissance France, valuto fino a che punto un modello come GPT-3 possa essere addestrato in poco tempo ad annotare manoscritti tecnici del Cinquecento."
 
 # Link this post with a project
 projects: [Efficient Editing]
