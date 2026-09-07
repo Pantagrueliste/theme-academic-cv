@@ -299,30 +299,6 @@ nl:
         url: /nl/#code
         weight: 40
 
-da:
-  locale: da-dk
-  weight: 14
-  params:
-    hugoblox:
-      identity:
-        description: "Clément Godbarges akademiske websted, PhD."
-      locale:
-        date_format: ":date_long"
-  menus:
-    main:
-      - name: Forside
-        url: /da/
-        weight: 10
-      - name: Zibaldone
-        url: /da/#posts
-        weight: 20
-      - name: Projekter
-        url: /da/#projects
-        weight: 30
-      - name: Kode
-        url: /da/#code
-        weight: 40
-
 sv:
   locale: sv-se
   weight: 15
