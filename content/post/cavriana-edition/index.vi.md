@@ -12,6 +12,12 @@ lastmod: "2026-03-24T00:00:00Z"
 
 draft: false
 featured: true
+
+image:
+  caption: 'Chi tiết một lá thư trong thư từ mật của Cavriana — ASFi MP 4726a f. 17v–18r'
+  focal_point: "Center"
+  placement: 2
+  preview_only: false
 machine_translated: true
 
 authors:
