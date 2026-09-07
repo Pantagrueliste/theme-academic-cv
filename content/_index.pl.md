@@ -43,13 +43,13 @@ sections:
         - name: Wszystkie
           tag: '*'
         - name: Bieżące badania
-          tag: Current Research
+          tag: Bieżące badania
         - name: Wcześniejsze badania
-          tag: Past Research
+          tag: Wcześniejsze badania
         - name: Humanistyka cyfrowa
-          tag: Digital Humanities
+          tag: Humanistyka cyfrowa
         - name: Książki
-          tag: Books
+          tag: Książki
       default_button_index: 0
     design:
       columns: 2
