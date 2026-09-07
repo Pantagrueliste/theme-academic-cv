@@ -43,13 +43,13 @@ sections:
         - name: Tots
           tag: '*'
         - name: Recerca actual
-          tag: Current Research
+          tag: Recerca actual
         - name: Recerca anterior
-          tag: Past Research
+          tag: Recerca anterior
         - name: Humanitats digitals
-          tag: Digital Humanities
+          tag: Humanitats digitals
         - name: Llibres
-          tag: Books
+          tag: Llibres
       default_button_index: 0
     design:
       columns: 2
