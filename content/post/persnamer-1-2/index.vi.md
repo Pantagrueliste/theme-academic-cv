@@ -1,12 +1,12 @@
 ---
 title: "persNamer 1.2: Một số VIAF, chín tệp thẩm quyền"
-subtitle: Công cụ danh mục nhân vật nhỏ bé nay gộp thẳng vào tệp TEI sẵn có của bạn và mang theo mã định danh của các danh mục lớn
+subtitle: Công cụ danh mục nhân vật nhỏ bé nay biết tự gộp vào tệp TEI sẵn có của bạn, lại mang về cả mã định danh của các danh mục lớn
 
 summary: >
-  persNamer nhận một số VIAF và trả về một mục nhân danh TEI. Phiên bản 1.2
-  làm cho mục ấy đáng để có: các biến thể tên, ngày tháng chuẩn hóa, mã định
-  danh của chín tệp thẩm quyền quốc gia và quốc tế, cùng một chế độ gộp làm
-  giàu danh mục nhân vật sẵn có thay vì in ra từng mẩu.
+  Đưa persNamer một số VIAF, nó trả lại một mục nhân danh TEI. Với phiên bản
+  1.2, mục ấy rốt cuộc có da có thịt: các biến thể tên, ngày tháng chuẩn hóa,
+  mã định danh của chín tệp thẩm quyền quốc gia và quốc tế, cùng một chế độ
+  gộp làm giàu danh mục nhân vật sẵn có thay vì in ra từng mẩu XML.
 
 date: "2026-09-07T00:00:00Z"
 lastmod: "2026-09-07T00:00:00Z"
@@ -35,13 +35,13 @@ categories:
 - Nhân văn số
 ---
 
-[persNamer](/code/persnamer/) khởi đầu như một tiện ích nhỏ: đưa nó một số VIAF, nhận về một mục `<person>` TEI và thẻ `<persName>` để chú giải văn bản của bạn. Nó chỉ làm đúng một việc, và mục nó tạo ra khá mỏng – một cái tên, hai mốc ngày, một mã định danh. Phiên bản 1.2, phát hành hôm nay, vẫn giữ một việc ấy nhưng làm cho mục nhân danh đáng để giữ lại.
+Thuở đầu, [persNamer](/code/persnamer/) chỉ là một tiện ích nhỏ: đưa vào một số VIAF, nhận về một mục `<person>` TEI kèm thẻ `<persName>` để chú giải văn bản. Chỉ một việc, không hơn – mà mục nhân danh làm ra cũng khá mỏng: một cái tên, hai mốc ngày, một mã định danh. Phiên bản 1.2 ra mắt hôm nay vẫn chỉ làm đúng một việc ấy, nhưng lần này mục nhân danh đã đáng để giữ lại.
 
 ## Một mục nhân danh giờ chứa những gì
 
-Bắt đầu từ cái tên. Một cụm VIAF mang một tên cho mỗi thư viện đóng góp, và persNamer cũ đơn giản lấy nhãn đầu tiên nó gặp. Hỏi nó về Voltaire, nó sẽ trả lời « فولتير، » – dạng tiếng Ả Rập, kèm luôn dấu phẩy thừa ở đuôi – và để cho trọn bộ, thêm một `xml:id` trống. Phiên bản 1.2 đếm các dạng tên trong toàn cụm và giữ lại dạng mà các hồ sơ nguồn đồng thuận; những dạng còn lại đi kèm dưới dạng `<persName type="variant">`, phổ biến nhất xếp trước. Ngày tháng được chuẩn hóa (`1572-08-00` thành `1572-08`) và xuất ra hai lần, vừa là văn bản vừa là thuộc tính `@when` – thứ mà bất kỳ bước xử lý nào hiểu được ngày tháng trên tệp thực sự sẽ đọc. Giới tính và mô tả xuất hiện khi VIAF cung cấp.
+Trước hết là cái tên. Trong một cụm VIAF, mỗi thư viện đóng góp mang đến một dạng tên riêng, và persNamer cũ cứ gặp nhãn nào đầu tiên là lấy nhãn ấy. Hỏi nó về Voltaire, nó đáp « فولتير، » – dạng chữ Ả Rập, dấu phẩy thừa ở đuôi cũng mang theo luôn – rồi tặng kèm một `xml:id` trống cho đủ bộ. Nay công cụ đếm các dạng tên trong toàn cụm, giữ lại dạng được các hồ sơ nguồn đồng thuận; những dạng còn lại xếp theo sau dưới dạng `<persName type="variant">`, dạng nào phổ biến hơn đứng trước. Ngày tháng được chuẩn hóa (`1572-08-00` thành `1572-08`) và ghi hai lần: một lần thành văn bản, một lần trong thuộc tính `@when` – mà thực ra, bất kỳ bước xử lý nào hiểu ngày tháng cũng chỉ đọc chỗ ấy. Giới tính và mô tả có mặt khi VIAF cung cấp.
 
-Phần tôi mong nhất: mọi mã định danh mà VIAF liên kết tới, qua `schema:sameAs` và qua các mã nguồn của chính nó, đều được ghi ra thành một `<idno>` – BnF, GND, Thư viện Quốc hội Mỹ, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Một số đi vào, chín danh mục đi ra. Với một danh mục nhân vật (personography), đó là khác biệt giữa một bảng liệt kê tên và một nút trong mạng lưới dữ liệu có thẩm quyền.
+Còn đây là phần tôi mong nhất. Mọi mã định danh mà VIAF nối tới nhân vật – qua `schema:sameAs` lẫn qua mã định danh của chính các nguồn trong VIAF – nay đều được ghi thành một `<idno>` riêng: BnF, GND, Thư viện Quốc hội Mỹ, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Một số vào, chín danh mục ra. Với một danh mục nhân vật (personography), đó là cả một khoảng cách: giữa một bảng kê tên suông và một nút trong mạng lưới dữ liệu thẩm quyền.
 
 ```xml
 <person xml:id="pers-teligny-c">
@@ -58,18 +58,18 @@ Phần tôi mong nhất: mọi mã định danh mà VIAF liên kết tới, qua 
 
 ## Từ những mẩu lẻ đến một danh mục nhân vật
 
-In XML ra terminal thì ổn với một người. Ấn bản có hàng trăm người. persNamer nay nhận nhiều số VIAF cùng lúc, lịch sự nghỉ một nhịp giữa các yêu cầu, lưu đệm những gì đã tải, và – với `--merge` – chèn thẳng các mục mới vào `<listPerson>` của một tệp TEI sẵn có. Hồ sơ đã có sẵn được nhận ra qua số VIAF và `xml:id` của chúng được dùng lại; mã mới được đối chiếu với tệp và thêm hậu tố (`-2`, `-3`) nếu có nguy cơ trùng; tệp được thụt lề lại, và trước đó một bản sao `.bak` được ghi ra.
+In XML ra terminal, với một người thì được; nhưng một ấn bản có tới hàng trăm người. Vì thế persNamer nay nhận nhiều số VIAF một lượt, lịch sự nghỉ một nhịp giữa hai lần hỏi VIAF, giữ lại trong bộ đệm những gì đã tải để khỏi hỏi lại, và – khi có `--merge` – chèn thẳng các mục mới vào `<listPerson>` của tệp TEI sẵn có. Ai đã có trong tệp thì được nhận ra qua số VIAF và giữ nguyên `xml:id` cũ; mã mới được đối chiếu với tệp, hễ trùng là thêm hậu tố (`-2`, `-3`); cuối cùng cả tệp được thụt lề lại – dĩ nhiên, sau khi một bản sao `.bak` đã được cất sẵn.
 
 ```bash
 persnamer --merge edition.xml 314802260 36925746
 ```
 
-Một thay đổi cần biết: tiểu từ đứng trước họ nay mặc định bị bỏ khỏi mã định danh, nên Charles de Téligny là `pers-teligny-c` chứ không phải `pers-deteligny-c`. Nếu dự án của bạn đã thống nhất dùng dạng cũ, `--keep-particle` khôi phục nó; còn nếu bạn thà không phụ thuộc vào tên chút nào, `--id-format viaf` cho bạn `pers-viaf-314802260`.
+Có một thay đổi nên biết: tiểu từ đứng trước họ nay mặc định không còn nằm trong mã định danh nữa, nên Charles de Téligny thành `pers-teligny-c` thay vì `pers-deteligny-c` như trước. Dự án nào đã quen dạng cũ thì `--keep-particle` trả lại y nguyên; còn ai không muốn mã định danh phụ thuộc vào tên người chút nào thì `--id-format viaf` cho ra `pers-viaf-314802260`.
 
 ## Dọn dẹp
 
-Script nay là một gói với lệnh `persnamer`, cài được bằng một dòng với `uv tool install` hoặc `pipx` (hoặc chạy một lần, không cần cài, với `uvx`). Hai mươi sáu bài kiểm thử chạy trên các phản hồi VIAF đã ghi sẵn, nên bộ kiểm thử không cần mạng; CI chạy chúng trên Python từ 3.9 đến 3.13, và đầu ra được kiểm định theo TEI P5. Giấy phép Apache 2.0, như trước.
+Script nay đã thành một gói đàng hoàng, có lệnh `persnamer` riêng: một dòng `uv tool install` hoặc `pipx` là cài xong, hoặc muốn chạy thử một lần mà không cài thì có `uvx`. Hai mươi sáu bài kiểm thử chạy trên các phản hồi VIAF đã ghi sẵn, nên bộ kiểm thử không cần đến mạng; CI chạy lại chúng trên Python từ 3.9 đến 3.13, và đầu ra được kiểm định theo TEI P5. Giấy phép vẫn là Apache 2.0.
 
-Điều nó vẫn chưa làm được là cho bạn biết ai đó sinh ở đâu hay làm nghề gì: RDF cụm của VIAF không mang địa danh, cũng chẳng mang nghề nghiệp. Các hồ sơ BnF và GND được liên kết thì có, và giờ bạn đã có số của chúng.
+Điều nó vẫn chưa làm được là cho bạn biết một người sinh ở đâu, sống bằng nghề gì: RDF cụm của VIAF không có địa danh mà cũng chẳng có nghề nghiệp. Nhưng các hồ sơ BnF và GND liên kết với nó thì có – và giờ số của chúng đã nằm trong tay bạn.
 
 Mã nguồn và tài liệu trên [GitHub](https://github.com/Pantagrueliste/persNamer).

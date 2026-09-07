@@ -1,13 +1,13 @@
 ---
 title: "persNamer 1.2: één VIAF-nummer, negen autoriteitsbestanden"
-subtitle: De kleine personografietool voegt zijn vermeldingen nu in je bestaande TEI-bestand in en neemt de identificatoren van de grote catalogi mee
+subtitle: De kleine personografietool schuift zijn vermeldingen nu in je bestaande TEI-bestand en brengt de identificatoren van de grote catalogi mee
 
 summary: >
-  persNamer neemt een VIAF-nummer en geeft een TEI-persoonsvermelding terug.
-  Versie 1.2 maakt die vermelding pas echt de moeite waard: naamvarianten,
-  genormaliseerde datums, de identificatoren van negen nationale en
-  internationale autoriteitsbestanden, en een merge-modus die een bestaande
-  personografie laat aangroeien in plaats van fragmenten af te drukken.
+  Geef persNamer een VIAF-nummer en je krijgt een TEI-persoonsvermelding terug.
+  Met versie 1.2 zit daar eindelijk vlees op: naamvarianten, genormaliseerde
+  datums, de identificatoren van negen nationale en internationale
+  autoriteitsbestanden, en een merge-modus die een bestaande personografie
+  laat groeien in plaats van losse fragmenten op het scherm te gooien.
 
 date: "2026-09-07T00:00:00Z"
 lastmod: "2026-09-07T00:00:00Z"
@@ -36,32 +36,32 @@ categories:
 - Digital humanities
 ---
 
-[persNamer](/code/persnamer/) begon als een kleine handigheid: geef het een
-VIAF-nummer en je krijgt een TEI-`<person>`-vermelding terug, plus de
-`<persName>`-tag om je tekst mee te annoteren. Het deed één ding, en de
-vermelding die het opleverde was mager – een naam, twee datums, één
-identificator. Versie 1.2, vandaag uitgebracht, houdt het bij dat ene ding en
-maakt de vermelding het bewaren waard.
+[persNamer](/code/persnamer/) begon als een klein gemak: een VIAF-nummer erin,
+een TEI-vermelding `<person>` eruit, met de `<persName>`-tag erbij om je tekst
+mee te annoteren. Meer deed het niet, en veel stond er ook niet in: een naam,
+twee datums, één identificator. Versie 1.2, die vandaag uitkomt, doet nog
+altijd dat ene – maar de vermelding die eruit rolt, is er nu een die je wilt
+bewaren.
 
-## Wat een persoonsvermelding nu bevat
+## Wat er nu in een persoonsvermelding staat
 
-Begin bij de naam. Een VIAF-cluster draagt één naam per deelnemende
-bibliotheek, en de oude persNamer nam simpelweg het eerste label dat het
-tegenkwam. Vroeg je het om Voltaire, dan antwoordde het “فولتير،” – de
-Arabische vorm, komma achteraan inbegrepen – met als toegift een lege
-`xml:id`. Versie 1.2 telt de naamvormen over het hele cluster en behoudt de vorm
-waarover de bronrecords het eens zijn; de andere komen mee als
-`<persName type="variant">`, de meest voorkomende eerst. Datums worden
-genormaliseerd (`1572-08-00` wordt `1572-08`) en twee keer uitgeschreven, als
-tekst en als `@when`-attribuut – want dat is wat elke verwerking van het
-bestand die iets met datums doet, in werkelijkheid leest. Geslacht en
-beschrijvingen verschijnen wanneer VIAF ze beschikbaar stelt.
+Om te beginnen de naam. In een VIAF-cluster brengt elke aangesloten bibliotheek
+haar eigen naamvorm in, en de oude persNamer pakte gewoon het eerste label dat
+voorbijkwam. Wie om Voltaire vroeg, kreeg “فولتير،” – de Arabische vorm, met
+afsluitende komma en al – en een lege `xml:id` op de koop toe. Voortaan telt het programma
+de vormen over het hele cluster en houdt het de vorm aan die bij de
+bronrecords het vaakst voorkomt; de rest volgt als
+`<persName type="variant">`, de meest voorkomende voorop. Datums worden
+genormaliseerd (`1572-08-00` wordt `1572-08`) en twee keer neergezet: als
+tekst én in een `@when`-attribuut, want dat is waar elke verwerking die iets
+met datums doet, uiteindelijk naar kijkt. Geslacht en beschrijvingen komen mee
+wanneer VIAF ze prijsgeeft.
 
-Het deel waar ik het meest op zat te wachten: elke identificator waar VIAF
-naar verwijst – via `schema:sameAs` en via zijn eigen bron-ID's – wordt
-uitgeschreven als een `<idno>`: BnF, GND, Library of Congress, SUDOC,
-Wikidata, ISNI, BNE, LIBRIS, NDL. Eén nummer erin, negen catalogi eruit.
-Voor een personografie is dat het verschil tussen een lijst namen en een
+En dan het onderdeel waar ik het meest naar had uitgekeken: elke identificator
+die VIAF aan de persoon koppelt – via `schema:sameAs` of via zijn eigen
+bron-ID's – krijgt een eigen `<idno>`: BnF, GND, Library of Congress, SUDOC,
+Wikidata, ISNI, BNE, LIBRIS, NDL. Eén nummer erin, negen catalogi eruit. Voor
+een personografie is dat precies het verschil tussen een rijtje namen en een
 knooppunt in het web van autoriteitsdata.
 
 ```xml
@@ -77,42 +77,41 @@ knooppunt in het web van autoriteitsdata.
 </person>
 ```
 
-## Van fragmenten naar een personografie
+## Van losse fragmenten naar een personografie
 
-XML naar de terminal schrijven is prima voor één persoon. Edities hebben er
-honderden. persNamer neemt nu meerdere VIAF-nummers tegelijk aan, wacht
-beleefd even tussen de verzoeken, bewaart wat het ophaalt in een cache en
-voegt – met `--merge` – de nieuwe vermeldingen rechtstreeks in de
-`<listPerson>` van een bestaand TEI-bestand in. Records die er al staan,
-worden herkend aan hun VIAF-nummer en hun `xml:id` wordt hergebruikt; nieuwe
-id's worden tegen het bestand gecontroleerd en krijgen een achtervoegsel
-(`-2`, `-3`) als ze zouden botsen; het bestand wordt opnieuw ingesprongen en
-er wordt eerst een `.bak`-kopie weggeschreven.
+Voor één persoon is XML in de terminal prima. Een editie telt er honderden.
+persNamer slikt daarom nu meerdere VIAF-nummers tegelijk, gunt VIAF tussen
+twee verzoeken beleefd een adempauze, houdt wat het al heeft opgehaald in een
+cache en schuift de nieuwe vermeldingen met `--merge` rechtstreeks in de
+`<listPerson>` van een bestaand TEI-bestand. Wie daar al in staat, wordt
+herkend aan zijn VIAF-nummer en houdt zijn `xml:id`; nieuwe id's worden aan
+het bestand getoetst en krijgen bij een botsing een achtervoegsel (`-2`, `-3`);
+tot slot wordt het bestand opnieuw ingesprongen – nadat er eerst een
+`.bak`-kopie opzij is gezet.
 
 ```bash
 persnamer --merge edition.xml 314802260 36925746
 ```
 
-Eén verandering om van te weten: het tussenvoegsel van de familienaam valt nu
-standaard uit de id, zodat Charles de Téligny `pers-teligny-c` wordt in
-plaats van `pers-deteligny-c`. Heeft je project zich op de oude vorm
-vastgelegd, dan herstelt `--keep-particle` die; en `--id-format viaf` geeft
-je `pers-viaf-314802260` als je liever helemaal niet van namen afhankelijk
-bent.
+Eén wijziging om rekening mee te houden: het tussenvoegsel blijft voortaan
+standaard uit de id, zodat Charles de Téligny `pers-teligny-c` wordt en niet
+langer `pers-deteligny-c`. Is je project gewend geraakt aan de oude vorm, dan
+haalt `--keep-particle` die terug; wil je liever helemaal niet op namen
+leunen, dan geeft `--id-format viaf` je `pers-viaf-314802260`.
 
 ## Huishoudelijke mededelingen
 
-Het script is nu een pakket met een `persnamer`-opdracht, in één regel te
-installeren met `uv tool install` of `pipx` (of eenmalig, zonder installatie,
-te draaien met `uvx`). Zesentwintig tests draaien tegen opgenomen
-VIAF-antwoorden, zodat de testsuite geen netwerk nodig heeft; CI voert ze uit
-op Python 3.9 tot en met 3.13, en de uitvoer wordt gevalideerd tegen TEI P5.
-Apache 2.0, zoals voorheen.
+Van het script is een echt pakket gemaakt, met een `persnamer`-opdracht: één
+regel volstaat om het te installeren (`uv tool install` of `pipx`) of om het
+met `uvx` eenmalig te proberen zonder iets te installeren. Zesentwintig tests
+draaien tegen opgenomen VIAF-antwoorden – de testsuite komt dus zonder netwerk
+uit –, CI laat ze los op Python 3.9 tot en met 3.13, en de uitvoer wordt
+gevalideerd tegen TEI P5. Licentie: Apache 2.0, zoals voorheen.
 
-Wat het nog altijd niet kan, is je vertellen waar iemand geboren is of
-waarmee hij de kost verdiende: de cluster-RDF van VIAF bevat plaatsen noch
-beroepen. De gekoppelde BnF- en GND-records wél, en daarvan heb je nu de
-nummers.
+Wat het nog steeds niet weet, is waar iemand geboren is of waarmee hij zijn
+brood verdiende: in de cluster-RDF van VIAF staan plaatsen noch beroepen. De
+gekoppelde records van de BnF en de GND weten het wél – en daar heb je nu de
+nummers van.
 
 Code en documentatie op
 [GitHub](https://github.com/Pantagrueliste/persNamer).

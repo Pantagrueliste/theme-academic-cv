@@ -1,13 +1,12 @@
 ---
 title: "persNamer 1.2: un número VIAF, nou fitxers d’autoritats"
-subtitle: La petita eina de personografia ara es fusiona amb el teu fitxer TEI i hi porta els identificadors dels grans catàlegs
+subtitle: La petita eina de personografia ja sap inserir-se en un fitxer TEI existent i, de passada, hi porta els identificadors dels grans catàlegs
 
 summary: >
-  persNamer pren un número VIAF i retorna una entrada de persona TEI. La
-  versió 1.2 fa que aquesta entrada valgui la pena: variants del nom, dates
-  normalitzades, els identificadors de nou fitxers d’autoritats nacionals i
-  internacionals, i un mode de fusió que fa créixer una personografia
-  existent en lloc d’imprimir fragments.
+  Dona un número VIAF a persNamer i et tornarà una entrada de persona en TEI. Amb la versió
+  1.2, l’entrada té per fi substància: variants del nom, dates normalitzades,
+  els identificadors de nou fitxers d’autoritats i un mode de fusió que fa
+  créixer una personografia en comptes d’imprimir retalls d’XML.
 
 date: "2026-09-07T00:00:00Z"
 lastmod: "2026-09-07T00:00:00Z"
@@ -36,33 +35,32 @@ categories:
 - Humanitats digitals
 ---
 
-[persNamer](/code/persnamer/) va començar com una petita comoditat: li dones
-un número VIAF i et retorna una entrada `<person>` en TEI i l’etiqueta
-`<persName>` amb què anotar el text. Feia una sola cosa, i l’entrada que
-produïa era magra – un nom, dues dates, un identificador. La versió 1.2,
-publicada avui, continua fent aquesta sola cosa, però ara l’entrada val la
-pena de guardar.
+[persNamer](/code/persnamer/) va néixer com una simple comoditat: li donaves
+un número VIAF i et tornava una entrada `<person>` en TEI, amb l’etiqueta
+`<persName>` per anotar el text. Res més – i l’entrada era ben magra: un nom,
+dues dates, un identificador. La versió 1.2, que surt avui, continua fent una
+sola cosa – però ara l’entrada ja val la pena de conservar.
 
 ## Què conté ara una entrada de persona
 
-Comencem pel nom. Un clúster del VIAF porta un nom per cada biblioteca que hi
-contribueix, i el vell persNamer es quedava senzillament amb la primera
-etiqueta que trobava. Li demanaves Voltaire i et responia « فولتير، » – la forma
-àrab, coma final inclosa – i, per postres, amb un `xml:id` buit. La versió
-1.2 compta les formes de tot el clúster i es queda amb aquella en què
-coincideixen els registres d’origen; les altres l’acompanyen com a
-`<persName type="variant">`, les més freqüents primer. Les dates es
-normalitzen (`1572-08-00` esdevé `1572-08`) i s’escriuen dues vegades, com a
-text i com a atribut `@when`, que és el que llegirà de debò qualsevol
-processament del fitxer que entengui de dates. El sexe i les descripcions hi
-apareixen quan el VIAF els exposa.
+Comencem pel nom. En un clúster del VIAF cada biblioteca que hi participa
+aporta la seva forma, i el persNamer d’abans s’acontentava amb la primera que
+li venia a mà. Li demanaves Voltaire i et responia « فولتير، »: la forma àrab,
+coma final inclosa, i, per postres, un `xml:id` buit. Ara l’eina fa el
+recompte de les formes de tot el clúster i es queda amb aquella en què
+coincideixen els registres d’origen; les altres van al darrere com a
+`<persName type="variant">`, la més freqüent primer. Les dates es normalitzen
+(`1572-08-00` passa a `1572-08`) i s’escriuen dues vegades, en text i en un
+atribut `@when` – que és el que llegirà de debò qualsevol tractament del
+fitxer que tingui en compte les dates. El sexe i les descripcions també hi són,
+sempre que el VIAF els faciliti.
 
-La part que més volia: tots els identificadors que el VIAF enllaça, per mitjà
-de `schema:sameAs` i dels seus propis identificadors de font, s’escriuen com a
-`<idno>` – BnF, GND, Library of Congress, SUDOC, Wikidata, ISNI, BNE, LIBRIS,
-NDL. Entra un número, en surten nou catàlegs. Per a una personografia, aquesta
-és la diferència entre una llista de noms i un node a la xarxa de dades
-d’autoritat.
+I després hi ha la part que jo més trobava a faltar. Tots els identificadors
+que el VIAF lliga a la persona, a través de `schema:sameAs` o pels seus propis
+identificadors de font, queden recollits cadascun en un `<idno>`: BnF, GND,
+Library of Congress, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Entra un número
+i en surten nou catàlegs. Per a una personografia, això és tota la diferència
+entre una llista de noms i un node dins la xarxa de les dades d’autoritat.
 
 ```xml
 <person xml:id="pers-teligny-c">
@@ -77,41 +75,42 @@ d’autoritat.
 </person>
 ```
 
-## Dels fragments a la personografia
+## Dels retalls a la personografia
 
-Imprimir XML al terminal va bé per a una persona. Les edicions en tenen
-centenars. persNamer ara accepta diversos números VIAF alhora, fa una pausa
-educada entre petició i petició, desa en memòria cau el que baixa i – amb
-`--merge` – insereix les entrades noves directament dins el `<listPerson>`
-d’un fitxer TEI existent. Els registres que ja hi eren es reconeixen pel
-número VIAF i se’n reutilitza l’`xml:id`; els identificadors nous es
-contrasten amb el fitxer i reben un sufix (`-2`, `-3`) si haguessin de
-col·lidir; el fitxer es torna a indentar, i abans se n’escriu una còpia
-`.bak`.
+Imprimir XML al terminal ja va bé per a una persona; una edició en té
+centenars. Per això persNamer accepta ara diversos números VIAF de cop, deixa
+respirar el VIAF, per cortesia, entre petició i petició, desa a la memòria cau
+el que ja ha baixat i, amb `--merge`, insereix les entrades noves directament
+dins el `<listPerson>` d’un fitxer TEI existent. Els registres que ja hi eren
+es reconeixen pel número VIAF i conserven el seu `xml:id`; els identificadors
+nous es contrasten amb el fitxer i, si coincideixen amb cap, reben un sufix
+(`-2`, `-3`); al final el fitxer es torna a sagnar, no sense haver desat
+abans una còpia `.bak`.
 
 ```bash
 persnamer --merge edition.xml 314802260 36925746
 ```
 
-Un canvi que cal conèixer: la partícula del cognom ara s’elimina de
-l’identificador per defecte, de manera que Charles de Téligny és
-`pers-teligny-c` i no `pers-deteligny-c`. Si el teu projecte s’havia decantat
-per la forma antiga, `--keep-particle` la restableix; `--id-format viaf` et
-dona `pers-viaf-314802260` si prefereixes no dependre gens dels noms.
+Un canvi que convé saber: per defecte, la partícula del cognom ja no entra a
+l’identificador, de manera que Charles de Téligny passa a ser
+`pers-teligny-c`, i no pas `pers-deteligny-c`. Si el teu projecte ja s’havia
+avesat a la forma antiga, `--keep-particle` la recupera; i si prefereixes no
+dependre gens dels noms, tens `--id-format viaf`, que dona
+`pers-viaf-314802260`.
 
-## Feines de casa
+## Endreça
 
-L’script és ara un paquet amb una ordre `persnamer`, instal·lable en una línia
-amb `uv tool install` o `pipx` (o executable un sol cop, sense instal·lar-lo,
-amb `uvx`). Vint-i-sis proves s’executen contra respostes del VIAF
-enregistrades, de manera que la bateria no necessita xarxa; la integració
-contínua les fa passar del Python 3.9 al 3.13, i la sortida es valida contra
-la TEI P5. Apache 2.0, com abans.
+L’script ha passat a ser un paquet, amb la seva ordre `persnamer`: amb una
+línia n’hi ha prou per instal·lar-lo (`uv tool install` o `pipx`), o es pot
+executar un sol cop, sense instal·lar res, amb `uvx`. Vint-i-sis proves el comproven sobre
+respostes del VIAF enregistrades – sense necessitat de xarxa – i la integració
+contínua les repeteix del Python 3.9 al 3.13; la sortida es valida contra la
+TEI P5. Llicència Apache 2.0, com fins ara.
 
-El que encara no sap fer és dir-te on va néixer algú ni de què es guanyava la
-vida: l’RDF dels clústers del VIAF no porta ni llocs ni ocupacions. Els
-registres enllaçats de la BnF i la GND sí que els porten, i ara en tens els
-números.
+El que encara no sap és on va néixer algú ni de què es guanyava la vida:
+l’RDF dels clústers del VIAF no diu res ni dels llocs ni dels oficis. Els
+registres enllaçats de la BnF i de la GND, en canvi, sí que ho saben – i ara
+en tens els números.
 
 Codi i documentació a
 [GitHub](https://github.com/Pantagrueliste/persNamer).

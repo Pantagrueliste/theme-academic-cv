@@ -1,13 +1,13 @@
 ---
 title: "persNamer 1.2: un número VIAF, nueve ficheros de autoridades"
-subtitle: La pequeña herramienta de personografía ahora se fusiona con su fichero TEI y lleva consigo los identificadores de los grandes catálogos
+subtitle: La pequeña herramienta de personografía ya sabe insertarse en un fichero TEI existente y, de paso, trae los identificadores de los grandes catálogos
 
 summary: >
-  persNamer toma un número VIAF y devuelve una entrada de persona en TEI. La
-  versión 1.2 hace que esa entrada merezca la pena: variantes del nombre,
+  Déle un número VIAF a persNamer y le devolverá una entrada TEI. Con la
+  versión 1.2, esa entrada por fin tiene sustancia: variantes del nombre,
   fechas normalizadas, los identificadores de nueve ficheros de autoridades
-  nacionales e internacionales, y un modo de fusión que hace crecer una
-  personografía existente en lugar de imprimir fragmentos.
+  y un modo de fusión que hace crecer una personografía en vez de imprimir
+  retazos de XML.
 
 date: "2026-09-07T00:00:00Z"
 lastmod: "2026-09-07T00:00:00Z"
@@ -36,13 +36,13 @@ categories:
 - Humanidades digitales
 ---
 
-[persNamer](/code/persnamer/) empezó como una pequeña comodidad: se le da un número VIAF y devuelve una entrada `<person>` en TEI junto con la etiqueta `<persName>` para anotar el texto. Hacía una sola cosa, y la entrada que producía era escueta: un nombre, dos fechas, un identificador. La versión 1.2, publicada hoy, sigue haciendo esa sola cosa, pero ahora la entrada merece la pena conservarla.
+[persNamer](/code/persnamer/) nació como una simple comodidad: se le daba un número VIAF y devolvía una entrada `<person>` en TEI, con su etiqueta `<persName>` para anotar el texto. Nada más, y la entrada era, además, bien escueta: un nombre, dos fechas, un identificador. La versión 1.2, que sale hoy, sigue haciendo una sola cosa, pero esta vez la hace a conciencia: la entrada ya merece conservarse.
 
 ## Qué contiene ahora una entrada de persona
 
-Empecemos por el nombre. Un clúster de VIAF lleva un nombre por cada biblioteca que contribuye, y el viejo persNamer se quedaba sin más con la primera etiqueta que encontraba. Si le pedía uno a Voltaire, respondía « فولتير، » —la forma árabe, coma final incluida— y, para rematar, con un `xml:id` vacío. La versión 1.2 cuenta las formas en todo el clúster y se queda con aquella en la que coinciden los registros fuente; las demás vienen detrás como `<persName type="variant">`, las más frecuentes primero. Las fechas se normalizan (`1572-08-00` pasa a ser `1572-08`) y se escriben dos veces, como texto y como atributo `@when`, que es lo que de verdad leerá cualquier procesamiento del fichero que entienda de fechas. El sexo y las descripciones aparecen cuando VIAF los expone.
+Empecemos por el nombre. En un clúster de VIAF cada biblioteca participante aporta su propia forma, y el persNamer de antes se conformaba con la primera que le salía al paso. Si le pedía Voltaire, le contestaba « فولتير، »: la forma árabe, con su coma final y, de propina, un `xml:id` vacío. Ahora la herramienta cuenta las formas de todo el clúster y se queda con aquella en la que coinciden los registros fuente; las demás la siguen como `<persName type="variant">`, por orden de frecuencia. Las fechas se normalizan (`1572-08-00` queda en `1572-08`) y se escriben por partida doble, como texto y en un atributo `@when`, que es el único que mirará cualquier tratamiento del fichero que sepa leer una fecha. El sexo y las descripciones vienen también, siempre que VIAF los facilite.
 
-La parte que más deseaba: todos los identificadores que VIAF enlaza, a través de `schema:sameAs` y de sus propios identificadores de fuente, se escriben como `<idno>`: BnF, GND, Library of Congress, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Entra un número, salen nueve catálogos. Para una personografía, esa es la diferencia entre una lista de nombres y un nodo en la red de datos de autoridad.
+Y luego está lo que yo más echaba en falta. Todos los identificadores que VIAF vincula a la persona, por `schema:sameAs` o por sus propios identificadores de fuente, quedan recogidos cada uno en un `<idno>`: BnF, GND, Library of Congress, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Entra un número y salen nueve catálogos. Para una personografía, eso es lo que separa una lista de nombres de un nodo en la red de los datos de autoridad.
 
 ```xml
 <person xml:id="pers-teligny-c">
@@ -57,20 +57,20 @@ La parte que más deseaba: todos los identificadores que VIAF enlaza, a través 
 </person>
 ```
 
-## De los fragmentos a la personografía
+## De los retazos a la personografía
 
-Imprimir XML en el terminal está bien para una persona. Las ediciones tienen cientos. persNamer acepta ahora varios números VIAF de una vez, hace una pausa cortés entre petición y petición, guarda en caché lo que descarga y —con `--merge`— inserta las nuevas entradas directamente en el `<listPerson>` de un fichero TEI existente. Los registros que ya estaban se reconocen por su número VIAF y se reutiliza su `xml:id`; los identificadores nuevos se cotejan con el fichero y reciben un sufijo (`-2`, `-3`) si fueran a chocar; el fichero se vuelve a indentar, no sin antes escribir una copia `.bak`.
+Imprimir XML en el terminal está bien cuando se trata de una persona; una edición tiene cientos. Por eso persNamer acepta ahora varios números VIAF de una tacada, deja respirar cortésmente a VIAF entre petición y petición, guarda en caché lo que ya ha descargado y, con `--merge`, mete las entradas nuevas directamente en el `<listPerson>` de un fichero TEI ya existente. A los registros que ya estaban se los reconoce por su número VIAF y conservan su `xml:id`; los identificadores nuevos se cotejan con el fichero y, si coincidieran con alguno, reciben un sufijo (`-2`, `-3`); al final el fichero se reindenta, no sin haber puesto antes a salvo una copia `.bak`.
 
 ```bash
 persnamer --merge edition.xml 314802260 36925746
 ```
 
-Un cambio que conviene conocer: la partícula del apellido ya no forma parte del identificador por defecto, de modo que Charles de Téligny es `pers-teligny-c` y no `pers-deteligny-c`. Si su proyecto se había asentado en la forma antigua, `--keep-particle` la restablece; `--id-format viaf` le da `pers-viaf-314802260` si prefiere no depender de los nombres en absoluto.
+Un detalle que conviene saber: la partícula del apellido ya no entra en el identificador por defecto, así que Charles de Téligny pasa a ser `pers-teligny-c`, y no `pers-deteligny-c`. Si su proyecto ya se había acostumbrado a la forma antigua, `--keep-particle` la devuelve; y quien prefiera no depender de los nombres tiene `--id-format viaf`, que produce `pers-viaf-314802260`.
 
-## Mantenimiento
+## Cuestiones de intendencia
 
-El script es ahora un paquete con un comando `persnamer`, instalable en una línea con `uv tool install` o `pipx` (o ejecutable una sola vez, sin instalar nada, con `uvx`). Veintiséis pruebas se ejecutan contra respuestas de VIAF grabadas, así que la batería no necesita red; la integración continua las pasa de Python 3.9 a 3.13, y la salida se valida contra TEI P5. Apache 2.0, como antes.
+El script se ha convertido en un paquete hecho y derecho, con su comando `persnamer`: se instala en una línea (`uv tool install` o `pipx`) o se prueba sin instalar nada (`uvx`). Veintiséis pruebas lo comprueban sobre respuestas de VIAF grabadas —sin necesidad de red— y la integración continua las repite de Python 3.9 a 3.13; la salida se valida contra TEI P5. Licencia Apache 2.0, como hasta ahora.
 
-Lo que sigue sin poder hacer es decirle dónde nació alguien o a qué se dedicaba: el RDF de los clústeres de VIAF no lleva ni lugares ni ocupaciones. Los registros enlazados de la BnF y la GND sí los llevan, y ahora tiene sus números.
+Lo que sigue sin saber es dónde nació alguien ni a qué se dedicaba: el RDF de los clústeres de VIAF no dice nada de lugares ni de oficios. Los registros enlazados de la BnF y de la GND, en cambio, sí lo saben, y ahora tiene usted sus números.
 
 Código y documentación en [GitHub](https://github.com/Pantagrueliste/persNamer).

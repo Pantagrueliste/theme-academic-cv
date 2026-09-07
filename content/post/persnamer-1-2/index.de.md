@@ -1,13 +1,13 @@
 ---
 title: "persNamer 1.2: Eine VIAF-Nummer, neun Normdateien"
-subtitle: Das kleine Personographie-Werkzeug fügt seine Einträge jetzt in Ihre bestehende TEI-Datei ein und bringt die Identifikatoren der großen Kataloge mit
+subtitle: Das kleine Personographie-Werkzeug fügt sich jetzt in eine bestehende TEI-Datei ein – und bringt die Identifikatoren der großen Kataloge gleich mit
 
 summary: >
-  persNamer nimmt eine VIAF-Nummer entgegen und gibt einen TEI-Personeneintrag
-  zurück. Mit Version 1.2 lohnt sich dieser Eintrag erst richtig:
-  Namensvarianten, normalisierte Daten, die Identifikatoren von neun nationalen
-  und internationalen Normdateien und ein Merge-Modus, der eine bestehende
-  Personographie erweitert, statt Schnipsel auszugeben.
+  Man gibt persNamer eine VIAF-Nummer, und es liefert einen TEI-Personeneintrag.
+  Mit Version 1.2 hat dieser Eintrag endlich Substanz: Namensvarianten,
+  normalisierte Datumsangaben, die Identifikatoren von neun nationalen und
+  internationalen Normdateien – und ein Merge-Modus, der eine bestehende
+  Personographie wachsen lässt, statt Schnipsel auszugeben.
 
 date: "2026-09-07T00:00:00Z"
 lastmod: "2026-09-07T00:00:00Z"
@@ -36,33 +36,34 @@ categories:
 - Digital Humanities
 ---
 
-[persNamer](/code/persnamer/) begann als kleine Bequemlichkeit: Man gibt ihm
-eine VIAF-Nummer, und es liefert einen TEI-`<person>`-Eintrag samt dem
-`<persName>`-Tag, mit dem man seinen Text annotiert. Es konnte eine Sache,
-und der Eintrag, den es erzeugte, war dünn – ein Name, zwei Daten, ein
-Identifikator. Version 1.2, die heute erscheint, behält die eine Sache bei
-und macht den Eintrag zu einem, den man behalten will.
+[persNamer](/code/persnamer/) war anfangs nicht mehr als eine kleine
+Bequemlichkeit: vorn eine VIAF-Nummer hinein, hinten ein TEI-Eintrag
+`<person>` heraus, dazu das `<persName>`-Tag für die Annotation im Text. Mehr
+nicht – und viel stand auch nicht drin: ein Name, zwei Daten, ein
+Identifikator. Die heute erschienene Version 1.2 kann nach wie vor nur dieses
+eine, aber der Eintrag, den sie liefert, ist jetzt einer, den man behalten
+möchte.
 
-## Was ein Personeneintrag jetzt enthält
+## Was heute in einem Personeneintrag steht
 
-Beginnen wir beim Namen. Ein VIAF-Cluster führt pro beteiligter Bibliothek
-einen Namen, und das alte persNamer nahm schlicht das erste Label, das ihm
-begegnete. Fragte man es nach Voltaire, antwortete es „فولتير،“ – die
-arabische Form, samt dem Komma am Ende – und obendrein mit leerer `xml:id`.
-Version 1.2 zählt die Namensformen im ganzen Cluster durch und behält
-diejenige, auf die sich die Quelldatensätze einigen; die übrigen kommen als
-`<persName type="variant">` mit, die häufigste zuerst. Daten werden
-normalisiert (aus `1572-08-00` wird `1572-08`) und zweimal ausgegeben, als
-Text und als `@when`-Attribut – denn genau das liest jede Verarbeitung der
-Datei, die Datumsangaben auswertet, tatsächlich. Geschlecht und
-Beschreibungen erscheinen, wenn VIAF sie bereitstellt.
+Zuerst der Name. In einem VIAF-Cluster steuert jede beteiligte Bibliothek ihre
+eigene Namensform bei, und das alte persNamer griff schlicht nach der ersten,
+die ihm in die Hände fiel. Wer nach Voltaire fragte, bekam „فولتير،“ – die
+arabische Form, Schlusskomma inklusive – und obendrein eine leere `xml:id`.
+Jetzt zählt das Programm die Formen im gesamten Cluster durch und behält die,
+die unter den Quelldatensätzen am häufigsten vorkommt; alle übrigen folgen als
+`<persName type="variant">`, nach Häufigkeit geordnet. Datumsangaben werden
+normalisiert (aus `1572-08-00` wird `1572-08`) und doppelt geschrieben: einmal
+als Text und einmal im Attribut `@when`, denn dorthin schaut jede
+Verarbeitung, die mit Datumsangaben etwas anfangen kann. Geschlecht und Beschreibungen
+kommen dazu, sofern VIAF sie hergibt.
 
-Der Teil, der mir am meisten am Herzen lag: Jeder Identifikator, den VIAF
-verknüpft – über `schema:sameAs` und über seine eigenen Quellen-IDs –, wird
-als `<idno>` ausgeschrieben: BnF, GND, Library of Congress, SUDOC, Wikidata,
-ISNI, BNE, LIBRIS, NDL. Eine Nummer hinein, neun Kataloge heraus. Für eine
-Personographie ist das der Unterschied zwischen einer Namensliste und einem
-Knoten im Netz der Normdaten.
+Und dann das, worauf ich am meisten gewartet hatte: Jeder Identifikator, den
+VIAF mit der Person verknüpft – über `schema:sameAs` wie über seine eigenen
+Quellen-IDs –, landet in einem eigenen `<idno>`: BnF, GND, Library of
+Congress, SUDOC, Wikidata, ISNI, BNE, LIBRIS, NDL. Eine Nummer hinein, neun
+Kataloge heraus. Für eine Personographie macht das den Unterschied zwischen
+einer bloßen Namensliste und einem Knoten im Netz der Normdaten.
 
 ```xml
 <person xml:id="pers-teligny-c">
@@ -77,42 +78,42 @@ Knoten im Netz der Normdaten.
 </person>
 ```
 
-## Von Schnipseln zur Personographie
+## Vom Schnipsel zur Personographie
 
-XML ins Terminal zu schreiben ist für eine Person in Ordnung. Editionen haben
-Hunderte. persNamer nimmt jetzt mehrere VIAF-Nummern auf einmal entgegen,
-legt zwischen den Anfragen höflich eine Pause ein, speichert zwischen, was es
-abruft, und fügt die neuen Einträge – mit `--merge` – direkt in die
-`<listPerson>` einer bestehenden TEI-Datei ein. Schon vorhandene Datensätze
-werden an ihrer VIAF-Nummer erkannt und ihre `xml:id` wiederverwendet; neue
-IDs werden gegen die Datei geprüft und mit einem Suffix (`-2`, `-3`)
-versehen, falls sie kollidieren würden; die Datei wird neu eingerückt, und
-zuvor wird eine `.bak`-Kopie geschrieben.
+Solange es um eine einzige Person geht, reicht XML im Terminal. Eine Edition
+aber hat Hunderte. persNamer nimmt deshalb jetzt mehrere VIAF-Nummern auf
+einmal entgegen, gönnt VIAF zwischen zwei Anfragen eine höfliche Atempause,
+behält Abgerufenes im Cache – und setzt die neuen Einträge mit `--merge`
+unmittelbar in die `<listPerson>` einer vorhandenen TEI-Datei. Wer dort schon
+steht, wird an seiner VIAF-Nummer erkannt und behält seine `xml:id`; neue IDs
+werden mit der Datei abgeglichen und bekommen bei einer Kollision ein Suffix
+(`-2`, `-3`); zum Schluss wird die Datei neu eingerückt, aber erst, nachdem
+eine `.bak`-Kopie beiseitegelegt ist.
 
 ```bash
 persnamer --merge edition.xml 314802260 36925746
 ```
 
-Eine Änderung, die man kennen sollte: Die Partikel im Familiennamen fällt
-jetzt standardmäßig aus der ID heraus, Charles de Téligny heißt also
-`pers-teligny-c` statt `pers-deteligny-c`. Hat sich Ihr Projekt auf die alte
-Form festgelegt, stellt `--keep-particle` sie wieder her; und
-`--id-format viaf` liefert `pers-viaf-314802260`, wenn Sie lieber gar nicht
-von Namen abhängen möchten.
+Eine Neuerung, die man kennen sollte: Die Namenspartikel bleibt in der ID jetzt
+standardmäßig weg – aus Charles de Téligny wird `pers-teligny-c`, nicht mehr
+`pers-deteligny-c`. Hat sich Ihr Projekt an die alte Form gewöhnt, holt
+`--keep-particle` sie zurück; und wer sich lieber gar nicht auf Namen
+verlassen mag, bekommt mit `--id-format viaf` ein `pers-viaf-314802260`.
 
-## Aufräumarbeiten
+## Hausputz
 
-Das Skript ist jetzt ein Paket mit einem `persnamer`-Befehl, das sich mit
-`uv tool install` oder `pipx` in einer Zeile installieren lässt (oder mit
-`uvx` einmalig läuft, ohne installiert zu werden). Sechsundzwanzig Tests
-laufen gegen aufgezeichnete VIAF-Antworten, die Testsuite braucht also kein
-Netz; die CI lässt sie unter Python 3.9 bis 3.13 laufen, und die Ausgabe
-wird gegen TEI P5 validiert. Apache 2.0, wie gehabt.
+Aus dem Skript ist ein ordentliches Paket geworden, mit dem Befehl
+`persnamer`; eine Zeile genügt, um es zu installieren (`uv tool install` oder
+`pipx`) oder es mit `uvx` einmal auszuprobieren, ohne überhaupt etwas zu
+installieren. Sechsundzwanzig Tests prüfen es gegen aufgezeichnete
+VIAF-Antworten – Netz braucht die Suite also keines –, die CI lässt sie unter
+Python 3.9 bis 3.13 durchlaufen, und die Ausgabe wird gegen TEI P5 validiert.
+Lizenz: Apache 2.0, wie gehabt.
 
-Was es nach wie vor nicht kann: Ihnen sagen, wo jemand geboren wurde oder
-wovon er lebte – das Cluster-RDF von VIAF enthält weder Orte noch Berufe.
-Die verknüpften BnF- und GND-Datensätze schon, und deren Nummern haben Sie
-jetzt.
+Was es nach wie vor nicht weiß: wo jemand geboren wurde und womit er sein Brot
+verdiente. Das Cluster-RDF von VIAF verzeichnet weder Orte noch Berufe. Die
+verknüpften Datensätze der BnF und der GND tun es – und deren Nummern haben
+Sie jetzt in der Hand.
 
 Code und Dokumentation auf
 [GitHub](https://github.com/Pantagrueliste/persNamer).
