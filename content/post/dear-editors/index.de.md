@@ -3,12 +3,10 @@ title: "Liebe Herausgeber: Wenn Sie meine Stimme wollen, geben Sie mir meine Spr
 subtitle: Über die KI-Richtlinien wissenschaftlicher Zeitschriften und die Wette auf die Einsprachigkeit, die in ihnen steckt
 
 summary: >
-  Eine neue KI-Richtlinie von Progress in Human Geography droht Autorinnen und
-  Autoren mit dem Widerruf ihrer Aufsätze, wenn sie mit KI „in einer Sprache
-  schreiben, die sie selbst normalerweise nie verwenden würden“ – und verlangt
-  zugleich von allen, ungeachtet ihrer Muttersprache, auf Englisch zu
-  publizieren. Für Nichtmuttersprachler verurteilt die Logik der Richtlinie
-  das einzige Englisch, das sie je hatten.
+  Progress in Human Geography droht mit dem Widerruf, wenn Autoren mit KI „in einer
+  Sprache schreiben, die sie selbst normalerweise nie verwenden würden“ – und
+  verlangt zugleich von allen, auf Englisch zu publizieren. Für Nichtmuttersprachler
+  verurteilt die Richtlinie das einzige Englisch, das sie je hatten.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"

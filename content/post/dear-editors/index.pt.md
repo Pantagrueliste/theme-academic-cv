@@ -3,11 +3,10 @@ title: "Caros editores: se querem a minha voz, devolvam-me a minha língua"
 subtitle: Sobre as políticas de IA das revistas académicas e a aposta monolingue que trazem embutida
 
 summary: >
-  Uma nova política de IA da revista Progress in Human Geography ameaça de retratação
-  os autores que usem a IA para escrever «numa língua que nunca empregariam por si
-  mesmos» – ao mesmo tempo que obriga todos os autores a publicar em inglês, seja qual
-  for a sua língua materna. Para quem não é falante nativo, a própria lógica da política
-  condena o único inglês que alguma vez teve.
+  A Progress in Human Geography ameaça de retratação os autores que usem a IA para
+  escrever «numa língua que nunca empregariam normalmente por si mesmos», ao mesmo
+  tempo que obriga toda a gente a publicar em inglês. Para quem não é falante nativo,
+  a política condena o único inglês que alguma vez teve.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"

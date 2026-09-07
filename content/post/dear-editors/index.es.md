@@ -3,12 +3,10 @@ title: "Estimados editores: si quieren mi voz, devuélvanme mi lengua"
 subtitle: Sobre las políticas de IA de las revistas académicas y la apuesta monolingüe que llevan dentro
 
 summary: >
-  Una nueva política sobre IA de Progress in Human Geography amenaza con retirar
-  los artículos de quienes usen la IA para escribir «en una lengua que ellos
-  mismos nunca emplearían normalmente», al tiempo que obliga a todos los autores
-  a publicar en inglés, sea cual sea su lengua materna. Para los hablantes no
-  nativos, la propia lógica de la política condena el único inglés que han
-  tenido nunca.
+  Progress in Human Geography amenaza con retirar los artículos de quienes usen
+  la IA para escribir «en una lengua que los autores nunca emplearían normalmente
+  por sí mismos», y a la vez obliga a todos a publicar en inglés. Para los no
+  nativos, la política condena el único inglés que han tenido nunca.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"

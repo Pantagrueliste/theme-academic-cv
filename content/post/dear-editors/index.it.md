@@ -3,11 +3,10 @@ title: "Cari direttori: se volete la mia voce, ridatemi la mia lingua"
 subtitle: Sulle politiche dell’editoria accademica in materia di IA, e sulla scommessa monolingue che vi sta dentro
 
 summary: >
-  Una nuova politica sull’IA di Progress in Human Geography minaccia di ritrattazione
-  gli autori che si servono dell’IA per scrivere «in una lingua che non impiegherebbero
-  mai normalmente» – e intanto impone a tutti di pubblicare in inglese, qualunque
-  sia la loro lingua madre. Per chi non è madrelingua, la logica stessa della politica
-  condanna l’unico inglese che abbia mai avuto.
+  Progress in Human Geography minaccia di ritrattazione gli autori che si servono
+  dell’IA per scrivere «in una lingua che non impiegherebbero mai normalmente», e
+  intanto impone a tutti di pubblicare in inglese. Per chi non è madrelingua, la
+  politica condanna l’unico inglese che abbia mai avuto.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"

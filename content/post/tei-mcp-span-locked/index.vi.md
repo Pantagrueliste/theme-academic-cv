@@ -3,12 +3,10 @@ title: "tei-mcp v0.3: Mã hóa TEI mà không viết lại văn bản gốc"
 subtitle: Ghép khóa theo đoạn (span-locked composition) khiến việc bịa đặt phần thân văn bản trở thành bất khả ngay từ cấu trúc
 
 summary: >
-  Bản phát hành mới của tei-mcp giới thiệu cơ chế ghép khóa theo đoạn, một hệ
-  thống được thiết kế để ngăn chặn loại bịa đặt tai hại nhất trong mã hóa TEI
-  có AI hỗ trợ: âm thầm viết lại văn bản gốc. Mô hình không bao giờ gõ phần
-  thân văn bản; nó chỉ đăng ký các thẻ dưới dạng vị trí ký tự trên văn bản gốc,
-  và bộ ghép từ chối trả về bất kỳ tài liệu TEI nào có nội dung văn bản phẳng
-  khác với bản gốc dù chỉ một byte.
+  tei-mcp v0.3 giới thiệu cơ chế ghép khóa theo đoạn, khiến kiểu bịa đặt tai hại
+  nhất trong mã hóa TEI có AI hỗ trợ trở thành bất khả: âm thầm viết lại văn bản
+  gốc. Mô hình không bao giờ gõ phần thân văn bản – nó đăng ký thẻ dưới dạng vị
+  trí ký tự, và việc ghép sẽ thất bại nếu dù chỉ một byte thay đổi.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

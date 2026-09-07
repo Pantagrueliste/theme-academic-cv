@@ -3,11 +3,10 @@ title: "Thưa quý ban biên tập: muốn nghe giọng tôi, xin trả lại t�
 subtitle: Về chính sách AI của các tạp chí học thuật và canh bạc đơn ngữ ẩn bên trong
 
 summary: >
-  Chính sách AI mới của Progress in Human Geography dọa rút bài những tác giả
-  dùng AI để viết "bằng một thứ ngôn ngữ mà bình thường họ sẽ không bao giờ tự
-  mình dùng đến" – trong khi bắt buộc mọi tác giả phải công bố bằng tiếng Anh,
-  bất kể tiếng mẹ đẻ là gì. Với người không phải bản ngữ, chính logic của
-  chính sách ấy kết án thứ tiếng Anh duy nhất mà họ từng có.
+  Progress in Human Geography dọa rút bài những tác giả dùng AI để viết “bằng một
+  thứ ngôn ngữ mà bình thường họ sẽ không bao giờ tự mình dùng đến”, trong khi buộc
+  mọi người phải công bố bằng tiếng Anh. Với người không phải bản ngữ, chính sách ấy
+  kết án thứ tiếng Anh duy nhất mà họ từng có.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"

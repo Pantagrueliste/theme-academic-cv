@@ -3,12 +3,11 @@ title: "tei-mcp v0.3: TEI kodieren, ohne die Quelle anzutasten"
 subtitle: Span-locked Composition macht Halluzinationen im Textkörper schon konstruktiv unmöglich
 
 summary: >
-  Die neue Version von tei-mcp führt Span-locked Composition ein – ein
-  Verfahren gegen die folgenschwerste Art von Halluzination bei der
-  KI-gestützten TEI-Kodierung: das stillschweigende Umschreiben des
-  Quelltexts. Das Modell tippt nie Textkörper; es registriert Tags als
-  Offsets über der Quelle, und der Composer weigert sich, TEI auszugeben,
-  dessen reiner Textinhalt auch nur um ein Byte vom Original abweicht.
+  tei-mcp v0.3 führt Span-locked Composition ein und macht damit die
+  folgenschwerste Halluzination der KI-gestützten TEI-Kodierung unmöglich: das
+  stille Umschreiben der Quelle. Das Modell tippt nie Textkörper – es registriert
+  Tags als Offsets, und die Composition schlägt fehl, sobald sich ein einziges
+  Byte geändert hat.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

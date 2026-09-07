@@ -3,12 +3,11 @@ title: "tei-mcp v0.3: codificare in TEI senza riscrivere la fonte"
 subtitle: La composizione span-locked rende impossibili per costruzione le allucinazioni nel corpo del testo
 
 summary: >
-  La nuova versione di tei-mcp introduce la composizione span-locked, un sistema
-  pensato per impedire la classe più dannosa di allucinazioni nella codifica TEI
-  assistita dall’IA: le riscritture silenziose del testo di partenza. Il modello
-  non batte mai il corpo del testo; registra i tag come offset sulla fonte, e il
-  compositore si rifiuta di restituire qualsiasi TEI il cui contenuto testuale
-  piatto differisca dall’originale anche di un solo byte.
+  tei-mcp v0.3 introduce la composizione span-locked, che rende impossibile
+  l’allucinazione più dannosa della codifica TEI assistita dall’IA: la riscrittura
+  silenziosa della fonte. Il modello non batte mai il corpo del testo; registra i
+  tag come offset sulla fonte, e la composizione fallisce se è cambiato anche un
+  solo byte.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

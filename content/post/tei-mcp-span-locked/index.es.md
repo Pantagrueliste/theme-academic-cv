@@ -3,13 +3,11 @@ title: "tei-mcp v0.3: codificar en TEI sin reescribir la fuente"
 subtitle: La composición con intervalos bloqueados hace imposibles, por construcción, las alucinaciones en el cuerpo del texto
 
 summary: >
-  La nueva versión de tei-mcp introduce la composición con intervalos
-  bloqueados (span-locked composition), un sistema pensado para impedir la
-  clase más dañina de alucinación en la codificación TEI asistida por IA: la
-  reescritura silenciosa del texto fuente. El modelo nunca teclea el cuerpo del
-  texto; registra las etiquetas como desplazamientos (offsets) sobre la fuente,
-  y el compositor se niega a devolver un TEI cuyo contenido textual plano
-  difiera del original en un solo byte.
+  tei-mcp v0.3 introduce la composición con intervalos bloqueados, que hace
+  imposible la alucinación más dañina de la codificación TEI asistida por IA: la
+  reescritura silenciosa de la fuente. El modelo nunca teclea el cuerpo del texto;
+  registra las etiquetas como desplazamientos, y la composición falla si ha
+  cambiado un solo byte.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

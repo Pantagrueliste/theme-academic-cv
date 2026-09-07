@@ -3,12 +3,11 @@ title: "tei-mcp v0.3 : encoder en TEI sans toucher à la source"
 subtitle: Avec la composition à empans verrouillés, l’hallucination dans le corps du texte devient impossible par construction
 
 summary: >
-  La nouvelle version de tei-mcp introduit la composition à empans verrouillés,
-  un dispositif qui prévient l’hallucination la plus dommageable de l’encodage TEI
-  assisté par IA : la réécriture silencieuse du texte source. Le modèle ne tape
-  jamais le corps du texte ; il enregistre ses balises comme des positions dans la
-  source, et le compositeur refuse de rendre tout document TEI dont le texte nu
-  s’écarte de l’original, fût-ce d’un seul octet.
+  tei-mcp v0.3 introduit la composition à empans verrouillés, qui rend impossible
+  l’hallucination la plus dommageable de l’encodage TEI assisté par IA : la
+  réécriture silencieuse de la source. Le modèle ne tape jamais le corps du
+  texte ; il enregistre ses balises comme des positions, et la composition échoue
+  au moindre octet modifié.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

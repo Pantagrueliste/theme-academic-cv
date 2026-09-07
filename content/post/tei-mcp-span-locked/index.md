@@ -3,12 +3,10 @@ title: "tei-mcp v0.3: Encoding TEI Without Rewriting the Source"
 subtitle: Span-locked composition makes body-text hallucinations impossible by construction
 
 summary: >
-  The new release of tei-mcp introduces span-locked composition, a system
-  designed to prevent the most damaging class of hallucination in
-  AI-assisted TEI encoding: silent rewrites of the source text. The model
-  never types body text; it registers tags as offsets over the source,
-  and the composer refuses to return any TEI whose flat text content
-  differs from the original by a single byte.
+  tei-mcp v0.3 introduces span-locked composition, which makes the most damaging
+  hallucination in AI-assisted TEI encoding impossible: silent rewrites of the
+  source. The model never types body text — it registers tags as offsets, and
+  composition fails if a single byte has changed.
 
 date: "2026-05-05T00:00:00Z"
 lastmod: "2026-05-05T00:00:00Z"

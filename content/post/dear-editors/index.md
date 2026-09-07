@@ -3,11 +3,10 @@ title: "Dear Editors: If You Want My Voice, Give Me Back My Language"
 subtitle: On academic publishing’s AI policies and the monolingual bet built into them
 
 summary: >
-  A new AI policy from Progress in Human Geography threatens retraction for
-  authors who use AI to write "in a language they would never themselves
-  normally employ" — while requiring every author to publish in English
-  regardless of their native tongue. For non-native speakers, the policy’s
-  own logic condemns the only English they have ever had.
+  Progress in Human Geography threatens retraction for authors who use AI to write
+  "in a language they would never themselves normally employ", while requiring
+  everyone to publish in English. For non-native speakers, the policy condemns
+  the only English they have ever had.
 
 date: "2026-08-27T00:00:00Z"
 lastmod: "2026-08-27T00:00:00Z"
