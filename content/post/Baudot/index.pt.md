@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'Fita de telégrafo ITA2 com uma mensagem codificada'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - História digital
 - Programação

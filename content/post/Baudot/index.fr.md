@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'Bande de télégraphe ITA2 portant un message codé'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Histoire numérique
 - Programmation

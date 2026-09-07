@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'شريط تلغراف ITA2 وعليه رسالة مشفّرة'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - التاريخ الرقمي
 - البرمجة

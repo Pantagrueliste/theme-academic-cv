@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'Nastro telegrafico ITA2 con un messaggio codificato'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Storia digitale
 - Programmazione

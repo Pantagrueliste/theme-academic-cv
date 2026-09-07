@@ -8,11 +8,11 @@ draft: false
 featured: false
 image:
   caption: 'ITA2 Telegraph tape showing encoded message'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Digital History
 - Programming

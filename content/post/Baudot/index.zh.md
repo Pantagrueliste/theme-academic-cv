@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: '打有编码信息的ITA2电报纸带'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - 数字史学
 - 编程

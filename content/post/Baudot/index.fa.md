@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'نوار تلگراف ITA2 با پیامی رمزگذاری‌شده'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - تاریخ دیجیتال
 - برنامه‌نویسی

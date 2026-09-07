@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'Cinta de telégrafo ITA2 con un mensaje codificado'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Historia digital
 - Programación

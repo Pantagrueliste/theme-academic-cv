@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'Băng điện báo ITA2 với một thông điệp đã mã hóa'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Lịch sử kỹ thuật số
 - Lập trình

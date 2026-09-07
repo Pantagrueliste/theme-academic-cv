@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: 'ITA2-Lochstreifen mit kodierter Nachricht'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - Digitale Geschichte
 - Programmierung

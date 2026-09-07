@@ -9,11 +9,11 @@ featured: false
 machine_translated: true
 image:
   caption: '符号化されたメッセージが打ち出されたITA2電信テープ'
-  focal_point: ""
+  focal_point: "Top"
   placement: 2
   preview_only: false
 authors:
-- admin
+- clement
 tags:
 - デジタル歴史学
 - プログラミング
