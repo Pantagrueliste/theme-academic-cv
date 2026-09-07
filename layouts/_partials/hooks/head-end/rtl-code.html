@@ -1,0 +1,22 @@
+{{/*
+  Code is left-to-right, whatever the page direction.
+
+  On the Arabic and Persian pages the kit gives inline code no bidi isolation,
+  so a span like `1572-08-00` inherits the paragraph's right-to-left direction
+  and its weak characters (digits, hyphens) get laid out backwards: it reads
+  00-08-1572, and `-2` becomes 2-. Isolating every code span and block and
+  forcing it left-to-right fixes this for the whole site, without sprinkling
+  left-to-right marks through the translations.
+*/}}
+<style>
+  html[dir="rtl"] code,
+  html[dir="rtl"] kbd,
+  html[dir="rtl"] samp {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  html[dir="rtl"] pre {
+    direction: ltr;
+    text-align: left;
+  }
+</style>
