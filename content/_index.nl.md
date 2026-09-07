@@ -43,13 +43,13 @@ sections:
         - name: Alle
           tag: '*'
         - name: Lopend onderzoek
-          tag: Current Research
+          tag: Lopend onderzoek
         - name: Eerder onderzoek
-          tag: Past Research
+          tag: Eerder onderzoek
         - name: Digital humanities
-          tag: Digital Humanities
+          tag: Digital humanities
         - name: Boeken
-          tag: Books
+          tag: Boeken
       default_button_index: 0
     design:
       columns: 2
