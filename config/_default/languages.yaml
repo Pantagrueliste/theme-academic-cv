@@ -11,7 +11,7 @@ en:
 
 fr:
   locale: fr-fr
-  weight: 2
+  weight: 6
   params:
     hugoblox:
       identity:
@@ -35,7 +35,7 @@ fr:
 
 es:
   locale: es-es
-  weight: 3
+  weight: 4
   params:
     hugoblox:
       identity:
@@ -59,7 +59,7 @@ es:
 
 it:
   locale: it-it
-  weight: 4
+  weight: 13
   params:
     hugoblox:
       identity:
@@ -83,7 +83,7 @@ it:
 
 de:
   locale: de-de
-  weight: 5
+  weight: 9
   params:
     hugoblox:
       identity:
@@ -107,7 +107,7 @@ de:
 
 ja:
   locale: ja-jp
-  weight: 6
+  weight: 10
   params:
     hugoblox:
       identity:
@@ -131,7 +131,7 @@ ja:
 
 zh:
   locale: zh-cn
-  weight: 7
+  weight: 2
   params:
     hugoblox:
       identity:
@@ -156,7 +156,7 @@ zh:
 ar:
   locale: ar
   direction: rtl
-  weight: 8
+  weight: 5
   params:
     hugoblox:
       identity:
@@ -180,7 +180,7 @@ ar:
 
 pt:
   locale: pt-pt
-  weight: 9
+  weight: 7
   params:
     hugoblox:
       identity:
@@ -205,7 +205,7 @@ pt:
 fa:
   locale: fa
   direction: rtl
-  weight: 10
+  weight: 12
   params:
     hugoblox:
       identity:
@@ -253,7 +253,7 @@ vi:
 
 ca:
   locale: ca
-  weight: 12
+  weight: 17
   params:
     hugoblox:
       identity:
@@ -277,7 +277,7 @@ ca:
 
 nl:
   locale: nl-nl
-  weight: 13
+  weight: 15
   params:
     hugoblox:
       identity:
@@ -301,7 +301,7 @@ nl:
 
 sv:
   locale: sv-se
-  weight: 15
+  weight: 16
   params:
     hugoblox:
       identity:
@@ -325,7 +325,7 @@ sv:
 
 pl:
   locale: pl-pl
-  weight: 16
+  weight: 14
   params:
     hugoblox:
       identity:
@@ -349,7 +349,7 @@ pl:
 
 ru:
   locale: ru-ru
-  weight: 18
+  weight: 8
   params:
     hugoblox:
       identity:

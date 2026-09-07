@@ -7,14 +7,30 @@
   anchors the list right under the button (absolute positioning) and lets it
   scroll if needed. The kit script (hb-i18n.js) still toggles `hidden` and
   closes the menu on outside clicks; its inline transform is neutralised.
+
+  On phones (below the `sm` breakpoint) a narrow scrolling list hides most of
+  sixteen languages behind a scrollbar nobody sees, so the menu becomes a
+  two-column panel spanning the header, with touch-sized rows: every language
+  visible at once, nothing to scroll. The header is made the positioning
+  context for that panel; it is static in the kit, so this changes nothing
+  else.
 */}}
 {{ $page := .page }}
 {{ $class := .class }}
 {{ $str_languages := T "languages" }}
 
 {{- if $page.IsTranslated -}}
-  <style>.hb-lang-menu{transform:none!important;min-width:0!important}</style>
-  <div class="relative flex justify-items-start {{ with $class }}{{. | safeCSS }}{{ end }}">
+  <style>
+    .hb-lang-menu{transform:none!important;min-width:0!important}
+    @media (max-width: 639px){
+      #site-header{position:relative}
+      .hb-lang-wrap{position:static}
+      .hb-lang-menu{position:absolute;left:.75rem;right:.75rem;top:100%;margin-top:0;max-height:calc(100dvh - 7rem);padding:.5rem;grid-template-columns:1fr 1fr;column-gap:.25rem}
+      .hb-lang-menu:not(.hidden){display:grid}
+      .hb-lang-menu a{padding:.7rem .75rem;font-size:1rem;border-radius:.375rem}
+    }
+  </style>
+  <div class="hb-lang-wrap relative flex justify-items-start {{ with $class }}{{. | safeCSS }}{{ end }}">
     <button
       title="{{ $str_languages }}"
       data-state="closed"
@@ -29,7 +45,7 @@
       </div>
     </button>
     <ul
-      class="hb-lang-menu absolute top-full mt-1 ltr:right-0 rtl:left-0 m-0 min-w-[140px] hidden z-30 max-h-80 overflow-auto rounded-md ring-1 ring-black/5 bg-white py-1 text-sm shadow-lg dark:ring-white/20 dark:bg-neutral-800"
+      class="hb-lang-menu absolute top-full mt-1 ltr:right-0 rtl:left-0 m-0 min-w-[140px] hidden z-30 max-h-[75vh] overflow-auto rounded-md ring-1 ring-black/5 bg-white py-1 text-sm shadow-lg dark:ring-white/20 dark:bg-neutral-800"
     >
       {{ range $page.Translations }}
         <li class="flex flex-col">
