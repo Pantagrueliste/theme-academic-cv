@@ -9,6 +9,30 @@ en:
   locale: en-us
   weight: 1
 
+hi:
+  locale: hi-in
+  weight: 3
+  params:
+    hugoblox:
+      identity:
+        description: "क्लेमां गोदबार्ज (पीएच.डी.) की अकादमिक वेबसाइट"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: मुखपृष्ठ
+        url: /hi/
+        weight: 10
+      - name: Zibaldone
+        url: /hi/#posts
+        weight: 20
+      - name: परियोजनाएँ
+        url: /hi/#projects
+        weight: 30
+      - name: कोड
+        url: /hi/#code
+        weight: 40
+
 fr:
   locale: fr-fr
   weight: 6

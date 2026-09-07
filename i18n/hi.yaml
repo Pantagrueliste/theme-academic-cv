@@ -1,0 +1,29 @@
+translation_notice:
+  other: "यह पृष्ठ मशीनी अनुवाद है और अभी तक किसी हिंदी भाषी ने इसकी जाँच नहीं की है।"
+translation_original:
+  other: "मूल पाठ पढ़ें"
+translation_vote_question:
+  other: "क्या यह अनुवाद अच्छा है?"
+translation_vote_good:
+  other: "हाँ"
+translation_vote_bad:
+  other: "नहीं"
+translation_vote_thanks:
+  other: "आपकी राय के लिए धन्यवाद!"
+
+questions:
+  other: "प्रश्न"
+faq:
+  other: "अक्सर पूछे जाने वाले प्रश्न"
+docs:
+  other: "दस्तावेज़"
+poweredby_button:
+  other: "अपनी साइट बनाएँ →"
+read_more:
+  other: "आगे पढ़ें"
+callout_note:
+  other: "टिप्पणी"
+portfolio_link_default:
+  other: "लिंक"
+backlinks:
+  other: "बैकलिंक"

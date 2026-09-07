@@ -1,0 +1,19 @@
+{{/*
+  Devanagari for the Hindi pages.
+
+  The site's body face, Noto Sans, ships a Devanagari subset, so running text
+  in Hindi already renders in the same family as everything else. The heading
+  face, Montserrat, does not, and would fall back to whatever Devanagari the
+  visitor's system offers. This loads Noto Sans Devanagari on /hi/ only and
+  points the heading and nav variables at it, Montserrat staying in the stack
+  for any Latin words inside a Hindi title.
+*/}}
+{{ if eq .Lang "hi" }}
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --hb-font-heading: 'Noto Sans Devanagari', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --hb-font-nav: 'Noto Sans Devanagari', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  }
+</style>
+{{ end }}
