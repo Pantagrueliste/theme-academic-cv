@@ -16,7 +16,7 @@ date: "2025-03-28T00:00:00Z"
 external_link: ""
 
 image:
-  caption: O Multi-Saxon em ação
+  caption: ''
   focal_point: Smart
 
 links:

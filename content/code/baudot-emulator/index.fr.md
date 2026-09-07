@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Bande de télégraphe ITA2 portant un message codé
+  caption: ''
   focal_point: Smart
 
 links:

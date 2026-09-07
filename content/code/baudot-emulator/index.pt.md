@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Fita de telégrafo ITA2 com uma mensagem codificada
+  caption: ''
   focal_point: Smart
 
 links:

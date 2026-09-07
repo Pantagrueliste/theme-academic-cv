@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: نوار تلگراف ITA2 با پیامی رمزگذاری‌شده
+  caption: ''
   focal_point: Smart
 
 links:

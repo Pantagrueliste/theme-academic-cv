@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Nastro telegrafico ITA2 con un messaggio codificato
+  caption: ''
   focal_point: Smart
 
 links:

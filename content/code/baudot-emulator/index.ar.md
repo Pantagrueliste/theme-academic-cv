@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: شريط تلغراف ITA2 وعليه رسالة مشفّرة
+  caption: ''
   focal_point: Smart
 
 links:

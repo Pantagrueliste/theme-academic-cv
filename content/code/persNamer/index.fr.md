@@ -15,7 +15,7 @@ date: "2025-03-28T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Démonstration de persNamer
+  caption: ''
   focal_point: Smart
 
 links:

@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: 打有编码信息的ITA2电报纸带
+  caption: ''
   focal_point: Smart
 
 links:

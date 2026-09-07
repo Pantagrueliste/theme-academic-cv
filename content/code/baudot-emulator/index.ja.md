@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: 符号化されたメッセージが打ち出されたITA2電信テープ
+  caption: ''
   focal_point: Smart
 
 links:

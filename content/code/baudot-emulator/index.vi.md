@@ -12,7 +12,7 @@ date: "2025-02-13T00:00:00Z"
 external_link: ""
 
 image:
-  caption: Băng điện báo ITA2 với một thông điệp đã mã hóa
+  caption: ''
   focal_point: Smart
 
 links:
