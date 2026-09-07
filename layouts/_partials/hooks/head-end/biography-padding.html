@@ -1,0 +1,14 @@
+{{/*
+  Breathing room for the biography block on phones.
+
+  The kit's resume-biography block sets no horizontal padding anywhere
+  between the section and the bio text. On wide screens the prose column's
+  max-width hides that; on a phone the column is the full viewport, so the
+  text touches both edges of the screen. This gives the block the same
+  inline padding the kit's other blocks use.
+*/}}
+<style>
+  .resume-biography {
+    padding-inline: 1.5rem;
+  }
+</style>
