@@ -77,7 +77,7 @@ Licensing need not produce that outcome. Affordable, non-exclusive access could 
 
 ## AI does not belong to Big Tech
 
-There is a deeper issue. Too much criticism of AI takes its largest commercial suppliers for the whole field. The products dominate the headlines; the research and development beyond those companies disappear from view. Big Tech could hardly ask for a more useful misunderstanding. Its ambition to own the field becomes the premise of the criticism directed against it. The monopoly is not yet secured. Treating it as settled does those companies an enormous favour.
+There is a deeper issue. Too much criticism of AI takes its largest commercial suppliers for the whole field. The products dominate the headlines; the research and development beyond those companies disappear from view. Big Tech could hardly ask for a more useful misunderstanding. Its ambition to own the field becomes the premise of the criticism directed against it. The monopoly is not yet secured. Treating it as settled does those companies an enormous favour. It also turns attention away from open source: from its needs, from its chances of existing, from its interests, from its legitimacy as an alternative.
 
 Open-source AI allows people to build and adapt systems that reflect a greater diversity of languages, cultures and forms of expression. For countries across Europe, Africa, Latin America and Asia, that is a practical basis for technological and cultural sovereignty: the ability to decide how systems work, which languages they serve and where they are used. Whether to use AI, and for what purposes, should remain a public choice, not a decision dictated by dependence on a foreign oligopoly.
 

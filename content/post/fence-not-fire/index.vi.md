@@ -75,7 +75,7 @@ Cấp phép không nhất thiết dẫn đến kết cục ấy. Quyền truy c�
 
 ## AI không thuộc về Big Tech
 
-Còn một vấn đề sâu hơn. Quá nhiều lời phê phán AI lấy những nhà cung cấp thương mại lớn nhất làm toàn bộ lĩnh vực. Sản phẩm chiếm hết tiêu đề; nghiên cứu và phát triển bên ngoài các công ty ấy biến mất khỏi tầm nhìn. Big Tech khó lòng mong một sự hiểu lầm nào có ích hơn. Tham vọng sở hữu cả lĩnh vực của họ trở thành tiền đề của chính những lời phê phán nhắm vào họ. Thế độc quyền chưa được bảo đảm. Coi nó như chuyện đã rồi là làm ơn rất lớn cho những công ty ấy.
+Còn một vấn đề sâu hơn. Quá nhiều lời phê phán AI lấy những nhà cung cấp thương mại lớn nhất làm toàn bộ lĩnh vực. Sản phẩm chiếm hết tiêu đề; nghiên cứu và phát triển bên ngoài các công ty ấy biến mất khỏi tầm nhìn. Big Tech khó lòng mong một sự hiểu lầm nào có ích hơn. Tham vọng sở hữu cả lĩnh vực của họ trở thành tiền đề của chính những lời phê phán nhắm vào họ. Thế độc quyền chưa được bảo đảm. Coi nó như chuyện đã rồi là làm ơn rất lớn cho những công ty ấy. Cũng là ngoảnh mặt khỏi mã nguồn mở: khỏi những nhu cầu của nó, khỏi cơ hội tồn tại, khỏi lợi ích, khỏi tính chính đáng như một lựa chọn thay thế.
 
 AI mã nguồn mở cho phép người ta xây dựng và điều chỉnh những hệ thống phản ánh sự đa dạng lớn hơn về ngôn ngữ, văn hóa và hình thức biểu đạt. Với các nước ở châu Âu, châu Phi, Mỹ Latinh và châu Á, đó là nền tảng thực tiễn cho chủ quyền công nghệ và văn hóa: khả năng quyết định hệ thống vận hành thế nào, phục vụ ngôn ngữ nào và được dùng ở đâu. Có dùng AI hay không, và dùng vào việc gì, phải là lựa chọn của công chúng, chứ không phải quyết định do sự lệ thuộc vào một nhóm độc quyền nước ngoài áp đặt.
 

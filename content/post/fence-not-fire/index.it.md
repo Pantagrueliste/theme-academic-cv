@@ -75,7 +75,7 @@ Le licenze non devono per forza finire così. Un accesso a prezzi abbordabili e 
 
 ## L’IA non appartiene a Big Tech
 
-C’è una questione più di fondo. Troppa critica dell’IA scambia i suoi maggiori fornitori commerciali per l’intero campo. I prodotti occupano i titoli; la ricerca e lo sviluppo fuori da quelle aziende spariscono dalla vista. Big Tech non potrebbe desiderare equivoco più comodo: la sua ambizione di possedere il campo diventa la premessa della critica che le si rivolge. Il monopolio non è ancora cosa fatta; trattarlo come tale è un enorme favore reso a quelle aziende.
+C’è una questione più di fondo. Troppa critica dell’IA scambia i suoi maggiori fornitori commerciali per l’intero campo. I prodotti occupano i titoli; la ricerca e lo sviluppo fuori da quelle aziende spariscono dalla vista. Big Tech non potrebbe desiderare equivoco più comodo: la sua ambizione di possedere il campo diventa la premessa della critica che le si rivolge. Il monopolio non è ancora cosa fatta; trattarlo come tale è un enorme favore reso a quelle aziende. È anche distogliere lo sguardo dall’open source: dai suoi bisogni, dalle sue possibilità di esistere, dai suoi interessi, dalla sua legittimità come alternativa.
 
 L’IA open source permette di costruire e adattare sistemi che rispecchino una maggiore varietà di lingue, culture e forme d’espressione. Per i paesi d’Europa, d’Africa, d’America Latina e d’Asia, è una base concreta di sovranità tecnologica e culturale: poter decidere come funzionano i sistemi, quali lingue servono e dove si usano. Se usare l’IA, e per quali fini, dovrebbe restare una scelta pubblica, non una decisione dettata dalla dipendenza da un oligopolio straniero.
 
