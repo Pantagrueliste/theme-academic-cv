@@ -1,0 +1,42 @@
+# Pack typographique maison — variante de « geometric » couvrant toutes les
+# écritures du site.
+#
+# Poppins, la police de corps du pack « geometric », ne sert que le latin, le
+# latin étendu et le devanagari : ni le cyrillique (russe) ni le vietnamien,
+# dont les diacritiques empilés tombaient donc en police de repli. Noto Sans
+# — conçue pour n'afficher aucun carré vide, d'où son nom — couvre latin,
+# latin étendu, cyrillique, grec et vietnamien.
+#
+# Montserrat est conservée pour les titres : elle couvre déjà le cyrillique et
+# le vietnamien, et donne au site son caractère.
+#
+# Le japonais, le chinois, l'arabe et le persan restent servis par les polices
+# du système : aucune police latine ne les couvre.
+
+hugoblox:
+  meta:
+    format: "hugoblox-font@1"
+    name: "Universal"
+    vendor: "site"
+    version: "1.0.0"
+    license: "OFL-1.1"
+    description: "Geometric headings with a body face that covers every script the site publishes in"
+
+  families:
+    heading: "Montserrat"
+    body: "Noto Sans"
+    code: "JetBrains Mono"
+
+  weights:
+    heading: [600, 700, 800]
+    body: [300, 400, 500, 600]
+    code: [400]
+
+  leading:
+    heading: 1.15
+    body: 1.65
+    code: 1.5
+
+  tracking:
+    heading: "-0.01em"
+    body: "0"

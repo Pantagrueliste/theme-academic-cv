@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Ta strona została przetłumaczona maszynowo i nie była jeszcze sprawdzona przez native speakera."
+translation_original:
+  other: "Przeczytaj oryginał"
+translation_vote_question:
+  other: "Czy to dobre tłumaczenie?"
+translation_vote_good:
+  other: "Tak"
+translation_vote_bad:
+  other: "Nie"
+translation_vote_thanks:
+  other: "Dziękuję za opinię!"
+
+questions:
+  other: "Pytania"
+faq:
+  other: "Najczęstsze pytania"
+docs:
+  other: "Dokumentacja"
+poweredby_button:
+  other: "Stwórz własną →"
+read_more:
+  other: "Czytaj dalej"
+callout_note:
+  other: "Uwaga"
+portfolio_link_default:
+  other: "Odnośnik"
+backlinks:
+  other: "Linki zwrotne"

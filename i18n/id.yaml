@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Halaman ini diterjemahkan secara otomatis dan belum ditinjau oleh penutur asli."
+translation_original:
+  other: "Baca versi asli"
+translation_vote_question:
+  other: "Apakah terjemahan ini bagus?"
+translation_vote_good:
+  other: "Ya"
+translation_vote_bad:
+  other: "Tidak"
+translation_vote_thanks:
+  other: "Terima kasih atas masukan Anda!"
+
+questions:
+  other: "Pertanyaan"
+faq:
+  other: "Tanya jawab"
+docs:
+  other: "Dokumentasi"
+poweredby_button:
+  other: "Buat milik Anda →"
+read_more:
+  other: "Baca selengkapnya"
+callout_note:
+  other: "Catatan"
+portfolio_link_default:
+  other: "Tautan"
+backlinks:
+  other: "Tautan balik"

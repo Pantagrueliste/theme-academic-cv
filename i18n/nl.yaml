@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Deze pagina is automatisch vertaald en nog niet nagelezen door een moedertaalspreker."
+translation_original:
+  other: "Lees het origineel"
+translation_vote_question:
+  other: "Is deze vertaling goed?"
+translation_vote_good:
+  other: "Ja"
+translation_vote_bad:
+  other: "Nee"
+translation_vote_thanks:
+  other: "Bedankt voor uw reactie!"
+
+questions:
+  other: "Vragen"
+faq:
+  other: "Veelgestelde vragen"
+docs:
+  other: "Documentatie"
+poweredby_button:
+  other: "Maak de jouwe →"
+read_more:
+  other: "Lees verder"
+callout_note:
+  other: "Let op"
+portfolio_link_default:
+  other: "Link"
+backlinks:
+  other: "Backlinks"

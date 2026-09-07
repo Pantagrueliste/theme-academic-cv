@@ -1,0 +1,24 @@
+# Čeština overrides for data/authors/clement.yaml
+role: Odborný asistent digitálních humanitních věd
+bio: |
+  Clément Godbarge působí jako odborný asistent digitálních humanitních věd na University of St Andrews. Jeho výzkum se točí kolem vědy a umění vládnout v raně novověké Evropě. V připravované knize zkoumá, jak se lékaři působící u francouzských a italských dvorů šestnáctého století prosazovali jako političtí odborníci nového typu. Jeho výzkum podpořily Nadace Andrewa W. Mellona, Fulbrightova komise, Renaissance Society of America a Harvardova univerzita.
+
+affiliations:
+  - name: University of St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: E-mail
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Raně novověké dějiny
+  - Evropská literatura
+  - Digitální humanitní vědy

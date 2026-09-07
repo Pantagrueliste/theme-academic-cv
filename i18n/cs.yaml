@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Tato stránka byla přeložena strojově a dosud ji nezkontroloval rodilý mluvčí."
+translation_original:
+  other: "Přečíst originál"
+translation_vote_question:
+  other: "Je tento překlad dobrý?"
+translation_vote_good:
+  other: "Ano"
+translation_vote_bad:
+  other: "Ne"
+translation_vote_thanks:
+  other: "Děkuji za zpětnou vazbu!"
+
+questions:
+  other: "Otázky"
+faq:
+  other: "Časté dotazy"
+docs:
+  other: "Dokumentace"
+poweredby_button:
+  other: "Vytvořte si vlastní →"
+read_more:
+  other: "Číst dál"
+callout_note:
+  other: "Poznámka"
+portfolio_link_default:
+  other: "Odkaz"
+backlinks:
+  other: "Zpětné odkazy"

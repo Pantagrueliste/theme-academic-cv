@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Эта страница переведена автоматически и ещё не проверена носителем языка."
+translation_original:
+  other: "Читать оригинал"
+translation_vote_question:
+  other: "Хороший ли это перевод?"
+translation_vote_good:
+  other: "Да"
+translation_vote_bad:
+  other: "Нет"
+translation_vote_thanks:
+  other: "Спасибо за отзыв!"
+
+questions:
+  other: "Вопросы"
+faq:
+  other: "Частые вопросы"
+docs:
+  other: "Документация"
+poweredby_button:
+  other: "Создайте свой →"
+read_more:
+  other: "Читать далее"
+callout_note:
+  other: "Примечание"
+portfolio_link_default:
+  other: "Ссылка"
+backlinks:
+  other: "Обратные ссылки"

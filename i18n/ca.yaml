@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Aquesta pàgina s'ha traduït automàticament i encara no l'ha revisada cap parlant nadiu."
+translation_original:
+  other: "Llegir l'original"
+translation_vote_question:
+  other: "És bona aquesta traducció?"
+translation_vote_good:
+  other: "Sí"
+translation_vote_bad:
+  other: "No"
+translation_vote_thanks:
+  other: "Gràcies per la vostra opinió!"
+
+questions:
+  other: "Preguntes"
+faq:
+  other: "Preguntes freqüents"
+docs:
+  other: "Documentació"
+poweredby_button:
+  other: "Crea el teu →"
+read_more:
+  other: "Llegir-ne més"
+callout_note:
+  other: "Nota"
+portfolio_link_default:
+  other: "Enllaç"
+backlinks:
+  other: "Enllaços de retorn"

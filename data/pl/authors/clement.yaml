@@ -1,0 +1,24 @@
+# Polski overrides for data/authors/clement.yaml
+role: Wykładowca humanistyki cyfrowej
+bio: |
+  Clément Godbarge jest wykładowcą humanistyki cyfrowej na University of St Andrews. Jego badania dotyczą nauki i sztuki rządzenia w Europie wczesnonowożytnej. W przygotowywanej książce analizuje, w jaki sposób lekarze związani z dworami Francji i Włoch XVI wieku przedstawiali się jako eksperci polityczni nowego typu. Jego badania wspierały Fundacja Andrew W. Mellona, Komisja Fulbrighta, Renaissance Society of America oraz Uniwersytet Harvarda.
+
+affiliations:
+  - name: University of St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: E-mail
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Historia wczesnonowożytna
+  - Literatura europejska
+  - Humanistyka cyfrowa

@@ -250,3 +250,195 @@ vi:
       - name: Mã nguồn
         url: /vi/#code
         weight: 40
+
+ca:
+  locale: ca
+  weight: 12
+  params:
+    hugoblox:
+      identity:
+        description: "Lloc acadèmic de Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Inici
+        url: /ca/
+        weight: 10
+      - name: Zibaldone
+        url: /ca/#posts
+        weight: 20
+      - name: Projectes
+        url: /ca/#projects
+        weight: 30
+      - name: Codi
+        url: /ca/#code
+        weight: 40
+
+nl:
+  locale: nl-nl
+  weight: 13
+  params:
+    hugoblox:
+      identity:
+        description: "Academische website van Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Home
+        url: /nl/
+        weight: 10
+      - name: Zibaldone
+        url: /nl/#posts
+        weight: 20
+      - name: Projecten
+        url: /nl/#projects
+        weight: 30
+      - name: Code
+        url: /nl/#code
+        weight: 40
+
+da:
+  locale: da-dk
+  weight: 14
+  params:
+    hugoblox:
+      identity:
+        description: "Clément Godbarges akademiske websted, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Forside
+        url: /da/
+        weight: 10
+      - name: Zibaldone
+        url: /da/#posts
+        weight: 20
+      - name: Projekter
+        url: /da/#projects
+        weight: 30
+      - name: Kode
+        url: /da/#code
+        weight: 40
+
+sv:
+  locale: sv-se
+  weight: 15
+  params:
+    hugoblox:
+      identity:
+        description: "Clément Godbarges akademiska webbplats, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Hem
+        url: /sv/
+        weight: 10
+      - name: Zibaldone
+        url: /sv/#posts
+        weight: 20
+      - name: Projekt
+        url: /sv/#projects
+        weight: 30
+      - name: Kod
+        url: /sv/#code
+        weight: 40
+
+pl:
+  locale: pl-pl
+  weight: 16
+  params:
+    hugoblox:
+      identity:
+        description: "Strona naukowa Clémenta Godbarge’a, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Strona główna
+        url: /pl/
+        weight: 10
+      - name: Zibaldone
+        url: /pl/#posts
+        weight: 20
+      - name: Projekty
+        url: /pl/#projects
+        weight: 30
+      - name: Kod
+        url: /pl/#code
+        weight: 40
+
+cs:
+  locale: cs-cz
+  weight: 17
+  params:
+    hugoblox:
+      identity:
+        description: "Akademický web Clémenta Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Domů
+        url: /cs/
+        weight: 10
+      - name: Zibaldone
+        url: /cs/#posts
+        weight: 20
+      - name: Projekty
+        url: /cs/#projects
+        weight: 30
+      - name: Kód
+        url: /cs/#code
+        weight: 40
+
+ru:
+  locale: ru-ru
+  weight: 18
+  params:
+    hugoblox:
+      identity:
+        description: "Академический сайт Клемана Годбаржа, PhD"
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Главная
+        url: /ru/
+        weight: 10
+      - name: Zibaldone
+        url: /ru/#posts
+        weight: 20
+      - name: Проекты
+        url: /ru/#projects
+        weight: 30
+      - name: Код
+        url: /ru/#code
+        weight: 40
+
+id:
+  locale: id-id
+  weight: 19
+  params:
+    hugoblox:
+      identity:
+        description: "Situs akademik Clément Godbarge, PhD."
+      locale:
+        date_format: ":date_long"
+  menus:
+    main:
+      - name: Beranda
+        url: /id/
+        weight: 10
+      - name: Zibaldone
+        url: /id/#posts
+        weight: 20
+      - name: Proyek
+        url: /id/#projects
+        weight: 30
+      - name: Kode
+        url: /id/#code
+        weight: 40

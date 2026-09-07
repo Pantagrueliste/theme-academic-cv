@@ -1,0 +1,24 @@
+# Dansk overrides for data/authors/clement.yaml
+role: Lektor i digital humaniora
+bio: |
+  Clément Godbarge er lektor i digital humaniora ved University of St Andrews. Hans forskning kredser om videnskab og statskunst i det tidligt moderne Europa. I sin kommende bog undersøger han, hvordan læger ved de franske og italienske hoffer i 1500-tallet gjorde sig gældende som politiske eksperter af en ny slags. Hans forskning har været støttet af Andrew W. Mellon Foundation, Fulbright-kommissionen, Renaissance Society of America og Harvard University.
+
+affiliations:
+  - name: University of St Andrews
+    url: https://www.st-andrews.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:cag30@st-andrews.ac.uk
+    label: E-mail
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-8699-7582
+    label: ORCID
+  - icon: brands/github
+    url: https://github.com/Pantagrueliste
+    label: GitHub
+
+interests:
+  - Tidlig moderne historie
+  - Europæisk litteratur
+  - Digital humaniora

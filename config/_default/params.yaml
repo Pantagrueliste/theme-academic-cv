@@ -5,7 +5,7 @@
 # shown at the end of pages that carry `machine_translated: true` AND whose language
 # is listed here — i.e. the languages the author cannot proofread himself.
 translation_feedback:
-  languages: [de, ja, zh, ar, pt, fa, vi]
+  languages: [de, ja, zh, ar, pt, fa, vi, ca, nl, da, sv, pl, cs, ru, id]
 
 # ══════════════════════════════════════════════════════════════════════════════
 # HUGO BLOX CONFIGURATION
@@ -57,10 +57,12 @@ hugoblox:
   # TYPOGRAPHY
   # ────────────────────────────────────────────────────────────────────────────
   typography:
-    # Font pack: name from data/fonts/ — geometric (Montserrat/Poppins) is the closest
-    # to the previous "minimal" theme (Montserrat/Roboto); others: modern (Inter),
-    # academic (Lora/Source Serif), editorial, humanist, developer, system.
-    pack: "geometric"
+    # Font pack: name from data/fonts/. "universal" is this site's own pack
+    # (data/fonts/universal.yaml): Montserrat headings as in "geometric", but
+    # Noto Sans for the body, because Poppins ships no Cyrillic and no
+    # Vietnamese. Kit packs: geometric, modern, academic, editorial, humanist,
+    # developer, system.
+    pack: "universal"
 
   # ────────────────────────────────────────────────────────────────────────────
   # LAYOUT

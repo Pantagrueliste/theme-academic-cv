@@ -1,0 +1,29 @@
+translation_notice:
+  other: "Den här sidan är maskinöversatt och har ännu inte granskats av någon med språket som modersmål."
+translation_original:
+  other: "Läs originalet"
+translation_vote_question:
+  other: "Är den här översättningen bra?"
+translation_vote_good:
+  other: "Ja"
+translation_vote_bad:
+  other: "Nej"
+translation_vote_thanks:
+  other: "Tack för din synpunkt!"
+
+questions:
+  other: "Frågor"
+faq:
+  other: "Vanliga frågor"
+docs:
+  other: "Dokumentation"
+poweredby_button:
+  other: "Skapa din egen →"
+read_more:
+  other: "Läs mer"
+callout_note:
+  other: "Obs"
+portfolio_link_default:
+  other: "Länk"
+backlinks:
+  other: "Bakåtlänkar"
