@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: '打有编码信息的ITA2电报纸带'
+  caption: '5位电报码对照：ITA2及其各国与非拉丁字母变体，以及相应的纸带孔型'
   focal_point: "Top"
   placement: 2
   preview_only: false

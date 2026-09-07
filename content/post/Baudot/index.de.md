@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'ITA2-Lochstreifen mit kodierter Nachricht'
+  caption: 'Fünf-Bit-Telegrafencodes im Vergleich: ITA2, seine nationalen und nichtlateinischen Varianten und ihre Lochstreifenmuster'
   focal_point: "Top"
   placement: 2
   preview_only: false

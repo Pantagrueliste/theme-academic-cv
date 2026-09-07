@@ -7,7 +7,7 @@ lastmod: "2025-02-13T00:00:00Z"
 draft: false
 featured: false
 image:
-  caption: 'ITA2 Telegraph tape showing encoded message'
+  caption: 'Five-bit telegraph codes compared: ITA2, its national and non-Latin variants, and their tape patterns'
   focal_point: "Top"
   placement: 2
   preview_only: false

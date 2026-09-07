@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'Nastro telegrafico ITA2 con un messaggio codificato'
+  caption: 'Codici telegrafici a cinque bit a confronto: l’ITA2, le sue varianti nazionali e non latine, e i fori sul nastro'
   focal_point: "Top"
   placement: 2
   preview_only: false

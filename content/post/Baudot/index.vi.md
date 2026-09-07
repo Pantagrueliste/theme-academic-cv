@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'Băng điện báo ITA2 với một thông điệp đã mã hóa'
+  caption: 'Đối chiếu các mã điện báo 5 bit: ITA2, các biến thể quốc gia và phi Latinh, cùng mẫu lỗ trên băng'
   focal_point: "Top"
   placement: 2
   preview_only: false

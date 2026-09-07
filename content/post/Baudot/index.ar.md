@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'شريط تلغراف ITA2 وعليه رسالة مشفّرة'
+  caption: 'مقارنة بين شفرات التلغراف ذات الخمسة بتات: ITA2 وصيغها الوطنية وغير اللاتينية وأنماط شرائطها المثقوبة'
   focal_point: "Top"
   placement: 2
   preview_only: false

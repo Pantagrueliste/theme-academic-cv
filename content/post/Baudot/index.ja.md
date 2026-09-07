@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: '符号化されたメッセージが打ち出されたITA2電信テープ'
+  caption: '5ビット電信符号の比較：ITA2と各国版・非ラテン文字版、およびテープの穴パターン'
   focal_point: "Top"
   placement: 2
   preview_only: false

@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'نوار تلگراف ITA2 با پیامی رمزگذاری‌شده'
+  caption: 'مقایسهٔ کدهای تلگراف 5 بیتی: ITA2 و گونه‌های ملی و غیرلاتین آن، همراه با الگوی سوراخ‌های نوار'
   focal_point: "Top"
   placement: 2
   preview_only: false

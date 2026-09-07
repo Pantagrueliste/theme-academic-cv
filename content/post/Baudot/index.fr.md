@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'Bande de télégraphe ITA2 portant un message codé'
+  caption: 'Codes télégraphiques à cinq bits comparés : l’ITA2, ses variantes nationales et non latines, et leurs bandes perforées'
   focal_point: "Top"
   placement: 2
   preview_only: false

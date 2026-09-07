@@ -8,7 +8,7 @@ draft: false
 featured: false
 machine_translated: true
 image:
-  caption: 'Fita de telégrafo ITA2 com uma mensagem codificada'
+  caption: 'Códigos telegráficos de cinco bits comparados: o ITA2, as suas variantes nacionais e não latinas, e as fitas perfuradas'
   focal_point: "Top"
   placement: 2
   preview_only: false
