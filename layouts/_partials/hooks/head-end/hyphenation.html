@@ -1,0 +1,26 @@
+{{/*
+  Automatic hyphenation for the languages browsers hyphenate well.
+
+  Body text stays left-aligned (justification makes rivers, and browsers
+  cannot justify Arabic, Persian, Vietnamese or Hindi decently anyway); what
+  changes is the ragged edge, which hyphenation evens out — most visibly on
+  phones, where a long German or Swedish compound can otherwise leave half
+  a line empty. Only languages with reliable dictionaries in Chrome, Firefox
+  and Safari are listed; Vietnamese, Hindi, Arabic, Persian, Japanese and
+  Chinese are left alone. Code, links and headings are never hyphenated.
+  hyphenate-limit-chars keeps short words whole and avoids two-letter stubs.
+*/}}
+<style>
+  html:is(:lang(en), :lang(fr), :lang(de), :lang(es), :lang(it), :lang(pt), :lang(nl), :lang(sv), :lang(ca), :lang(pl))
+    :is(.prose p, .prose li, .prose blockquote, .bio-text) {
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 7 3 3;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+  }
+  .prose :is(code, pre, a, h1, h2, h3, h4) {
+    -webkit-hyphens: manual;
+    hyphens: manual;
+  }
+</style>
