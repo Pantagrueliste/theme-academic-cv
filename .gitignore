@@ -28,3 +28,7 @@ static/pagefind/
 
 # Logs
 *.log
+
+# Python
+__pycache__/
+*.pyc
