@@ -52,6 +52,9 @@ HN_SLEEP_S = 0.5
 RETRY_ATTEMPTS = 3  # first try + two retries
 RETRY_WAIT_S = 2.0
 
+SESSION = requests.Session()
+SESSION.headers.update({"User-Agent": "slop-timeline-chart/1.0 (research script)"})
+
 # Crude, transparent keyword heuristic for classifying whether a HN hit that
 # contains the bare word 'slop' is plausibly about AI-generated content.
 # This is not a language model judgement; see README.md for the caveat.
@@ -96,7 +99,11 @@ def fetch_with_retries(fetch_fn, label: str):
             print(f"  [warn] {label}: attempt {attempt}/{RETRY_ATTEMPTS} failed: {exc}",
                   file=sys.stderr)
             if attempt < RETRY_ATTEMPTS:
-                time.sleep(RETRY_WAIT_S)
+                # Back off harder on rate limiting (HTTP 429) than on other errors.
+                status = getattr(getattr(exc, "response", None), "status_code", None)
+                wait = RETRY_WAIT_S * (5 ** attempt) if status == 429 else RETRY_WAIT_S * attempt
+                print(f"  [warn] {label}: waiting {wait:.0f}s before retrying", file=sys.stderr)
+                time.sleep(wait)
     print(f"  [error] {label}: giving up after {RETRY_ATTEMPTS} attempts.", file=sys.stderr)
     raise RuntimeError(f"{label} failed after {RETRY_ATTEMPTS} attempts") from last_exc
 
@@ -115,7 +122,7 @@ def fetch_gdelt_timeline(query: str, start: dt.datetime, end: dt.datetime) -> pd
     }
 
     def do_fetch():
-        resp = requests.get(GDELT_URL, params=params, timeout=60)
+        resp = SESSION.get(GDELT_URL, params=params, timeout=60)
         resp.raise_for_status()
         text = resp.text
         if not text.strip():
@@ -165,7 +172,7 @@ def hn_count(query: str | None, month_start: dt.datetime, month_end: dt.datetime
         params["advancedSyntax"] = 1
 
     def do_fetch():
-        resp = requests.get(HN_URL, params=params, timeout=30)
+        resp = SESSION.get(HN_URL, params=params, timeout=30)
         resp.raise_for_status()
         return resp.json()
 
@@ -185,7 +192,7 @@ def hn_samples(query: str, month_start: dt.datetime, month_end: dt.datetime,
     }
 
     def do_fetch():
-        resp = requests.get(HN_URL, params=params, timeout=30)
+        resp = SESSION.get(HN_URL, params=params, timeout=30)
         resp.raise_for_status()
         return resp.json()
 
