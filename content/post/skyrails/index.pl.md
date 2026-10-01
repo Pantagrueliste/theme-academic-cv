@@ -23,10 +23,9 @@ authors:
 - clement
 
 tags:
+- Trwałość
 - AI
-- Wizualizacja sieci
-- Archiwizacja oprogramowania
-- Humanistyka cyfrowa
+- Wizualizacja danych
 
 categories:
 - Notatki
@@ -39,7 +38,7 @@ Około 2007 roku Yose Widjaja, wówczas student University of New South Wales, s
 
 Skyrails nigdy nie był utrzymywany. Działał pod Windows, jego strona domowa na uniwersytecie zniknęła, a każdy link, w który klikałem, okazywał się martwy. Przetrwały za to ślady: [album zrzutów ekranu na Flickrze](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) i garść wpisów blogowych z 2007 roku – na [FlowingData](https://flowingdata.com/?p=947), na blogu Tima Lamberta [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations) i na [InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
 
-Zrzuty ekranu mówią zaskakująco wiele. Widać na nich nocny błękit nieba poprzecinany smugami chmur, krawędzie rysowane jako animowane szewrony, węzły w postaci ikon lub wykresów kołowych i menu radialne, które rozwija się wokół węzła, gdy przytrzyma się prawy przycisk myszy. Widać nazwy skryptów, które napędzały poszczególne demonstracje (`labs.van`, `macaque.van`, `worldtrade.van`), menu tworzone przez te skrypty i cztery motywy: *normal*, *desert*, *valley* i *openspace*. Jeden ze zrzutów zachował nawet pojedynczą linijkę języka skryptowego, wpisaną w konsolę u góry ekranu:
+Zrzuty ekranu mówią zaskakująco wiele. Widać na nich nocny błękit nieba poprzecinany smugami chmur, krawędzie rysowane jako animowane szewrony, węzły w postaci ikon lub wykresów kołowych i menu radialne, które rozwija się wokół węzła, gdy przytrzyma się prawy przycisk myszy. Widać nazwy skryptów, które napędzały poszczególne demonstracje (`labs.van`, `macaque.van`, `worldtrade.van`), menu tworzone przez te skrypty i cztery motywy: *normal*, *desert*, *valley* i *openspace*. Jeden ze zrzutów zachował nawet pojedynczą linijkę języka skryptowego, wpisaną do konsoli u góry ekranu:
 
 ```
 with all nodes do nodeplane x 1 -1 end
@@ -48,7 +47,7 @@ with all nodes do nodeplane x 1 -1 end
 
 ## Rekonstrukcja z poszlak
 
-Na tej podstawie Claude odbudował Skyrails w ciągu jednej nocy. Nowa wersja działa w przeglądarce dzięki [Three.js](https://threejs.org/) i teoretycznie powinna działać także w goglach wirtualnej rzeczywistości. Odwzorowuje niebo, szewronowe szyny, świecące węzły z ich ikonami, wykresami kołowymi i pierścieniami, dużą etykietę węzła pod kursorem, menu radialne i cztery motywy. Ma też niewielki język skryptowy, zbudowany wokół tej jednej linijki, którą zachowały zrzuty, tak że instrukcje `with … do … end` nadają grafowi styl i definiują menu.
+Na tej podstawie Claude odbudował Skyrails w ciągu jednej nocy. Nowa wersja, oparta na [Three.js](https://threejs.org/), uruchamia się w przeglądarce i teoretycznie powinna działać także w goglach wirtualnej rzeczywistości. Odwzorowuje niebo, szewronowe szyny, świecące węzły z ich ikonami, wykresami kołowymi i pierścieniami, dużą etykietę węzła pod kursorem, menu radialne i cztery motywy. Ma też niewielki język skryptowy, zbudowany wokół tej jednej linijki, którą zachowały zrzuty, tak że instrukcje `with … do … end` nadają grafowi styl i definiują menu.
 
 Do testów wczytałem trzy klasyczne zbiory danych: sieć florenckich rodów Johna Padgetta, z ich powiązaniami małżeńskimi i handlowymi; klub karate Wayne'a Zachary'ego; wreszcie sieć postaci *Nędzników* Donalda Knutha, w której dwie postaci są połączone, jeśli występują w tym samym rozdziale. Poniższe nagranie przemierza tę ostatnią, od Valjeana do Javerta, Fantyny, Kozety i Mariusza. Każda szyna rozbłyska, gdy sunie wzdłuż niej kamera.
 
@@ -76,7 +75,7 @@ with all edges do (
 
 Podprogramy definiuje się w nich za pomocą `sub`, menu za pomocą `menudef` i `menulink`, kolory zapisem `rgb: 130 0 0`, a typy połączeń – strzałkami. Nic z tego nie pojawia się w rekonstrukcji, która ma z oryginałem wspólną jedynie formę `with … do … end`, widoczną na zrzucie ekranu. Oryginalne shadery, noszące nazwy takie jak `BloomFX` i `RetinalBurnFX`, również nie mają nic wspólnego z nowymi.
 
-Nie rozstrzyga to kwestii zapamiętywania. Oryginalne skrypty są publicznie dostępne od 2015 roku i całkiem możliwe, że trafiły do danych treningowych modelu, a nikt, łącznie z samym modelem, nie potrafi z pewnością powiedzieć, co ten widział. Gdyby jednak model zapamiętał Skyrails, spodziewałbym się, że odtworzy przynajmniej język. Różnice sugerują, że Claude oparł się na tym, co dało się wyczytać ze zrzutów ekranu.
+Nie rozstrzyga to kwestii zapamiętywania. Oryginalne skrypty są publicznie dostępne od 2015 roku i całkiem możliwe, że trafiły do danych treningowych modelu, a nikt, łącznie z samym modelem, nie potrafi z pewnością powiedzieć, co ten widział. Gdyby jednak model zapamiętał Skyrails, spodziewałbym się, że odtworzyłby przynajmniej język. Różnice sugerują, że Claude oparł się na tym, co dało się wyczytać ze zrzutów ekranu.
 
 
 ## Archeologia cyfrowa i trwałość oprogramowania
