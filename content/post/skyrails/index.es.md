@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Los personajes de *Les Misérables* en el Skyrails reconstruido, con el foco puesto en Cosette'
+  caption: 'Los personajes de *Los miserables* en el Skyrails reconstruido, con el foco puesto en Cosette'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Con estos indicios, Claude reconstruyó Skyrails en una noche. La nueva versión se ejecuta en un navegador web con [Three.js](https://threejs.org/) y debería, en principio, funcionar también en un visor de realidad virtual. Reproduce el cielo, los raíles de chevrones, los nodos luminosos con sus iconos, gráficos de sectores y anillos, la etiqueta grande del nodo sobre el que está el puntero, el menú radial y los cuatro temas. Tiene además un pequeño lenguaje de *scripts*, construido en torno a la única línea que conservan las capturas, de modo que las instrucciones `with … do … end` dan estilo al grafo y definen los menús.
 
-Para probarlo, cargué tres conjuntos de datos clásicos: la red de familias florentinas de John Padgett, con sus vínculos matrimoniales y comerciales; el club de kárate de Wayne Zachary; y la red que Donald Knuth construyó con los personajes de *Les Misérables*, en la que dos personajes quedan unidos cuando aparecen en el mismo capítulo. El vídeo que sigue recorre esta última, de Valjean a Javert, Fantine, Cosette y Marius. Cada raíl se ilumina a medida que la cámara lo sigue.
+Para probarlo, cargué tres conjuntos de datos clásicos: la red de familias florentinas de John Padgett, con sus vínculos matrimoniales y comerciales; el club de kárate de Wayne Zachary; y la red que Donald Knuth construyó con los personajes de *Los miserables*, en la que dos personajes quedan unidos cuando aparecen en el mismo capítulo. El vídeo que sigue recorre esta última, de Valjean a Javert, Fantine, Cosette y Marius. Cada raíl se ilumina a medida que la cámara lo sigue.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">
