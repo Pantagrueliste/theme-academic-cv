@@ -31,7 +31,7 @@ categories:
 - Ghi chép
 ---
 
-Khoảng năm 2007, Yose Widjaja, khi ấy là sinh viên Đại học New South Wales, đã tạo ra Skyrails, một chương trình đặc sắc để khám phá mạng lưới trong không gian ba chiều. Người dùng du hành ngay bên trong mạng lưới, từ nút này sang nút khác dọc theo những đường ray phát sáng, như thể đang ở giữa lòng dữ liệu. Vào thời mà phần lớn công cụ nghiên cứu còn phẳng lì và xám xịt, nó trông như một trò chơi điện tử. Đằng sau vẻ ngoài ấy là một chiều sâu thực sự: Skyrails có ngôn ngữ kịch bản riêng để tùy chỉnh cách hiển thị và phân tích đồ thị, cùng những menu viết bằng chính ngôn ngữ ấy, để cả người không biết lập trình vẫn dùng được. Tất cả là công sức của một sinh viên duy nhất. Nhiều năm trước, tôi đã xem một bản demo trên YouTube và chưa bao giờ quên được.
+Khoảng năm 2007, Yose Widjaja, khi ấy là sinh viên Đại học New South Wales, đã tạo ra Skyrails, một chương trình đặc sắc để khám phá mạng lưới trong không gian ba chiều. Người dùng du hành ngay bên trong mạng lưới, từ nút này sang nút khác dọc theo những đường ray phát sáng, như thể đang ở giữa lòng dữ liệu. Vào thời mà phần lớn công cụ nghiên cứu còn phẳng lì và xám xịt, nó trông như một trò chơi điện tử. Đằng sau vẻ ngoài ấy là một chiều sâu thực sự: Skyrails có ngôn ngữ kịch bản riêng để tùy chỉnh cách hiển thị và phân tích đồ thị, cùng những menu viết bằng chính ngôn ngữ ấy, để cả người không biết lập trình vẫn dùng được. Tất cả đều do một mình một sinh viên làm nên. Nhiều năm trước, tôi đã xem một bản demo trên YouTube và chưa bao giờ quên được.
 
 
 ## Một chương trình biến mất
@@ -45,9 +45,9 @@ with all nodes do nodeplane x 1 -1 end
 ```
 
 
-## Dựng lại từ những gì còn sót
+## Dựng lại từ chứng cứ
 
-Từ những chứng cứ ấy, Claude dựng lại Skyrails chỉ trong một đêm. Phiên bản mới chạy trong trình duyệt web với [Three.js](https://threejs.org/) và, về nguyên tắc, hẳn cũng chạy được trên kính thực tế ảo. Nó sao lại bầu trời, những đường ray hình chữ V, các nút phát sáng cùng biểu tượng, biểu đồ tròn và các vành của chúng, cái nhãn lớn của nút nằm dưới con trỏ, menu hình tròn và bốn chủ đề giao diện. Nó cũng có một ngôn ngữ kịch bản nho nhỏ, xây dựng quanh dòng lệnh duy nhất mà ảnh chụp còn giữ lại, để các câu lệnh `with … do … end` định kiểu cho đồ thị và khai báo menu.
+Từ những chứng cứ ấy, Claude dựng lại Skyrails chỉ trong một đêm. Phiên bản mới chạy trong trình duyệt web với [Three.js](https://threejs.org/) và, về nguyên tắc, cũng phải chạy được trên kính thực tế ảo. Nó sao lại bầu trời, những đường ray hình chữ V, các nút phát sáng cùng biểu tượng, biểu đồ tròn và các vành của chúng, nhãn lớn của nút nằm dưới con trỏ, menu hình tròn và bốn chủ đề giao diện. Nó cũng có một ngôn ngữ kịch bản nho nhỏ, xây dựng quanh dòng lệnh duy nhất mà ảnh chụp còn giữ lại, để các câu lệnh `with … do … end` định kiểu cho đồ thị và khai báo menu.
 
 Để thử nghiệm, tôi nạp vào ba bộ dữ liệu kinh điển: mạng lưới các gia tộc Firenze của John Padgett, với những mối quan hệ hôn nhân và làm ăn giữa họ; câu lạc bộ karate của Wayne Zachary; và mạng lưới nhân vật *Những người khốn khổ* của Donald Knuth, trong đó hai nhân vật được nối với nhau khi cùng xuất hiện trong một chương. Đoạn video dưới đây du hành qua mạng lưới cuối cùng này, từ Valjean đến Javert, Fantine, Cosette và Marius. Máy quay men theo đường ray nào, đường ray ấy bừng sáng.
 
@@ -75,15 +75,15 @@ with all edges do (
 
 Chúng định nghĩa chương trình con bằng `sub`, menu bằng `menudef` và `menulink`, màu sắc bằng `rgb: 130 0 0`, và kiểu liên kết bằng các mũi tên. Bản dựng lại không có thứ nào trong số đó; điểm chung duy nhất là dạng `with … do … end` nhìn thấy trong ảnh chụp. Các shader gốc, với những cái tên như `BloomFX` và `RetinalBurnFX`, cũng chẳng có gì chung với các shader mới.
 
-Điều này chưa khép lại được câu hỏi liệu mô hình có học thuộc hay không. Các script gốc đã được công khai từ năm 2015 và rất có thể đã nằm trong dữ liệu huấn luyện của mô hình; không ai, kể cả chính mô hình, có thể nói chắc nó đã từng thấy những gì. Nhưng nếu mô hình đã học thuộc Skyrails, tôi nghĩ ít ra nó cũng phải tái hiện được ngôn ngữ kịch bản. Những khác biệt này gợi ý rằng Claude đã làm việc dựa trên chứng cứ trong các ảnh chụp màn hình.
+Điều này chưa khép lại được câu hỏi liệu mô hình có học thuộc hay không. Các script gốc đã được công khai từ năm 2015 và rất có thể đã nằm trong dữ liệu huấn luyện của mô hình; không ai, kể cả chính mô hình, có thể nói chắc nó đã từng thấy những gì. Nhưng nếu mô hình đã học thuộc Skyrails, thì tôi cho rằng chí ít nó cũng đã tái hiện được ngôn ngữ kịch bản. Những khác biệt này gợi ý rằng Claude đã làm việc dựa trên chứng cứ trong các ảnh chụp màn hình.
 
 
 ## Khảo cổ học số và tính bền vững của phần mềm
 
 Tôi xem thí nghiệm này như một dạng khảo cổ học số: dựng lại một vật đã mất từ những dấu vết nó để lại, rồi tìm ra bản gốc và đo xem mình đã đến gần tới đâu. Như mọi công trình phục dựng, Skyrails mới là một cách diễn giải. Diện mạo và cách vận hành của nó dựa trên chứng cứ, còn mọi thứ bên dưới đều mới.
 
-Đây cũng là chuyện bền vững. Phần mềm lỗi thời nhanh hơn nhiều so với dữ liệu mà nó được viết ra để đọc. Khi một chương trình chết đi, các tệp, script và hình ảnh trực quan hóa tạo ra bằng nó trở nên khó mở, ngay cả khi chúng vẫn còn đó. Rất nhiều phần mềm của thập niên 2000 giờ chỉ còn lại dưới dạng ảnh chụp màn hình, video và những tệp nhị phân cũ mà ngày càng ít máy chạy nổi. Skyrails gốc có thể vẫn khởi động được trên một máy tính Windows, hay trong một trình giả lập, nhưng không còn ai bảo trì, điều chỉnh hay chuyển nó sang nền tảng khác được nữa, vì mã nguồn của nó đã mất.
+Đây cũng là một vấn đề về tính bền vững. Phần mềm lỗi thời nhanh hơn nhiều so với dữ liệu mà nó được viết ra để đọc. Khi một chương trình chết đi, các tệp, script và hình ảnh trực quan hóa tạo ra bằng nó trở nên khó mở, ngay cả khi chúng vẫn còn đó. Rất nhiều phần mềm của thập niên 2000 giờ chỉ còn lại dưới dạng ảnh chụp màn hình, video và những tệp nhị phân cũ mà ngày càng ít máy chạy nổi. Skyrails gốc có thể vẫn khởi động được trên một máy tính Windows, hay trong một trình giả lập, nhưng không thể bảo trì, điều chỉnh hay chuyển nó sang nền tảng khác được nữa, vì mã nguồn của nó đã mất.
 
-Như tôi đã dự đoán từ vài năm trước, AI đang trở thành một công cụ thiết thực để chống lại kiểu lỗi thời này. Nó có thể dựng lại một công cụ đã mất từ những dấu vết còn lại, và dựng lại những trình đọc giúp dữ liệu cũ vẫn dùng được. Bước tiếp theo hiển nhiên của dự án này là dạy engine mới đọc các script `.van` và tệp dữ liệu gốc, để những bản trình diễn mà Yose Widjaja viết năm 2007 có thể chạy lại. Với bất kỳ ai quan tâm đến tính bền vững của dữ liệu, dù trong nghiên cứu, trong lưu trữ hay trong nhân văn số, điều này đáng được lưu tâm.
+Như tôi đã dự đoán từ vài năm trước, AI đang trở thành một công cụ thiết thực để chống lại kiểu lỗi thời này. Nó có thể dựng lại một công cụ đã mất từ những dấu vết còn lại, và dựng lại những trình đọc giúp dữ liệu cũ vẫn dùng được. Bước tiếp theo hiển nhiên của dự án này là dạy engine mới đọc các script `.van` và tệp dữ liệu gốc, để những bản trình diễn mà Yose Widjaja viết năm 2007 có thể chạy lại. Với bất kỳ ai quan tâm đến tính bền vững của dữ liệu, dù trong nghiên cứu, trong ngành lưu trữ hay trong nhân văn số, điều này đáng được lưu tâm.
 
 Skyrails đã đi trước thời đại, và gần hai mươi năm sau vẫn còn gây ấn tượng. Toàn bộ công lao về ý tưởng và thiết kế thuộc về Yose Widjaja, và tôi mong những dòng này sẽ đến được với anh.
