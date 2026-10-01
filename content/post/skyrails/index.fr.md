@@ -23,7 +23,7 @@ authors:
 - clement
 
 tags:
-- Durabilité
+- Pérennité
 - IA
 - Visualisation de données
 
