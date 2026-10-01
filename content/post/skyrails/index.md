@@ -22,10 +22,9 @@ authors:
 - clement
 
 tags:
+- Sustainability
 - AI
-- Network visualisation
-- Software preservation
-- Digital humanities
+- Data Visualization
 
 categories:
 - Notes
