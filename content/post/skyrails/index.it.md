@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'I personaggi di *Les Misérables* nello Skyrails ricostruito, con Cosette in primo piano'
+  caption: 'I personaggi dei *Miserabili* nello Skyrails ricostruito, con Cosette in primo piano'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Partendo da questi indizi, Claude ha ricostruito Skyrails in una notte. La nuova versione gira in un browser web grazie a [Three.js](https://threejs.org/) e dovrebbe, in linea di principio, funzionare in un visore per la realtà virtuale. Riprende il cielo, i binari a chevron, i nodi luminosi con le loro icone, i grafici a torta e gli anelli, la grande etichetta del nodo sotto il puntatore, il menu radiale e i quattro temi. Ha anche un piccolo linguaggio di scripting, costruito attorno all’unica riga che le schermate ci hanno conservato: sono istruzioni `with … do … end` a dare stile al grafo e a definire i menu.
 
-Per metterla alla prova ho caricato tre dataset classici: la rete delle famiglie fiorentine di John Padgett, con i loro legami matrimoniali e d’affari; il club di karate di Wayne Zachary; e la rete di Donald Knuth dei personaggi di *Les Misérables*, in cui due personaggi sono collegati se compaiono nello stesso capitolo. Il video qui sotto percorre quest’ultima, da Valjean a Javert, Fantine, Cosette e Marius. Ogni binario si accende man mano che la telecamera lo segue.
+Per metterla alla prova ho caricato tre dataset classici: la rete delle famiglie fiorentine di John Padgett, con i loro legami matrimoniali e d’affari; il club di karate di Wayne Zachary; e la rete di Donald Knuth dei personaggi dei *Miserabili*, in cui due personaggi sono collegati se compaiono nello stesso capitolo. Il video qui sotto percorre quest’ultima, da Valjean a Javert, Fantine, Cosette e Marius. Ogni binario si accende man mano che la telecamera lo segue.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

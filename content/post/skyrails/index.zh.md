@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: '重建版Skyrails中的《Les Misérables》人物，焦点落在珂赛特身上'
+  caption: '重建版Skyrails中的《悲惨世界》人物，焦点落在珂赛特身上'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Claude根据这些证据，一夜之间重建了Skyrails。新版本借助[Three.js](https://threejs.org/)在网页浏览器中运行，按理说也应当能在虚拟现实头显上使用。它复刻了天空、V形箭头轨道、带着图标、饼图和圆环的发光节点、指针所指节点上的大号标签、环形菜单，以及四套主题。它还有一门小小的脚本语言，围绕截图中留存的那一行搭建而成，用`with … do … end`语句来设定图的样式、定义菜单。
 
-为了检验，我载入了三个经典数据集：约翰·帕吉特（John Padgett）的佛罗伦萨家族网络，记录各家族之间的联姻与商业往来；韦恩·扎卡里（Wayne Zachary）的空手道俱乐部；以及高德纳（Donald Knuth）的《Les Misérables》人物网络——两个人物若在同一章中出场，便连在一起。下面的视频在最后这个网络中穿行，从冉阿让到沙威、芳汀、珂赛特和马吕斯。镜头沿着哪条轨道行进，哪条轨道便亮起来。
+为了检验，我载入了三个经典数据集：约翰·帕吉特（John Padgett）的佛罗伦萨家族网络，记录各家族之间的联姻与商业往来；韦恩·扎卡里（Wayne Zachary）的空手道俱乐部；以及高德纳（Donald Knuth）的《悲惨世界》人物网络——两个人物若在同一章中出场，便连在一起。下面的视频在最后这个网络中穿行，从冉阿让到沙威、芳汀、珂赛特和马吕斯。镜头沿着哪条轨道行进，哪条轨道便亮起来。
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

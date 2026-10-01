@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Postaci *Les Misérables* w odbudowanym Skyrails, z Kozetą na pierwszym planie'
+  caption: 'Postaci *Nędzników* w odbudowanym Skyrails, z Kozetą na pierwszym planie'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Na tej podstawie Claude odbudował Skyrails w ciągu jednej nocy. Nowa wersja, oparta na [Three.js](https://threejs.org/), uruchamia się w przeglądarce i teoretycznie powinna działać także w goglach wirtualnej rzeczywistości. Odwzorowuje niebo, szewronowe szyny, świecące węzły z ich ikonami, wykresami kołowymi i pierścieniami, dużą etykietę węzła pod kursorem, menu radialne i cztery motywy. Ma też niewielki język skryptowy, zbudowany wokół tej jednej linijki, którą zachowały zrzuty, tak że instrukcje `with … do … end` nadają grafowi styl i definiują menu.
 
-Do testów wczytałem trzy klasyczne zbiory danych: sieć florenckich rodów Johna Padgetta, z ich powiązaniami małżeńskimi i handlowymi; klub karate Wayne'a Zachary'ego; wreszcie sieć postaci *Les Misérables* Donalda Knutha, w której dwie postaci są połączone, jeśli występują w tym samym rozdziale. Poniższe nagranie przemierza tę ostatnią, od Valjeana do Javerta, Fantyny, Kozety i Mariusza. Każda szyna rozbłyska, gdy sunie wzdłuż niej kamera.
+Do testów wczytałem trzy klasyczne zbiory danych: sieć florenckich rodów Johna Padgetta, z ich powiązaniami małżeńskimi i handlowymi; klub karate Wayne'a Zachary'ego; wreszcie sieć postaci *Nędzników* Donalda Knutha, w której dwie postaci są połączone, jeśli występują w tym samym rozdziale. Poniższe nagranie przemierza tę ostatnią, od Valjeana do Javerta, Fantyny, Kozety i Mariusza. Każda szyna rozbłyska, gdy sunie wzdłuż niej kamera.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

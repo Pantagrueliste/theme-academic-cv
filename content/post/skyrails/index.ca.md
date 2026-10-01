@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Els personatges de *Les Misérables* al nou Skyrails, amb Cosette en primer pla'
+  caption: 'Els personatges d’*Els miserables* al nou Skyrails, amb Cosette en primer pla'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Amb aquests indicis, Claude va reconstruir Skyrails en una nit. La nova versió s’executa en un navegador web amb [Three.js](https://threejs.org/) i, en principi, hauria de funcionar també amb unes ulleres de realitat virtual. Reprodueix el cel, els rails de fletxes, els nodes lluminosos amb les seves icones, gràfics de sectors i anells, la gran etiqueta del node que queda sota el punter, el menú radial i els quatre temes. També té un petit llenguatge d’scripts, construït a partir de l’única línia que conserven les captures, de manera que les instruccions `with … do … end` defineixen l’aspecte del graf i els menús.
 
-Per posar-la a prova, hi vaig carregar tres conjunts de dades clàssics: la xarxa de famílies florentines de John Padgett, amb els seus lligams matrimonials i de negocis; el club de karate de Wayne Zachary; i la xarxa que Donald Knuth va construir amb els personatges de *Les Misérables*, en què dos personatges queden units quan apareixen en un mateix capítol. El vídeo d’aquí sota recorre aquesta última, de Valjean a Javert, Fantine, Cosette i Marius. Cada rail s’encén a mesura que la càmera el resegueix.
+Per posar-la a prova, hi vaig carregar tres conjunts de dades clàssics: la xarxa de famílies florentines de John Padgett, amb els seus lligams matrimonials i de negocis; el club de karate de Wayne Zachary; i la xarxa que Donald Knuth va construir amb els personatges d’*Els miserables*, en què dos personatges queden units quan apareixen en un mateix capítol. El vídeo d’aquí sota recorre aquesta última, de Valjean a Javert, Fantine, Cosette i Marius. Cada rail s’encén a mesura que la càmera el resegueix.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

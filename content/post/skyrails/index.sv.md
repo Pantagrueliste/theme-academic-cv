@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Gestalterna i *Les Misérables* i det återuppbyggda Skyrails, med Cosette i fokus'
+  caption: 'Gestalterna i *Samhällets olycksbarn* i det återuppbyggda Skyrails, med Cosette i fokus'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Utifrån detta material byggde Claude upp Skyrails igen på en natt. Den nya versionen körs i en webbläsare med [Three.js](https://threejs.org/) och borde i princip fungera i ett VR-headset. Den kopierar himlen, chevronrälsen, de glödande noderna med sina ikoner, cirkeldiagram och ringar, den stora etiketten för noden under muspekaren, den radiella menyn och de fyra temana. Den har också ett litet skriptspråk, uppbyggt kring den enda rad som skärmdumparna bevarar, så att `with … do … end`-satser formger grafen och definierar menyerna.
 
-För att pröva den laddade jag in tre klassiska dataset: John Padgetts nätverk av florentinska släkter, med deras äktenskaps- och affärsband; Wayne Zacharys karateklubb; och Donald Knuths nätverk av gestalterna i *Les Misérables*, där två gestalter förbinds när de förekommer i samma kapitel. Videon nedan färdas genom det sistnämnda, från Valjean till Javert, Fantine, Cosette och Marius. Varje räls tänds när kameran följer den.
+För att pröva den laddade jag in tre klassiska dataset: John Padgetts nätverk av florentinska släkter, med deras äktenskaps- och affärsband; Wayne Zacharys karateklubb; och Donald Knuths nätverk av gestalterna i *Samhällets olycksbarn*, där två gestalter förbinds när de förekommer i samma kapitel. Videon nedan färdas genom det sistnämnda, från Valjean till Javert, Fantine, Cosette och Marius. Varje räls tänds när kameran följer den.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

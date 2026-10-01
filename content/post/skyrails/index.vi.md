@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Các nhân vật của *Les Misérables* trong Skyrails dựng lại, với Cosette ở tâm điểm'
+  caption: 'Các nhân vật của *Những người khốn khổ* trong Skyrails dựng lại, với Cosette ở tâm điểm'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Từ những chứng cứ ấy, Claude dựng lại Skyrails chỉ trong một đêm. Phiên bản mới chạy trong trình duyệt web với [Three.js](https://threejs.org/) và, về nguyên tắc, cũng phải chạy được trên kính thực tế ảo. Nó sao lại bầu trời, những đường ray hình chữ V, các nút phát sáng cùng biểu tượng, biểu đồ tròn và các vành của chúng, nhãn lớn của nút nằm dưới con trỏ, menu hình tròn và bốn chủ đề giao diện. Nó cũng có một ngôn ngữ kịch bản nho nhỏ, xây dựng quanh dòng lệnh duy nhất mà ảnh chụp còn giữ lại, để các câu lệnh `with … do … end` định kiểu cho đồ thị và khai báo menu.
 
-Để thử nghiệm, tôi nạp vào ba bộ dữ liệu kinh điển: mạng lưới các gia tộc Firenze của John Padgett, với những mối quan hệ hôn nhân và làm ăn giữa họ; câu lạc bộ karate của Wayne Zachary; và mạng lưới nhân vật *Les Misérables* của Donald Knuth, trong đó hai nhân vật được nối với nhau khi cùng xuất hiện trong một chương. Đoạn video dưới đây du hành qua mạng lưới cuối cùng này, từ Valjean đến Javert, Fantine, Cosette và Marius. Máy quay men theo đường ray nào, đường ray ấy bừng sáng.
+Để thử nghiệm, tôi nạp vào ba bộ dữ liệu kinh điển: mạng lưới các gia tộc Firenze của John Padgett, với những mối quan hệ hôn nhân và làm ăn giữa họ; câu lạc bộ karate của Wayne Zachary; và mạng lưới nhân vật *Những người khốn khổ* của Donald Knuth, trong đó hai nhân vật được nối với nhau khi cùng xuất hiện trong một chương. Đoạn video dưới đây du hành qua mạng lưới cuối cùng này, từ Valjean đến Javert, Fantine, Cosette và Marius. Máy quay men theo đường ray nào, đường ray ấy bừng sáng.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">
