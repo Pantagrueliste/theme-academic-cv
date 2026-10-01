@@ -36,9 +36,9 @@ Rond 2007 maakte Yose Widjaja, toen student aan de University of New South Wales
 
 ## Een verdwenen programma
 
-Skyrails is nooit onderhouden. Het draaide op Windows, de homepage bij de universiteit verdween, en elke link die ik volgde liep dood. Wat wel bewaard bleef, waren sporen: een [album met screenshots op Flickr](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) en een handvol blogposts uit 2007, op [FlowingData](https://flowingdata.com/?p=947), op Tim Lamberts [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations) en op de [InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
+Skyrails werd nooit onderhouden. Het draaide op Windows, de homepage bij de universiteit verdween, en elke link die ik volgde liep dood. Wat wel bewaard bleef, waren sporen: een [album met screenshots op Flickr](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) en een handvol blogposts uit 2007, op [FlowingData](https://flowingdata.com/?p=947), op Tim Lamberts [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations) en op de [InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
 
-De screenshots zijn verrassend veelzeggend. Ze tonen een nachtblauwe hemel met wolkenslierten, verbindingen die als geanimeerde chevrons zijn getekend, knopen in de vorm van iconen of taartdiagrammen, en een radiaal menu dat zich rond een knoop opent wanneer je de rechtermuisknop ingedrukt houdt. Ze tonen de namen van de scripts achter elke demonstratie (`labs.van`, `macaque.van`, `worldtrade.van`), de menu's die die scripts aanmaakten, en vier thema's met de namen *normal*, *desert*, *valley* en *openspace*. Op één ervan is zelfs een enkele regel van de scripttaal bewaard gebleven, ingetypt in de console bovenaan het scherm:
+De screenshots zijn verrassend veelzeggend. Ze tonen een nachtblauwe hemel met wolkenslierten, verbindingen die als geanimeerde chevrons zijn getekend, knopen in de vorm van iconen of taartdiagrammen, en een radiaal menu dat zich rond een knoop opent wanneer je de rechtermuisknop ingedrukt houdt. Ze tonen de namen van de scripts achter elke demonstratie (`labs.van`, `macaque.van`, `worldtrade.van`), de menu's die die scripts aanmaakten, en vier thema's met de namen *normal*, *desert*, *valley* en *openspace*. Op een van de screenshots is zelfs een enkele regel van de scripttaal bewaard gebleven, ingetypt in de console bovenaan het scherm:
 
 ```
 with all nodes do nodeplane x 1 -1 end
@@ -47,9 +47,9 @@ with all nodes do nodeplane x 1 -1 end
 
 ## Herbouwd uit de sporen
 
-Op basis van dit materiaal bouwde Claude Skyrails in één nacht opnieuw op. De nieuwe versie draait in een webbrowser met [Three.js](https://threejs.org/) en zou in principe ook met een VR-headset moeten werken. Ze kopieert de hemel, de chevronrails, de oplichtende knopen met hun iconen, taartdiagrammen en ringen, het grote label van de knoop onder de muisaanwijzer, het radiale menu en de vier thema's. Ze heeft ook een kleine scripttaal, opgebouwd rond die ene regel die de screenshots bewaren, zodat `with … do … end`-statements de graaf opmaken en de menu's definiëren.
+Op basis van dit materiaal bouwde Claude Skyrails in één nacht opnieuw op. De nieuwe versie draait in een webbrowser met [Three.js](https://threejs.org/) en zou in principe met een VR-headset moeten werken. Ze kopieert de hemel, de chevronrails, de oplichtende knopen met hun iconen, taartdiagrammen en ringen, het grote label van de knoop onder de muisaanwijzer, het radiale menu en de vier thema's. Ze heeft ook een kleine scripttaal, opgebouwd rond die ene regel die de screenshots bewaren, zodat `with … do … end`-statements de graaf opmaken en de menu's definiëren.
 
-Om haar te testen laadde ik drie klassieke datasets: het netwerk van Florentijnse families van John Padgett, met hun huwelijks- en zakenbanden; de karateclub van Wayne Zachary; en het netwerk van personages uit *Les Misérables* van Donald Knuth, waarin twee personages met elkaar verbonden zijn wanneer ze in hetzelfde hoofdstuk voorkomen. De video hieronder reist door dat laatste netwerk, van Valjean naar Javert, Fantine, Cosette en Marius. Elke rail licht op wanneer de camera hem volgt.
+Om haar te testen laadde ik drie klassieke datasets: het netwerk van Florentijnse families van John Padgett, met hun huwelijks- en zakenbanden; de karateclub van Wayne Zachary; en Donald Knuths netwerk van personages uit *Les Misérables*, waarin twee personages met elkaar verbonden zijn wanneer ze in hetzelfde hoofdstuk voorkomen. De video hieronder reist door dat laatste netwerk, van Valjean naar Javert, Fantine, Cosette en Marius. Elke rail licht op wanneer de camera hem volgt.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">
@@ -61,7 +61,7 @@ Het resultaat leek zo sterk op de screenshots dat ik meteen vermoedde dat het mo
 
 ## Het origineel duikt op
 
-Toen nam het verhaal een wending. Na de reconstructie vond ik het oorspronkelijke programma op GitHub. Een onderzoeker had het in 2015, met toestemming van Yose Widjaja, gedeeld samen met de code van een lezing over datavisualisatie op de beveiligingsconferentie ShmooCon ([RITHoneynet/DataVisualization](https://github.com/RITHoneynet/DataVisualization), ook gekopieerd in [Light0617/3D_UIUX](https://github.com/Light0617/3D_UIUX/tree/master/skyrails/skyrailsdist)). Het bevat de Windows-executables, de data, de shaders en de oorspronkelijke scripts, maar niet de broncode van de engine zelf.
+Toen nam het verhaal een wending. Na de reconstructie vond ik het oorspronkelijke programma op GitHub. Een onderzoeker had het in 2015 met toestemming van Yose Widjaja gedeeld, samen met de code van een lezing over datavisualisatie op de beveiligingsconferentie ShmooCon ([RITHoneynet/DataVisualization](https://github.com/RITHoneynet/DataVisualization), ook gekopieerd in [Light0617/3D_UIUX](https://github.com/Light0617/3D_UIUX/tree/master/skyrails/skyrailsdist)). Het bevat de Windows-executables, de data, de shaders en de oorspronkelijke scripts, maar niet de broncode van de engine zelf.
 
 We konden de twee dus vergelijken. In uiterlijk en gebruik kwam de reconstructie dicht bij het origineel, maar haar scripttaal en haar shaders zijn heel anders. De oorspronkelijke scripts zien er zo uit:
 

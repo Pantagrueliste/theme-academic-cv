@@ -38,7 +38,7 @@ Omkring 2007 skapade Yose Widjaja, då student vid University of New South Wales
 
 Skyrails underhölls aldrig. Det kördes på Windows, dess hemsida vid universitetet försvann, och varje länk jag följde ledde ingenstans. Det som fanns kvar var spår: ett [album med skärmdumpar på Flickr](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) och en handfull blogginlägg från 2007, på [FlowingData](https://flowingdata.com/?p=947), på Tim Lamberts [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations) och på [InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
 
-Skärmdumparna är förvånansvärt talande. De visar en nattblå himmel strimmad av moln, länkar ritade som animerade chevroner, noder formade som ikoner eller cirkeldiagram, och en radiell meny som öppnar sig kring en nod när man håller ned höger musknapp. De visar namnen på de skript som drev varje demonstration (`labs.van`, `macaque.van`, `worldtrade.van`), menyerna som skripten skapade och fyra teman med namnen *normal*, *desert*, *valley* och *openspace*. En av dem bevarar till och med en enda rad av skriptspråket, inskriven i konsolen högst upp på skärmen:
+Skärmdumparna är förvånansvärt talande. De visar en nattblå himmel strimmad av moln, länkar ritade som animerade chevroner, noder formade som ikoner eller cirkeldiagram, och en radiell meny som öppnar sig kring en nod när man håller ned höger musknapp. De visar namnen på de skript som drev varje demonstration (`labs.van`, `macaque.van`, `worldtrade.van`), menyerna som skripten skapade och fyra teman med namnen *normal*, *desert*, *valley* och *openspace*. På en av skärmdumparna syns till och med en enda rad av skriptspråket, inskriven i konsolen högst upp på skärmen:
 
 ```
 with all nodes do nodeplane x 1 -1 end
@@ -61,7 +61,7 @@ Resultatet låg så nära skärmdumparna att jag genast misstänkte att modellen
 
 ## Originalet dyker upp
 
-Sedan tog historien en oväntad vändning. Efter rekonstruktionen hittade jag originalprogrammet på GitHub. En forskare hade delat det 2015, med Yose Widjajas tillstånd, tillsammans med koden till ett föredrag om datavisualisering på säkerhetskonferensen ShmooCon ([RITHoneynet/DataVisualization](https://github.com/RITHoneynet/DataVisualization), även kopierat i [Light0617/3D_UIUX](https://github.com/Light0617/3D_UIUX/tree/master/skyrails/skyrailsdist)). Där finns de körbara filerna för Windows, data, shaders och originalskripten, men inte källkoden till själva motorn.
+Sedan tog det hela en vändning. Efter rekonstruktionen hittade jag originalprogrammet på GitHub. En forskare hade delat det 2015, med Yose Widjajas tillstånd, tillsammans med koden till ett föredrag om datavisualisering på säkerhetskonferensen ShmooCon ([RITHoneynet/DataVisualization](https://github.com/RITHoneynet/DataVisualization), även kopierat i [Light0617/3D_UIUX](https://github.com/Light0617/3D_UIUX/tree/master/skyrails/skyrailsdist)). Där finns de körbara filerna för Windows, data, shaders och originalskripten, men inte källkoden till själva motorn.
 
 Vi kunde alltså jämföra de två. Till utseende och känsla kom rekonstruktionen nära originalet, men dess skriptspråk och shaders skiljer sig mycket från förlagans. Originalskripten ser ut så här:
 
