@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'As personagens de *Os Miseráveis* no Skyrails reconstruído, com o foco em Cosette'
+  caption: 'As personagens de *Les Misérables* no Skyrails reconstruído, com o foco em Cosette'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -49,7 +49,7 @@ with all nodes do nodeplane x 1 -1 end
 
 Com base nestes indícios, o Claude reconstruiu o Skyrails numa só noite. A nova versão corre num navegador web com [Three.js](https://threejs.org/) e deverá, em princípio, funcionar também em óculos de realidade virtual. Reproduz o céu, os carris de chevrons, os nós luminosos com os seus ícones, gráficos circulares e anéis, a etiqueta grande do nó sob o ponteiro, o menu radial e os quatro temas. Tem ainda uma pequena linguagem de *scripting*, construída em torno da única linha que as capturas preservam, de modo que as instruções `with … do … end` definem o estilo do grafo e os menus.
 
-Para a pôr à prova, carreguei três conjuntos de dados clássicos: a rede de famílias florentinas de John Padgett, com os seus laços matrimoniais e comerciais; o clube de karaté de Wayne Zachary; e a rede de personagens de *Os Miseráveis* de Donald Knuth, em que duas personagens ficam ligadas quando aparecem no mesmo capítulo. O vídeo abaixo percorre esta última, de Valjean a Javert, Fantine, Cosette e Marius. Cada carril acende-se à medida que a câmara o segue.
+Para a pôr à prova, carreguei três conjuntos de dados clássicos: a rede de famílias florentinas de John Padgett, com os seus laços matrimoniais e comerciais; o clube de karaté de Wayne Zachary; e a rede que Donald Knuth construiu com as personagens de *Les Misérables*, em que duas personagens ficam ligadas quando aparecem no mesmo capítulo. O vídeo abaixo percorre esta última, de Valjean a Javert, Fantine, Cosette e Marius. Cada carril acende-se à medida que a câmara o segue.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

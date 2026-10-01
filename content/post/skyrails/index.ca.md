@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Els personatges d’*Els miserables* al nou Skyrails, amb Cosette en primer pla'
+  caption: 'Els personatges de *Les Misérables* al nou Skyrails, amb Cosette en primer pla'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -38,7 +38,7 @@ Cap al 2007, Yose Widjaja, aleshores estudiant de la Universitat de Nova Gal·le
 
 Ningú no va mantenir mai Skyrails. Funcionava amb Windows, la seva pàgina a la universitat va desaparèixer i tots els enllaços que vaig seguir estaven trencats. Se’n van conservar, això sí, alguns rastres: un [àlbum de captures de pantalla a Flickr](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) i un grapat d’apunts de blog del 2007, a [FlowingData](https://flowingdata.com/?p=947), al [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations) de Tim Lambert i a l’[InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
 
-Les captures són sorprenentment reveladores. S’hi veu un cel blau nit estriat de núvols, arestes dibuixades com a galons animats, nodes en forma d’icona o de gràfic de sectors i un menú radial que s’obre al voltant d’un node quan mantens premut el botó dret del ratolí. Hi apareixen els noms dels scripts que governaven cada demostració (`labs.van`, `macaque.van`, `worldtrade.van`), els menús que aquests scripts creaven i quatre temes anomenats *normal*, *desert*, *valley* i *openspace*. Una d’elles fins i tot conserva una sola línia del llenguatge d’scripts, teclejada a la consola de la part superior de la pantalla:
+Les captures són sorprenentment reveladores. S’hi veu un cel blau nit estriat de núvols, arestes dibuixades com a chevrons animats, nodes en forma d’icona o de gràfic de sectors i un menú radial que s’obre al voltant d’un node quan mantens premut el botó dret del ratolí. Hi apareixen els noms dels scripts que governaven cada demostració (`labs.van`, `macaque.van`, `worldtrade.van`), els menús que aquests scripts creaven i quatre temes anomenats *normal*, *desert*, *valley* i *openspace*. Una d’elles fins i tot conserva una sola línia del llenguatge d’scripts, teclejada a la consola de la part superior de la pantalla:
 
 ```
 with all nodes do nodeplane x 1 -1 end
@@ -47,9 +47,9 @@ with all nodes do nodeplane x 1 -1 end
 
 ## Reconstruir a partir dels indicis
 
-Amb aquests indicis, Claude va reconstruir Skyrails en una nit. La nova versió s’executa en un navegador web amb [Three.js](https://threejs.org/) i, en principi, hauria de funcionar també amb unes ulleres de realitat virtual. Reprodueix el cel, els rails de galons, els nodes lluminosos amb les seves icones, gràfics de sectors i anells, la gran etiqueta del node que queda sota el punter, el menú radial i els quatre temes. També té un petit llenguatge d’scripts, construït a partir de l’única línia que conserven les captures, de manera que les instruccions `with … do … end` defineixen l’aspecte del graf i els menús.
+Amb aquests indicis, Claude va reconstruir Skyrails en una nit. La nova versió s’executa en un navegador web amb [Three.js](https://threejs.org/) i, en principi, hauria de funcionar també amb unes ulleres de realitat virtual. Reprodueix el cel, els rails de chevrons, els nodes lluminosos amb les seves icones, gràfics de sectors i anells, la gran etiqueta del node que queda sota el punter, el menú radial i els quatre temes. També té un petit llenguatge d’scripts, construït a partir de l’única línia que conserven les captures, de manera que les instruccions `with … do … end` defineixen l’aspecte del graf i els menús.
 
-Per posar-la a prova, hi vaig carregar tres conjunts de dades clàssics: la xarxa de famílies florentines de John Padgett, amb els seus lligams matrimonials i de negocis; el club de karate de Wayne Zachary; i la xarxa de personatges d’*Els miserables* de Donald Knuth, en què dos personatges queden units quan apareixen en un mateix capítol. El vídeo d’aquí sota recorre aquesta última, de Valjean a Javert, Fantine, Cosette i Marius. Cada rail s’encén a mesura que la càmera el resegueix.
+Per posar-la a prova, hi vaig carregar tres conjunts de dades clàssics: la xarxa de famílies florentines de John Padgett, amb els seus lligams matrimonials i de negocis; el club de karate de Wayne Zachary; i la xarxa que Donald Knuth va construir amb els personatges de *Les Misérables*, en què dos personatges queden units quan apareixen en un mateix capítol. El vídeo d’aquí sota recorre aquesta última, de Valjean a Javert, Fantine, Cosette i Marius. Cada rail s’encén a mesura que la càmera el resegueix.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">

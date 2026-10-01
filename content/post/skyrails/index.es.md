@@ -14,7 +14,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'Los personajes de *Los miserables* en el Skyrails reconstruido, con el foco puesto en Cosette'
+  caption: 'Los personajes de *Les Misérables* en el Skyrails reconstruido, con el foco puesto en Cosette'
   focal_point: "Center"
   placement: 2
   preview_only: false
@@ -38,7 +38,7 @@ Hacia 2007, Yose Widjaja, entonces estudiante de la Universidad de Nueva Gales d
 
 Nadie se ocupó nunca de mantener Skyrails. Funcionaba en Windows, su página en la universidad desapareció y todos los enlaces que seguí estaban rotos. Lo que sobrevivió fueron huellas: un [álbum de capturas de pantalla en Flickr](https://www.flickr.com/photos/14933315@N05/albums/72157602730584157/) y un puñado de entradas de blog de 2007, en [FlowingData](https://flowingdata.com/?p=947), en [*Deltoid*](https://scienceblogs.com/deltoid/2007/10/22/skyrails-graph-visualizations), el blog de Tim Lambert, y en la [InfoVis Wiki](https://infovis-wiki.net/wiki/2007-10-27:_Skyrails:_Social_Network_Visualisation_System).
 
-Las capturas dicen más de lo que cabría pensar. Muestran un cielo azul noche surcado de nubes, aristas dibujadas como cheurones animados, nodos en forma de iconos o de gráficos de sectores, y un menú radial que se abre alrededor de un nodo cuando se mantiene pulsado el botón derecho del ratón. Muestran los nombres de los *scripts* que movían cada demostración (`labs.van`, `macaque.van`, `worldtrade.van`), los menús que esos *scripts* creaban y cuatro temas llamados *normal*, *desert*, *valley* y *openspace*. Una de ellas conserva incluso una única línea del lenguaje de *scripts*, tecleada en la consola de la parte superior de la pantalla:
+Las capturas dicen más de lo que cabría pensar. Muestran un cielo azul noche surcado de nubes, aristas dibujadas como chevrones animados, nodos en forma de iconos o de gráficos de sectores, y un menú radial que se abre alrededor de un nodo cuando se mantiene pulsado el botón derecho del ratón. Muestran los nombres de los *scripts* que movían cada demostración (`labs.van`, `macaque.van`, `worldtrade.van`), los menús que esos *scripts* creaban y cuatro temas llamados *normal*, *desert*, *valley* y *openspace*. Una de ellas conserva incluso una única línea del lenguaje de *scripts*, tecleada en la consola de la parte superior de la pantalla:
 
 ```
 with all nodes do nodeplane x 1 -1 end
@@ -47,13 +47,13 @@ with all nodes do nodeplane x 1 -1 end
 
 ## Reconstruir a partir de los indicios
 
-Con estos indicios, Claude reconstruyó Skyrails en una noche. La nueva versión se ejecuta en un navegador web con [Three.js](https://threejs.org/) y debería, en principio, funcionar también en un visor de realidad virtual. Reproduce el cielo, los raíles de cheurones, los nodos luminosos con sus iconos, gráficos de sectores y anillos, la etiqueta grande del nodo sobre el que está el puntero, el menú radial y los cuatro temas. Tiene además un pequeño lenguaje de *scripts*, construido en torno a la única línea que conservan las capturas, de modo que las instrucciones `with … do … end` dan estilo al grafo y definen los menús.
+Con estos indicios, Claude reconstruyó Skyrails en una noche. La nueva versión se ejecuta en un navegador web con [Three.js](https://threejs.org/) y debería, en principio, funcionar también en un visor de realidad virtual. Reproduce el cielo, los raíles de chevrones, los nodos luminosos con sus iconos, gráficos de sectores y anillos, la etiqueta grande del nodo sobre el que está el puntero, el menú radial y los cuatro temas. Tiene además un pequeño lenguaje de *scripts*, construido en torno a la única línea que conservan las capturas, de modo que las instrucciones `with … do … end` dan estilo al grafo y definen los menús.
 
-Para probarlo, cargué tres conjuntos de datos clásicos: la red de familias florentinas de John Padgett, con sus vínculos matrimoniales y comerciales; el club de kárate de Wayne Zachary; y la red de personajes de *Los miserables* de Donald Knuth, en la que dos personajes quedan unidos cuando aparecen en el mismo capítulo. El vídeo que sigue recorre esta última, de Valjean a Javert, Fantine, Cosette y Marius. Cada raíl se ilumina a medida que la cámara lo sigue.
+Para probarlo, cargué tres conjuntos de datos clásicos: la red de familias florentinas de John Padgett, con sus vínculos matrimoniales y comerciales; el club de kárate de Wayne Zachary; y la red que Donald Knuth construyó con los personajes de *Les Misérables*, en la que dos personajes quedan unidos cuando aparecen en el mismo capítulo. El vídeo que sigue recorre esta última, de Valjean a Javert, Fantine, Cosette y Marius. Cada raíl se ilumina a medida que la cámara lo sigue.
 
 <video controls playsinline preload="metadata" poster="/post/skyrails/poster.jpg" style="width:100%; height:auto; border-radius:4px;">
   <source src="/post/skyrails/skyrails-les-miserables.mp4" type="video/mp4">
-  Su navegador no puede reproducir este vídeo. Puede, en cambio, <a href="/post/skyrails/skyrails-les-miserables.mp4">descargarlo</a>.
+  Tu navegador no puede reproducir este vídeo, pero puedes <a href="/post/skyrails/skyrails-les-miserables.mp4">descargarlo</a>.
 </video>
 
 El resultado se parecía tanto a las capturas que enseguida sospeché que el modelo había absorbido rastros del código original durante su entrenamiento.
