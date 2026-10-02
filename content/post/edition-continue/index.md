@@ -30,6 +30,8 @@ tags:
 
 categories:
 - Digital Humanities
+
+projects: [DCE]
 ---
 
 The early modern humanists who adopted the printing press gave the edition the form it has kept ever since: the text is established, set in type, published once, and corrected, if at all, in a second edition years later. We have had computers for half a century, and we still make digital editions as if they were printed books. We finish the text, publish it in one go, and leave the errata for later. The tools are new, but the habits are old.
@@ -46,7 +48,7 @@ This first part sets out the pieces that free the editor from the inherited work
 - **Schematron rules**, which add the editorial constraints a schema cannot express;
 - a **validation script**, which checks the whole corpus in one command and produces readable outputs through XSLT.
 
-The examples come from the correspondence of Filippo Cavriana, the edition I am [building along these lines](/post/cavriana-edition/). Part 2 will add the chain that ties these pieces together, so that every change to the corpus is validated and published as it is made.
+The examples come from the correspondence of Filippo Cavriana, the edition I am [building along these lines](/post/cavriana-edition/). Part 2 will add the chain that ties these pieces together, so that every change to the corpus is validated and published as it is made. The lesson belongs to my [Efficient Editing](/project/dce/) project, which looks for ways to bring the cost of scholarly editions down; automating publication, so that the editor is no longer waiting on a specialist at the end of the chain, is one of the largest savings available.
 
 
 ## Outcry, denial, or superficial adoption
