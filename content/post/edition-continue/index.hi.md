@@ -15,7 +15,7 @@ featured: true
 machine_translated: true
 
 image:
-  caption: 'जैकार्ड करघे पर एक बुनकर, और छिद्रित कार्डों की वह लड़ी जो बुनावट का नमूना प्रोग्राम करती है. चित्र: [*IEEE Spectrum*](https://spectrum.ieee.org/the-jacquard-loom-a-driver-of-the-industrial-revolution)'
+  caption: 'जैकार्ड करघे पर एक बुनकर, और छिद्रित कार्डों की वह लड़ी जो बुनावट का नमूना प्रोग्राम करती है। चित्र: [*IEEE Spectrum*](https://spectrum.ieee.org/the-jacquard-loom-a-driver-of-the-industrial-revolution)'
   focal_point: "Center"
   placement: 2
   preview_only: false
