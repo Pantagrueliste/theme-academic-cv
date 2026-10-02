@@ -14,7 +14,7 @@ draft: false
 featured: true
 
 image:
-  caption: 'A Jacquard loom, Museum of Science and Industry, Manchester. Photograph by George H. Williams, public domain, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jacquard.loom.full.view.jpg)'
+  caption: 'A weaver at a Jacquard loom, with the chain of punched cards that programmes the pattern'
   focal_point: "Center"
   placement: 2
   preview_only: false
