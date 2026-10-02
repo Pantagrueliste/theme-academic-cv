@@ -48,13 +48,13 @@ projects: [DCE]
 - **Schematron规则**，补上模式无法表达的编辑约束；
 - **验证脚本**，一条命令即可检查整个语料库，并借助XSLT生成便于阅读的输出。
 
-示例均取自菲利波·卡夫里亚纳（Filippo Cavriana）的书信，也就是我正[按照这一思路构建](/post/cavriana-edition/)的校勘本。下篇将加入一条流水线，把这些构件串联起来，让语料库的每一处改动都随改随验、随验随发。本教程隶属于我的[高效校勘](/project/dce/)项目，该项目致力于降低学术校勘本的成本；而把出版自动化，让校勘者不必再在流程末端干等技术专家，正是其中最能省钱的环节之一。
+示例均取自Filippo Cavriana的书信，也就是我正[按照这一思路构建](/post/cavriana-edition/)的校勘本。下篇将加入一条流水线，把这些构件串联起来，让语料库的每一处改动都随改随验、随验随发。本教程隶属于我的[高效校勘](/project/dce/)项目，该项目致力于降低学术校勘本的成本；而把出版自动化，让校勘者不必再在流程末端干等技术专家，正是其中最能省钱的环节之一。
 
 
 ## 抵制、否认，或流于表面
 
 人们对人工智能的反应也是同一个套路：要么抵制，要么否认，要么只是表面上用一用。这也是我喜欢数字人文的原因之一：很少有哪个领域把这种悖论暴露得如此直白。新工具本该促使我们重新思考如何把工作做得更好，而不是给老套路刷上一层新漆。这篇教程便是在学术校勘领域接下这份邀请。下篇敬请期待。
 
-感谢我的编辑达芙妮·马特利耶（Daphné Mathelier）和马蒂亚斯·吉勒·勒旺松（Matthias Gille Levenson），审稿人雅丝明·马卡里奥斯（Jasmin Macarios）和埃尔莎·范·科特（Elsa Van Kote），以及阿妮莎·霍斯（Anisa Hawes）。
+感谢我的编辑Daphné Mathelier和Matthias Gille Levenson，审稿人Jasmin Macarios和Elsa Van Kote，以及Anisa Hawes。
 
 教程以开放获取方式发布：[programminghistorian.org/fr/lecons/edition-critique-continu-pt1](https://programminghistorian.org/fr/lecons/edition-critique-continu-pt1)（DOI：[10.46430/phfr0044](https://doi.org/10.46430/phfr0044)）。
