@@ -14,7 +14,7 @@ draft: false
 featured: true
 
 image:
-  caption: 'A weaver at a Jacquard loom, with the chain of punched cards that programmes the pattern'
+  caption: 'A weaver at a Jacquard loom, with the chain of punched cards that programmes the pattern. Photograph via [*IEEE Spectrum*](https://spectrum.ieee.org/the-jacquard-loom-a-driver-of-the-industrial-revolution)'
   focal_point: "Center"
   placement: 2
   preview_only: false
