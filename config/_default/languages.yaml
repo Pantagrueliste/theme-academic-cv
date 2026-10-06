@@ -29,6 +29,9 @@ hi:
       - name: परियोजनाएँ
         url: /hi/#projects
         weight: 30
+      - name: प्रकाशन
+        url: /hi/#publications
+        weight: 35
       - name: कोड
         url: /hi/#code
         weight: 40
@@ -53,6 +56,9 @@ fr:
       - name: Projets
         url: /fr/#projects
         weight: 30
+      - name: Publications
+        url: /fr/#publications
+        weight: 35
       - name: Code
         url: /fr/#code
         weight: 40
@@ -77,6 +83,9 @@ es:
       - name: Proyectos
         url: /es/#projects
         weight: 30
+      - name: Publicaciones
+        url: /es/#publications
+        weight: 35
       - name: Código
         url: /es/#code
         weight: 40
@@ -101,6 +110,9 @@ it:
       - name: Progetti
         url: /it/#projects
         weight: 30
+      - name: Pubblicazioni
+        url: /it/#publications
+        weight: 35
       - name: Codice
         url: /it/#code
         weight: 40
@@ -125,6 +137,9 @@ de:
       - name: Projekte
         url: /de/#projects
         weight: 30
+      - name: Publikationen
+        url: /de/#publications
+        weight: 35
       - name: Code
         url: /de/#code
         weight: 40
@@ -149,6 +164,9 @@ ja:
       - name: プロジェクト
         url: /ja/#projects
         weight: 30
+      - name: 出版物
+        url: /ja/#publications
+        weight: 35
       - name: コード
         url: /ja/#code
         weight: 40
@@ -173,6 +191,9 @@ zh:
       - name: 项目
         url: /zh/#projects
         weight: 30
+      - name: 出版物
+        url: /zh/#publications
+        weight: 35
       - name: 代码
         url: /zh/#code
         weight: 40
@@ -198,6 +219,9 @@ ar:
       - name: المشاريع
         url: /ar/#projects
         weight: 30
+      - name: المنشورات
+        url: /ar/#publications
+        weight: 35
       - name: الكود
         url: /ar/#code
         weight: 40
@@ -222,6 +246,9 @@ pt:
       - name: Projetos
         url: /pt/#projects
         weight: 30
+      - name: Publicações
+        url: /pt/#publications
+        weight: 35
       - name: Código
         url: /pt/#code
         weight: 40
@@ -247,6 +274,9 @@ fa:
       - name: پروژه‌ها
         url: /fa/#projects
         weight: 30
+      - name: انتشارات
+        url: /fa/#publications
+        weight: 35
       - name: کد
         url: /fa/#code
         weight: 40
@@ -271,6 +301,9 @@ vi:
       - name: Dự án
         url: /vi/#projects
         weight: 30
+      - name: Ấn phẩm
+        url: /vi/#publications
+        weight: 35
       - name: Mã nguồn
         url: /vi/#code
         weight: 40
@@ -295,6 +328,9 @@ ca:
       - name: Projectes
         url: /ca/#projects
         weight: 30
+      - name: Publicacions
+        url: /ca/#publications
+        weight: 35
       - name: Codi
         url: /ca/#code
         weight: 40
@@ -319,6 +355,9 @@ nl:
       - name: Projecten
         url: /nl/#projects
         weight: 30
+      - name: Publicaties
+        url: /nl/#publications
+        weight: 35
       - name: Code
         url: /nl/#code
         weight: 40
@@ -343,6 +382,9 @@ sv:
       - name: Projekt
         url: /sv/#projects
         weight: 30
+      - name: Publikationer
+        url: /sv/#publications
+        weight: 35
       - name: Kod
         url: /sv/#code
         weight: 40
@@ -367,6 +409,9 @@ pl:
       - name: Projekty
         url: /pl/#projects
         weight: 30
+      - name: Publikacje
+        url: /pl/#publications
+        weight: 35
       - name: Kod
         url: /pl/#code
         weight: 40
@@ -391,6 +436,9 @@ ru:
       - name: Проекты
         url: /ru/#projects
         weight: 30
+      - name: Публикации
+        url: /ru/#publications
+        weight: 35
       - name: Код
         url: /ru/#code
         weight: 40

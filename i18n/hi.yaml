@@ -27,3 +27,7 @@ portfolio_link_default:
   other: "लिंक"
 backlinks:
   other: "बैकलिंक"
+status:
+  other: "स्थिति"
+open_access:
+  other: "मुक्त पहुँच"

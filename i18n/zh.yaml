@@ -11,3 +11,7 @@ translation_vote_bad:
   other: "不好"
 translation_vote_thanks:
   other: "感谢您的反馈！"
+status:
+  other: "状态"
+open_access:
+  other: "开放获取"

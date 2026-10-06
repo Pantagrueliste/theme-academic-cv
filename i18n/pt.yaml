@@ -29,3 +29,7 @@ portfolio_link_default:
   other: "Ligação"
 backlinks:
   other: "Ligações de retorno"
+status:
+  other: "Estado"
+open_access:
+  other: "Acesso aberto"

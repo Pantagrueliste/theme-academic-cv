@@ -29,3 +29,7 @@ portfolio_link_default:
   other: "رابط"
 backlinks:
   other: "روابط خلفية"
+status:
+  other: "الحالة"
+open_access:
+  other: "وصول مفتوح"

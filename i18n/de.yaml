@@ -11,3 +11,7 @@ translation_vote_bad:
   other: "Nein"
 translation_vote_thanks:
   other: "Vielen Dank für Ihre Rückmeldung!"
+status:
+  other: "Status"
+open_access:
+  other: "Open Access"

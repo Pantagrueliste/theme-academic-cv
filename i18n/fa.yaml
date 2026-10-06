@@ -29,3 +29,7 @@ portfolio_link_default:
   other: "پیوند"
 backlinks:
   other: "پیوندهای بازگشتی"
+status:
+  other: "وضعیت"
+open_access:
+  other: "دسترسی آزاد"

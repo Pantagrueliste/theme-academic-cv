@@ -51,6 +51,16 @@ sections:
       columns: 2
       fallback_icon: academic-cap
   - block: collection
+    id: publications
+    content:
+      title: 出版物
+      count: 0
+      filters:
+        folders:
+          - publications
+    design:
+      view: citation
+  - block: collection
     id: code
     content:
       title: 代码

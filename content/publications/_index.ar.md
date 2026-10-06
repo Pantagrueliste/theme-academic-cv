@@ -1,0 +1,4 @@
+---
+title: المنشورات
+view: citation
+---

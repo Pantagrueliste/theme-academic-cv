@@ -27,3 +27,7 @@ portfolio_link_default:
   other: "Ссылка"
 backlinks:
   other: "Обратные ссылки"
+status:
+  other: "Статус"
+open_access:
+  other: "Открытый доступ"

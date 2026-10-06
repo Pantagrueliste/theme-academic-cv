@@ -29,3 +29,7 @@ portfolio_link_default:
   other: "Liên kết"
 backlinks:
   other: "Liên kết ngược"
+status:
+  other: "Trạng thái"
+open_access:
+  other: "Truy cập mở"

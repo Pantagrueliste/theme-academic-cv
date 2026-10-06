@@ -27,3 +27,7 @@ backlinks:
   other: "Rétroliens"
 portfolio_link_default:
   other: "Lien"
+status:
+  other: "Statut"
+open_access:
+  other: "Accès libre"

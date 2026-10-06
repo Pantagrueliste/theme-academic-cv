@@ -27,3 +27,7 @@ portfolio_link_default:
   other: "Link"
 backlinks:
   other: "Backlinks"
+status:
+  other: "Status"
+open_access:
+  other: "Open access"
