@@ -27,3 +27,9 @@ portfolio_link_default:
   other: "Link"
 backlinks:
   other: "Backlinks"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Recensie"
+pub_review_book:
+  other: "Boekrecensie"

@@ -21,3 +21,9 @@ docs:
   other: "Documentación"
 poweredby_button:
   other: "Crea el tuyo →"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Reseña"
+pub_review_book:
+  other: "Reseña de libro"

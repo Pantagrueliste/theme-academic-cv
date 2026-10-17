@@ -29,3 +29,9 @@ portfolio_link_default:
   other: "Ligação"
 backlinks:
   other: "Ligações de retorno"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Recensão"
+pub_review_book:
+  other: "Recensão de livro"

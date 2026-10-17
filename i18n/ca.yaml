@@ -27,3 +27,15 @@ portfolio_link_default:
   other: "Enllaç"
 backlinks:
   other: "Enllaços de retorn"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Ressenya"
+pub_review_book:
+  other: "Ressenya de llibre"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "Lloc web"
+btn_doi:
+  other: "DOI"

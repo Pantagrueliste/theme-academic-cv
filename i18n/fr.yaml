@@ -27,3 +27,15 @@ backlinks:
   other: "Rétroliens"
 portfolio_link_default:
   other: "Lien"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Compte rendu"
+pub_review_book:
+  other: "Compte rendu de livre"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "Site"
+btn_doi:
+  other: "DOI"

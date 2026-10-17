@@ -29,3 +29,15 @@ portfolio_link_default:
   other: "リンク"
 backlinks:
   other: "バックリンク"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "レビュー"
+pub_review_book:
+  other: "書評"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "サイト"
+btn_doi:
+  other: "DOI"

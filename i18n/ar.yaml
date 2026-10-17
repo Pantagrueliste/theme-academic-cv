@@ -29,3 +29,15 @@ portfolio_link_default:
   other: "رابط"
 backlinks:
   other: "روابط خلفية"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "مراجعة"
+pub_review_book:
+  other: "مراجعة كتاب"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "الموقع"
+btn_doi:
+  other: "DOI"

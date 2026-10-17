@@ -29,3 +29,15 @@ portfolio_link_default:
   other: "Liên kết"
 backlinks:
   other: "Liên kết ngược"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Bài phê bình"
+pub_review_book:
+  other: "Điểm sách"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "Trang web"
+btn_doi:
+  other: "DOI"

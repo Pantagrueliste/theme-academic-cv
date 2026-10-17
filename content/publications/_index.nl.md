@@ -1,0 +1,4 @@
+---
+title: Publicaties
+view: citation
+---

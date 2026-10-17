@@ -27,3 +27,15 @@ portfolio_link_default:
   other: "Odnośnik"
 backlinks:
   other: "Linki zwrotne"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Recenzja"
+pub_review_book:
+  other: "Recenzja książki"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "Strona"
+btn_doi:
+  other: "DOI"
