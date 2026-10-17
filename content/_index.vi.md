@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Công trình
+      title: Công trình mới nhất
       count: 0
       filters:
         folders:

@@ -1,4 +1,4 @@
 ---
-title: انتشارات
+title: تازه‌ترین انتشارات
 view: citation
 ---

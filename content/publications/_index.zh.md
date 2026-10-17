@@ -1,4 +1,4 @@
 ---
-title: 出版物
+title: 最新出版物
 view: citation
 ---

@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: المنشورات
+      title: أحدث المنشورات
       count: 0
       filters:
         folders:

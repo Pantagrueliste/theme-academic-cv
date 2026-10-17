@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Publicaties
+      title: Recente publicaties
       count: 0
       filters:
         folders:

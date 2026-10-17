@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Публикации
+      title: Последние публикации
       count: 0
       filters:
         folders:

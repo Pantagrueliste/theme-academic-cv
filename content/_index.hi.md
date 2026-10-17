@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: प्रकाशन
+      title: नवीनतम प्रकाशन
       count: 0
       filters:
         folders:

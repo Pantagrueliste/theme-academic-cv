@@ -1,4 +1,4 @@
 ---
-title: المنشورات
+title: أحدث المنشورات
 view: citation
 ---

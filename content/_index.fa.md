@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: انتشارات
+      title: تازه‌ترین انتشارات
       count: 0
       filters:
         folders:

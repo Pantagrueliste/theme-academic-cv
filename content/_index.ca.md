@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Publicacions
+      title: Darreres publicacions
       count: 0
       filters:
         folders:

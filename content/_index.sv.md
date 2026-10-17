@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Publikationer
+      title: Senaste publikationer
       count: 0
       filters:
         folders:

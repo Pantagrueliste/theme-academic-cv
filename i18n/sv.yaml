@@ -39,3 +39,13 @@ btn_site:
   other: "Webbplats"
 btn_doi:
   other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Status"
+peer_reviewed:
+  other: "Expertgranskad"
+open_access:
+  other: "Öppen tillgång"
+license:
+  other: "Licens"

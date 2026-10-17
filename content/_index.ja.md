@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: 出版物
+      title: 最新の出版物
       count: 0
       filters:
         folders:

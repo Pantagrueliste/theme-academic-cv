@@ -39,3 +39,13 @@ btn_site:
   other: "Lloc web"
 btn_doi:
   other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Estat"
+peer_reviewed:
+  other: "Revisat per experts"
+open_access:
+  other: "Accés obert"
+license:
+  other: "Llicència"

@@ -17,3 +17,13 @@ pub_review:
   other: "评论"
 pub_review_book:
   other: "书评"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "状态"
+peer_reviewed:
+  other: "同行评审"
+open_access:
+  other: "开放获取"
+license:
+  other: "许可"

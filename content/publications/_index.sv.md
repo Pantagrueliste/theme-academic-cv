@@ -1,4 +1,4 @@
 ---
-title: Publikationer
+title: Senaste publikationer
 view: citation
 ---

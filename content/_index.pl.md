@@ -57,7 +57,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Publikacje
+      title: Najnowsze publikacje
       count: 0
       filters:
         folders:

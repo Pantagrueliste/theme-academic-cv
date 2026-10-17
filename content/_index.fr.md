@@ -53,7 +53,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Publications
+      title: Dernières publications
       count: 0
       filters:
         folders:

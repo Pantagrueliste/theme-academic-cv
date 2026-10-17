@@ -1,4 +1,4 @@
 ---
-title: प्रकाशन
+title: नवीनतम प्रकाशन
 view: citation
 ---

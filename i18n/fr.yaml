@@ -39,3 +39,13 @@ btn_site:
   other: "Site"
 btn_doi:
   other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Statut"
+peer_reviewed:
+  other: "Évalué par les pairs"
+open_access:
+  other: "Libre accès"
+license:
+  other: "Licence"

@@ -1,4 +1,4 @@
 ---
-title: Publicações
+title: Publicações recentes
 view: citation
 ---

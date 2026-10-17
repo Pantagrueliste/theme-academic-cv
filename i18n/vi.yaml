@@ -41,3 +41,13 @@ btn_site:
   other: "Trang web"
 btn_doi:
   other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Trạng thái"
+peer_reviewed:
+  other: "Được bình duyệt"
+open_access:
+  other: "Truy cập mở"
+license:
+  other: "Giấy phép"

@@ -27,3 +27,13 @@ pub_review:
   other: "Reseña"
 pub_review_book:
   other: "Reseña de libro"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Estado"
+peer_reviewed:
+  other: "Revisado por pares"
+open_access:
+  other: "Acceso abierto"
+license:
+  other: "Licencia"

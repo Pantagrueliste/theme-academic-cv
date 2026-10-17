@@ -41,3 +41,13 @@ btn_site:
   other: "وب‌گاه"
 btn_doi:
   other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "وضعیت"
+peer_reviewed:
+  other: "داوری‌شده"
+open_access:
+  other: "دسترسی آزاد"
+license:
+  other: "پروانه"
