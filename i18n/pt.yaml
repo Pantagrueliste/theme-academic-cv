@@ -29,3 +29,19 @@ portfolio_link_default:
   other: "Ligação"
 backlinks:
   other: "Ligações de retorno"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Recensão"
+pub_review_book:
+  other: "Recensão de livro"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Estado"
+peer_reviewed:
+  other: "Revisto por pares"
+open_access:
+  other: "Acesso aberto"
+license:
+  other: "Licença"

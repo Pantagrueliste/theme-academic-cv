@@ -11,3 +11,19 @@ translation_vote_bad:
   other: "Nein"
 translation_vote_thanks:
   other: "Vielen Dank für Ihre Rückmeldung!"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Rezension"
+pub_review_book:
+  other: "Buchrezension"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Status"
+peer_reviewed:
+  other: "Begutachtet"
+open_access:
+  other: "Open Access"
+license:
+  other: "Lizenz"

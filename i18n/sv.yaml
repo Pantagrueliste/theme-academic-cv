@@ -27,3 +27,25 @@ portfolio_link_default:
   other: "Länk"
 backlinks:
   other: "Bakåtlänkar"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Recension"
+pub_review_book:
+  other: "Bokrecension"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "Webbplats"
+btn_doi:
+  other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Status"
+peer_reviewed:
+  other: "Expertgranskad"
+open_access:
+  other: "Öppen tillgång"
+license:
+  other: "Licens"

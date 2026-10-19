@@ -11,3 +11,19 @@ translation_vote_bad:
   other: "不好"
 translation_vote_thanks:
   other: "感谢您的反馈！"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "评论"
+pub_review_book:
+  other: "书评"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "状态"
+peer_reviewed:
+  other: "同行评审"
+open_access:
+  other: "开放获取"
+license:
+  other: "许可"

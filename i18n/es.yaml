@@ -21,3 +21,19 @@ docs:
   other: "Documentación"
 poweredby_button:
   other: "Crea el tuyo →"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "Reseña"
+pub_review_book:
+  other: "Reseña de libro"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "Estado"
+peer_reviewed:
+  other: "Revisado por pares"
+open_access:
+  other: "Acceso abierto"
+license:
+  other: "Licencia"

@@ -27,3 +27,19 @@ portfolio_link_default:
   other: "लिंक"
 backlinks:
   other: "बैकलिंक"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "समीक्षा"
+pub_review_book:
+  other: "पुस्तक समीक्षा"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "स्थिति"
+peer_reviewed:
+  other: "सहकर्मी-समीक्षित"
+open_access:
+  other: "मुक्त पहुँच"
+license:
+  other: "लाइसेंस"

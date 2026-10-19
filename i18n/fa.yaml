@@ -29,3 +29,25 @@ portfolio_link_default:
   other: "پیوند"
 backlinks:
   other: "پیوندهای بازگشتی"
+
+# Publication types from the CSL standard that the Kit does not translate
+pub_review:
+  other: "نقد"
+pub_review_book:
+  other: "نقد کتاب"
+
+# Link buttons the Kit does not translate into this language
+btn_site:
+  other: "وب‌گاه"
+btn_doi:
+  other: "DOI"
+
+# Publication status labels the Kit only ships in English
+status:
+  other: "وضعیت"
+peer_reviewed:
+  other: "داوری‌شده"
+open_access:
+  other: "دسترسی آزاد"
+license:
+  other: "پروانه"
